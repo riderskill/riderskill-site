@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Agenda — RiderSkill</title>
+<title>RiderSkill — Accueil</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -17,91 +17,82 @@
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
-    margin:0;
-    font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    color:var(--text);
+    margin:0; font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text);
     background:
       radial-gradient(80vmax 80vmax at 10% -10%, rgba(93,0,255,.22), transparent 55%),
       radial-gradient(80vmax 80vmax at 110% 110%, rgba(0,255,153,.18), transparent 55%),
       linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.85)),
       var(--bg-img) center/cover no-repeat fixed;
   }
-  .wrap{
-    max-width: 1100px;
-    margin: clamp(18px,3vw,48px) auto;
-    padding: 0 18px;
-  }
-  header{
-    display:flex; align-items:center; gap:14px; margin-bottom:20px;
-  }
+  .wrap{max-width: 1100px; margin: clamp(18px,3vw,48px) auto; padding: 0 18px;}
+  header{display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:20px;}
   header .brand{
     display:flex; align-items:center; gap:10px; padding:10px 14px;
     background: linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.00));
-    border:1px solid rgba(255,255,255,.08);
-    border-radius: 999px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.25);
-    backdrop-filter: blur(6px);
+    border:1px solid rgba(255,255,255,.08); border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25); backdrop-filter: blur(6px);
   }
   header .brand strong{font-weight:800; letter-spacing:.5px}
+  .social{display:flex; flex-wrap:wrap; gap:10px}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:12px; font-weight:700;
+    background:#111319; border:1px solid rgba(255,255,255,.12); transition:.2s; text-decoration:none; color:var(--text)
+  }
+  .btn:hover{transform:translateY(-1px); box-shadow:0 0 12px rgba(0,255,209,.3)}
+
   .panel{
     background: var(--panel);
     border:1px solid rgba(255,255,255,.08);
     border-radius: calc(var(--radius) + 6px);
     box-shadow: 0 25px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04);
-    overflow:hidden;
+    overflow:hidden; margin-bottom: 20px;
   }
   .panel h2{
     margin:0; padding:22px 22px 10px;
     font-size: clamp(22px, 2.4vw, 30px);
     letter-spacing: .6px;
   }
+
+  /* STREAM */
+  .stream-wrap{padding:0 16px 18px}
+  .stream-player{
+    position:relative; padding-top:56.25%;
+    border-radius:16px; overflow:hidden;
+    border:1px solid rgba(255,255,255,.06); background:#0f1115;
+  }
+  .stream-player iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  .stream-grid{display:grid; grid-template-columns:1fr 360px; gap:12px; padding:0 16px 18px}
+  .stream-chat{
+    border:1px solid rgba(255,255,255,.06); border-radius:12px; overflow:hidden; background:#0f1115; height:600px;
+  }
+  @media (max-width:900px){
+    .stream-grid{grid-template-columns:1fr}
+    .stream-chat{height:480px}
+  }
+
+  /* AGENDA */
   .list{padding: 10px 12px 16px;}
   .card{
-    --glow: 255,255,255; /* fallback */
-    position:relative;
-    display:flex; align-items:center; gap:14px;
-    padding:16px 18px;
-    background: linear-gradient(180deg, #0d0f12, #0b0d10);
-    border:1px solid rgba(255,255,255,.06);
-    border-radius: var(--radius);
-    margin: 10px;
-    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    --glow: 255,255,255;
+    position:relative; display:flex; align-items:center; gap:14px;
+    padding:16px 18px; background: linear-gradient(180deg, #0d0f12, #0b0d10);
+    border:1px solid rgba(255,255,255,.06); border-radius: var(--radius);
+    margin: 10px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
   }
   .card:before{
-    content:""; position:absolute; inset:-1px;
-    border-radius: inherit;
+    content:""; position:absolute; inset:-1px; border-radius: inherit;
     background: radial-gradient(80% 120% at 10% 0%, rgba(var(--glow),.18), transparent 60%);
-    opacity:.9; pointer-events:none;
-    mask: linear-gradient(#000, transparent 60%);
+    opacity:.9; pointer-events:none; mask: linear-gradient(#000, transparent 60%);
   }
-  .card:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(var(--glow),.14), 0 8px 18px rgba(0,0,0,.55);
-    border-color: rgba(var(--glow), .35);
-  }
-  .icon{
-    width:36px; height:36px; flex:0 0 auto; display:grid; place-items:center;
-    border-radius:12px; background:#0f1115; border:1px solid rgba(255,255,255,.06);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
-  }
+  .card:hover{transform: translateY(-2px); box-shadow: 0 12px 28px rgba(var(--glow),.14), 0 8px 18px rgba(0,0,0,.55); border-color: rgba(var(--glow), .35);}
+  .icon{width:36px; height:36px; flex:0 0 auto; display:grid; place-items:center; border-radius:12px; background:#0f1115; border:1px solid rgba(255,255,255,.06); box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);}
   .content{flex:1 1 auto; min-width:0}
-  .title{
-    font-size: clamp(16px, 1.8vw, 18px);
-    font-weight:700; line-height:1.2; margin:0 0 4px;
-    text-shadow: 0 1px 0 rgba(0,0,0,.4);
-  }
-  .meta{
-    font-size: 13px; color: var(--muted);
-    display:flex; flex-wrap:wrap; gap:10px;
-  }
+  .title{font-size: clamp(16px, 1.8vw, 18px); font-weight:700; line-height:1.2; margin:0 0 4px; text-shadow: 0 1px 0 rgba(0,0,0,.4);}
+  .meta{font-size: 13px; color: var(--muted); display:flex; flex-wrap:wrap; gap:10px;}
   .badge{
-    flex:0 0 auto;
-    font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.6px;
-    padding:8px 14px; border-radius: 999px;
-    border:1px solid rgba(255,255,255,.14);
-    background: #161a20; color:#d6dde8;
-    box-shadow: inset 0 -2px 0 rgba(255,255,255,.03), 0 0 0 0 rgba(0,0,0,0);
-    transition: .2s ease;
+    flex:0 0 auto; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.6px;
+    padding:8px 14px; border-radius: 999px; border:1px solid rgba(255,255,255,.14);
+    background: #161a20; color:#d6dde8; box-shadow: inset 0 -2px 0 rgba(255,255,255,.03); transition:.2s;
   }
   .badge.live{
     color:#fff; border-color: rgba(255,255,255,.25);
@@ -110,23 +101,28 @@
     animation: pulse 1.35s ease-in-out infinite;
   }
   @keyframes pulse{
-    0%{box-shadow:0 0 12px rgba(var(--glow),.18), inset 0 0 0 1px rgba(255,255,255,.06)}
-    50%{box-shadow:0 0 28px rgba(var(--glow),.35), inset 0 0 0 1px rgba(255,255,255,.08)}
-    100%{box-shadow:0 0 12px rgba(var(--glow),.18), inset 0 0 0 1px rgba(255,255,255,.06)}
+    0%{box-shadow:0 0 12px rgba(var(--glow),.18)}
+    50%{box-shadow:0 0 28px rgba(var(--glow),.35)}
+    100%{box-shadow:0 0 12px rgba(var(--glow),.18)}
   }
+  .twitch   { --glow: 138, 43, 226; }
+  .youtube  { --glow: 255, 61, 61; }
+  .kick     { --glow: 0, 255, 136; }
 
-  /* Plateformes → couleurs de glow */
-  .twitch   { --glow: 138, 43, 226; }    /* violet */
-  .youtube  { --glow: 255, 61, 61; }      /* rouge */
-  .kick     { --glow: 0, 255, 136; }      /* vert */
-
-  /* Responsive */
-  @media (max-width:640px){
-    .card{align-items:flex-start}
-    .badge{margin-top:8px}
+  /* Bouton flottant Clips */
+  .fab-clips{
+    position:fixed; right:22px; bottom:22px; z-index:99;
+    display:inline-flex; align-items:center; gap:10px;
+    padding:12px 16px; border-radius:999px; font-weight:800; text-transform:uppercase; letter-spacing:.5px;
+    background:linear-gradient(180deg,#111319,#0b0e12);
+    border:1px solid rgba(255,255,255,.14); color:#fff; text-decoration:none;
+    box-shadow:0 10px 28px rgba(0,0,0,.45), 0 0 16px rgba(145,70,255,.25);
+    transition:.2s;
   }
+  .fab-clips:hover{transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,.55), 0 0 24px rgba(145,70,255,.35)}
+  .fab-clips .dot{width:10px;height:10px;border-radius:50%;background:#9146FF; box-shadow:0 0 12px #9146FF; animation:dot 1.3s infinite ease-in-out}
+  @keyframes dot{50%{transform:scale(1.2)}}
 
-  /* Petits helpers d’accessibilité visuelle */
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 </head>
@@ -134,128 +130,160 @@
   <div class="wrap">
     <header>
       <div class="brand" aria-label="RiderSkill">
-        <!-- Emblème simple RS -->
         <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00FFD1" d="M3 4h10a5 5 0 0 1 0 10H9l6 6h-4l-6-6V4zm4 4v4h6a2 2 0 0 0 0-4H7z"/></svg>
-        <strong>RiderSkill</strong><span style="opacity:.7;font-weight:600">Agenda</span>
+        <strong>RiderSkill</strong><span style="opacity:.7;font-weight:600">Accueil</span>
       </div>
+
+      <!-- Boutons sociaux (Twitch, Kick, YouTube, X, Instagram) -->
+      <nav class="social" aria-label="Liens sociaux">
+        <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noreferrer" title="Twitch">
+          <svg width="18" height="18" viewBox="0 0 2400 2800" aria-hidden="true"><path fill="#9146FF" d="M500 0 0 400v1700h600v400h400l400-400h500l600-600V0H500zm1700 1300-300 300h-600l-400 400v-400H400V200h1800v1100z"/><path fill="#fff" d="M1700 800h200v500h-200zM1200 800h200v500h-200z"/></svg>
+          Twitch
+        </a>
+        <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noreferrer" title="Kick">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="#00FF88"/><path d="M7 6h3v5l4-5h3l-4.6 5.6L17 18h-3.2l-3.8-5v5H7V6z" fill="#0A0D12"/></svg>
+          Kick
+        </a>
+        <a class="btn" href="https://www.youtube.com/@RiderSkill" target="_blank" rel="noreferrer" title="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FF0033" d="M23.5 6.2a3.5 3.5 0 0 0-2.5-2.5C19 3 12 3 12 3s-7 0-9 .7A3.5 3.5 0 0 0 .5 6.2 36 36 0 0 0 0 12a36 36 0 0 0 .5 5.8 3.5 3.5 0 0 0 2.5 2.5C5 21 12 21 12 21s7 0 9-.7a3.5 3.5 0 0 0 2.5-2.5A36 36 0 0 0 24 12a36 36 0 0 0-.5-5.8Z"/><path fill="#fff" d="M10 8.5v7l6-3.5-6-3.5z"/></svg>
+          YouTube
+        </a>
+        <a class="btn" href="https://x.com/TON_HANDLE" target="_blank" rel="noreferrer" title="X (Twitter)">
+          <!-- Logo X -->
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M18.146 2H21l-6.52 7.454L22.5 22h-6.873l-4.77-6.203L4.5 22H2l7.032-8.042L1.5 2h6.956l4.36 5.73L18.146 2Zm-1.2 18h1.79L7.17 4h-1.8l11.576 16Z"/></svg>
+          X
+        </a>
+        <a class="btn" href="https://www.instagram.com/TON_HANDLE" target="_blank" rel="noreferrer" title="Instagram">
+          <!-- Logo Instagram -->
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#fff" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .4 1.5.9.4.4.7.9.9 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.4 1-.9 1.5-.4.4-.9.7-1.5.9-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.4-1.5-.9-.4-.4-.7-.9-.9-1.5-.2-.5-.3-1.2-.4-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.4-1 .9-1.5.4-.4.9-.7 1.5-.9.5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2ZM12 0C8.7 0 8.3 0 7 .1 5.7.2 4.8.4 4 .7c-.9.3-1.6.7-2.3 1.4C1 2.8.6 3.5.3 4.4c-.3.8-.5 1.7-.6 3C-.4 8.7-.4 9.1-.4 12s0 3.3.1 4.6c.1 1.3.3 2.2.6 3 .3.9.7 1.6 1.4 2.3.7.7 1.4 1.1 2.3 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 4.6.1s3.3 0 4.6-.1c1.3-.1 2.2-.3 3-.6.9-.3 1.6-.7 2.3-1.4.7-.7 1.1-1.4 1.4-2.3.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-4.6s0-3.3-.1-4.6c-.1-1.3-.3-2.2-.6-3-.3-.9-.7-1.6-1.4-2.3C21.2 1.4 20.5 1 19.6.7c-.8-.3-1.7-.5-3-.6C15.3 0 14.9 0 12 0Zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8.1 4 4 0 0 1 0 8.1Zm6.4-10.9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
+          </svg>
+          Instagram
+        </a>
+      </nav>
     </header>
 
+    <!-- STREAM EN DIRECT -->
+    <section class="panel" aria-labelledby="live-title">
+      <h2 id="live-title">🎥 Stream en direct</h2>
+      <div class="stream-wrap">
+        <div class="stream-player">
+          <iframe
+            src="https://player.twitch.tv/?channel=riderskill&parent=localhost&muted=true&autoplay=true&playsinline=true"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Chat (optionnel) -->
+      <div class="stream-grid">
+        <div></div>
+        <iframe
+          class="stream-chat"
+          src="https://www.twitch.tv/embed/riderskill/chat?parent=localhost">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
     <section class="panel" aria-labelledby="agenda-title">
       <h2 id="agenda-title">Agenda</h2>
       <div class="list" id="agenda-list" role="list"></div>
     </section>
   </div>
 
-  <!-- Templates d’icônes officielles (SVG inline exactes) -->
+  <!-- Icônes officielles -->
   <template id="ico-twitch">
-    <!-- Twitch Glitch (œil/yeux inclus) -->
     <svg width="22" height="22" viewBox="0 0 2400 2800" aria-hidden="true">
       <path fill="#9146FF" d="M500 0 0 400v1700h600v400h400l400-400h500l600-600V0H500zm1700 1300-300 300h-600l-400 400v-400H400V200h1800v1100z"/>
       <path fill="#fff" d="M1700 800h200v500h-200zM1200 800h200v500h-200z"/>
     </svg>
   </template>
-
   <template id="ico-youtube">
     <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
       <path fill="#FF0033" d="M23.5 6.2a3.5 3.5 0 0 0-2.5-2.5C19 3 12 3 12 3s-7 0-9 .7A3.5 3.5 0 0 0 .5 6.2 36 36 0 0 0 0 12a36 36 0 0 0 .5 5.8 3.5 3.5 0 0 0 2.5 2.5C5 21 12 21 12 21s7 0 9-.7a3.5 3.5 0 0 0 2.5-2.5A36 36 0 0 0 24 12a36 36 0 0 0-.5-5.8Z"/>
       <path fill="#fff" d="M10 8.5v7l6-3.5-6-3.5z"/>
     </svg>
   </template>
-
   <template id="ico-kick">
-    <!-- Kick “K” bloc vert -->
     <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
       <rect x="2" y="2" width="20" height="20" rx="4" fill="#00FF88"/>
       <path d="M7 6h3v5l4-5h3l-4.6 5.6L17 18h-3.2l-3.8-5v5H7V6z" fill="#0A0D12"/>
     </svg>
   </template>
 
+  <!-- Bouton flottant Clips -->
+  <a class="fab-clips" href="#clips" title="Clips & Best-of">
+    <span class="dot" aria-hidden="true"></span> CLIPS
+  </a>
+
 <script>
 /* ===========
-   REMPLIS ICI tes événements
-   start/end au format ISO local (YYYY-MM-DDTHH:mm)
-   platform: "twitch" | "youtube" | "kick"
+   EVENTS (ISO local)
    =========== */
 const events = [
-  {
-    title: "Live Rust — chill & raids",
-    start: "2025-09-04T21:00",
-    end:   "2025-09-04T23:59",
-    platform: "twitch",
-    location: "Twitch"
-  },
-  {
-    title: "GTA RP — braquage & roleplay",
-    start: "2025-09-05T20:30",
-    end:   "2025-09-05T23:30",
-    platform: "twitch",
-    location: "Twitch"
-  },
-  {
-    title: "Best-of & TikTok review",
-    start: "2025-09-06T18:00",
-    end:   "2025-09-06T19:30",
-    platform: "youtube",
-    location: "YouTube"
-  }
+  { title: "Live Rust — chill & raids",  start: "2025-09-04T21:00", end: "2025-09-04T23:59", platform: "twitch",  location: "Twitch" },
+  { title: "GTA RP — braquage & roleplay", start: "2025-09-05T20:30", end: "2025-09-05T23:30", platform: "twitch",  location: "Twitch" },
+  { title: "Best-of & TikTok review",    start: "2025-09-06T18:00", end: "2025-09-06T19:30", platform: "youtube", location: "YouTube" }
 ];
 
-// ----- util
-const fmt = (date) => {
-  const d = new Date(date);
-  return d.toLocaleString('fr-FR', {
-    weekday:'short', day:'2-digit', month:'2-digit',
-    hour:'2-digit', minute:'2-digit'
-  }).replace(',', '');
-};
+const fmt = (date) => new Date(date).toLocaleString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).replace(',', '');
 const platformIcon = (p) => {
-  const tpl = document.getElementById(
-    p === 'twitch' ? 'ico-twitch' :
-    p === 'youtube' ? 'ico-youtube' :
-    'ico-kick'
-  );
+  const tpl = document.getElementById(p==='twitch'?'ico-twitch':p==='youtube'?'ico-youtube':'ico-kick');
   return tpl.content.cloneNode(true);
 };
 const badgeFor = (start, end) => {
-  const now = new Date();
-  const s = new Date(start), e = new Date(end);
+  const now = new Date(), s = new Date(start), e = new Date(end);
   if (now < s) return {text:'Programmé', cls:''};
   if (now >= s && now <= e) return {text:'En direct', cls:'live'};
   return {text:'Terminé', cls:''};
 };
 
-// ----- render
 const list = document.getElementById('agenda-list');
-events
-  .sort((a,b)=> new Date(a.start)-new Date(b.start))
-  .forEach(ev=>{
-    const card = document.createElement('div');
-    card.className = `card ${ev.platform}`;
-    card.setAttribute('role','listitem');
+events.sort((a,b)=> new Date(a.start)-new Date(b.start)).forEach(ev=>{
+  const card = document.createElement('div');
+  card.className = `card ${ev.platform}`;
+  card.setAttribute('role','listitem');
 
-    const icon = document.createElement('div');
-    icon.className = 'icon';
-    icon.append(platformIcon(ev.platform));
-    card.append(icon);
+  const icon = document.createElement('div');
+  icon.className = 'icon';
+  icon.append(platformIcon(ev.platform));
+  card.append(icon);
 
-    const content = document.createElement('div');
-    content.className = 'content';
-    const h3 = document.createElement('h3');
-    h3.className = 'title';
-    h3.textContent = ev.title;
-    const meta = document.createElement('div');
-    meta.className = 'meta';
-    meta.textContent = `${fmt(ev.start)} — ${new Date(ev.end).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})} · ${ev.location}`;
-    content.append(h3, meta);
+  const content = document.createElement('div');
+  content.className = 'content';
+  const h3 = document.createElement('h3');
+  h3.className = 'title';
+  h3.textContent = ev.title;
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  meta.textContent = `${fmt(ev.start)} — ${new Date(ev.end).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})} · ${ev.location}`;
+  content.append(h3, meta);
 
-    const badge = document.createElement('span');
-    const b = badgeFor(ev.start, ev.end);
-    badge.className = `badge ${b.cls}`;
-    badge.textContent = b.text;
+  const badge = document.createElement('span');
+  const b = badgeFor(ev.start, ev.end);
+  badge.className = `badge ${b.cls}`;
+  badge.textContent = b.text;
 
-    card.append(content, badge);
-    list.append(card);
-  });
+  card.append(content, badge);
+  list.append(card);
+});
+
+/* Si tu veux que le bouton flottant ouvre une playlist externe, remplace le href ci-dessus
+   par ton URL (ex: https://youtube.com/playlist?list=XXXX) et ajoute un id="#clips" plus bas. */
 </script>
+
+<!-- Section cible pour le bouton Clips (si tu veux scroller sur la page) -->
+<div id="clips" class="wrap" style="margin-top:10px; margin-bottom:60px;">
+  <div class="panel">
+    <h2>🎬 Clips & Best-of</h2>
+    <div style="padding:0 16px 18px">
+      <p style="opacity:.9">Colle ici ta playlist YouTube ou tes meilleurs clips. Remplace le lien du bouton flottant si tu préfères ouvrir directement la playlist.</p>
+      <a class="btn" href="https://youtube.com/playlist?list=TON_PLAYLIST" target="_blank" rel="noreferrer">Ouvrir la playlist</a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
