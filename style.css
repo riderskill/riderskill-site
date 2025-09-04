@@ -93,3 +93,22 @@ header, main, footer{position:relative; z-index:1}
 .card-link .card:hover{transform:translateY(-2px)}
 
 footer{max-width:1200px;margin:24px auto;padding:14px 16px;color:var(--muted);text-align:center;border-top:1px solid #1a2030}
+.social-links .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-links .btn:hover {
+  transform: scale(1.1);
+}
+
+/* Couleurs spécifiques au hover */
+.btn.twitch:hover { color: #9146FF; }
+.btn.kick:hover { color: #53FC18; }
+.btn.youtube:hover { color: #FF0000; }
+.btn.tiktok:hover { color: #000000; }
+.btn.x:hover { color: #1DA1F2; }
+.btn.discord:hover { color: #5865F2; }
