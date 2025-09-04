@@ -4,14 +4,13 @@
     "start": "2025-09-04T21:00:00+02:00",
     "end":   "2025-09-04T23:59:00+02:00",
     "platform": "Twitch",
-    "note": "Drops actifs si event"
+    "note": "Drops si event"
   },
   {
     "title": "GTA RP — braquage & roleplay",
     "start": "2025-09-05T20:30:00+02:00",
     "end":   "2025-09-05T23:30:00+02:00",
-    "platform": "Twitch",
-    "note": ""
+    "platform": "Twitch"
   },
   {
     "title": "Best-of & TikTok review",
