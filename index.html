@@ -4,203 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RiderSkill — Site Officiel</title>
-  <meta name="description" content="RiderSkill — Streamer & Animateur WebTV. Live Twitch + musique + communauté. Rejoins le show.">
-  <meta name="theme-color" content="#0D0D0D">
-
-  <!-- Favicon via avatar Twitch (simple et toujours à jour) -->
+  <meta name="description" content="RiderSkill — Streamer & Animateur WebTV. Live Twitch + musique + communauté." />
+  <meta name="theme-color" content="#0D0D0D" />
   <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
   <link rel="apple-touch-icon" href="https://unavatar.io/twitch/riderskill" />
   <link rel="shortcut icon" href="https://unavatar.io/twitch/riderskill" />
-
   <style>
-    /* ====== Design System ====== */
     :root{
-      --bg:#0a0b0f;
-      --panel:#101219;
-      --panel-2:#0e1118;
-      --txt:#e9edf1;
-      --muted:#9aa3ab;
-      --line:#1a2030;
-
-      --neon:#9b5cff;      /* violet Twitch-like */
-      --mint:#17e1a6;      /* vert néon Kick-like */
-      --cyan:#2bd9ff;      /* touche futuriste */
-      --accent:#ff3fa4;    /* petite touche rose fun */
-
-      --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+      --bg:#0a0b0f; --panel:#101219; --txt:#e9edf1; --muted:#9aa3ab;
+      --line:#1a2030; --neon:#9b5cff; --mint:#17e1a6; --discord:#5865F2;
+      --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
     }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{box-sizing:border-box} html,body{height:100%}
     body{
-      margin:0;
-      font-family: Inter,system-ui,Segoe UI,Roboto,Arial;
-      color:var(--txt);
-      background: var(--bg);
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial; color:var(--txt);
+      /* 👇 IMAGE DE FOND (concert/futuriste) */
+      background: url("https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1920&q=80")
+                  no-repeat center center fixed;
+      background-size: cover;
       overflow-x:hidden;
     }
-
-    /* ====== Background Futuriste (grid + gradient animé + bruit fin) ====== */
-    .bg {
-      position:fixed; inset:0; z-index:-3;
+    /* Filtre sombre au centre pour lisibilité */
+    body::before{
+      content:""; position:fixed; inset:0; z-index:0;
       background:
+        radial-gradient(60% 60% at 50% 45%, rgba(0,0,0,.55) 0%, rgba(0,0,0,.85) 70%),
         radial-gradient(1200px 500px at 70% -10%, rgba(155,92,255,.25), transparent 60%),
-        radial-gradient(900px 380px at 20% 110%, rgba(23,225,166,.18), transparent 60%),
-        linear-gradient(120deg, #0a0b0f 0%, #0b0e14 40%, #0a0b0f 100%);
+        radial-gradient(900px 380px at 20% 110%, rgba(23,225,166,.18), transparent 60%);
     }
-    .bg-grid::before{
-      content:""; position:absolute; inset:-200% -200% -200% -200%;
-      background:
-        linear-gradient(transparent 97%, rgba(255,255,255,.06) 99%),
-        linear-gradient(90deg, transparent 97%, rgba(255,255,255,.06) 99%);
-      background-size: 40px 40px, 40px 40px;
-      opacity:.06; filter: blur(.3px);
-      animation: drift 40s linear infinite;
-    }
-    .bg-noise::after{
-      content:""; position:absolute; inset:0;
-      background-image: url("data:image/svg+xml;utf8,\
-      <svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'>\
-      <filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter>\
-      <rect width='100%' height='100%' filter='url(%23n)' opacity='0.04'/></svg>");
-      mix-blend-mode: soft-light; pointer-events:none;
-    }
-    @keyframes drift { from{transform:translate3d(0,0,0)} to{transform:translate3d(-40px,-40px,0)} }
+    header, main, footer{ position:relative; z-index:1 }
 
-    /* ====== Header / Hero ====== */
-    header{
-      padding: clamp(28px,3vw,40px) 16px 0;
-    }
-    .nav{
-      max-width:1200px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.4px;
-    }
-    .brand .dot{
-      width:12px; height:12px; border-radius:50%;
-      background: radial-gradient(circle at 50% 30%, var(--neon), #5b2ed6);
-      box-shadow:0 0 16px var(--neon);
-    }
-    .socials{display:flex; gap:8px; flex-wrap:wrap}
-    .btn{
-      background:linear-gradient(180deg,#171b26, #0f121a);
-      border:1px solid #20283a; color:var(--txt);
-      padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:600;
-      box-shadow:var(--shadow); transition: .18s transform, .18s border-color, .18s filter;
-      display:inline-flex; align-items:center; gap:8px;
-    }
-    .btn:hover{ transform: translateY(-1px); border-color:#2b3550; filter: saturate(1.1) }
-    .btn.primary{ background: linear-gradient(180deg, #7d49ff, #5c2fe6); border-color:#6a3bff }
-    .btn.discord{ background: linear-gradient(180deg, #6970ff, #5865F2); border-color:#5865F2 }
-    .btn.kickish{ background: linear-gradient(180deg, #1ee7b0, #10c68f); color:#08110f; border-color:#17e1a6 }
+    /* Header / Nav */
+    header{ padding: clamp(28px,3vw,40px) 16px 0; }
+    .nav{ max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .brand{ display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.4px; }
+    .brand .dot{ width:12px; height:12px; border-radius:50%;
+      background: radial-gradient(circle at 50% 30%, var(--neon), #5b2ed6); box-shadow:0 0 16px var(--neon); }
+    .socials{ display:flex; gap:8px; flex-wrap:wrap }
+    .btn{ background:linear-gradient(180deg,#171b26,#0f121a); border:1px solid #20283a; color:var(--txt);
+      padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:600; box-shadow:var(--shadow);
+      transition:.18s transform,.18s border-color,.18s filter; display:inline-flex; align-items:center; gap:8px }
+    .btn:hover{ transform:translateY(-1px); border-color:#2b3550; filter:saturate(1.1) }
+    .btn.primary{ background:linear-gradient(180deg,#7d49ff,#5c2fe6); border-color:#6a3bff }
+    .btn.discord{ background:linear-gradient(180deg,#6970ff,#5865F2); border-color:#5865F2 }
+    .btn.kickish{ background:linear-gradient(180deg,#1ee7b0,#10c68f); color:#08110f; border-color:#17e1a6 }
 
-    .hero{
-      max-width:1200px; margin: clamp(18px,3vw,28px) auto 24px;
-      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px;
-      padding: 0 16px;
-    }
-    @media (max-width: 980px){ .hero{ grid-template-columns: 1fr } }
-
-    .hero-card{
-      background: linear-gradient(180deg, rgba(20,22,33,.7), rgba(12,14,20,.7));
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding: clamp(18px,2.5vw,26px);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-card::after{
-      content:"";
-      position:absolute; right:-120px; top:-120px; width:260px; height:260px; border-radius:50%;
-      background: radial-gradient(circle, rgba(155,92,255,.35), transparent 60%);
-      filter: blur(10px);
-    }
-    .title{
-      margin:0 0 6px;
-      font-size: clamp(28px, 5vw, 54px);
-      line-height:1.05;
-      letter-spacing:.3px;
-    }
-    .subtitle{
-      margin:0 0 16px; color:var(--muted);
-      font-size: clamp(14px, 2vw, 18px);
-    }
+    /* Hero */
+    .hero{ max-width:1200px; margin: clamp(18px,3vw,28px) auto 24px; display:grid; grid-template-columns:1.2fr .8fr; gap:18px; padding:0 16px }
+    @media (max-width:980px){ .hero{ grid-template-columns:1fr } }
+    .hero-card{ background:rgba(16,18,25,.75); border:1px solid var(--line); border-radius:var(--radius);
+      padding: clamp(18px,2.5vw,26px); box-shadow:var(--shadow); backdrop-filter: blur(6px); position:relative; overflow:hidden }
+    .title{ margin:0 0 6px; font-size:clamp(28px,5vw,54px); line-height:1.05; letter-spacing:.3px }
+    .subtitle{ margin:0 0 16px; color:var(--muted); font-size:clamp(14px,2vw,18px) }
     .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px }
-
-    /* Equalizer musique (petit clin d’œil à ta marque) */
     .eq{ display:flex; align-items:flex-end; gap:6px; height:22px; margin-top:8px }
-    .eq span{
-      width:6px; border-radius:2px; background: linear-gradient(180deg,var(--mint),var(--cyan));
-      box-shadow:0 0 10px rgba(23,225,166,.35);
-      animation: bounce 1s ease-in-out infinite;
-    }
-    .eq span:nth-child(2){ animation-delay:.1s }
-    .eq span:nth-child(3){ animation-delay:.2s }
-    .eq span:nth-child(4){ animation-delay:.3s }
-    .eq span:nth-child(5){ animation-delay:.4s }
-    @keyframes bounce {
-      0%,100%{ height: 6px }
-      50%{ height: 22px }
-    }
+    .eq span{ width:6px; border-radius:2px; background:linear-gradient(180deg,var(--mint),#2bd9ff);
+      box-shadow:0 0 10px rgba(23,225,166,.35); animation:bounce 1s ease-in-out infinite }
+    .eq span:nth-child(2){animation-delay:.1s} .eq span:nth-child(3){animation-delay:.2s}
+    .eq span:nth-child(4){animation-delay:.3s} .eq span:nth-child(5){animation-delay:.4s}
+    @keyframes bounce{0%,100%{height:6px}50%{height:22px}}
 
-    /* ====== Live Section ====== */
-    .section{
-      max-width:1200px; margin: 18px auto; padding: 0 16px;
-    }
-    .panel{
-      background: linear-gradient(180deg, rgba(16,18,25,.75), rgba(12,14,20,.75));
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding: clamp(16px,2.4vw,22px);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-    }
-    .section h2{ margin: 0 0 12px; font-size: clamp(18px,2.6vw,26px) }
+    /* Sections */
+    .section{ max-width:1200px; margin:18px auto; padding:0 16px }
+    .panel{ background:rgba(12,14,20,.78); border:1px solid var(--line); border-radius:var(--radius);
+      padding:clamp(16px,2.4vw,22px); box-shadow:var(--shadow); backdrop-filter: blur(6px) }
+    .section h2{ margin:0 0 12px; font-size:clamp(18px,2.6vw,26px) }
     .muted{ color:var(--muted) }
 
     .live-wrap{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center }
     #twitch-player,#twitch-chat{ border:none; border-radius:14px; background:#000 }
-    #twitch-player{ width: min(100%, 760px); height: 430px }
-    #twitch-chat{ width: 360px; height: 430px }
-    @media (max-width: 1100px){ #twitch-player{ width:100%; height:56.25vw; max-height:460px } #twitch-chat{ width:100%; height:380px } }
+    #twitch-player{ width:min(100%,760px); height:430px }
+    #twitch-chat{ width:360px; height:430px }
+    @media (max-width:1100px){ #twitch-player{ width:100%; height:56.25vw; max-height:460px } #twitch-chat{ width:100%; height:380px } }
 
-    /* ====== Cards “rapides” ====== */
-    .grid{ display:grid; gap:14px; grid-template-columns: repeat(3,1fr) }
-    @media (max-width: 900px){ .grid{ grid-template-columns: 1fr } }
-    .card{
-      background: linear-gradient(180deg, rgba(18,20,30,.75), rgba(12,14,20,.8));
-      border:1px solid var(--line); border-radius:14px; padding:16px; box-shadow:var(--shadow)
-    }
-    .tag{
-      display:inline-block; padding:6px 10px; border-radius:999px;
-      background: rgba(155,92,255,.12); color:#d7c6ff; border:1px solid rgba(155,92,255,.25);
-      font-size:.85rem; margin-bottom:10px;
-    }
+    .grid{ display:grid; gap:14px; grid-template-columns:repeat(3,1fr) }
+    @media (max-width:900px){ .grid{ grid-template-columns:1fr } }
+    .card{ background:rgba(18,20,30,.78); border:1px solid var(--line); border-radius:14px; padding:16px; box-shadow:var(--shadow) }
+    .tag{ display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(155,92,255,.12); color:#d7c6ff; border:1px solid rgba(155,92,255,.25); font-size:.85rem; margin-bottom:10px }
 
-    /* ====== Footer ====== */
-    footer{
-      max-width:1200px; margin:24px auto; padding: 14px 16px;
-      color:var(--muted); text-align:center; border-top:1px solid var(--line);
-    }
+    footer{ max-width:1200px; margin:24px auto; padding:14px 16px; color:var(--muted); text-align:center; border-top:1px solid var(--line) }
   </style>
 </head>
 <body>
-  <!-- Background layers -->
-  <div class="bg bg-grid bg-noise"></div>
-
-  <!-- Header & Top Nav -->
+  <!-- NAV -->
   <header>
     <div class="nav">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>RiderSkill</span>
-      </div>
+      <div class="brand"><span class="dot"></span><span>RiderSkill</span></div>
       <div class="socials">
         <a class="btn primary" href="https://twitch.tv/riderskill">🎮 Twitch</a>
         <a class="btn kickish" href="https://kick.com/riderskill">📺 Kick</a>
@@ -211,36 +100,25 @@
       </div>
     </div>
 
-    <!-- Hero -->
+    <!-- HERO -->
     <div class="hero">
       <div class="hero-card">
         <h1 class="title">Le show. Le game. <span style="color:var(--neon)">La musique.</span></h1>
-        <p class="subtitle">Streamer FR — Rust • GTA • SOT — ambiance live + vibes musicales. Rejoins le hub, ne rate plus rien.</p>
+        <p class="subtitle">Streamer FR — Rust • GTA • SOT — ambiance live + vibes musicales.</p>
         <div class="cta">
           <a class="btn primary" href="https://twitch.tv/riderskill">Regarder en direct</a>
           <a class="btn" href="#live">Voir le live intégré</a>
           <a class="btn discord" href="https://discord.gg/2UWwhhyY">Rejoindre le Discord</a>
         </div>
-        <div class="eq" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
+        <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
       </div>
 
       <div class="hero-card">
         <div class="tag">Infos rapides</div>
         <div class="grid" style="grid-template-columns:1fr">
-          <div class="card">
-            <strong>Planning</strong><br>
-            <span class="muted">Lives en soirée (FR). Annonces sur Discord & 𝕏.</span>
-          </div>
-          <div class="card">
-            <strong>Contenu</strong><br>
-            <span class="muted">Gameplay + musique + best moments. Drops Rust & events.</span>
-          </div>
-          <div class="card">
-            <strong>Objectif</strong><br>
-            <span class="muted">Un live propre, fun, qui donne envie de rester.</span>
-          </div>
+          <div class="card"><strong>Planning</strong><br><span class="muted">Lives en soirée (FR). Annonces sur Discord & 𝕏.</span></div>
+          <div class="card"><strong>Contenu</strong><br><span class="muted">Gameplay + musique + best moments. Drops Rust & events.</span></div>
+          <div class="card"><strong>Objectif</strong><br><span class="muted">Un live propre, fun, qui donne envie de rester.</span></div>
         </div>
       </div>
     </div>
@@ -258,44 +136,27 @@
       <script src="https://player.twitch.tv/js/embed/v1.js"></script>
       <script>
         new Twitch.Player("twitch-player", {
-          channel: "riderskill",
-          width: "100%",
-          height: "100%",
-          autoplay: true,
-          muted: true,
-          parent: ["riderskill.github.io"]
+          channel: "riderskill", width: "100%", height: "100%",
+          autoplay: true, muted: true, parent: ["riderskill.github.io"]
         });
       </script>
     </div>
   </section>
 
-  <!-- Cards rapide (ex: prochains lives / clips / annonces) -->
+  <!-- CARDS -->
   <section class="section">
     <div class="panel">
       <h2>À la une</h2>
       <div class="grid">
-        <div class="card">
-          <div class="tag">Prochain live</div>
-          <strong>Ce soir 21:00</strong><br>
-          <span class="muted">Rust / GTA selon humeur. Passe dire bonjour 👋</span>
-        </div>
-        <div class="card">
-          <div class="tag" style="background:rgba(39,217,255,.12);color:#bdefff;border-color:rgba(39,217,255,.25)">Clips</div>
-          <strong>Moments forts</strong><br>
-          <span class="muted">Les meilleurs extraits arrivent ici très vite.</span>
-        </div>
-        <div class="card">
-          <div class="tag" style="background:rgba(255,63,164,.12);color:#ffd0e8;border-color:rgba(255,63,164,.25)">Communauté</div>
-          <strong>Discord</strong><br>
-          <span class="muted">Participe aux sondages & annonces exclusives.</span>
-        </div>
+        <div class="card"><div class="tag">Prochain live</div><strong>Ce soir 21:00</strong><br><span class="muted">Rust / GTA selon humeur. Passe dire bonjour 👋</span></div>
+        <div class="card"><div class="tag" style="background:rgba(39,217,255,.12);color:#bdefff;border-color:rgba(39,217,255,.25)">Clips</div><strong>Moments forts</strong><br><span class="muted">Les meilleurs extraits arrivent ici très vite.</span></div>
+        <div class="card"><div class="tag" style="background:rgba(255,63,164,.12);color:#ffd0e8;border-color:rgba(255,63,164,.25)">Communauté</div><strong>Discord</strong><br><span class="muted">Participe aux sondages & annonces exclusives.</span></div>
       </div>
     </div>
   </section>
 
-  <footer>
-    © 2025 RiderSkill — twitch.tv/riderskill · kick.com/riderskill
-  </footer>
+  <footer>© 2025 RiderSkill — twitch.tv/riderskill · kick.com/riderskill</footer>
 </body>
 </html>
+
 
