@@ -11,107 +11,53 @@
   <meta property="og:url" content="https://twitch.tv/riderskill" />
   <meta name="theme-color" content="#9146FF" />
   <style>
-    :root{
-      --bg:#0d0d0d;
-      --txt:#f2f2f2;
-      --muted:#bdbdbd;
-      --primary:#9146FF; /* Twitch */
-      --accent:#1db954;  /* Kick/Spotify green vibe */
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-      background: var(--bg);
-      color: var(--txt);
-      text-align:center;
-      line-height:1.6;
-    }
-    header{
-      padding:72px 20px 56px;
-      background: radial-gradient(1200px 400px at 50% -10%, rgba(145,70,255,.35), transparent 60%),
-                  linear-gradient(135deg, var(--primary), var(--accent));
-      color:white;
-    }
-    header h1{
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      margin:0 0 8px;
-      letter-spacing:.5px;
-    }
-    header p{margin:0 0 16px; opacity:.95}
-    .btns{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:10px}
-    .btn{
-      display:inline-block;
-      padding:14px 20px;
-      border-radius:12px;
-      background: #1b1b1b;
-      border:1px solid rgba(255,255,255,.08);
-      color:white;
-      text-decoration:none;
-      transition: transform .08s ease, background .2s ease, border-color .2s ease;
-      font-weight:600;
-    }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22) }
-    .btn.primary{ background: var(--primary) }
-    .btn.accent{ background: var(--accent); color:#0b0b0b; }
-    main{ padding: 40px 20px }
-    section{ max-width: 920px; margin: 0 auto 40px; text-align:left; background:#121212; border:1px solid #1f1f1f; border-radius:18px; padding:24px }
-    section h2{ margin-top:0; font-size: clamp(1.4rem, 2.5vw, 1.8rem) }
-    .muted{ color: var(--muted) }
-    footer{ padding:28px 12px; font-size:.9rem; background:#0f0f0f; border-top:1px solid #1f1f1f }
-    a{ color: var(--accent) }
-    .grid{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
-    .card{ background:#151515; border:1px solid #222; border-radius:14px; padding:16px }
-    .tag{ display:inline-block; padding:4px 10px; border-radius:999px; background:#1b1b1b; border:1px solid #242424; font-size:.8rem; color:#cfcfcf }
+    body {margin:0;font-family:Arial, sans-serif;background:#0d0d0d;color:#f2f2f2;text-align:center}
+    header {padding:60px 20px;background:linear-gradient(135deg,#9146FF,#1db954)}
+    header h1 {font-size:3em;margin:0}
+    header p {font-size:1.2em;opacity:.9}
+    .btn {display:inline-block;margin:15px;padding:15px 25px;background:#9146FF;color:white;text-decoration:none;border-radius:10px;transition:.3s}
+    .btn:hover {background:#772ce8}
+    section {padding:40px 20px;max-width:1000px;margin:auto}
+    footer {padding:20px;font-size:.9em;background:#111}
+    iframe {border:none;border-radius:8px}
+    .twitch-container{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
   </style>
 </head>
 <body>
   <header>
     <h1>RiderSkill</h1>
     <p>Streamer & Créateur de contenu</p>
-    <div class="btns">
-      <a href="https://twitch.tv/riderskill" class="btn primary">🎮 Regarder en direct</a>
-      <a href="https://kick.com/riderskill" class="btn">📺 Suivre sur Kick</a>
-      <a href="https://www.youtube.com/@riderskill" class="btn">▶️ YouTube</a>
-      <a href="https://discord.gg/" class="btn accent">💬 Rejoindre le Discord</a>
-    </div>
+    <a href="https://twitch.tv/riderskill" class="btn">🎮 Regarder sur Twitch</a>
+    <a href="https://kick.com/riderskill" class="btn">📺 Suis-moi sur Kick</a>
   </header>
 
-  <main>
-    <section>
-      <h2>Mon univers</h2>
-      <p class="muted">Rust, GTA, Sea of Thieves… Du gameplay, du show, et une communauté fidèle. Reste branché : planning, clips et actus au même endroit.</p>
-    </section>
+  <section>
+    <h2>Regarde mon live directement ici</h2>
+    <div class="twitch-container">
+      <!-- Lecteur Twitch -->
+      <iframe
+        src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io"
+        height="400"
+        width="700"
+        allowfullscreen="true">
+      </iframe>
 
-    <section>
-      <h2>Planning</h2>
-      <div class="grid">
-        <div class="card">
-          <strong>Soirées – 21:00</strong><br>
-          <span class="muted">Live régulier (FR). Annonces sur Discord.</span>
-        </div>
-        <div class="card">
-          <strong>Rust / GTA / SOT</strong><br>
-          <span class="muted">Rotation selon drops & humeur (oui, je suis humain).</span>
-        </div>
-        <div class="card">
-          <strong>Événements</strong><br>
-          <span class="muted">Drops Rust, tournois, soirées spéciales.</span>
-        </div>
-      </div>
-      <p class="muted">Astuce : ajoute cette page en favori, tu ne rateras plus les annonces.</p>
-    </section>
+      <!-- Chat Twitch -->
+      <iframe
+        src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"
+        height="400"
+        width="350">
+      </iframe>
+    </div>
+  </section>
 
-    <section>
-      <h2>Clips & Moments forts</h2>
-      <p class="muted">Bientôt : best-of intégrés. En attendant, suis les shorts sur YouTube & TikTok.</p>
-      <span class="tag">WIP</span>
-    </section>
-  </main>
+  <section>
+    <h2>Planning</h2>
+    <p>📅 Lives réguliers en soirée – Consulte Discord pour les annonces.</p>
+  </section>
 
   <footer>
-    © 2025 RiderSkill — Tous droits réservés · <a href="https://twitch.tv/riderskill">twitch.tv/riderskill</a>
+    © 2025 RiderSkill – Tous droits réservés
   </footer>
 </body>
 </html>
