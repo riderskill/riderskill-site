@@ -32,7 +32,7 @@
   .social{display:flex; gap:10px}
   .btn{display:inline-flex; align-items:center; gap:8px; padding:8px 14px;
     border-radius:12px; font-weight:700; background:#111319; border:1px solid rgba(255,255,255,.12)}
-  .btn:hover{transform:none; box-shadow:0 0 12px rgba(0,255,209,.3)} /* PATCH: clic direct */
+  .btn:hover{transform:none; box-shadow:0 0 12px rgba(0,255,209,.3)}
   .hero{padding:48px 0 24px}
   .hero h1{font-size:clamp(28px,4vw,48px); margin:8px 0}
   .hero p{opacity:.85; max-width:800px}
@@ -66,18 +66,6 @@
   @media(min-width:820px){.grid.two{grid-template-columns:1fr 1fr}}
   .module{padding:16px; background:#0f1115; border:1px solid rgba(255,255,255,.08); border-radius:var(--radius)}
   footer{opacity:.7; padding:30px 0 60px; text-align:center; font-size:13px}
-
-  /* === PATCH RiderSkill === */
-  :root { --headerH: 64px; }
-  header{ min-height: var(--headerH); }
-  [id]{ scroll-margin-top: calc(var(--headerH) + 8px); }
-  html{ scrollbar-gutter: stable both-edges; }
-  .btn, .iconbtn{ min-height: 44px; min-width: 44px; }
-  body{ -webkit-tap-highlight-color: transparent; }
-  @media(max-width: 1000px){
-    .stream-grid{ grid-template-columns: 1fr; }
-    .chat{ height: 480px; }
-  }
 </style>
 </head>
 
@@ -91,6 +79,7 @@
       <a class="btn" href="https://x.com/riderskill" target="_blank">X</a>
       <a class="btn" href="https://www.instagram.com/riderskill_twitch_et_kick/?hl=fr" target="_blank">Instagram</a>
       <a class="btn" href="https://www.youtube.com/@RiderSkill" target="_blank">YouTube</a>
+      <a class="btn" href="#clips">Clips Twitch</a>
     </div>
   </div>
 </header>
@@ -103,6 +92,7 @@
     <div class="cta">
       <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank">▶ Rejoindre le live</a>
       <a class="btn" href="#agenda">📅 Voir l’agenda</a>
+      <a class="btn" href="#clips">🎬 Voir les clips</a>
     </div>
   </section>
 
@@ -128,6 +118,13 @@
   <section id="agenda" class="panel">
     <h2>Agenda</h2>
     <div class="list" id="agenda-list" role="list"></div>
+  </section>
+
+  <!-- CLIPS -->
+  <section id="clips" class="panel">
+    <h2>🎬 Top clips Twitch</h2>
+    <div id="clips-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px"></div>
+    <div id="clips-empty" style="opacity:.7;display:none">Ajoute tes clips dans <code>clips.json</code> et recharge.</div>
   </section>
 
   <!-- CLIPS & ABOUT -->
@@ -172,6 +169,42 @@ events.forEach(ev=>{
   card.append(icon,content,badge); list.append(card);
 });
 document.getElementById('year').textContent=new Date().getFullYear();
+
+// === CLIPS ===
+(async function(){
+  try{
+    const res = await fetch('clips.json',{cache:'no-store'});
+    const data = await res.json();
+    if(!Array.isArray(data) || data.length===0){
+      document.getElementById('clips-empty').style.display='block'; return;
+    }
+    data.sort((a,b)=>(b.views||0)-(a.views||0));
+    const parent = 'riderskill.github.io';
+    const grid = document.getElementById('clips-grid');
+    data.forEach(c=>{
+      const slug = (c.url||'').split('/').filter(Boolean).pop();
+      const card = document.createElement('article');
+      card.style.cssText='background:#0f1115;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden';
+      card.innerHTML = `
+        <div style="position:relative;padding-top:56.25%;background:#000">
+          <iframe
+            src="https://clips.twitch.tv/embed?clip=${encodeURIComponent(slug)}&parent=${parent}&autoplay=false"
+            allowfullscreen loading="lazy"
+            style="position:absolute;inset:0;border:0;width:100%;height:100%"
+            title="${(c.title||'Clip Twitch').replace(/"/g,'&quot;')}">
+          </iframe>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px">
+          <div style="font-weight:700;line-height:1.2;max-width:75%">${c.title||'Clip Twitch'}</div>
+          <div style="opacity:.8;font-size:12px">👀 ${c.views||0}</div>
+        </div>`;
+      grid.appendChild(card);
+    });
+  }catch(e){
+    console.warn(e);
+    document.getElementById('clips-empty').style.display='block';
+  }
+})();
 </script>
 </body>
 </html>
