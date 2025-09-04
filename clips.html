@@ -11,35 +11,25 @@
 <!-- NAV -->
 <div class="topbar">
   <div class="nav">
-    <a class="brand" href="index.html" title="Accueil">
+    <a class="brand" href="/riderskill-site/index.html" title="Accueil">
       <img src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
       <span id="brandText">RiderSkill</span>
       <span id="statusDot"></span>
     </a>
     <div class="links">
-      <a class="btn" href="index.html">Live</a>
-      <a class="btn" href="clips.html">Clips</a>
-      <a class="btn" href="alaune.html">À la une</a>
-      <a class="btn twitch" href="https://twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
-      <a class="btn kick" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
+      <a class="btn" href="/riderskill-site/index.html">Live</a>
+      <a class="btn" href="/riderskill-site/clips.html">Clips</a>
+      <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
     </div>
   </div>
 </div>
 
 <section class="section" id="clips">
   <div class="panel">
-    <div class="clips-toolbar">
-      <h2 style="margin:0">Clips</h2>
-      <div style="display:flex;gap:10px;align-items:center">
-        <select id="albumFilter" class="select">
-          <option value="">Tous les albums</option>
-        </select>
-        <!-- Bouton admin caché : visible avec ?admin=1 -->
-        <a id="adminLink" class="btn" href="https://github.com/riderskill/riderskill-site/edit/main/clips.json" target="_blank" rel="noopener" style="display:none">⚙️ Paramètres (ajouter/éditer)</a>
-      </div>
-    </div>
+    <h2>Clips</h2>
+    <p class="muted">Tous les moments forts de RiderSkill sont regroupés ici.</p>
     <div id="clipsGrid" class="grid"></div>
-    <p class="muted" id="clipsEmpty" style="display:none">Aucun clip pour l’instant. Passe en mode admin pour en ajouter.</p>
+    <p class="muted" id="clipsEmpty" style="display:none">Aucun clip pour l’instant. Ajoute-en dans clips.json</p>
   </div>
 </section>
 
@@ -47,9 +37,8 @@
 
 <script src="app.js"></script>
 <script>
-  initStatusFromUrl();        // garde le badge si tu forces ?live=1|0
-  showAdminIfNeeded();        // affiche le bouton admin si ?admin=1
-  initClipsPage();            // charge & affiche clips.json
+  initStatusFromUrl();
+  initClipsPage();
 </script>
 </body>
 </html>
