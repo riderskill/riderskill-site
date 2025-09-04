@@ -6,29 +6,22 @@
   <title>RiderSkill – Site Officiel</title>
   <meta name="description" content="RiderSkill — Animateur WebTV & créateur de contenu en direct. Planning, liens, live intégré." />
   <meta name="theme-color" content="#9146FF" />
+
+  <!-- Favicon & icônes via avatar Twitch (no file upload needed) -->
+  <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
+  <link rel="apple-touch-icon" href="https://unavatar.io/twitch/riderskill" />
+  <link rel="shortcut icon" href="https://unavatar.io/twitch/riderskill" />
+
   <style>
-    :root{
-      --bg:#0d0d0d;--panel:#121212;--border:#222;
-      --txt:#f2f2f2;--muted:#bfbfbf;
-      --primary:#9146FF;--accent:#1db954;--discord:#5865F2;
-    }
+    :root{--bg:#0d0d0d;--panel:#121212;--border:#222;--txt:#f2f2f2;--muted:#bfbfbf;--primary:#9146FF;--accent:#1db954;--discord:#5865F2}
     *{box-sizing:border-box} html,body{height:100%}
     body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--txt)}
     a{color:inherit;text-decoration:none}
-    header{
-      padding:56px 18px 28px;
-      text-align:center;
-      background: radial-gradient(1100px 360px at 50% -10%,rgba(145,70,255,.35),transparent 60%),
-                  linear-gradient(135deg,var(--primary),var(--accent));
-      color:#fff;
-    }
+    header{padding:56px 18px 28px;text-align:center;background: radial-gradient(1100px 360px at 50% -10%,rgba(145,70,255,.35),transparent 60%),linear-gradient(135deg,var(--primary),var(--accent));color:#fff}
     .title{margin:0;font-size:clamp(28px,4.5vw,46px);letter-spacing:.3px}
     .subtitle{margin:6px 0 18px;opacity:.95}
     .btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-    .btn{
-      padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.15);
-      background:#1b1b1b;color:#fff;font-weight:600;transition:.2s;
-    }
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#1b1b1b;color:#fff;font-weight:600;transition:.2s}
     .btn:hover{filter:brightness(1.15)}
     .btn.twitch{background:var(--primary)}
     .btn.kick{background:var(--accent);color:#0b0b0b}
@@ -37,15 +30,11 @@
     section{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:18px}
     section h2{margin:0 0 10px;font-size:clamp(18px,2.5vw,22px)}
     .note{color:var(--muted);font-size:.95rem}
-    /* LIVE layout */
     .live-wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
     #twitch-player,#twitch-chat{border:none;border-radius:10px;background:#000}
     #twitch-player{width:min(100%, 720px);height:405px}
     #twitch-chat{width:350px;height:405px}
-    @media (max-width:1024px){
-      #twitch-player{width:100%;height:56.25vw;max-height:420px}
-      #twitch-chat{width:100%;height:360px}
-    }
+    @media (max-width:1024px){#twitch-player{width:100%;height:56.25vw;max-height:420px}#twitch-chat{width:100%;height:360px}}
     footer{padding:16px;color:#bcbcbc;background:#0f0f0f;text-align:center;border-top:1px solid var(--border)}
   </style>
 </head>
@@ -69,9 +58,7 @@
       <h2>Regarde le live ici</h2>
       <div class="live-wrap">
         <div id="twitch-player"></div>
-        <iframe id="twitch-chat"
-          src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io">
-        </iframe>
+        <iframe id="twitch-chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"></iframe>
       </div>
       <p class="note">Si le lecteur n’apparaît pas, rafraîchis (Ctrl+F5) ou désactive les bloqueurs pour <code>riderskill.github.io</code>.</p>
       <script src="https://player.twitch.tv/js/embed/v1.js"></script>
@@ -101,6 +88,6 @@
   <footer>
     © 2025 RiderSkill — Tous droits réservés · twitch.tv/riderskill
   </footer>
-
 </body>
 </html>
+
