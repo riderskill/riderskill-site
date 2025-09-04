@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RiderSkill — Clips</title>
+<link rel="icon" href="https://unavatar.io/twitch/riderskill" />
+<meta name="theme-color" content="#0D0D0D" />
+<style>
+:root{ --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  min-height:100vh;
+  color:var(--text); background-color:#0f1014;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+  background-image:
+    radial-gradient(ellipse at 50% 45%, rgba(255,255,255,.14), rgba(255,255,255,.06) 35%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.55) 100%),
+    url("/riderskill-site/assets/bg.jpg"),
+    url("https://cdn.pixabay.com/photo/2019/08/06/10/14/gaming-4381792_1920.jpg"),
+    url("https://cdn.pixabay.com/photo/2016/11/29/09/32/robot-1868736_1920.jpg");
+  background-size: cover, cover, cover, cover;
+  background-position: center 25%, 20% 50%, 20% 50%, 20% 50%;
+}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1100px;margin:0 auto;padding:0 16px}
+.topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.82);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
+#brandText{font-weight:800}
+#statusDot{width:12px;height:12px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35);margin-left:6px}
+.links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{padding:8px 12px;background:rgba(26,26,26,.9);border:1px solid #2a2a2a;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s}
+.btn:hover{transform:translateY(-1px);background:#1e1e1e;border-color:#3a3a3a}
+.icon{width:18px;height:18px;display:block;transition:transform .18s,filter .18s}
+.btn.social:hover .icon{transform:translateY(-1px) scale(1.06);filter:drop-shadow(0 0 6px rgba(255,255,255,.15))}
+.section{padding:20px 0}
+.panel{background:linear-gradient(180deg, rgba(20,20,20,.92), rgba(20,20,20,.88));border:1px solid #1f1f1f;border-radius:14px;padding:16px;box-shadow:0 10px 28px rgba(0,0,0,.35)}
+.panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.clip{display:block;background:#121212;border:1px solid #222;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.clip iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
+.clip .clip-meta{padding:10px}
+.clip .title{font-size:1rem;margin:0 0 4px 0}
+.clip .album{color:var(--muted);font-size:.9rem}
+footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted);text-shadow:0 1px 2px rgba(0,0,0,.35)}
+@media (max-width:900px){ .grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:520px){ .grid{grid-template-columns:1fr} #brandText{display:none} }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="nav container">
+    <a class="brand" href="/riderskill-site/index.html" title="Accueil">
+      <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
+      <span id="brandText">RiderSkill</span>
+      <span id="statusDot" title="Hors-ligne (OFF)" aria-label="Hors-ligne (OFF)"></span>
+    </a>
+    <div class="links">
+      <a class="btn" href="/riderskill-site/index.html">Live</a>
+      <a class="btn" href="/riderskill-site/clips.html">Clips</a>
+      <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
+      <a class="btn social" href="https://www.twitch.tv/riderskill" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/twitch/9146FF" alt="Twitch">Twitch</a>
+      <a class="btn social" href="https://kick.com/riderskill" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/kick/53FC18" alt="Kick">Kick</a>
+      <a class="btn social" href="https://www.youtube.com/@riderskill" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube">YouTube</a>
+      <a class="btn social" href="https://www.tiktok.com/@riderskill_twitch" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/tiktok/000000" alt="TikTok">TikTok</a>
+      <a class="btn social" href="https://x.com/riderskill" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/x/1DA1F2" alt="X">X</a>
+      <a class="btn social" href="https://discord.gg/2UWwhhyY" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord">Discord</a>
+    </div>
+  </div>
+</div>
 
+<section class="section container" id="clips">
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Clips</h2>
+      <a id="clipsAdmin" class="btn" href="#" target="_blank" rel="noopener" style="display:none">⚙️ Paramètres</a>
+    </div>
+    <p class="muted">Tous les moments forts de RiderSkill sont regroupés ici.</p>
+    <div id="clipsGrid" class="grid"></div>
+    <p class="muted" id="clipsEmpty" style="display:none">Aucun clip pour l’instant. Ajoute-en dans <code>clips.json</code>.</p>
+  </div>
+</section>
+
+<footer class="container">© 2025 RiderSkill — Page Clips</footer>
+
+<script>
+function setStatusOff(){const d=document.getElementById('statusDot'); if(d){d.style.background='#ef4444';d.title='Hors-ligne (OFF)';}}
+setStatusOff();
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function makeEmbed(url){
+  try{
+    const u=new URL(url);
+    if(u.hostname.includes('twitch.tv')){
+      let slug=u.pathname.split('/').pop(); if(u.searchParams.get('clip')) slug=u.searchParams.get('clip');
+      if(!slug) return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">Ouvrir le clip</a></div>`;
+      return `<iframe src="https://clips.twitch.tv/embed?clip=${encodeURIComponent(slug)}&parent=riderskill.github.io" allowfullscreen loading="lazy" title="Twitch Clip"></iframe>`;
+    }
+    if(u.hostname.includes('youtube.com')||u.hostname.includes('youtu.be')){
+      let id=u.searchParams.get('v'); if(!id && u.hostname.includes('youtu.be')) id=u.pathname.replace('/','');
+      if(!id) return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">Ouvrir la vidéo</a></div>`;
+      return `<iframe src="https://www.youtube.com/embed/${encodeURIComponent(id)}" allowfullscreen loading="lazy" title="YouTube Clip"></iframe>`;
+    }
+    return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">Ouvrir</a></div>`;
+  }catch(e){ return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url||'#')}" target="_blank" rel="noopener">Ouvrir</a></div>`; }
+}
+function renderClip(item){
+  const t=escapeHtml(item?.title||'Clip'); const a=item?.album?`<div class="album" style="color:#9a9a9a;font-size:.9rem">${escapeHtml(item.album)}</div>`:'';
+  return `<div class="clip">${makeEmbed(item?.url||'')}<div class="clip-meta"><h3 class="title">${t}</h3>${a}</div></div>`;
+}
+(function initClips(){
+  const grid=document.getElementById('clipsGrid'); const empty=document.getElementById('clipsEmpty'); const admin=document.getElementById('clipsAdmin');
+  const p=new URLSearchParams(location.search); if(admin && p.get('admin')==='1'){ admin.style.display='inline-flex'; admin.href="https://github.com/riderskill/riderskill-site/edit/main/clips.json"; }
+  fetch('clips.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(list=>{
+    if(!Array.isArray(list)||list.length===0){ if(empty) empty.style.display='block'; return; }
+    if(empty) empty.style.display='none'; grid.innerHTML=list.map(renderClip).join('');
+  }).catch(()=>{ if(empty) empty.style.display='block'; });
+})();
+</script>
+</body>
+</html>
