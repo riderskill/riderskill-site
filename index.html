@@ -129,18 +129,23 @@ function renderAgenda(items){
 }
 fetch('/riderskill-site/planning.json',{cache:'no-store'}).then(r=>r.json()).then(renderAgenda).catch(()=>{});
 </script>
-const fonds = [
+onst fonds = [
   "https://images.unsplash.com/photo-1606813902910-5e2b19f6f64e?q=80&w=1920&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1633113093133-5ec52ffb62a3?q=80&w=1920&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1622286342621-4f2d0f2a8f6e?q=80&w=1920&auto=format&fit=crop"
 ];
 const choix = fonds[Math.floor(Math.random()*fonds.length)];
-document.body.style.backgroundImage =
-  `radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.10), rgba(255,255,255,.05) 35%, rgba(0,0,0,.35) 65%, rgba(0,0,0,.55) 100%), url("${choix}")`;
-</script>
+const bg = `radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.10), rgba(255,255,255,.05) 35%, rgba(0,0,0,.35) 65%, rgba(0,0,0,.55) 100%), url("${choix}")`;
 
-</body>
-</html>
+// FORCE le style même si un CSS a !important
+const s = document.body.style;
+s.setProperty('background-color', '#0f1014', 'important');
+s.setProperty('background-image', bg, 'important');
+s.setProperty('background-size', 'cover, cover', 'important');
+s.setProperty('background-position', 'center 25%, center', 'important');
+s.setProperty('background-repeat', 'no-repeat, no-repeat', 'important');
+s.setProperty('background-attachment', 'fixed, fixed', 'important');
+</script>
 
 
 
