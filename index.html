@@ -2,63 +2,106 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RiderSkill - Streamer Officiel</title>
-  <meta name="description" content="RiderSkill — Animateur WebTV & créateur de contenu en direct. Planning, liens, clips et actus." />
-  <meta property="og:title" content="RiderSkill - Streamer Officiel" />
-  <meta property="og:description" content="Planning, liens, clips, actus — rejoins le live !" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://twitch.tv/riderskill" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RiderSkill – Site Officiel</title>
+  <meta name="description" content="RiderSkill — Animateur WebTV & créateur de contenu en direct. Planning, liens, live intégré." />
   <meta name="theme-color" content="#9146FF" />
   <style>
-    body {margin:0;font-family:Arial, sans-serif;background:#0d0d0d;color:#f2f2f2;text-align:center}
-    header {padding:60px 20px;background:linear-gradient(135deg,#9146FF,#1db954)}
-    header h1 {font-size:3em;margin:0}
-    header p {font-size:1.2em;opacity:.9}
-    .btn {display:inline-block;margin:15px;padding:15px 25px;background:#9146FF;color:white;text-decoration:none;border-radius:10px;transition:.3s}
-    .btn:hover {background:#772ce8}
-    section {padding:40px 20px;max-width:1000px;margin:auto}
-    footer {padding:20px;font-size:.9em;background:#111}
-    iframe {border:none;border-radius:8px}
-    .twitch-container{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+    :root{
+      --bg:#0d0d0d;--panel:#121212;--border:#222;
+      --txt:#f2f2f2;--muted:#bfbfbf;
+      --primary:#9146FF;--accent:#1db954;
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--txt)}
+    a{color:inherit;text-decoration:none}
+    header{
+      padding:56px 18px 28px;
+      text-align:center;
+      background: radial-gradient(1100px 360px at 50% -10%,rgba(145,70,255,.35),transparent 60%),
+                  linear-gradient(135deg,var(--primary),var(--accent));
+      color:#fff;
+    }
+    .title{margin:0;font-size:clamp(28px,4.5vw,46px);letter-spacing:.3px}
+    .subtitle{margin:6px 0 18px;opacity:.95}
+    .btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+    .btn{
+      padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.15);
+      background:#1b1b1b;color:#fff;font-weight:600
+    }
+    .btn:hover{filter:brightness(1.15)}
+    .btn.twitch{background:var(--primary)}
+    .btn.kick{background:var(--accent);color:#0b0b0b}
+    main{max-width:1100px;margin:0 auto;padding:22px 14px 40px}
+    section{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:18px}
+    section h2{margin:0 0 10px;font-size:clamp(18px,2.5vw,22px)}
+    .note{color:var(--muted);font-size:.95rem}
+    /* LIVE layout */
+    .live-wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+    #twitch-player,#twitch-chat{border:none;border-radius:10px;background:#000}
+    #twitch-player{width:min(100%, 720px);height:405px}
+    #twitch-chat{width:350px;height:405px}
+    @media (max-width:1024px){
+      #twitch-player{width:100%;height:56.25vw;max-height:420px}
+      #twitch-chat{width:100%;height:360px}
+    }
+    footer{padding:16px;color:#bcbcbc;background:#0f0f0f;text-align:center;border-top:1px solid var(--border)}
   </style>
 </head>
 <body>
+
   <header>
-    <h1>RiderSkill</h1>
-    <p>Streamer & Créateur de contenu</p>
-    <a href="https://twitch.tv/riderskill" class="btn">🎮 Regarder sur Twitch</a>
-    <a href="https://kick.com/riderskill" class="btn">📺 Suis-moi sur Kick</a>
+    <h1 class="title">RiderSkill</h1>
+    <p class="subtitle">Streamer • Créateur de contenu • Rust / GTA / SOT</p>
+    <div class="btns">
+      <a class="btn twitch" href="https://twitch.tv/riderskill">🎮 Twitch</a>
+      <a class="btn" href="https://kick.com/riderskill">📺 Kick</a>
+      <a class="btn" href="https://www.youtube.com/@riderskill">▶️ YouTube</a>
+      <a class="btn" href="https://www.tiktok.com/@riderskill_twitch">🎵 TikTok</a>
+      <a class="btn" href="https://x.com/riderskill">𝕏 Twitter</a>
+      <a class="btn" href="https://discord.gg/XXXXXXX">💬 Discord</a>
+    </div>
   </header>
 
-  <section>
-    <h2>Regarde mon live directement ici</h2>
-    <div class="twitch-container">
-      <!-- Lecteur Twitch -->
-      <iframe
-        src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&autoplay=true&muted=true"
-        width="700"
-        height="400"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-      </iframe>
+  <main>
+    <section>
+      <h2>Regarde le live ici</h2>
+      <div class="live-wrap">
+        <div id="twitch-player"></div>
+        <iframe id="twitch-chat"
+          src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io">
+        </iframe>
+      </div>
+      <p class="note">Si le lecteur n’apparaît pas, rafraîchis (Ctrl+F5) ou désactive les bloqueurs pour <code>riderskill.github.io</code>.</p>
+      <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+      <script>
+        // Player officiel Twitch (plus fiable que l'iframe simple)
+        new Twitch.Player("twitch-player", {
+          channel: "riderskill",
+          width: "100%",
+          height: "100%",
+          autoplay: true,
+          muted: true,
+          // IMPORTANT : ceci doit correspondre exactement au domaine de ton site
+          parent: ["riderskill.github.io"]
+        });
+      </script>
+    </section>
 
-      <!-- Chat Twitch -->
-      <iframe
-        src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"
-        width="350"
-        height="400">
-      </iframe>
-    </div>
-  </section>
+    <section>
+      <h2>Planning</h2>
+      <p class="note">Lives en soirée (heure FR). Annonces sur Discord et 𝕏.</p>
+    </section>
 
-  <section>
-    <h2>Planning</h2>
-    <p>📅 Lives réguliers en soirée – Consulte Discord pour les annonces.</p>
-  </section>
+    <section>
+      <h2>À propos</h2>
+      <p class="note">Gaming, musique, events, Rust drops. Objectif : show propre et communauté soudée. </p>
+    </section>
+  </main>
 
   <footer>
-    © 2025 RiderSkill – Tous droits réservés
+    © 2025 RiderSkill — Tous droits réservés · twitch.tv/riderskill
   </footer>
+
 </body>
 </html>
