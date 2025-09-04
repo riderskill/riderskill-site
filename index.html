@@ -6,7 +6,6 @@
 <title>RiderSkill — Accueil</title>
 <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
 <meta name="theme-color" content="#0D0D0D" />
-
 <style>
 :root{
   --panel:#141414; --text:#EDEDED; --muted:#9aa0a6;
@@ -19,13 +18,15 @@ html,body{margin:0;padding:0}
 body{
   min-height:100vh;color:var(--text);
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-  /* FOND: image gaming futuriste (non sombre), overlay doux pour lisibilité, pas de fixed */
-  background:
-    linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.35)),
-    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop");
-  background-size: cover, cover;
-  background-position: center 25%, center 25%;
-  background-repeat: no-repeat;
+  /* FOND: overlay + 2 images (gaming clair + robot/IA), pas de fixed (compat mobile) */
+  background-image:
+    radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.10), rgba(255,255,255,.05) 35%, rgba(0,0,0,.35) 65%, rgba(0,0,0,.55) 100%),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop"),
+    url("https://images.unsplash.com/photo-1581091226825-c6a6c8f6fa54?q=80&w=1920&auto=format&fit=crop");
+  background-size: cover, cover, cover;
+  background-position: center 25%, center 35%, center 30%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-color:#0f1014;
 }
 a{color:inherit;text-decoration:none}
 .container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
@@ -88,6 +89,21 @@ a{color:inherit;text-decoration:none}
 .badge.live{background:#05260f;color:var(--ok);border:1px solid #115e2c}
 .badge.soon{background:#1d1b09;color:#facc15;border:1px solid #8a6d0a}
 .badge.off{background:#2a0b0b;color:var(--ko);border:1px solid #7a2020}
+
+/* RADIO */
+.radio{
+  display:grid;gap:10px
+}
+.radio-wrap{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap
+}
+.radio-btn{
+  padding:10px 14px;border-radius:10px;border:1px solid #2a2a2a;background:#1b1b1b;
+  font-weight:800;cursor:pointer;user-select:none;transition:transform .15s,background .15s,border-color .15s
+}
+.radio-btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a}
+.radio-title{margin:0}
+.radio-meta{color:#9a9a9a;font-size:.9rem}
 
 /* FAB CLIPS */
 .fab-clips{
@@ -184,6 +200,24 @@ footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted);text-shado
   </div>
 </section>
 
+<!-- RADIO -->
+<section class="section container" id="radio">
+  <div class="panel radio">
+    <div>
+      <h2 class="radio-title">Radio RiderSkill — tes sons en continu</h2>
+      <p class="radio-meta">Lecture en boucle, suivant auto, shuffle, reprise au rechargement. (Autoplay son = nécessite un clic selon le navigateur.)</p>
+    </div>
+    <div class="radio-wrap">
+      <button id="btnPlay" class="radio-btn">▶️ Lire</button>
+      <button id="btnNext" class="radio-btn">⏭️ Suivant</button>
+      <button id="btnPrev" class="radio-btn">⏮️ Précédent</button>
+      <button id="btnShuffle" class="radio-btn">🔀 Shuffle: OFF</button>
+      <span id="nowPlaying" class="radio-meta">Aucun titre…</span>
+    </div>
+    <audio id="player" preload="none"></audio>
+  </div>
+</section>
+
 <!-- BOUTON CLIPS -->
 <a class="fab-clips" href="/riderskill-site/clips.html" aria-label="Aller aux clips">
   <span class="fab-emoji">🎬</span><span class="fab-text">CLIPS !</span>
@@ -195,7 +229,7 @@ footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted);text-shado
 <!-- SCRIPTS -->
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 <script>
-/* Statut vert/rouge + libellé */
+/* ===== Statut vert/rouge + libellé ===== */
 function setStatus(state){
   const dot=document.getElementById('statusDot');
   const label=document.getElementById('statusLabel');
@@ -213,8 +247,6 @@ function setStatus(state){
   }
 }
 setStatus('off');
-
-/* Forçage via URL (?status=on/off) */
 (function(){
   const p=new URLSearchParams(location.search);
   const s=p.get('status')||p.get('on');
@@ -222,7 +254,7 @@ setStatus('off');
   if(s==='0'||s==='false'||s==='off') setStatus('off');
 })();
 
-/* Player Twitch: bascule automatique */
+/* ===== Twitch Player ===== */
 (function(){
   const parentHosts=["riderskill.github.io","localhost","127.0.0.1"];
   const player=new Twitch.Player("twitch-player",{
@@ -233,7 +265,7 @@ setStatus('off');
   player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
 })();
 
-/* AGENDA depuis planning.json */
+/* ===== AGENDA depuis planning.json ===== */
 function fmtDate(d){return d.toLocaleDateString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit'})}
 function fmtTime(d){return d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
 function renderAgenda(items){
@@ -264,6 +296,52 @@ fetch('/riderskill-site/planning.json',{cache:'no-store'})
   .then(r=>r.ok?r.json():[])
   .then(renderAgenda)
   .catch(()=>renderAgenda([]));
+
+/* ===== RADIO (playlist depuis /music/radio.json) ===== */
+const audio = document.getElementById('player');
+const np    = document.getElementById('nowPlaying');
+const bPlay = document.getElementById('btnPlay');
+const bNext = document.getElementById('btnNext');
+const bPrev = document.getElementById('btnPrev');
+const bShuf = document.getElementById('btnShuffle');
+let list=[], i=0, shuffle=false;
+
+function load(i0){
+  if(!list.length) return;
+  i = (i0+list.length)%list.length;
+  const t = list[i];
+  audio.src = t.url;
+  audio.title = t.title||'Track';
+  np.textContent = `▶️ ${t.title||'Track'} — ${t.artist||''}`.trim();
+  localStorage.setItem('rs_radio_index', String(i));
+  localStorage.setItem('rs_radio_time', '0');
+}
+function play(){ audio.play().catch(()=>{ /* autoplay bloqué -> texte */
+  np.textContent = 'Clique ▶️ Lire pour démarrer la radio';
+}); }
+function next(){ load(i + (shuffle? Math.floor(Math.random()*list.length) || 1 : 1)); play(); }
+function prev(){ load(i-1); play(); }
+
+bPlay.addEventListener('click', ()=>{ if(audio.paused){ play(); bPlay.textContent='⏸️ Pause'; } else { audio.pause(); bPlay.textContent='▶️ Lire'; }});
+bNext.addEventListener('click', next);
+bPrev.addEventListener('click', prev);
+bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent = '🔀 Shuffle: ' + (shuffle?'ON':'OFF'); });
+
+audio.addEventListener('ended', next);
+audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
+
+fetch('/riderskill-site/music/radio.json',{cache:'no-store'})
+  .then(r=>r.ok?r.json():[])
+  .then(arr=>{
+    list = Array.isArray(arr)?arr:[];
+    if(!list.length){ np.textContent='Aucune piste dans la radio.'; return; }
+    // reprise index/temps
+    const idx = parseInt(localStorage.getItem('rs_radio_index')||'0',10);
+    load(isNaN(idx)?0:idx);
+    const t = parseFloat(localStorage.getItem('rs_radio_time')||'0');
+    if(!isNaN(t) && t>0) audio.currentTime = t;
+  })
+  .catch(()=>{ np.textContent='Impossible de charger la radio.'; });
 </script>
 </body>
 </html>
