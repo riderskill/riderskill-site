@@ -7,33 +7,44 @@
 <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
 <meta name="theme-color" content="#0D0D0D" />
 <style>
-:root{ --bg:#0D0D0D; --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; }
+:root{ --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial}
+html,body{margin:0;padding:0;height:100%}
+body{
+  color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(255,255,255,.14), rgba(255,255,255,.06) 35%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.55) 100%),
+    url('/riderskill-site/assets/bg.jpg'),
+    url('https://source.unsplash.com/1920x1080/?futuristic,robot,ai,neon,metal,gaming,setup&sig=7');
+  background-size: cover, cover, cover;
+  background-position: center 20%, 20% 50%, 20% 50%;
+  background-attachment: fixed, fixed, fixed;
+}
 a{color:inherit;text-decoration:none}
 .container{width:100%;max-width:1100px;margin:0 auto;padding:0 16px}
-.topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.9);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
+.topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.82);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
 .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-.brand-avatar{width:28px;height:28px;border-radius:6px}
+.brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
 #brandText{font-weight:800}
-#statusDot{width:12px;height:12px;border-radius:50%;display:inline-block;vertical-align:middle;margin-left:6px;background:#ef4444;box-shadow:0 0 0 2px rgba(0,0,0,.4)} /* OFF par défaut */
+#statusDot{width:12px;height:12px;border-radius:50%;display:inline-block;vertical-align:middle;margin-left:6px;background:#ef4444;box-shadow:0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)}
 .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{padding:8px 12px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;font-weight:700;transition:transform .18s ease,background .18s ease,border-color .18s ease;display:inline-flex;align-items:center;gap:8px}
+.btn{padding:8px 12px;background:rgba(26,26,26,.9);border:1px solid #2a2a2a;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:transform .18s ease,background .18s ease,border-color .18s ease}
 .btn:hover{transform:translateY(-1px);background:#1e1e1e;border-color:#3a3a3a}
 .btn.small{padding:6px 10px;font-size:.9rem}
 .icon{width:18px;height:18px;display:block;transition:transform .18s ease,filter .18s ease}
 .btn.social:hover .icon{transform:translateY(-1px) scale(1.06);filter:drop-shadow(0 0 6px rgba(255,255,255,.15))}
 .section{padding:20px 0}
-.panel{background:var(--panel);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
+.panel{background:linear-gradient(180deg, rgba(20,20,20,.92), rgba(20,20,20,.88));border:1px solid #1f1f1f;border-radius:14px;padding:16px;box-shadow:0 10px 28px rgba(0,0,0,.35)}
 .panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.clip{display:block;background:#121212;border:1px solid #222;border-radius:12px;overflow:hidden}
+.clip{display:block;background:#121212;border:1px solid #222;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.28)}
 .clip iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
 .clip .clip-meta{padding:10px}
 .clip .title{font-size:1rem;margin:0 0 4px 0}
 .clip .album{color:var(--muted);font-size:.9rem}
-footer{opacity:.8;padding:24px 0;text-align:center;color:var(--muted)}
+footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted);text-shadow:0 1px 2px rgba(0,0,0,.35)}
 @media (max-width:900px){ .grid{grid-template-columns:repeat(2,1fr)} }
 @media (max-width:520px){ .grid{grid-template-columns:1fr} }
 @media (max-width:420px){ #brandText{display:none} }
@@ -90,77 +101,50 @@ footer{opacity:.8;padding:24px 0;text-align:center;color:var(--muted)}
 <footer class="container">© 2025 RiderSkill — Page Clips</footer>
 
 <script>
-/* ===== Statut OFF rouge par défaut (pas de player ici) ===== */
+/* ===== Statut OFF rouge (pas de player ici) ===== */
 function setStatus(state){
-  const dot = document.getElementById('statusDot');
-  if(!dot) return;
-  if(state === 'on'){
-    dot.style.background = '#22c55e';
-    dot.title = 'Live (ON)'; dot.setAttribute('aria-label','Live (ON)');
-    dot.style.boxShadow = '0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(34,197,94,.45)';
+  const dot=document.getElementById('statusDot'); if(!dot) return;
+  if(state==='on'){
+    dot.style.background='#22c55e';dot.title='Live (ON)';dot.setAttribute('aria-label','Live (ON)');
+    dot.style.boxShadow='0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(34,197,94,.45)';
   }else{
-    dot.style.background = '#ef4444';
-    dot.title = 'Hors-ligne (OFF)'; dot.setAttribute('aria-label','Hors-ligne (OFF)');
-    dot.style.boxShadow = '0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)';
+    dot.style.background='#ef4444';dot.title='Hors-ligne (OFF)';dot.setAttribute('aria-label','Hors-ligne (OFF)');
+    dot.style.boxShadow='0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)';
   }
 }
-function initStatusFromUrl(){
-  const p = new URLSearchParams(location.search);
-  const s = p.get('status') || p.get('on');
-  if(s === '1' || s === 'true' || s === 'on')  setStatus('on'); else setStatus('off');
-}
-setStatus('off'); initStatusFromUrl();
+(function(){ setStatus('off');
+  const p=new URLSearchParams(location.search); const s=p.get('status')||p.get('on');
+  if(s==='1'||s==='true'||s==='on') setStatus('on'); })();
 
-/* ===== CLIPS: charge clips.json et intègre Twitch/YT ===== */
+/* ===== CLIPS ===== */
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function makeEmbed(url){
   try{
-    const u = new URL(url);
-    if(u.hostname.includes('twitch.tv')){ // Twitch clip
-      let slug = u.pathname.split('/').pop();
-      if(u.searchParams.get('clip')) slug = u.searchParams.get('clip');
+    const u=new URL(url);
+    if(u.hostname.includes('twitch.tv')){
+      let slug=u.pathname.split('/').pop(); if(u.searchParams.get('clip')) slug=u.searchParams.get('clip');
       if(!slug) return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">Ouvrir le clip</a></div>`;
       return `<iframe src="https://clips.twitch.tv/embed?clip=${encodeURIComponent(slug)}&parent=riderskill.github.io" allowfullscreen loading="lazy" title="Twitch Clip"></iframe>`;
     }
-    if(u.hostname.includes('youtube.com')||u.hostname.includes('youtu.be')){ // YouTube
-      let id = u.searchParams.get('v'); if(!id && u.hostname.includes('youtu.be')) id = u.pathname.replace('/','');
+    if(u.hostname.includes('youtube.com')||u.hostname.includes('youtu.be')){
+      let id=u.searchParams.get('v'); if(!id && u.hostname.includes('youtu.be')) id=u.pathname.replace('/','');
       if(!id) return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">Ouvrir la vidéo</a></div>`;
       return `<iframe src="https://www.youtube.com/embed/${encodeURIComponent(id)}" allowfullscreen loading="lazy" title="YouTube Clip"></iframe>`;
     }
     return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url)}" target="_blank" rel="noopener">Ouvrir</a></div>`;
-  }catch(e){
-    return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url||'#')}" target="_blank" rel="noopener">Ouvrir</a></div>`;
-  }
+  }catch(e){ return `<div style="padding:12px"><a class="btn" href="${escapeHtml(url||'#')}" target="_blank" rel="noopener">Ouvrir</a></div>`; }
 }
 function renderClip(item){
-  const t = escapeHtml(item?.title||'Clip');
-  const a = item?.album ? `<div class="album">${escapeHtml(item.album)}</div>` : '';
-  return `
-    <div class="clip">
-      ${makeEmbed(item?.url||'')}
-      <div class="clip-meta">
-        <h3 class="title">${t}</h3>
-        ${a}
-      </div>
-    </div>`;
+  const t=escapeHtml(item?.title||'Clip'); const a=item?.album?`<div class="album">${escapeHtml(item.album)}</div>`:'';
+  return `<div class="clip">${makeEmbed(item?.url||'')}<div class="clip-meta"><h3 class="title">${t}</h3>${a}</div></div>`;
 }
 (function initClips(){
-  const grid = document.getElementById('clipsGrid');
-  const empty = document.getElementById('clipsEmpty');
-  const admin = document.getElementById('clipsAdmin');
-  const p = new URLSearchParams(location.search);
-  if(admin && p.get('admin')==='1'){
-    admin.style.display='inline-flex';
-    admin.href="https://github.com/riderskill/riderskill-site/edit/main/clips.json";
-  }
-  fetch('clips.json',{cache:'no-store'})
-    .then(r=>r.ok?r.json():[])
-    .then(list=>{
-      if(!Array.isArray(list)||list.length===0){ if(empty) empty.style.display='block'; return; }
-      if(empty) empty.style.display='none';
-      grid.innerHTML=list.map(renderClip).join('');
-    })
-    .catch(()=>{ if(empty) empty.style.display='block'; });
+  const grid=document.getElementById('clipsGrid'); const empty=document.getElementById('clipsEmpty'); const admin=document.getElementById('clipsAdmin');
+  const p=new URLSearchParams(location.search); if(admin && p.get('admin')==='1'){ admin.style.display='inline-flex'; admin.href="https://github.com/riderskill/riderskill-site/edit/main/clips.json"; }
+  fetch('clips.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(list=>{
+    if(!Array.isArray(list)||list.length===0){ if(empty) empty.style.display='block'; return; }
+    if(empty) empty.style.display='none'; grid.innerHTML=list.map(renderClip).join('');
+  }).catch(()=>{ if(empty) empty.style.display='block'; });
 })();
 </script>
 </body>
