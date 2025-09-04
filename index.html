@@ -1,159 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>RiderSkill — Accueil</title>
-<link rel="icon" href="https://unavatar.io/twitch/riderskill" />
-<meta name="theme-color" content="#0D0D0D" />
+<title>RiderSkill — Site Officiel</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{ --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; --twitch:#9146FF; --kick:#53FC18; }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  min-height:100vh;color:var(--text);background-color:#0f1014;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-  background: url("https://cdn.pixabay.com/photo/2019/08/06/10/14/gaming-4381792_1920.jpg") center/cover no-repeat fixed;
+:root{
+  --bg-img:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920');
+  --text:#e9e9ef; --muted:#9aa0aa; --panel:rgba(14,14,18,.88); --radius:18px;
+  --tw:#9146FF; --yt:#FF0000; --kick:#00FF88; --x:#fff; --ig:#E1306C; --brand:#00ffd1;
 }
-a{color:inherit;text-decoration:none}
-.container{width:100%;max-width:1100px;margin:0 auto;padding:0 16px}
-.topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.82);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
-.brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-.brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
-#brandText{font-weight:800}
-.status-wrap{display:inline-flex;align-items:center;gap:6px;margin-left:6px;white-space:nowrap}
-#statusDot{width:12px;height:12px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)}
-#statusLabel{font-weight:800;font-size:.85rem;letter-spacing:.5px;color:#ef4444}
-.links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{padding:8px 12px;background:rgba(26,26,26,.9);border:1px solid #2a2a2a;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s}
-.btn:hover{transform:translateY(-1px);background:#1e1e1e;border-color:#3a3a3a}
-.icon{width:18px;height:18px;display:block;transition:transform .18s,filter .18s}
-.btn.social:hover .icon{transform:translateY(-1px) scale(1.06);filter:drop-shadow(0 0 6px rgba(255,255,255,.15))}
-.hero{display:grid;gap:16px;padding:20px 0}
-.card{background:rgba(20,20,20,.9);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
-.subtitle{margin:0;color:var(--muted)}
-.section{padding:20px 0}
-.panel{background:rgba(20,20,20,.9);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
-.live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:10px}
-.player,.chat{height:520px;border-radius:10px;border:1px solid #1f1f1f}
-.chat{background:#0b0b0b}
-.agenda-list{display:grid;gap:10px}
-.ag-item{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#121212;border:1px solid #222;border-radius:10px;padding:10px}
-.ag-left{display:flex;flex-direction:column}
-.ag-title{font-weight:800;margin:0}
-.ag-meta{color:#9a9a9a;font-size:.9rem}
-.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 10px;font-weight:800;letter-spacing:.3px}
-.badge.live{background:#05260f;color:#22c55e;border:1px solid #115e2c}
-.badge.soon{background:#1d1b09;color:#facc15;border:1px solid #8a6d0a}
-.badge.off{background:#2a0b0b;color:#ef4444;border:1px solid #7a2020}
-footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted)}
+*{box-sizing:border-box}
+body{
+  margin:0; color:var(--text); font-family:'Poppins',sans-serif;
+  background:
+    radial-gradient(80vmax 80vmax at 10% -10%, rgba(93,0,255,.22), transparent 55%),
+    radial-gradient(80vmax 80vmax at 110% 110%, rgba(0,255,153,.18), transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.9)),
+    var(--bg-img) center/cover no-repeat fixed;
+}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:1200px; margin:auto; padding:0 18px}
+
+/* Header */
+header{
+  position:sticky; top:0; z-index:50; backdrop-filter:blur(8px);
+  background:rgba(15,15,20,.75); border-bottom:1px solid rgba(255,255,255,.06)
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px}
+.social{display:flex; gap:10px}
+.iconbtn{display:inline-grid; place-items:center; width:44px; height:44px; border-radius:12px;
+  background:#111319; border:1px solid rgba(255,255,255,.12); transition:.2s}
+.iconbtn:hover{transform:translateY(-1px); box-shadow:0 0 14px rgba(255,255,255,.16)}
+
+/* Hero */
+.hero{padding:42px 0 22px}
+.hero h1{font-size:clamp(28px,4vw,48px); margin:8px 0}
+.hero p{opacity:.85; max-width:800px}
+.cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:12px; font-weight:800;
+  background:#111319; border:1px solid rgba(255,255,255,.12)}
+.btn:hover{transform:translateY(-1px); box-shadow:0 0 12px rgba(0,255,209,.3)}
+
+/* Panels */
+.panel{
+  background:var(--panel); border:1px solid rgba(255,255,255,.08);
+  border-radius:calc(var(--radius)+6px); margin:28px 0; padding:20px
+}
+.panel h2{margin:0 0 14px; font-size:clamp(22px,2.2vw,30px)}
+
+/* Stream */
+.stream{padding:0 0 10px}
+.player{position:relative; padding-top:56.25%; border-radius:16px; overflow:hidden;
+  border:1px solid rgba(255,255,255,.06); background:#0f1115}
+.player iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.stream-grid{display:grid; grid-template-columns:1fr 360px; gap:12px}
+.chat{border:1px solid rgba(255,255,255,.06); border-radius:12px; overflow:hidden; background:#0f1115; height:600px}
+@media(max-width:960px){.stream-grid{grid-template-columns:1fr}.chat{height:480px}}
+
+/* Agenda */
+.list{padding:0}
+.card{
+  --glow:255,255,255;
+  display:flex; align-items:center; gap:14px;
+  margin:10px 0; padding:16px; border-radius:var(--radius);
+  background:#0f1115; border:1px solid rgba(255,255,255,.08);
+  transition:.2s
+}
+.card:before{content:""; position:absolute; inset:0; border-radius:inherit; opacity:0}
+.card:hover{transform:translateY(-2px); box-shadow:0 8px 18px rgba(var(--glow),.24)}
+.icon{width:32px;height:32px; display:grid; place-items:center; border-radius:10px; background:#111319; border:1px solid rgba(255,255,255,.08)}
+.title{font-weight:700; font-size:16px; margin:0 0 4px}
+.meta{color:var(--muted); font-size:13px}
+.badge{margin-left:auto; padding:6px 12px; font-size:12px;
+  border-radius:20px; font-weight:800; text-transform:uppercase;
+  background:#222; color:#ddd}
+.badge.live{background:#e00; color:#fff; animation:pulse 1.3s infinite}
+@keyframes pulse{0%{box-shadow:0 0 5px #e00}50%{box-shadow:0 0 18px #f33}100%{box-shadow:0 0 5px #e00}}
+.twitch{--glow:145,70,255}.youtube{--glow:255,61,61}.kick{--glow:0,255,136}
+
+/* Grid modules */
+.grid{display:grid; gap:14px}
+@media(min-width:820px){.grid.two{grid-template-columns:1fr 1fr}}
+.module{padding:16px; background:#0f1115; border:1px solid rgba(255,255,255,.08); border-radius:var(--radius)}
+
+/* Footer */
+footer{opacity:.7; padding:30px 0 60px; text-align:center; font-size:13px}
+
+/* Floating button */
+.fab{
+  position:fixed; right:22px; bottom:22px; z-index:99;
+  display:inline-flex; align-items:center; gap:10px; padding:12px 16px;
+  background:linear-gradient(180deg,#111319,#0b0e12); border:1px solid rgba(255,255,255,.14);
+  border-radius:999px; font-weight:800; letter-spacing:.4px
+}
+.fab .dot{width:10px;height:10px;border-radius:50%;background:var(--tw); box-shadow:0 0 12px var(--tw); animation:dot 1.3s infinite}
+@keyframes dot{50%{transform:scale(1.2)}}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="nav container">
-    <a class="brand" href="/riderskill-site/index.html">
-      <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
-      <span id="brandText">RiderSkill</span>
-      <span class="status-wrap">
-        <span id="statusDot"></span>
-        <span id="statusLabel">OFF</span>
-      </span>
-    </a>
-    <div class="links">
-      <a class="btn" href="/riderskill-site/index.html">Live</a>
-      <a class="btn" href="/riderskill-site/clips.html">Clips</a>
-      <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--brand)" d="M3 4h10a5 5 0 0 1 0 10H9l6 6h-4l-6-6V4zm4 4v4h6a2 2 0 0 0 0-4H7z"/></svg>
+      RIDERSKILL
     </div>
-  </div>
-</div>
-
-<header class="hero container">
-  <div class="card">
-    <h1 class="title">Le show. Le game. <span style="color:var(--twitch)">La musique.</span></h1>
-    <p class="subtitle">Streamer FR — Rust • GTA • Sea of Thieves.</p>
+    <nav class="social" aria-label="Réseaux">
+      <a class="iconbtn" href="https://www.twitch.tv/riderskill" target="_blank" title="Twitch">
+        <svg width="22" height="22" viewBox="0 0 2400 2800"><path fill="var(--tw)" d="M500 0 0 400v1700h600v400h400l400-400h500l600-600V0H500zm1700 1300-300 300h-600l-400 400v-400H400V200h1800v1100z"/><path fill="#fff" d="M1700 800h200v500h-200zM1200 800h200v500h-200z"/></svg>
+      </a>
+      <a class="iconbtn" href="https://kick.com/riderskill" target="_blank" title="Kick">
+        <svg width="22" height="22" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4" fill="var(--kick)"/><path d="M7 6h3v5l4-5h3l-4.6 5.6L17 18h-3.2l-3.8-5v5H7V6z" fill="#0A0D12"/></svg>
+      </a>
+      <a class="iconbtn" href="https://x.com/riderskill" target="_blank" title="X">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path fill="var(--x)" d="M18.146 2H21l-6.52 7.454L22.5 22h-6.873l-4.77-6.203L4.5 22H2l7.032-8.042L1.5 2h6.956l4.36 5.73L18.146 2Zm-1.2 18h1.79L7.17 4h-1.8l11.576 16Z"/></svg>
+      </a>
+      <a class="iconbtn" href="https://www.instagram.com/riderskill_twitch_et_kick/?hl=fr" target="_blank" title="Instagram">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path fill="var(--ig)" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .4 1.5.9.4.4.7.9.9 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.4 1-.9 1.5-.4.4-.9.7-1.5.9-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.4-1.5-.9-.4-.4-.7-.9-.9-1.5-.2-.5-.3-1.2-.4-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.4-1 .9-1.5.4-.4.9-.7 1.5-.9.5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2Z"/><circle cx="12" cy="12" r="3.2" fill="#fff"/><circle cx="18" cy="6" r="1" fill="#fff"/></svg>
+      </a>
+      <a class="iconbtn" href="https://www.youtube.com/@RiderSkill" target="_blank" title="YouTube">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path fill="var(--yt)" d="M23.5 6.2a3.5 3.5 0 0 0-2.5-2.5C19 3 12 3 12 3s-7 0-9 .7A3.5 3.5 0 0 0 .5 6.2 36 36 0 0 0 0 12a36 36 0 0 0 .5 5.8 3.5 3.5 0 0 0 2.5 2.5C5 21 12 21 12 21s7 0 9-.7a3.5 3.5 0 0 0 2.5-2.5A36 36 0 0 0 24 12a36 36 0  0 0-.5-5.8Z"/><path fill="#fff" d="M10 8.5v7l6-3.5-6-3.5z"/></svg>
+      </a>
+    </nav>
   </div>
 </header>
 
-<section class="section container" id="live">
-  <div class="panel">
-    <h2>Live intégré</h2>
-    <div class="live-wrap">
-      <div id="twitch-player" class="player"></div>
-      <iframe id="twitch-chat" class="chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"></iframe>
+<main class="wrap">
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Multigaming • Musique IA • Lives RiderSkill</h1>
+    <p>Rust, GTA RP, Sea of Thieves… + sons originaux. Ici, ça joue dur et ça claque.</p>
+    <div class="cta">
+      <a class="btn" href="#live">▶ Regarder le live</a>
+      <a class="btn" href="#agenda">📅 Voir l’agenda</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section container" id="agenda">
-  <div class="panel">
+  <!-- LIVE -->
+  <section id="live" class="panel">
+    <h2>🎥 Stream en direct</h2>
+    <div class="stream">
+      <div class="player" id="rs-player"></div>
+    </div>
+    <div class="stream-grid">
+      <div></div>
+      <iframe class="chat" id="rs-chat" title="Twitch Chat"></iframe>
+    </div>
+    <div id="rs-fallback" style="display:none;text-align:center;margin-top:10px">
+      <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noreferrer">Ouvrir sur Twitch</a>
+    </div>
+  </section>
+
+  <!-- AGENDA -->
+  <section id="agenda" class="panel">
     <h2>Agenda</h2>
-    <div id="agendaList" class="agenda-list"></div>
-  </div>
-</section>
+    <div class="list" id="agenda-list" role="list"></div>
+  </section>
 
-<footer class="container">© 2025 RiderSkill</footer>
+  <!-- CLIPS & ABOUT -->
+  <section class="grid two">
+    <div class="module">
+      <h3>🎬 Clips & Best-of</h3>
+      <p>Les moments forts et compilations YouTube.</p>
+      <a class="btn" href="https://www.youtube.com/@RiderSkill/videos" target="_blank">Ouvrir la playlist</a>
+    </div>
+    <div class="module">
+      <h3>ℹ️ À propos</h3>
+      <p>Animateur WebTV & créateur de contenu. Streams réguliers, musique IA, et un peu de sueur. Bienvenue chez RiderSkill.</p>
+    </div>
+  </section>
+</main>
 
-<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+<footer>
+  © <span id="year"></span> RiderSkill — Tous droits réservés.
+</footer>
+
+<!-- Bouton flottant -->
+<a class="fab" href="https://www.twitch.tv/riderskill" target="_blank" title="S’abonner sur Twitch">
+  <span class="dot"></span> S’ABONNER
+</a>
+
 <script>
-function setStatus(state){
-  const dot=document.getElementById('statusDot'); const label=document.getElementById('statusLabel');
-  if(state==='on'){ dot.style.background='#22c55e'; label.textContent='LIVE'; label.style.color='#22c55e'; }
-  else { dot.style.background='#ef4444'; label.textContent='OFF'; label.style.color='#ef4444'; }
-}
-setStatus('off');
-(function(){const parentHosts=["riderskill.github.io"];
-  const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
-  player.addEventListener(Twitch.Player.ONLINE,()=>setStatus('on'));
-  player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
+/* ===== Twitch player + chat — parent fixés pour GitHub Pages ===== */
+(function () {
+  const parents = ['riderskill.github.io','www.riderskill.github.io'];
+
+  const qs = new URLSearchParams({
+    channel: 'riderskill',
+    autoplay: 'true',
+    muted: 'true',
+    playsinline: 'true'
+  });
+  parents.forEach(p => qs.append('parent', p));
+
+  const playerBox = document.getElementById('rs-player');
+  const chat = document.getElementById('rs-chat');
+  const fb = document.getElementById('rs-fallback');
+
+  try {
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://player.twitch.tv/?' + qs.toString();
+    iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.style = 'position:absolute;inset:0;border:0;width:100%;height:100%';
+    playerBox.appendChild(iframe);
+
+    chat.src = 'https://www.twitch.tv/embed/riderskill/chat?' + qs.toString();
+  } catch (e) {
+    fb.style.display = 'block';
+    console.warn(e);
+  }
 })();
 
-/* Agenda */
-function fmtDate(d){return d.toLocaleDateString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit'})}
-function fmtTime(d){return d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
-function renderAgenda(items){
-  const el=document.getElementById('agendaList'); if(!el) return;
-  const now=new Date();
-  el.innerHTML = items.map(it=>{
-    const s=new Date(it.start); const e=it.end?new Date(it.end):null;
-    const live=s<=now && (!e||e>=now);
-    const soon=s>now && (s-now)<=1000*60*60*6;
-    const badge= live?'live':(soon?'soon':'off');
-    const text= live?'EN LIVE':(soon?'Bientôt':'Programmé');
-    return `<div class="ag-item"><div class="ag-left">
-      <h3 class="ag-title">${it.title}</h3>
-      <div class="ag-meta">${fmtDate(s)} · ${fmtTime(s)}${e?(' → '+fmtTime(e)):""} · ${it.platform}</div>
-    </div><span class="badge ${badge}">${text}</span></div>`;
-  }).join('');
+/* ===== Agenda ===== */
+const events = [
+  { title:"Live Rust — chill & raids", start:"2025-09-04T21:00", end:"2025-09-04T23:59", platform:"twitch", location:"Twitch" },
+  { title:"GTA RP — braquage & roleplay", start:"2025-09-05T20:30", end:"2025-09-05T23:30", platform:"twitch", location:"Twitch" },
+  { title:"Best-of & TikTok review", start:"2025-09-06T18:00", end:"2025-09-06T19:30", platform:"youtube", location:"YouTube" }
+];
+function fmt(d){return new Date(d).toLocaleString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).replace(',','')}
+function endT(d){return new Date(d).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
+function badgeFor(s,e){const n=new Date(),S=new Date(s),E=new Date(e);if(n<S)return{text:'Programmé',cls:''};if(n>=S&&n<=E)return{text:'En direct',cls:'live'};return{text:'Terminé',cls:''}}
+function iconSVG(p){
+  if(p==='twitch')return `<svg width="18" height="18" viewBox="0 0 2400 2800" aria-hidden="true"><path fill="#9146FF" d="M500 0 0 400v1700h600v400h400l400-400h500l600-600V0H500zm1700 1300-300 300h-600l-400 400v-400H400V200h1800v1100z"/><path fill="#fff" d="M1700 800h200v500h-200zM1200 800h200v500h-200z"/></svg>`;
+  if(p==='youtube')return `<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FF0000" d="M23.5 6.2a3.5 3.5 0 0 0-2.5-2.5C19 3 12 3 12 3s-7 0-9 .7A3.5 3.5 0 0 0 .5 6.2 36 36 0 0 0 0 12a36 36 0 0 0 .5 5.8 3.5 3.5 0 0 0 2.5 2.5C5 21 12 21 12 21s7 0 9-.7a3.5 3.5 0 0 0 2.5-2.5A36 36 0 0 0 24 12a36 36 0 0 0-.5-5.8Z"/><path fill="#fff" d="M10 8.5v7l6-3.5-6-3.5z"/></svg>`;
+  return `<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="#00FF88"/><path d="M7 6h3v5l4-5h3l-4.6 5.6L17 18h-3.2l-3.8-5v5H7V6z" fill="#0A0D12"/></svg>`;
 }
-fetch('/riderskill-site/planning.json',{cache:'no-store'}).then(r=>r.json()).then(renderAgenda).catch(()=>{});
+const list=document.getElementById('agenda-list');
+events.sort((a,b)=>new Date(a.start)-new Date(b.start)).forEach(ev=>{
+  const li=document.createElement('div'); li.className=`card ${ev.platform}`;
+  const icon=document.createElement('div'); icon.className='icon'; icon.innerHTML=iconSVG(ev.platform);
+  const content=document.createElement('div'); content.style.flex='1 1 auto';
+  const t=document.createElement('div'); t.className='title'; t.textContent=ev.title;
+  const m=document.createElement('div'); m.className='meta'; m.textContent=`${fmt(ev.start)} — ${endT(ev.end)} · ${ev.location}`;
+  const badge=document.createElement('span'); const b=badgeFor(ev.start,ev.end); badge.className=`badge ${b.cls}`; badge.textContent=b.text;
+  content.append(t,m); li.append(icon,content,badge); list.append(li);
+});
+document.getElementById('year').textContent=new Date().getFullYear();
 </script>
-function(){
-  const fonds = [
-    "https://images.unsplash.com/photo-1606813902910-5e2b19f6f64e?q=80&w=1920&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1633113093133-5ec52ffb62a3?q=80&w=1920&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1622286342621-4f2d0f2a8f6e?q=80&w=1920&auto=format&fit=crop"
-  ];
-  const choix = fonds[Math.floor(Math.random()*fonds.length)];
-  const css = `
-    html,body{min-height:100vh!important}
-    body{background:transparent!important}
-    html{
-      background-color:#0f1014!important;
-      background-image:
-        radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.10), rgba(255,255,255,.05) 35%, rgba(0,0,0,.35) 65%, rgba(0,0,0,.55) 100%),
-        url('${choix}') !important;
-      background-size:cover, cover !important;
-      background-position:center 25%, center !important;
-      background-repeat:no-repeat, no-repeat !important;
-      background-attachment:fixed, fixed !important;
-    }`;
-  const style = document.createElement('style');
-  style.id = 'bgfix';
-  style.innerHTML = css;
-  document.head.appendChild(style);
-})();
-</script>
-
-
+</body>
+</html>
