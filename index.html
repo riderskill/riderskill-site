@@ -8,43 +8,75 @@
 <meta name="theme-color" content="#0D0D0D" />
 
 <style>
-:root{ --bg:#0D0D0D; --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; --twitch:#9146FF; --kick:#53FC18; }
+:root{
+  --text:#EDEDED; --muted:#B9B9B9;
+  --panel-alpha: .58;            /* transparence des cartes/panneaux */
+  --twitch:#9146FF; --kick:#53FC18;
+  /* Image de fond : 1) locale (si tu ajoutes /assets/bg.jpg), 2) lien stable futuriste Unsplash */
+  --bg-local: url('/riderskill-site/assets/bg.jpg');
+  --bg-fallback: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1920&q=80');
+}
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial}
+html,body{margin:0;padding:0;min-height:100%}
+body{
+  color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(255,255,255,.18), rgba(255,255,255,.08) 36%, rgba(0,0,0,.30) 62%, rgba(0,0,0,.45) 100%),
+    var(--bg-local),
+    var(--bg-fallback);
+  background-size: cover, cover, cover;
+  background-position: center 25%, 20% 50%, 20% 50%;
+  /* pas de fixed -> compat mobile */
+  background-repeat:no-repeat;
+}
 a{color:inherit;text-decoration:none}
 .container{width:100%;max-width:1100px;margin:0 auto;padding:0 16px}
 
 /* Topbar */
-.topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.9);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
+.topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.82);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
 .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-.brand-avatar{width:28px;height:28px;border-radius:6px}
+.brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
 #brandText{font-weight:800}
-#statusDot{width:12px;height:12px;border-radius:50%;display:inline-block;vertical-align:middle;margin-left:6px;background:#ef4444;box-shadow:0 0 0 2px rgba(0,0,0,.4)} /* OFF rouge par défaut */
+#statusDot{
+  width:12px;height:12px;border-radius:50%;display:inline-block;vertical-align:middle;margin-left:6px;
+  background:#ef4444; /* OFF par défaut */
+  box-shadow:0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35);
+}
 
-/* Liens */
+/* Liens + logos */
 .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{padding:8px 12px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;font-weight:700;transition:transform .18s ease,background .18s ease,border-color .18s ease;display:inline-flex;align-items:center;gap:8px}
-.btn:hover{transform:translateY(-1px);background:#1e1e1e;border-color:#3a3a3a}
+.btn{
+  padding:8px 12px;background:rgba(26,26,26,.88);border:1px solid rgba(255,255,255,.08);border-radius:10px;
+  font-weight:700;display:inline-flex;align-items:center;gap:8px;
+  transition:transform .18s ease,background .18s ease,border-color .18s ease
+}
+.btn:hover{transform:translateY(-1px);background:rgba(30,30,30,.92);border-color:rgba(255,255,255,.14)}
 .btn.small{padding:6px 10px;font-size:.9rem}
 .icon{width:18px;height:18px;display:block;transition:transform .18s ease,filter .18s ease}
 .btn.social:hover .icon{transform:translateY(-1px) scale(1.06);filter:drop-shadow(0 0 6px rgba(255,255,255,.15))}
 
-/* Hero / Cards */
+/* Cards / panels translucides pour VOIR l'image */
 .hero{display:grid;gap:16px;padding:20px 0}
-.card{background:var(--panel);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
+.card{
+  background:rgba(20,20,20,var(--panel-alpha));
+  border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,.28);
+}
 .card .title{margin:0 0 6px 0}
 .subtitle{margin:0;color:var(--muted)}
 
 /* Section live */
 .section{padding:20px 0}
-.panel{background:var(--panel);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
+.panel{
+  background:rgba(20,20,20,var(--panel-alpha));
+  border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
 .live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:10px}
-.player,.chat{height:520px;border-radius:10px;border:1px solid #1f1f1f}
-.chat{background:#0b0b0b}
-
-/* Grids réutilisables */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.player,.chat{height:520px;border-radius:10px;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.35)}
+.chat{background:rgba(0,0,0,.35)}
 
 /* FAB CLIPS */
 .fab-clips{
@@ -57,11 +89,11 @@ a{color:inherit;text-decoration:none}
 .fab-emoji{font-size:20px;line-height:1}.fab-text{font-size:14px}
 
 /* Footer */
-footer{opacity:.8;padding:24px 0;text-align:center;color:var(--muted)}
+footer{opacity:.95;padding:24px 0;text-align:center;color:#D0D0D0;text-shadow:0 1px 2px rgba(0,0,0,.35)}
 
-/* Responsif / anti-chevauchement */
+/* Responsive / anti-chevauchement */
 @media (max-width:900px){ .live-wrap{grid-template-columns:1fr}.player,.chat{height:420px} }
-@media (max-width:520px){ .grid{grid-template-columns:1fr} .fab-text{display:none} .fab-clips{padding:12px} }
+@media (max-width:520px){ .fab-text{display:none} .fab-clips{padding:12px} }
 @media (max-width:420px){ #brandText{display:none} }
 </style>
 </head>
@@ -80,7 +112,7 @@ footer{opacity:.8;padding:24px 0;text-align:center;color:var(--muted)}
       <a class="btn" href="/riderskill-site/clips.html">Clips</a>
       <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
 
-      <!-- Réseaux (logos SVG via Simple Icons) -->
+      <!-- Logos officiels -->
       <a class="btn social" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">
         <img class="icon" src="https://cdn.simpleicons.org/twitch/9146FF" alt="Twitch"> Twitch
       </a>
@@ -139,46 +171,31 @@ footer{opacity:.8;padding:24px 0;text-align:center;color:var(--muted)}
 <!-- JS -->
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 <script>
-/* ===== Statut (OFF rouge / ON vert) ===== */
+/* Statut (OFF rouge / ON vert) */
 function setStatus(state){
-  const dot = document.getElementById('statusDot');
-  if(!dot) return;
-  if(state === 'on'){
-    dot.style.background = '#22c55e';         // VERT
-    dot.title = 'Live (ON)'; dot.setAttribute('aria-label','Live (ON)');
-    dot.style.boxShadow = '0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(34,197,94,.45)';
-  }else if(state === 'off'){
-    dot.style.background = '#ef4444';         // ROUGE
-    dot.title = 'Hors-ligne (OFF)'; dot.setAttribute('aria-label','Hors-ligne (OFF)');
-    dot.style.boxShadow = '0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)';
+  const dot=document.getElementById('statusDot'); if(!dot) return;
+  if(state==='on'){
+    dot.style.background='#22c55e'; dot.title='Live (ON)'; dot.setAttribute('aria-label','Live (ON)');
+    dot.style.boxShadow='0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(34,197,94,.45)';
   }else{
-    dot.style.background = '#6b7280';         // GRIS inconnu
-    dot.title = 'Statut inconnu'; dot.setAttribute('aria-label','Statut inconnu');
-    dot.style.boxShadow = '0 0 0 2px rgba(0,0,0,.4)';
+    dot.style.background='#ef4444'; dot.title='Hors-ligne (OFF)'; dot.setAttribute('aria-label','Hors-ligne (OFF)');
+    dot.style.boxShadow='0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)';
   }
 }
+setStatus('off'); // par défaut
 
-/* Par défaut: OFF rouge */
-setStatus('off');
-
-/* Forcer via URL (?status=on/off) */
-(function initStatusFromUrl(){
-  const p = new URLSearchParams(location.search);
-  const s = p.get('status') || p.get('on');
-  if(s === '1' || s === 'true' || s === 'on')  setStatus('on');
-  if(s === '0' || s === 'false' || s === 'off') setStatus('off');
+// URL override ?status=on/off
+(function(){const p=new URLSearchParams(location.search);const s=p.get('status')||p.get('on');
+  if(s==='1'||s==='true'||s==='on') setStatus('on');
+  if(s==='0'||s==='false'||s==='off') setStatus('off');
 })();
 
-/* ===== Twitch Player: bascule auto vert/rouge ===== */
+// Twitch player -> bascule auto
 (function(){
-  const parentHosts = ["riderskill.github.io","localhost","127.0.0.1"];
-  const player = new Twitch.Player("twitch-player", {
-    channel: "riderskill",
-    width: "100%", height: "100%",
-    autoplay: true, muted: true, parent: parentHosts
-  });
-  player.addEventListener(Twitch.Player.ONLINE,  () => setStatus('on'));
-  player.addEventListener(Twitch.Player.OFFLINE, () => setStatus('off'));
+  const parentHosts=["riderskill.github.io","localhost","127.0.0.1"];
+  const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
+  player.addEventListener(Twitch.Player.ONLINE, ()=>setStatus('on'));
+  player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
 })();
 </script>
 </body>
