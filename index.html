@@ -25,7 +25,7 @@
       var(--bg-img) center/cover no-repeat fixed;
   }
   .wrap{max-width: 1100px; margin: clamp(18px,3vw,48px) auto; padding: 0 18px;}
-  header{display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:20px;}
+  header{display:flex; align-items:center; justify-content:space-between; gap:14px; margin:20px 0;}
   header .brand{
     display:flex; align-items:center; gap:10px; padding:10px 14px;
     background: linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.00));
@@ -94,13 +94,11 @@
     padding:8px 14px; border-radius: 999px; border:1px solid rgba(255,255,255,.14);
     background: #161a20; color:#d6dde8; box-shadow: inset 0 -2px 0 rgba(255,255,255,.03); transition:.2s;
   }
-  .badge.live{
-    color:#fff; border-color: rgba(255,255,255,.25);
+  .badge.live{ color:#fff; border-color: rgba(255,255,255,.25);
     background: radial-gradient(120% 120% at 20% 10%, rgba(255,255,255,.36), rgba(0,0,0,.35));
     box-shadow: 0 0 22px rgba(255,255,255,.25), inset 0 0 0 1px rgba(255,255,255,.06);
-    animation: pulse 1.35s ease-in-out infinite;
-  }
-  @keyframes pulse{0%{box-shadow:0 0 12px rgba(255,255,255,.18)}50%{box-shadow:0 0 28px rgba(255,255,255,.35)}100%{box-shadow:0 0 12px rgba(255,255,255,.18)}}
+    animation: pulse 1.35s ease-in-out infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 12px rgba(var(--glow),.18)}50%{box-shadow:0 0 28px rgba(var(--glow),.35)}100%{box-shadow:0 0 12px rgba(var(--glow),.18)}}
   .twitch   { --glow: 138, 43, 226; }
   .youtube  { --glow: 255, 61, 61; }
   .kick     { --glow: 0, 255, 136; }
@@ -118,31 +116,27 @@
   .fab-clips:hover{transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,.55), 0 0 24px rgba(145,70,255,.35)}
   .fab-clips .dot{width:10px;height:10px;border-radius:50%;background:#9146FF; box-shadow:0 0 12px #9146FF; animation:dot 1.3s infinite ease-in-out}
   @keyframes dot{50%{transform:scale(1.2)}}
-
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand" aria-label="RiderSkill">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00FFD1" d="M3 4h10a5 5 0 0 1 0 10H9l6 6h-4l-6-6V4zm4 4v4h6a2 2 0 0 0 0-4H7z"/></svg>
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 24 24"><path fill="#00FFD1" d="M3 4h10a5 5 0 0 1 0 10H9l6 6h-4l-6-6V4zm4 4v4h6a2 2 0 0 0 0-4H7z"/></svg>
         <strong>RiderSkill</strong><span style="opacity:.7;font-weight:600">Accueil</span>
       </div>
-
-      <!-- Liens officiels -->
-      <nav class="social" aria-label="Liens sociaux">
-        <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noreferrer" title="Twitch">Twitch</a>
-        <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noreferrer" title="Kick">Kick</a>
-        <a class="btn" href="https://x.com/riderskill" target="_blank" rel="noreferrer" title="X (Twitter)">X</a>
-        <a class="btn" href="https://www.instagram.com/riderskill_twitch_et_kick" target="_blank" rel="noreferrer" title="Instagram">Instagram</a>
-        <a class="btn" href="https://www.youtube.com/@RiderSkill" target="_blank" rel="noreferrer" title="YouTube">YouTube</a>
+      <nav class="social">
+        <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank">Twitch</a>
+        <a class="btn" href="https://kick.com/riderskill" target="_blank">Kick</a>
+        <a class="btn" href="https://x.com/riderskill" target="_blank">X</a>
+        <a class="btn" href="https://www.instagram.com/riderskill_twitch_et_kick/?hl=fr" target="_blank">Instagram</a>
+        <a class="btn" href="https://www.youtube.com/@RiderSkill" target="_blank">YouTube</a>
       </nav>
     </header>
 
     <!-- STREAM EN DIRECT -->
-    <section class="panel" aria-labelledby="live-title">
-      <h2 id="live-title">🎥 Stream en direct</h2>
+    <section class="panel">
+      <h2>🎥 Stream en direct</h2>
       <div class="stream-wrap">
         <div class="stream-player">
           <iframe
@@ -152,112 +146,51 @@
           </iframe>
         </div>
       </div>
-
-      <!-- Chat -->
       <div class="stream-grid">
         <div></div>
-        <iframe
-          class="stream-chat"
-          src="https://www.twitch.tv/embed/riderskill/chat?parent=localhost">
-        </iframe>
+        <iframe class="stream-chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=localhost"></iframe>
       </div>
     </section>
 
     <!-- AGENDA -->
-    <section class="panel" aria-labelledby="agenda-title">
-      <h2 id="agenda-title">Agenda</h2>
-      <div class="list" id="agenda-list" role="list"></div>
+    <section class="panel">
+      <h2>Agenda</h2>
+      <div class="list" id="agenda-list"></div>
     </section>
   </div>
 
-  <!-- Icônes pour l’agenda -->
-  <template id="ico-twitch">
-    <svg width="22" height="22" viewBox="0 0 2400 2800" aria-hidden="true">
-      <path fill="#9146FF" d="M500 0 0 400v1700h600v400h400l400-400h500l600-600V0H500zm1700 1300-300 300h-600l-400 400v-400H400V200h1800v1100z"/>
-      <path fill="#fff" d="M1700 800h200v500h-200zM1200 800h200v500h-200z"/>
-    </svg>
-  </template>
-  <template id="ico-youtube">
-    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="#FF0033" d="M23.5 6.2a3.5 3.5 0 0 0-2.5-2.5C19 3 12 3 12 3s-7 0-9 .7A3.5 3.5 0 0 0 .5 6.2 36 36 0 0 0 0 12a36 36 0 0 0 .5 5.8 3.5 3.5 0 0 0 2.5 2.5C5 21 12 21 12 21s7 0 9-.7a3.5 3.5 0 0 0 2.5-2.5A36 36 0 0 0 24 12a36 36 0 0 0-.5-5.8Z"/>
-      <path fill="#fff" d="M10 8.5v7l6-3.5-6-3.5z"/>
-    </svg>
-  </template>
-  <template id="ico-kick">
-    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="2" y="2" width="20" height="20" rx="4" fill="#00FF88"/>
-      <path d="M7 6h3v5l4-5h3l-4.6 5.6L17 18h-3.2l-3.8-5v5H7V6z" fill="#0A0D12"/>
-    </svg>
-  </template>
-
   <!-- Bouton flottant Clips -->
-  <a class="fab-clips" href="#clips" title="Clips & Best-of">
-    <span class="dot" aria-hidden="true"></span> CLIPS
+  <a class="fab-clips" href="https://www.youtube.com/@RiderSkill" target="_blank">
+    <span class="dot"></span> CLIPS
   </a>
 
 <script>
-/* ===========
-   EVENTS (ISO local)
-   =========== */
 const events = [
   { title: "Live Rust — chill & raids",  start: "2025-09-04T21:00", end: "2025-09-04T23:59", platform: "twitch",  location: "Twitch" },
   { title: "GTA RP — braquage & roleplay", start: "2025-09-05T20:30", end: "2025-09-05T23:30", platform: "twitch",  location: "Twitch" },
   { title: "Best-of & TikTok review",    start: "2025-09-06T18:00", end: "2025-09-06T19:30", platform: "youtube", location: "YouTube" }
 ];
 
-const fmt = (date) => new Date(date).toLocaleString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).replace(',', '');
-const platformIcon = (p) => {
-  const tpl = document.getElementById(p==='twitch'?'ico-twitch':p==='youtube'?'ico-youtube':'ico-kick');
-  return tpl.content.cloneNode(true);
-};
-const badgeFor = (start, end) => {
-  const now = new Date(), s = new Date(start), e = new Date(end);
-  if (now < s) return {text:'Programmé', cls:''};
-  if (now >= s && now <= e) return {text:'En direct', cls:'live'};
-  return {text:'Terminé', cls:''};
+const fmt = d => new Date(d).toLocaleString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).replace(',','');
+const badgeFor = (s,e) => {
+  const now=new Date(),S=new Date(s),E=new Date(e);
+  if(now<S) return{text:'Programmé',cls:''};
+  if(now>=S&&now<=E) return{text:'En direct',cls:'live'};
+  return{text:'Terminé',cls:''};
 };
 
-const list = document.getElementById('agenda-list');
-events.sort((a,b)=> new Date(a.start)-new Date(b.start)).forEach(ev=>{
-  const card = document.createElement('div');
-  card.className = `card ${ev.platform}`;
-  card.setAttribute('role','listitem');
-
-  const icon = document.createElement('div');
-  icon.className = 'icon';
-  icon.append(platformIcon(ev.platform));
-  card.append(icon);
-
-  const content = document.createElement('div');
-  content.className = 'content';
-  const h3 = document.createElement('h3');
-  h3.className = 'title';
-  h3.textContent = ev.title;
-  const meta = document.createElement('div');
-  meta.className = 'meta';
-  meta.textContent = `${fmt(ev.start)} — ${new Date(ev.end).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})} · ${ev.location}`;
-  content.append(h3, meta);
-
-  const badge = document.createElement('span');
-  const b = badgeFor(ev.start, ev.end);
-  badge.className = `badge ${b.cls}`;
-  badge.textContent = b.text;
-
-  card.append(content, badge);
-  list.append(card);
+const list=document.getElementById('agenda-list');
+events.forEach(ev=>{
+  const card=document.createElement('div'); card.className=`card ${ev.platform}`;
+  const icon=document.createElement('div'); icon.className='icon'; icon.textContent='🎮';
+  const content=document.createElement('div'); content.className='content';
+  const title=document.createElement('div'); title.className='title'; title.textContent=ev.title;
+  const meta=document.createElement('div'); meta.className='meta'; meta.textContent=`${fmt(ev.start)} — ${new Date(ev.end).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})} · ${ev.location}`;
+  content.append(title,meta);
+  const badge=document.createElement('span'); const b=badgeFor(ev.start,ev.end);
+  badge.className=`badge ${b.cls}`; badge.textContent=b.text;
+  card.append(icon,content,badge); list.append(card);
 });
 </script>
-
-<!-- Section cible pour le bouton Clips -->
-<div id="clips" class="wrap" style="margin-top:10px; margin-bottom:60px;">
-  <div class="panel">
-    <h2>🎬 Clips & Best-of</h2>
-    <div style="padding:0 16px 18px">
-      <p style="opacity:.9">Colle ici ta playlist YouTube ou tes meilleurs clips. Si tu veux ouvrir une URL externe avec le bouton flottant, remplace son href.</p>
-      <a class="btn" href="https://www.youtube.com/@RiderSkill" target="_blank" rel="noreferrer">Ouvrir la chaîne</a>
-    </div>
-  </div>
-</div>
-
 </body>
 </html>
