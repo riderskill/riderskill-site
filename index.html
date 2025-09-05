@@ -188,7 +188,7 @@
     const $ = (s,d=document)=>d.querySelector(s);
     $('#y').textContent = new Date().getFullYear();
 
-    // Charger la dernière VOD depuis vod.json (mis à jour par l'automatisation)
+    // Charger la dernière VOD depuis vod.json
     async function loadVOD(){
       try{
         const res = await fetch('vod.json',{cache:'no-store'});
