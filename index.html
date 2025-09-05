@@ -88,6 +88,8 @@
         <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
         <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
         <a class="btn" href="https://www.youtube.com/@RiderSkill" target="_blank" rel="noopener">YouTube</a>
+        <!-- ✅ Nouveau bouton "riderskill.fr" -->
+        <a class="btn" href="https://riderskill.github.io/riderskill-site/" target="_blank" rel="noopener">riderskill.fr</a>
       </div>
     </div>
   </header>
@@ -113,7 +115,7 @@
             <a class="btn" href="https://x.com/search?q=RiderSkill" target="_blank" rel="noopener">X / Twitter</a>
           </div>
 
-          <!-- ===== Dernière VOD (auto via vod.json) ===== -->
+          <!-- ===== Dernière VOD ===== -->
           <div class="vodWrap" style="margin-top:16px">
             <div class="vodTitle" id="vodTitle">Dernière VOD</div>
             <div class="vodMeta" id="vodMeta">Chargement…</div>
@@ -130,7 +132,6 @@
               <span class="muted">La VOD se met à jour automatiquement.</span>
             </div>
           </div>
-          <!-- ============================================ -->
         </div>
       </article>
 
@@ -171,34 +172,26 @@
 
   <script>
     const $ = (s, d=document)=>d.querySelector(s);
-
-    // Année footer
     $('#y').textContent = new Date().getFullYear();
 
-    // Indicateur live basique
+    // Indicateur live
     const player = $('#twitchPlayer');
     const pill = $('#livePill'); const txt = $('#liveText');
     let loaded = false;
     player?.addEventListener('load', ()=>{ loaded=true; pill.classList.add('live'); txt.textContent='En direct'; });
     setTimeout(()=>{ if(!loaded) txt.textContent='Hors ligne ?'; },6000);
 
-    // Charger la dernière VOD depuis vod.json (mis à jour par ton workflow)
+    // Charger la dernière VOD depuis vod.json
     async function loadVOD(){
       try{
         const res = await fetch('vod.json', { cache: 'no-store' });
         if(!res.ok) throw new Error('vod.json introuvable');
         const v = await res.json();
-
-        // Titre
         $('#vodTitle').textContent = v.title || 'Dernière VOD';
-
-        // Meta (date FR + durée si dispo)
         const d = v.published_at ? new Date(v.published_at) : null;
         const dateTxt = d ? d.toLocaleString('fr-FR', { dateStyle:'medium', timeStyle:'short' }) : '';
         const durTxt = v.duration ? ` • ${v.duration}` : '';
         $('#vodMeta').textContent = (dateTxt || durTxt) ? (dateTxt + durTxt) : '—';
-
-        // Lecteur Twitch (IMPORTANT: parent= riderskill.github.io)
         const iframe = $('#vodPlayer');
         if (v.id) {
           iframe.src = `https://player.twitch.tv/?video=${encodeURIComponent(v.id)}&parent=riderskill.github.io&autoplay=false&muted=false`;
@@ -208,8 +201,6 @@
         } else {
           $('#vodMeta').textContent = 'Aucune VOD trouvée.';
         }
-
-        // Lien direct
         if (v.url) $('#vodLink').href = v.url;
       }catch(e){
         console.error(e);
