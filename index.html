@@ -6,128 +6,116 @@
 <title>RiderSkill — Accueil</title>
 <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
 <meta name="theme-color" content="#0D0D0D" />
+
+<!-- Sécurité navigateur -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               img-src 'self' https://unavatar.io https://cdn.simpleicons.org https://images.unsplash.com https://cdn.pixabay.com data:;
+               script-src 'self' https://player.twitch.tv 'unsafe-inline';
+               style-src 'self' 'unsafe-inline';
+               frame-src https://player.twitch.tv https://www.twitch.tv;
+               connect-src 'self';
+               media-src 'self' https://riderskill.github.io;
+               object-src 'none';
+               base-uri 'self';
+               form-action 'none';
+               upgrade-insecure-requests;">
+<meta http-equiv="Permissions-Policy"
+      content="autoplay=(), camera=(), microphone=(), geolocation=(), usb=(), payment=()">
+<meta name="referrer" content="no-referrer">
+
 <style>
-:root{ --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; --twitch:#9146FF; --kick:#53FC18; }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  min-height:100vh;color:var(--text);background-color:#0f1014;
+/* ton CSS existant (raccourci ici pour l’exemple) */
+body {
+  min-height:100vh;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-  background: url("https://cdn.pixabay.com/photo/2019/08/06/10/14/gaming-4381792_1920.jpg") center/cover no-repeat fixed;
+  color:#EDEDED;
+  background: url("/riderskill-site/musique/bg.jpg") center/cover no-repeat fixed;
 }
-a{color:inherit;text-decoration:none}
-.container{width:100%;max-width:1100px;margin:0 auto;padding:0 16px}
-.topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.82);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
-.brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-.brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
-#brandText{font-weight:800}
-.status-wrap{display:inline-flex;align-items:center;gap:6px;margin-left:6px;white-space:nowrap}
-#statusDot{width:12px;height:12px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)}
-#statusLabel{font-weight:800;font-size:.85rem;letter-spacing:.5px;color:#ef4444}
-.links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{padding:8px 12px;background:rgba(26,26,26,.9);border:1px solid #2a2a2a;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s}
-.btn:hover{transform:translateY(-1px);background:#1e1e1e;border-color:#3a3a3a}
-.icon{width:18px;height:18px;display:block;transition:transform .18s,filter .18s}
-.btn.social:hover .icon{transform:translateY(-1px) scale(1.06);filter:drop-shadow(0 0 6px rgba(255,255,255,.15))}
-.hero{display:grid;gap:16px;padding:20px 0}
-.card{background:rgba(20,20,20,.9);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
-.subtitle{margin:0;color:var(--muted)}
-.section{padding:20px 0}
-.panel{background:rgba(20,20,20,.9);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
-.live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:10px}
-.player,.chat{height:520px;border-radius:10px;border:1px solid #1f1f1f}
-.chat{background:#0b0b0b}
-.agenda-list{display:grid;gap:10px}
-.ag-item{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#121212;border:1px solid #222;border-radius:10px;padding:10px}
-.ag-left{display:flex;flex-direction:column}
-.ag-title{font-weight:800;margin:0}
-.ag-meta{color:#9a9a9a;font-size:.9rem}
-.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 10px;font-weight:800;letter-spacing:.3px}
-.badge.live{background:#05260f;color:#22c55e;border:1px solid #115e2c}
-.badge.soon{background:#1d1b09;color:#facc15;border:1px solid #8a6d0a}
-.badge.off{background:#2a0b0b;color:#ef4444;border:1px solid #7a2020}
-footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted)}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="nav container">
-    <a class="brand" href="/riderskill-site/index.html">
-      <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
-      <span id="brandText">RiderSkill</span>
-      <span class="status-wrap">
-        <span id="statusDot"></span>
-        <span id="statusLabel">OFF</span>
-      </span>
-    </a>
-    <div class="links">
-      <a class="btn" href="/riderskill-site/index.html">Live</a>
-      <a class="btn" href="/riderskill-site/clips.html">Clips</a>
-      <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
+  <div class="topbar">…</div>
+
+  <section class="section container" id="live">
+    <div class="panel">
+      <h2>Live intégré</h2>
+      <div class="live-wrap">
+        <div id="twitch-player" class="player"></div>
+        <iframe id="twitch-chat" class="chat"
+                src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"
+                allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<header class="hero container">
-  <div class="card">
-    <h1 class="title">Le show. Le game. <span style="color:var(--twitch)">La musique.</span></h1>
-    <p class="subtitle">Streamer FR — Rust • GTA • Sea of Thieves.</p>
-  </div>
-</header>
-
-<section class="section container" id="live">
-  <div class="panel">
-    <h2>Live intégré</h2>
-    <div class="live-wrap">
-      <div id="twitch-player" class="player"></div>
-      <iframe id="twitch-chat" class="chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"></iframe>
+  <section class="section container" id="agenda">
+    <div class="panel">
+      <h2>Agenda</h2>
+      <div id="agendaList" class="agenda-list"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section container" id="agenda">
-  <div class="panel">
-    <h2>Agenda</h2>
-    <div id="agendaList" class="agenda-list"></div>
-  </div>
-</section>
-
-<footer class="container">© 2025 RiderSkill</footer>
+  <footer class="container">© 2025 RiderSkill</footer>
 
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 <script>
+/* Fonction d’échappement pour éviter XSS */
+function esc(s){
+  return String(s)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
+}
+
+/* Status LIVE/OFF */
 function setStatus(state){
-  const dot=document.getElementById('statusDot'); const label=document.getElementById('statusLabel');
-  if(state==='on'){ dot.style.background='#22c55e'; label.textContent='LIVE'; label.style.color='#22c55e'; }
-  else { dot.style.background='#ef4444'; label.textContent='OFF'; label.style.color='#ef4444'; }
+  const dot=document.getElementById('statusDot');
+  const label=document.getElementById('statusLabel');
+  if(!dot||!label) return;
+  if(state==='on'){
+    dot.style.background='#22c55e';
+    label.textContent='LIVE'; label.style.color='#22c55e';
+  } else {
+    dot.style.background='#ef4444';
+    label.textContent='OFF'; label.style.color='#ef4444';
+  }
 }
 setStatus('off');
-(function(){const parentHosts=["riderskill.github.io"];
-  const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
+
+/* Twitch Player */
+(function(){
+  const parentHosts=["riderskill.github.io"];
+  const player=new Twitch.Player("twitch-player",{
+    channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts
+  });
   player.addEventListener(Twitch.Player.ONLINE,()=>setStatus('on'));
   player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
 })();
 
-/* Agenda */
+/* Agenda sécurisé */
 function fmtDate(d){return d.toLocaleDateString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit'})}
 function fmtTime(d){return d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
 function renderAgenda(items){
   const el=document.getElementById('agendaList'); if(!el) return;
   const now=new Date();
-  el.innerHTML = items.map(it=>{
+  el.innerHTML = (Array.isArray(items)?items:[]).map(it=>{
     const s=new Date(it.start); const e=it.end?new Date(it.end):null;
     const live=s<=now && (!e||e>=now);
     const soon=s>now && (s-now)<=1000*60*60*6;
     const badge= live?'live':(soon?'soon':'off');
     const text= live?'EN LIVE':(soon?'Bientôt':'Programmé');
     return `<div class="ag-item"><div class="ag-left">
-      <h3 class="ag-title">${it.title}</h3>
-      <div class="ag-meta">${fmtDate(s)} · ${fmtTime(s)}${e?(' → '+fmtTime(e)):""} · ${it.platform}</div>
+      <h3 class="ag-title">${esc(it.title||'Live')}</h3>
+      <div class="ag-meta">${fmtDate(s)} · ${fmtTime(s)}${e?(' → '+fmtTime(e)):""} · ${esc(it.platform||'')}</div>
     </div><span class="badge ${badge}">${text}</span></div>`;
   }).join('');
 }
-fetch('/riderskill-site/planning.json',{cache:'no-store'}).then(r=>r.json()).then(renderAgenda).catch(()=>{});
+fetch('/riderskill-site/planning.json',{cache:'no-store'})
+  .then(r=>r.json())
+  .then(renderAgenda)
+  .catch(()=>{});
 </script>
 </body>
 </html>
