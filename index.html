@@ -1,4 +1,3 @@
-<!-- Généré le 06/09/2025 — Nav avec logos SVG + Player gauche/Chat droite + Fallback -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,90 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RiderSkill — Accueil</title>
   <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
-  <link rel="stylesheet" href="style.css" />
   <meta name="theme-color" content="#0D0D0D" />
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Fix layout LIVE directement ici */
-    #live .live-wrap{ display:grid; grid-template-columns:2fr 1fr; gap:16px; align-items:start; }
-    #live #twitch-player{ width:100%; aspect-ratio:16/9; border-radius:10px; background:#000; }
-    #live #twitch-chat{ width:100%; min-height:480px; border-radius:10px; background:#111; }
-    @media (max-width:900px){ #live .live-wrap{ grid-template-columns:1fr; } #live #twitch-chat{ min-height:360px; } }
-    #offlineNote{ display:none; margin-top:10px; padding:10px 12px; border-radius:8px; background:#151515; color:#bbb; }
-    #offlineNote a{ color:#9146FF; font-weight:600; text-decoration:none; }
+    body { margin:0; font-family:Arial, sans-serif; background:#0d0d0d; color:#fff; }
+    .topbar { background:#111; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:18px; text-decoration:none; color:#fff; }
+    .brand img { width:28px; height:28px; border-radius:50%; }
+    .links.social { display:flex; gap:15px; }
+    .links.social .btn { display:inline-flex; align-items:center; gap:6px; color:#fff; text-decoration:none; font-weight:bold; }
+    .links.social svg { height:18px; width:18px; }
 
-    /* Nav logos clean */
-    .links.social .btn { display:inline-flex; align-items:center; gap:8px; }
-    .links.social svg { flex:0 0 18px; height:18px; }
+    header { text-align:center; padding:40px 20px; }
+    .title { font-size:32px; margin:0; }
+    .subtitle { font-size:16px; color:#bbb; }
+
+    .section { padding:20px; }
+    .panel { background:#151515; padding:20px; border-radius:10px; }
+    .live-wrap { display:grid; grid-template-columns:2fr 1fr; gap:16px; }
+    #twitch-player { width:100%; aspect-ratio:16/9; border-radius:10px; background:#000; }
+    #twitch-chat { width:100%; min-height:480px; border-radius:10px; background:#111; }
+    @media (max-width:900px) {
+      .live-wrap { grid-template-columns:1fr; }
+      #twitch-chat { min-height:360px; }
+    }
+    #offlineNote{ display:none; margin-top:10px; padding:10px 12px; border-radius:8px; background:#222; color:#bbb; }
+    #offlineNote a{ color:#9146FF; font-weight:bold; text-decoration:none; }
+
+    footer { text-align:center; padding:20px; font-size:14px; color:#777; }
   </style>
 </head>
 <body>
   <!-- NAV -->
   <div class="topbar">
-    <div class="nav">
-      <a class="brand" href="/riderskill-site/index.html" title="Accueil">
-        <img src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
-        <span id="brandText">RiderSkill</span>
-        <span id="statusDot"></span>
+    <a class="brand" href="index.html">
+      <img src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
+      RiderSkill
+    </a>
+    <div class="links social">
+      <a class="btn" href="index.html">Live</a>
+      <a class="btn" href="clips.html">Clips</a>
+      <a class="btn" href="alaune.html">À la une</a>
+
+      <!-- Twitch -->
+      <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank">
+        <svg viewBox="0 0 2400 2800"><path fill="#9146FF" d="M0 0v2200h600v600l600-600h500l700-700V0H0z"/><path fill="#fff" d="M1500 550h200v600h-200zM900 550h200v600H900z"/><path fill="#9146FF" d="M300 200h1600v1000l-400 400h-500l-400 400v-400H300z"/></svg>
+        Twitch
       </a>
-      <div class="links social">
-        <a class="btn" href="/riderskill-site/index.html">Live</a>
-        <a class="btn" href="/riderskill-site/clips.html">Clips</a>
-        <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
 
-        <!-- TWITCH -->
-        <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">
-          <svg viewBox="0 0 2400 2800" width="18" height="18"><path fill="#9146FF" d="M0 0v2200h600v600l600-600h500l700-700V0H0z"/><path fill="#fff" d="M1500 550h200v600h-200zM900 550h200v600H900z"/><path fill="#9146FF" d="M300 200h1600v1000l-400 400h-500l-400 400v-400H300z"/></svg>
-          Twitch
-        </a>
+      <!-- Kick -->
+      <a class="btn" href="https://kick.com/riderskill" target="_blank">
+        <svg viewBox="0 0 24 24"><path fill="#53FC18" d="M3 3h4v18H3zM21 3h-3.5l-7 9 7 9H21z"/></svg>
+        Kick
+      </a>
 
-        <!-- KICK -->
-        <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#53FC18" d="M3 3h4v18H3zM21 3h-3.5l-7 9 7 9H21z"/></svg>
-          Kick
-        </a>
+      <!-- YouTube -->
+      <a class="btn" href="https://www.youtube.com/@riderskill" target="_blank">
+        <svg viewBox="0 0 24 24"><path fill="#FF0000" d="M23.5 6.2A3 3 0 0 0 21.4 4C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8z"/><path fill="#fff" d="M9.75 15.5v-7l6 3.5-6 3.5z"/></svg>
+        YouTube
+      </a>
 
-        <!-- YOUTUBE -->
-        <a class="btn" href="https://www.youtube.com/@riderskill" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#FF0000" d="M23.5 6.2A3 3 0 0 0 21.4 4C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8z"/><path fill="#fff" d="M9.75 15.5v-7l6 3.5-6 3.5z"/></svg>
-          YouTube
-        </a>
+      <!-- TikTok -->
+      <a class="btn" href="https://www.tiktok.com/@riderskill_twitch" target="_blank">
+        <svg viewBox="0 0 48 48"><path fill="#000000" d="M41 17.4c-2.9 0-5.7-.9-8-2.6v13c0 8.2-6.6 14.9-14.8 15-3.2 0-6.2-1-8.7-2.9-2.5-1.9-4.3-4.6-5-7.6-1.5-6.4 2.5-12.8 8.9-14.3 1-.2 2-.3 3-.3v6.9c-.7-.2-1.3-.2-2-.1-2.5.4-4.2 2.8-3.7 5.3.2 1.2.9 2.2 1.8 3 1 .8 2.2 1.2 3.4 1.2 2.6 0 4.9-2.1 5-4.8V4h6.9c.4 3 2 5.8 4.4 7.7s5.4 2.9 8.6 2.9z"/></svg>
+        TikTok
+      </a>
 
-        <!-- TIKTOK -->
-        <a class="btn" href="https://www.tiktok.com/@riderskill_twitch" target="_blank" rel="noopener">
-          <svg viewBox="0 0 48 48" width="18" height="18"><path fill="#000000" d="M41 17.4c-2.9 0-5.7-.9-8-2.6v13c0 8.2-6.6 14.9-14.8 15-3.2 0-6.2-1-8.7-2.9-2.5-1.9-4.3-4.6-5-7.6-1.5-6.4 2.5-12.8 8.9-14.3 1-.2 2-.3 3-.3v6.9c-.7-.2-1.3-.2-2-.1-2.5.4-4.2 2.8-3.7 5.3.2 1.2.9 2.2 1.8 3 1 .8 2.2 1.2 3.4 1.2 2.6 0 4.9-2.1 5-4.8V4h6.9c.4 3 2 5.8 4.4 7.7s5.4 2.9 8.6 2.9z"/></svg>
-          TikTok
-        </a>
+      <!-- X -->
+      <a class="btn" href="https://x.com/riderskill" target="_blank">
+        <svg viewBox="0 0 24 24"><path fill="#1DA1F2" d="M18.24 2.25h3.45l-7.54 8.59 8.89 10.91h-6.99l-5.49-6.88-6.28 6.88H1.83l8.05-8.81L1.09 2.25h7.05l4.95 6.2z"/></svg>
+        X
+      </a>
 
-        <!-- X -->
-        <a class="btn" href="https://x.com/riderskill" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#1DA1F2" d="M18.24 2.25h3.45l-7.54 8.59 8.89 10.91h-6.99l-5.49-6.88-6.28 6.88H1.83l8.05-8.81L1.09 2.25h7.05l4.95 6.2z"/></svg>
-          X
-        </a>
-
-        <!-- DISCORD -->
-        <a class="btn" href="https://discord.gg/2UWwhhyY" target="_blank" rel="noopener">
-          <svg viewBox="0 0 245 240" width="18" height="18"><path fill="#5865F2" d="M189.5 20h-134C24.3 20 10 34.3 10 52.8v134.4C10 205.7 24.3 220 42.8 220h111.3l-5.2-18.1 12.6 11.8 11.9 11.1 21.2 19.2V220h5c18.5 0 32.8-14.3 32.8-32.8V52.8C222.3 34.3 208 20 189.5 20z"/><path fill="#fff" d="M104.4 104.3c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.6-11.1-10.2-11.1zm36.2 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.6-11.1-10.2-11.1z"/></svg>
-          Discord
-        </a>
-      </div>
+      <!-- Discord -->
+      <a class="btn" href="https://discord.gg/2UWwhhyY" target="_blank">
+        <svg viewBox="0 0 245 240"><path fill="#5865F2" d="M189.5 20h-134C24.3 20 10 34.3 10 52.8v134.4C10 205.7 24.3 220 42.8 220h111.3l-5.2-18.1 12.6 11.8 11.9 11.1 21.2 19.2V220h5c18.5 0 32.8-14.3 32.8-32.8V52.8C222.3 34.3 208 20 189.5 20z"/><path fill="#fff" d="M104.4 104.3c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.6-11.1-10.2-11.1zm36.2 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.6-11.1-10.2-11.1z"/></svg>
+        Discord
+      </a>
     </div>
   </div>
 
   <!-- HEADER -->
   <header>
-    <div class="hero">
-      <div class="card">
-        <h1 class="title">Le show. Le game. <span style="color:#9146FF">La musique.</span></h1>
-        <p class="subtitle">Streamer FR — Rust • GTA • SOT — vibes musicales + communauté active.</p>
-        <div class="cta" style="margin-top:14px">
-          <a class="btn youtube" href="/riderskill-site/clips.html">▶️ Voir les clips</a>
-        </div>
-      </div>
-      <div class="card mini">
-        <strong>Infos rapides</strong>
-        <p class="subtitle" style="margin-top:6px">Lives en soirée · Drops Rust · Highlights · Rejoins la commu</p>
-      </div>
-    </div>
+    <h1 class="title">Le show. Le game. <span style="color:#9146FF">La musique.</span></h1>
+    <p class="subtitle">Streamer FR — Rust • GTA • SOT — vibes musicales + communauté active.</p>
   </header>
 
   <!-- LIVE -->
@@ -103,7 +102,6 @@
           src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&autoplay=true&muted=true"
           frameborder="0" allowfullscreen scrolling="no"
         ></iframe>
-
         <!-- Chat -->
         <iframe
           id="twitch-chat"
@@ -113,18 +111,17 @@
       </div>
       <div id="offlineNote">
         Hors-ligne pour le moment. Passe dire bonjour sur
-        <a href="https://twitch.tv/riderskill" target="_blank" rel="noopener">twitch.tv/riderskill</a> 💜
+        <a href="https://twitch.tv/riderskill" target="_blank">twitch.tv/riderskill</a> 💜
       </div>
     </div>
     <script>
       (function(){
         const s = new URLSearchParams(location.search).get('live');
-        if(s === 'off'){ const n = document.getElementById('offlineNote'); if(n) n.style.display='block'; }
+        if(s === 'off'){ document.getElementById('offlineNote').style.display='block'; }
       })();
     </script>
   </section>
 
-  <!-- FOOTER -->
   <footer>© 2025 RiderSkill — twitch.tv/riderskill · kick.com/riderskill</footer>
 </body>
 </html>
