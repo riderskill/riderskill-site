@@ -1,0 +1,52 @@
+name: Update latest Twitch VOD
+
+on:
+  schedule:
+    - cron: "15 3 * * *"   # Tous les jours à 03:15 UTC (~05:15 Paris)
+  workflow_dispatch: {}     # Lancer manuellement si besoin
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Get app token
+        run: |
+          TOKEN=$(curl -s -X POST "https://id.twitch.tv/oauth2/token?client_id=${{ secrets.TWITCH_CLIENT_ID }}&client_secret=${{ secrets.TWITCH_CLIENT_SECRET }}&grant_type=client_credentials" | jq -r .access_token)
+          echo "TOKEN=$TOKEN" >> $GITHUB_ENV
+
+      - name: Resolve user id
+        run: |
+          UID=$(curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
+            "https://api.twitch.tv/helix/users?login=riderskill" | jq -r '.data[0].id')
+          echo "UID=$UID" >> $GITHUB_ENV
+
+      - name: Fetch latest VOD
+        run: |
+          curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
+            "https://api.twitch.tv/helix/videos?user_id=$UID&type=archive&first=1" > vod_api.json
+          ID=$(jq -r '.data[0].id // empty' vod_api.json)
+          URL=$(jq -r '.data[0].url // empty' vod_api.json)
+          TITLE=$(jq -r '.data[0].title // empty' vod_api.json)
+          DURATION=$(jq -r '.data[0].duration // empty' vod_api.json)
+          THUMB=$(jq -r '.data[0].thumbnail_url // empty' vod_api.json)
+          PUBLISHED=$(jq -r '.data[0].published_at // empty' vod_api.json)
+          jq -n --arg id "$ID" --arg url "$URL" --arg title "$TITLE" --arg duration "$DURATION" --arg thumb "$THUMB" --arg published "$PUBLISHED" \
+            '{id:$id,url:$url,title:$title,duration:$duration,thumbnail_url:$thumb,published_at:$published}' > vod.json
+          rm -f vod_api.json
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet vod.json; then
+            echo "No changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add vod.json
+            git commit -m "chore: update latest VOD"
+            git push
+          fi
