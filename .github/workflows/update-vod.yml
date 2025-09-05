@@ -23,7 +23,7 @@ jobs:
           fi
           echo "TOKEN=$TOKEN" >> $GITHUB_ENV
 
-      # ⚠️ Correction : on utilise TWITCH_UID au lieu de UID (UID est réservé)
+      # ⚠️ NE PAS utiliser 'UID' (variable système). On utilise TWITCH_UID.
       - name: Resolve user id
         run: |
           TWITCH_LOGIN="riderskill"
