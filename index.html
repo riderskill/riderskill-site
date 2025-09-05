@@ -1,127 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RiderSkill — Accueil</title>
-  <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
-  <meta name="theme-color" content="#0D0D0D" />
-  <link rel="stylesheet" href="style.css" />
+  <title>RiderSkill — Live & Hub Officiel</title>
+  <meta name="description" content="Le hub officiel de RiderSkill : live Twitch, chat, planning, liens et infos.">
+  <meta name="theme-color" content="#121219">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family:Arial, sans-serif; background:#0d0d0d; color:#fff; }
-    .topbar { background:#111; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; }
-    .brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:18px; text-decoration:none; color:#fff; }
-    .brand img { width:28px; height:28px; border-radius:50%; }
-    .links.social { display:flex; gap:15px; }
-    .links.social .btn { display:inline-flex; align-items:center; gap:6px; color:#fff; text-decoration:none; font-weight:bold; }
-    .links.social svg { height:18px; width:18px; }
-
-    header { text-align:center; padding:40px 20px; }
-    .title { font-size:32px; margin:0; }
-    .subtitle { font-size:16px; color:#bbb; }
-
-    .section { padding:20px; }
-    .panel { background:#151515; padding:20px; border-radius:10px; }
-    .live-wrap { display:grid; grid-template-columns:2fr 1fr; gap:16px; }
-    #twitch-player { width:100%; aspect-ratio:16/9; border-radius:10px; background:#000; }
-    #twitch-chat { width:100%; min-height:480px; border-radius:10px; background:#111; }
-    @media (max-width:900px) {
-      .live-wrap { grid-template-columns:1fr; }
-      #twitch-chat { min-height:360px; }
+    :root{
+      --bg:#0e0e12; --bg2:#12121a; --panel:#171721; --text:#e8e9ee; --muted:#9aa0aa;
+      --violet:#9146FF; --brand:#00F5D4; --accent:#17d1a6; --danger:#ff4d4d;
+      --radius:18px; --shadow:0 12px 30px rgba(0,0,0,.35);
+      --maxw:1200px;
     }
-    #offlineNote{ display:none; margin-top:10px; padding:10px 12px; border-radius:8px; background:#222; color:#bbb; }
-    #offlineNote a{ color:#9146FF; font-weight:bold; text-decoration:none; }
-
-    footer { text-align:center; padding:20px; font-size:14px; color:#777; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--text); background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(145,70,255,.12), transparent 60%),
+        radial-gradient(1200px 600px at 110% 10%, rgba(0,245,212,.08), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:20px}
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.2) blur(6px);
+      background:linear-gradient(180deg, rgba(18,18,26,.9), rgba(18,18,26,.5));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{
+      display:flex; align-items:center; gap:16px; padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px;
+      background:linear-gradient(90deg, var(--brand), #6ee7ff 40%, var(--violet));
+      -webkit-background-clip:text; background-clip:text; color:transparent; font-size:22px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px;
+      background:#1c1c28; color:#cfd2dc; font-size:13px; border:1px solid rgba(255,255,255,.06)
+    }
+    .pill .dot{width:8px; height:8px; border-radius:50%; background:#6b6f7a}
+    .live .dot{background:#ff3b3b; box-shadow:0 0 0 6px rgba(255,59,59,.15)}
+    main{padding:26px 0 60px}
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 1024px){
+      .grid{grid-template-columns: 2fr 1fr;}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card h2{margin:0; padding:16px 18px; font-size:18px; border-bottom:1px solid rgba(255,255,255,.06)}
+    .card .body{padding:16px}
+    .embed{
+      position:relative; width:100%; aspect-ratio:16/9; background:#0b0b12;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .embed iframe{
+      position:absolute; inset:0; width:100%; height:100%; border:0;
+      border-radius:calc(var(--radius) - 2px);
+    }
+    .fallback{
+      position:absolute; inset:0; display:none; place-items:center; text-align:center;
+      padding:24px; background:
+        radial-gradient(800px 400px at 10% 0%, rgba(145,70,255,.15), transparent 60%),
+        linear-gradient(180deg, #0b0b12, #0e0e15);
+    }
+    .fallback.show{display:grid}
+    .fallback .msg{max-width:520px; margin:auto; color:#cdd2de}
+    .btns{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      appearance:none; border:1px solid rgba(255,255,255,.1); background:#1b1b25; color:#e9ecf6;
+      padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600; font-size:14px;
+    }
+    .btn.primary{background:var(--violet); border-color:transparent; color:white}
+    .row{display:flex; gap:10px; flex-wrap:wrap}
+    .badges a{display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.08); background:#171722; color:#e7ebf6; font-weight:600; font-size:14px}
+    .badges svg{opacity:.9}
+    footer{opacity:.75; font-size:13px; padding:22px 0 60px; text-align:center}
+    .muted{color:var(--muted)}
+    /* Chat toggle for mobile */
+    .chatToggle{display:none}
+    @media (max-width: 1023px){
+      .chat.desktop{display:none}
+      .chatToggle{display:flex; gap:10px; margin:12px 0}
+      .chat.mobile{display:none}
+      .chat.mobile.show{display:block}
+    }
+    @media (min-width: 1024px){
+      .chat.mobile{display:none}
+    }
   </style>
 </head>
 <body>
-  <!-- NAV -->
-  <div class="topbar">
-    <a class="brand" href="index.html">
-      <img src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
-      RiderSkill
-    </a>
-    <div class="links social">
-      <a class="btn" href="index.html">Live</a>
-      <a class="btn" href="clips.html">Clips</a>
-      <a class="btn" href="alaune.html">À la une</a>
-
-      <!-- Twitch -->
-      <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank">
-        <svg viewBox="0 0 2400 2800"><path fill="#9146FF" d="M0 0v2200h600v600l600-600h500l700-700V0H0z"/><path fill="#fff" d="M1500 550h200v600h-200zM900 550h200v600H900z"/><path fill="#9146FF" d="M300 200h1600v1000l-400 400h-500l-400 400v-400H300z"/></svg>
-        Twitch
-      </a>
-
-      <!-- Kick -->
-      <a class="btn" href="https://kick.com/riderskill" target="_blank">
-        <svg viewBox="0 0 24 24"><path fill="#53FC18" d="M3 3h4v18H3zM21 3h-3.5l-7 9 7 9H21z"/></svg>
-        Kick
-      </a>
-
-      <!-- YouTube -->
-      <a class="btn" href="https://www.youtube.com/@riderskill" target="_blank">
-        <svg viewBox="0 0 24 24"><path fill="#FF0000" d="M23.5 6.2A3 3 0 0 0 21.4 4C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8z"/><path fill="#fff" d="M9.75 15.5v-7l6 3.5-6 3.5z"/></svg>
-        YouTube
-      </a>
-
-      <!-- TikTok -->
-      <a class="btn" href="https://www.tiktok.com/@riderskill_twitch" target="_blank">
-        <svg viewBox="0 0 48 48"><path fill="#000000" d="M41 17.4c-2.9 0-5.7-.9-8-2.6v13c0 8.2-6.6 14.9-14.8 15-3.2 0-6.2-1-8.7-2.9-2.5-1.9-4.3-4.6-5-7.6-1.5-6.4 2.5-12.8 8.9-14.3 1-.2 2-.3 3-.3v6.9c-.7-.2-1.3-.2-2-.1-2.5.4-4.2 2.8-3.7 5.3.2 1.2.9 2.2 1.8 3 1 .8 2.2 1.2 3.4 1.2 2.6 0 4.9-2.1 5-4.8V4h6.9c.4 3 2 5.8 4.4 7.7s5.4 2.9 8.6 2.9z"/></svg>
-        TikTok
-      </a>
-
-      <!-- X -->
-      <a class="btn" href="https://x.com/riderskill" target="_blank">
-        <svg viewBox="0 0 24 24"><path fill="#1DA1F2" d="M18.24 2.25h3.45l-7.54 8.59 8.89 10.91h-6.99l-5.49-6.88-6.28 6.88H1.83l8.05-8.81L1.09 2.25h7.05l4.95 6.2z"/></svg>
-        X
-      </a>
-
-      <!-- Discord -->
-      <a class="btn" href="https://discord.gg/2UWwhhyY" target="_blank">
-        <svg viewBox="0 0 245 240"><path fill="#5865F2" d="M189.5 20h-134C24.3 20 10 34.3 10 52.8v134.4C10 205.7 24.3 220 42.8 220h111.3l-5.2-18.1 12.6 11.8 11.9 11.1 21.2 19.2V220h5c18.5 0 32.8-14.3 32.8-32.8V52.8C222.3 34.3 208 20 189.5 20z"/><path fill="#fff" d="M104.4 104.3c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.6-11.1-10.2-11.1zm36.2 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.6-11.1-10.2-11.1z"/></svg>
-        Discord
-      </a>
-    </div>
-  </div>
-
-  <!-- HEADER -->
   <header>
-    <h1 class="title">Le show. Le game. <span style="color:#9146FF">La musique.</span></h1>
-    <p class="subtitle">Streamer FR — Rust • GTA • SOT — vibes musicales + communauté active.</p>
+    <div class="wrap nav">
+      <div class="brand" aria-label="RIDERSKILL">RIDERSKILL</div>
+      <div id="livePill" class="pill" title="Statut live">
+        <span class="dot"></span><span id="liveText">Statut inconnu</span>
+      </div>
+      <div class="badges" style="margin-left:auto; display:flex; gap:10px;">
+        <a href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">
+          <!-- Twitch icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#9146FF" xmlns="http://www.w3.org/2000/svg"><path d="M4 2h16v11l-4 4h-4l-2 2H8v-2H4V2Zm2 2v11h4v2l2-2h4l2-2V4H6Zm4 2h2v6h-2V6Zm4 0h2v6h-2V6Z"/></svg>
+          Twitch
+        </a>
+        <a href="https://kick.com/riderskill" target="_blank" rel="noopener">
+          <!-- Kick K -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#17d1a6" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h6v6H3V3Zm12 0h6v6h-6V3ZM3 15h6v6H3v-6Zm12 0h6v6h-6v-6ZM9 9h6v6H9V9Z"/></svg>
+          Kick
+        </a>
+        <a href="https://www.youtube.com/@RiderSkill" target="_blank" rel="noopener">
+          <!-- YouTube -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#ff4d4d" xmlns="http://www.w3.org/2000/svg"><path d="M23 7.5a4 4 0 0 0-2.8-2.8C18.3 4 12 4 12 4s-6.3 0-8.2.7A4 4 0 0 0 1 7.5 41 41 0 0 0 0 12a41 41 0 0 0 1 4.5 4 4 0 0 0 2.8 2.8C5.7 20 12 20 12 20s6.3 0 8.2-.7a4 4 0 0 0 2.8-2.8 41 41 0 0 0 1-4.5 41 41 0 0 0-1-4.5ZM9.75 8.5l6.5 3.5-6.5 3.5v-7Z"/></svg>
+          YouTube
+        </a>
+      </div>
+    </div>
   </header>
 
-  <!-- LIVE -->
-  <section class="section" id="live">
-    <div class="panel">
-      <h2>Stream en direct</h2>
-      <div class="live-wrap">
-        <!-- Player -->
-        <iframe
-          id="twitch-player"
-          src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&autoplay=true&muted=true"
-          frameborder="0" allowfullscreen scrolling="no"
-        ></iframe>
-        <!-- Chat -->
-        <iframe
-          id="twitch-chat"
-          src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"
-          frameborder="0" scrolling="no"
-        ></iframe>
-      </div>
-      <div id="offlineNote">
-        Hors-ligne pour le moment. Passe dire bonjour sur
-        <a href="https://twitch.tv/riderskill" target="_blank">twitch.tv/riderskill</a> 💜
-      </div>
-    </div>
-    <script>
-      (function(){
-        const s = new URLSearchParams(location.search).get('live');
-        if(s === 'off'){ document.getElementById('offlineNote').style.display='block'; }
-      })();
-    </script>
-  </section>
+  <main class="wrap">
+    <section class="grid">
+      <!-- PLAYER -->
+      <article class="card">
+        <h2>Live Twitch</h2>
+        <div class="embed" id="playerWrap" aria-label="Lecteur Twitch">
+          <iframe
+            id="twitchPlayer"
+            title="Lecteur Twitch RiderSkill"
+            allow="autoplay; fullscreen; picture-in-picture"
+            loading="lazy"
+            src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&muted=true&autoplay=true"
+          ></iframe>
+          <div id="playerFallback" class="fallback" role="alert" aria-live="polite">
+            <div class="msg">
+              <h3 style="margin:0 0 6px">Le lecteur ne s’affiche pas ?</h3>
+              <p class="muted">Ça vient souvent des cookies tiers ou d’un bloqueur. Pas grave :</p>
+              <div class="btns">
+                <a class="btn primary" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Ouvrir sur Twitch</a>
+                <button class="btn" id="retryBtn" type="button">Réessayer</button>
+              </div>
+              <p class="muted" style="margin-top:10px">Astuce : autorise <b>riderskill.github.io</b> dans le paramètre <i>parent</i> (déjà fait ici).</p>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="row badges">
+            <a href="https://www.twitch.tv/riderskill/clips?filter=clips&range=all" target="_blank" rel="noopener">Clips</a>
+            <a href="https://www.twitch.tv/riderskill/schedule" target="_blank" rel="noopener">Planning Twitch</a>
+            <a href="https://x.com/search?q=RiderSkill" target="_blank" rel="noopener">X / Twitter</a>
+          </div>
+        </div>
+      </article>
 
-  <footer>© 2025 RiderSkill — twitch.tv/riderskill · kick.com/riderskill</footer>
+      <!-- CHAT (desktop) -->
+      <aside class="card chat desktop">
+        <h2>Chat</h2>
+        <div class="embed" aria-label="Chat Twitch intégré">
+          <iframe
+            title="Chat Twitch RiderSkill"
+            loading="lazy"
+            src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io&theme=dark"
+            allow="fullscreen"
+          ></iframe>
+        </div>
+        <div class="body muted" style="font-size:13px">
+          Si le chat ne se charge pas, ouvre-le
+          <a href="https://www.twitch.tv/popout/riderskill/chat?popout=" target="_blank" rel="noopener">en popout</a>.
+        </div>
+      </aside>
+
+      <!-- CHAT (mobile toggle) -->
+      <div class="chatToggle">
+        <button class="btn" id="toggleChat" type="button">Afficher/Masquer le Chat</button>
+      </div>
+      <aside class="card chat mobile" id="chatMobile">
+        <h2>Chat</h2>
+        <div class="embed">
+          <iframe
+            title="Chat Twitch RiderSkill (Mobile)"
+            loading="lazy"
+            src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io&theme=dark"
+            allow="fullscreen"
+          ></iframe>
+        </div>
+      </aside>
+
+      <!-- INFO / À PROPOS -->
+      <article class="card" style="grid-column:1 / -1">
+        <h2>À propos</h2>
+        <div class="body">
+          <p>Bienvenue sur le hub de <b>RiderSkill</b>. Ici : live, chat, liens et planning — simple, propre, efficace.</p>
+          <ul class="muted" style="margin:0; padding-left:18px; line-height:1.6">
+            <li>URL propre : <code>https://riderskill.github.io/riderskill-site/</code> (pas besoin de <code>index.html</code>).</li>
+            <li>Embed conforme aux règles Twitch (<code>parent=riderskill.github.io</code>).</li>
+            <li>Responsive : lecteur + chat côte à côte sur desktop, toggle chat sur mobile.</li>
+            <li>Fallback si le lecteur est bloqué (bloqueur/cookies tiers).</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap muted">© <span id="y"></span> RiderSkill — Tous droits réservés.</div>
+  </footer>
+
+  <script>
+    // ——— Utilitaires
+    const $ = (s, d=document)=>d.querySelector(s);
+
+    // Année footer
+    $('#y').textContent = new Date().getFullYear();
+
+    // Chat mobile toggle
+    const toggle = $('#toggleChat'), chatMobile = $('#chatMobile');
+    if (toggle) toggle.addEventListener('click', ()=> chatMobile.classList.toggle('show'));
+
+    // Fallback player si l'iframe ne termine pas son "load" sous 6s
+    const player = $('#twitchPlayer');
+    const fb = $('#playerFallback');
+    const retry = $('#retryBtn');
+    let loaded = false;
+    if (player){
+      player.addEventListener('load', ()=> { loaded = true; fb?.classList.remove('show'); }, { once:true });
+      setTimeout(()=>{ if (!loaded) fb?.classList.add('show'); }, 6000);
+    }
+    retry?.addEventListener('click', ()=>{
+      fb?.classList.remove('show');
+      const url = new URL(player.src);
+      url.searchParams.set('t', Date.now()); // bust cache
+      player.src = url.toString();
+      setTimeout(()=> fb?.classList.add('show'), 6000);
+    });
+
+    // Indicateur "live" non intrusif (sans token) : on considère "live" si player a chargé.
+    const pill = $('#livePill');
+    const txt = $('#liveText');
+    function setLive(on){
+      if (!pill || !txt) return;
+      pill.classList.toggle('live', !!on);
+      txt.textContent = on ? 'En direct' : 'Hors ligne ?';
+    }
+    setTimeout(()=> setLive(loaded), 6500);
+  </script>
 </body>
 </html>
