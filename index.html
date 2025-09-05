@@ -7,33 +7,12 @@
 <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
 <meta name="theme-color" content="#0D0D0D" />
 
-<!-- Sécurité navigateur (CSP assouplie pour Twitch) -->
-<meta http-equiv="Content-Security-Policy"
-      content="
-default-src 'self';
-img-src 'self' https://unavatar.io https://cdn.simpleicons.org https://images.unsplash.com https://cdn.pixabay.com https://static-cdn.jtvnw.net data:;
-script-src 'self' 'unsafe-inline' https://player.twitch.tv https://embed.twitch.tv;
-style-src 'self' 'unsafe-inline';
-frame-src https://player.twitch.tv https://www.twitch.tv;
-connect-src 'self' https://*.twitch.tv https://*.twitchcdn.net https://*.jtvnw.net https://*.ttvnw.net;
-media-src 'self' https://*.twitch.tv https://*.twitchcdn.net https://*.jtvnw.net https://*.ttvnw.net;
-object-src 'none';
-base-uri 'self';
-form-action 'none';
-upgrade-insecure-requests;">
-
-<meta http-equiv="Permissions-Policy"
-      content="autoplay=(), camera=(), microphone=(), geolocation=(), usb=(), payment=()">
-<meta name="referrer" content="no-referrer">
-
 <style>
-:root{ --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; --twitch:#9146FF; --kick:#53FC18; --ok:#22c55e; --ko:#ef4444; }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
+:root{ --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; --ok:#22c55e; --ko:#ef4444; --twitch:#9146FF; }
+*{box-sizing:border-box} html,body{margin:0;padding:0}
 body{
-  min-height:100vh;color:var(--text);background-color:#0f1014;
+  min-height:100vh; color:var(--text);
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-  /* Fond gaming (si tu veux changer, remplace l’URL) */
   background: url("https://cdn.pixabay.com/photo/2019/08/06/10/14/gaming-4381792_1920.jpg") center/cover no-repeat fixed;
 }
 a{color:inherit;text-decoration:none}
@@ -42,28 +21,26 @@ a{color:inherit;text-decoration:none}
 /* Topbar */
 .topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.82);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
-.brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-.brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-avatar{width:28px;height:28px;border-radius:6px}
 #brandText{font-weight:800}
-.status-wrap{display:inline-flex;align-items:center;gap:6px;margin-left:6px;white-space:nowrap}
-#statusDot{width:12px;height:12px;border-radius:50%;background:var(--ko);box-shadow:0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)}
+.status-wrap{display:inline-flex;align-items:center;gap:6px;margin-left:6px}
+#statusDot{width:12px;height:12px;border-radius:50%;background:var(--ko)}
 #statusLabel{font-weight:800;font-size:.85rem;letter-spacing:.5px;color:var(--ko)}
-
-/* Liens */
 .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{padding:8px 12px;background:rgba(26,26,26,.9);border:1px solid #2a2a2a;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s}
-.btn:hover{transform:translateY(-1px);background:#1e1e1e;border-color:#3a3a3a}
+.btn{padding:8px 12px;background:rgba(26,26,26,.9);border:1px solid #2a2a2a;border-radius:10px;font-weight:700}
 
-/* Cartes / sections */
+/* Sections */
 .hero{display:grid;gap:16px;padding:20px 0}
 .card{background:rgba(20,20,20,.9);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
 .subtitle{margin:0;color:var(--muted)}
 .section{padding:20px 0}
 .panel{background:rgba(20,20,20,.9);border:1px solid #1f1f1f;border-radius:14px;padding:16px}
 
-/* Live layout */
+/* Live */
 .live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:10px}
 .player,.chat{height:520px;border-radius:10px;border:1px solid #1f1f1f;background:#0b0b0b}
+@media (max-width:900px){ .live-wrap{grid-template-columns:1fr}.player,.chat{height:420px} }
 
 /* Agenda */
 .agenda-list{display:grid;gap:10px}
@@ -71,13 +48,12 @@ a{color:inherit;text-decoration:none}
 .ag-left{display:flex;flex-direction:column}
 .ag-title{font-weight:800;margin:0}
 .ag-meta{color:#9a9a9a;font-size:.9rem}
-.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 10px;font-weight:800;letter-spacing:.3px}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 10px;font-weight:800}
 .badge.live{background:#05260f;color:var(--ok);border:1px solid #115e2c}
 .badge.soon{background:#1d1b09;color:#facc15;border:1px solid #8a6d0a}
 .badge.off{background:#2a0b0b;color:var(--ko);border:1px solid #7a2020}
 
 footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted)}
-@media (max-width:900px){ .live-wrap{grid-template-columns:1fr}.player,.chat{height:420px} }
 </style>
 </head>
 <body>
@@ -96,6 +72,12 @@ footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted)}
       <a class="btn" href="/riderskill-site/index.html">Live</a>
       <a class="btn" href="/riderskill-site/clips.html">Clips</a>
       <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
+      <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
+      <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
+      <a class="btn" href="https://www.youtube.com/@riderskill" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn" href="https://www.tiktok.com/@riderskill_twitch" target="_blank" rel="noopener">TikTok</a>
+      <a class="btn" href="https://x.com/riderskill" target="_blank" rel="noopener">X</a>
+      <a class="btn" href="https://discord.gg/2UWwhhyY" target="_blank" rel="noopener">Discord</a>
     </div>
   </div>
 </div>
@@ -108,12 +90,11 @@ footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted)}
   </div>
 </header>
 
-<!-- LIVE (iframe robuste + CSP OK) -->
+<!-- LIVE (iframe Twitch + chat) -->
 <section class="section container" id="live">
   <div class="panel">
     <h2>Live intégré</h2>
     <div class="live-wrap">
-      <!-- Player Twitch -->
       <iframe
         class="player"
         src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&muted=true&autoplay=true"
@@ -122,7 +103,6 @@ footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted)}
         frameborder="0"
         title="Twitch Player"></iframe>
 
-      <!-- Chat Twitch -->
       <iframe
         class="chat"
         src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"
@@ -143,24 +123,10 @@ footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted)}
 <footer class="container">© 2025 RiderSkill</footer>
 
 <script>
-/* Petit helper anti-XSS */
-function esc(s){
-  return String(s)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;");
-}
+/* anti-XSS basique */
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 
-/* Statut visuel par défaut */
-(function setStatus(state='off'){
-  const dot=document.getElementById('statusDot'); const label=document.getElementById('statusLabel');
-  if(!dot||!label) return;
-  if(state==='on'){ dot.style.background= getComputedStyle(document.documentElement).getPropertyValue('--ok'); label.textContent='LIVE'; label.style.color='var(--ok)'; }
-  else { dot.style.background= getComputedStyle(document.documentElement).getPropertyValue('--ko'); label.textContent='OFF'; label.style.color='var(--ko)'; }
-})();
-
-/* Agenda (depuis /planning.json) */
+/* Agenda */
 function fmtDate(d){return d.toLocaleDateString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit'})}
 function fmtTime(d){return d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
 function renderAgenda(items){
@@ -178,10 +144,7 @@ function renderAgenda(items){
     </div><span class="badge ${badge}">${text}</span></div>`;
   }).join('') || '<div class="ag-item"><div class="ag-left"><div class="ag-meta">Aucun événement planifié.</div></div><span class="badge off">OFF</span></div>';
 }
-fetch('/riderskill-site/planning.json',{cache:'no-store'})
-  .then(r=>r.ok?r.json():[])
-  .then(renderAgenda)
-  .catch(()=>{ /* silencieux */ });
+fetch('/riderskill-site/planning.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(renderAgenda).catch(()=>{});
 </script>
 </body>
 </html>
