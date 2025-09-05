@@ -17,26 +17,39 @@ jobs:
       - name: Get app token
         run: |
           TOKEN=$(curl -s -X POST "https://id.twitch.tv/oauth2/token?client_id=${{ secrets.TWITCH_CLIENT_ID }}&client_secret=${{ secrets.TWITCH_CLIENT_SECRET }}&grant_type=client_credentials" | jq -r .access_token)
+          if [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then
+            echo "Fail: impossible d'obtenir le token Twitch." >&2
+            exit 1
+          fi
           echo "TOKEN=$TOKEN" >> $GITHUB_ENV
 
+      # ⚠️ Correction : on utilise TWITCH_UID au lieu de UID (UID est réservé)
       - name: Resolve user id
         run: |
-          UID=$(curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
-            "https://api.twitch.tv/helix/users?login=riderskill" | jq -r '.data[0].id')
-          echo "UID=$UID" >> $GITHUB_ENV
+          TWITCH_LOGIN="riderskill"
+          TWITCH_UID=$(curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
+            "https://api.twitch.tv/helix/users?login=${TWITCH_LOGIN}" | jq -r '.data[0].id')
+          if [ -z "$TWITCH_UID" ] || [ "$TWITCH_UID" = "null" ]; then
+            echo "Fail: Twitch user id introuvable pour '${TWITCH_LOGIN}'." >&2
+            exit 1
+          fi
+          echo "TWITCH_UID=$TWITCH_UID" >> $GITHUB_ENV
 
       - name: Fetch latest VOD
         run: |
           curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
-            "https://api.twitch.tv/helix/videos?user_id=$UID&type=archive&first=1" > vod_api.json
+            "https://api.twitch.tv/helix/videos?user_id=$TWITCH_UID&type=archive&first=1" > vod_api.json
+
           ID=$(jq -r '.data[0].id // empty' vod_api.json)
           URL=$(jq -r '.data[0].url // empty' vod_api.json)
           TITLE=$(jq -r '.data[0].title // empty' vod_api.json)
           DURATION=$(jq -r '.data[0].duration // empty' vod_api.json)
           THUMB=$(jq -r '.data[0].thumbnail_url // empty' vod_api.json)
           PUBLISHED=$(jq -r '.data[0].published_at // empty' vod_api.json)
+
           jq -n --arg id "$ID" --arg url "$URL" --arg title "$TITLE" --arg duration "$DURATION" --arg thumb "$THUMB" --arg published "$PUBLISHED" \
             '{id:$id,url:$url,title:$title,duration:$duration,thumbnail_url:$thumb,published_at:$published}' > vod.json
+
           rm -f vod_api.json
 
       - name: Commit changes
