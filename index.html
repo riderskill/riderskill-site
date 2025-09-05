@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0e0e12; --bg2:#12121a; --panel:#171721; --text:#e8e9ee; --muted:#9aa0aa;
+      --bg:#0e0e12; --bg2:#12121a; --text:#e8e9ee; --muted:#9aa0aa;
       --violet:#9146FF; --brand:#00F5D4; --radius:18px; --shadow:0 12px 30px rgba(0,0,0,.35);
       --maxw:1200px;
     }
@@ -49,6 +49,11 @@
     }
     .card h2{margin:0; padding:16px 18px; font-size:18px; border-bottom:1px solid rgba(255,255,255,.06)}
     .card .body{padding:16px}
+    .row{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{appearance:none;border:1px solid rgba(255,255,255,.12);background:#1b1b25;color:#e9ecf6;
+      padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:600;font-size:14px}
+    .btn:hover{filter:brightness(1.1)}
+    .muted{color:var(--muted)}
 
     /* Player: ratio 16/9 */
     .embed{
@@ -56,20 +61,15 @@
     }
     .embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:calc(var(--radius) - 2px);}
 
-    /* Chat: hauteur fixe plus grande (ne dépend PAS du 16/9) */
+    /* Chat: grande hauteur */
     .chatEmbed{
       position:relative; width:100%; height:720px; background:#0b0b12; border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .chatEmbed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:calc(var(--radius) - 2px);}
-    @media (max-width:1023px){
-      .chatEmbed{height:520px;}
-    }
+    .chatEmbed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:calc(var(--radius) - 2px); transition:filter .2s ease}
+    @media (max-width:1023px){ .chatEmbed{height:520px;} }
 
-    .row{display:flex; gap:10px; flex-wrap:wrap}
-    .badges a{display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px;
-      border:1px solid rgba(255,255,255,.08); background:#171722; color:#e7ebf6; font-weight:600; font-size:14px}
-    footer{opacity:.75; font-size:13px; padding:22px 0 60px; text-align:center}
-    .muted{color:var(--muted)}
+    /* Mode "forcer sombre" (fallback visuel) */
+    .force-dark iframe{ filter: invert(1) hue-rotate(180deg) contrast(0.95) brightness(0.95); }
   </style>
 </head>
 <body>
@@ -79,10 +79,10 @@
       <div id="livePill" class="pill" title="Statut live" style="margin-left:auto">
         <span class="dot"></span><span id="liveText">Statut inconnu</span>
       </div>
-      <div class="badges" style="display:flex; gap:10px; margin-left:10px">
-        <a href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
-        <a href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
-        <a href="https://www.youtube.com/@RiderSkill" target="_blank" rel="noopener">YouTube</a>
+      <div class="row" style="margin-left:10px">
+        <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
+        <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
+        <a class="btn" href="https://www.youtube.com/@RiderSkill" target="_blank" rel="noopener">YouTube</a>
       </div>
     </div>
   </header>
@@ -102,24 +102,34 @@
           ></iframe>
         </div>
         <div class="body">
-          <div class="row badges">
-            <a href="https://www.twitch.tv/riderskill/clips?filter=clips&range=all" target="_blank" rel="noopener">Clips</a>
-            <a href="https://www.twitch.tv/riderskill/schedule" target="_blank" rel="noopener">Planning Twitch</a>
-            <a href="https://x.com/search?q=RiderSkill" target="_blank" rel="noopener">X / Twitter</a>
+          <div class="row">
+            <a class="btn" href="https://www.twitch.tv/riderskill/clips?filter=clips&range=all" target="_blank" rel="noopener">Clips</a>
+            <a class="btn" href="https://www.twitch.tv/riderskill/schedule" target="_blank" rel="noopener">Planning</a>
+            <a class="btn" href="https://x.com/search?q=RiderSkill" target="_blank" rel="noopener">X / Twitter</a>
           </div>
         </div>
       </article>
 
-      <!-- CHAT — Hauteur agrandie -->
+      <!-- CHAT — Sombre + contrôles -->
       <aside class="card">
         <h2>Chat Twitch</h2>
-        <div class="chatEmbed" aria-label="Chat Twitch intégré (grand)">
+        <div id="chatBox" class="chatEmbed" aria-label="Chat Twitch intégré (grand)">
           <iframe
+            id="twitchChat"
             title="Chat Twitch RiderSkill"
             loading="lazy"
             src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io&theme=dark"
             allow="fullscreen"
           ></iframe>
+        </div>
+        <div class="body">
+          <div class="row">
+            <a class="btn" href="https://www.twitch.tv/popout/riderskill/chat?popout=" target="_blank" rel="noopener">
+              Pop-out sombre (ouvre Twitch)
+            </a>
+            <button id="forceDark" class="btn" type="button" title="Si le chat reste blanc malgré tout">Forcer sombre (fallback)</button>
+            <span class="muted">Si ça reste blanc : connecte-toi sur twitch.tv en mode sombre + autorise cookies tiers.</span>
+          </div>
         </div>
       </aside>
 
@@ -136,18 +146,24 @@
   </main>
 
   <footer>
-    <div class="wrap muted">© <span id="y"></span> RiderSkill — Tous droits réservés.</div>
+    <div class="wrap" style="opacity:.75; font-size:13px; text-align:center">© <span id="y"></span> RiderSkill — Tous droits réservés.</div>
   </footer>
 
   <script>
     const $ = (s, d=document)=>d.querySelector(s);
     $('#y').textContent = new Date().getFullYear();
 
+    // Indicateur live basique
     const player = $('#twitchPlayer');
     const pill = $('#livePill'); const txt = $('#liveText');
     let loaded = false;
     player?.addEventListener('load', ()=>{ loaded=true; pill.classList.add('live'); txt.textContent='En direct'; });
     setTimeout(()=>{ if(!loaded) txt.textContent='Hors ligne ?'; },6000);
+
+    // Forcer sombre (fallback visuel via filtre)
+    $('#forceDark')?.addEventListener('click', ()=>{
+      $('#chatBox')?.classList.toggle('force-dark');
+    });
   </script>
 </body>
 </html>
