@@ -17,13 +17,10 @@
         <span id="brandText">RiderSkill</span>
         <span id="statusDot"></span>
       </a>
-
       <div class="links">
         <a class="btn" href="/riderskill-site/index.html">Live</a>
         <a class="btn" href="/riderskill-site/clips.html">Clips</a>
         <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
-
-        <!-- Réseaux -->
         <a class="btn social twitch" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">
           <img class="icon" src="https://cdn.simpleicons.org/twitch/9146FF" alt="Twitch"> Twitch
         </a>
@@ -63,18 +60,26 @@
     </div>
   </header>
 
-  <!-- LIVE + CHAT -->
+  <!-- LIVE -->
   <section class="section" id="live">
     <div class="panel">
       <h2>Stream en direct</h2>
       <div class="live-wrap">
-        <div id="twitch-player"></div>
+        <!-- Player vidéo à gauche -->
+        <iframe
+          id="twitch-player"
+          src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&autoplay=true&muted=true"
+          frameborder="0"
+          allowfullscreen
+          scrolling="no"
+        ></iframe>
+
+        <!-- Chat à droite -->
         <iframe
           id="twitch-chat"
           src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"
           frameborder="0"
           scrolling="no"
-          allowfullscreen
         ></iframe>
       </div>
     </div>
@@ -82,8 +87,4 @@
 
   <!-- FOOTER -->
   <footer>© 2025 RiderSkill — twitch.tv/riderskill · kick.com/riderskill</footer>
-
-  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-  <script src="app.js"></script>
 </body>
-</html>
