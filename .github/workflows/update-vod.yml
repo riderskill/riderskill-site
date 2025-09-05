@@ -5,11 +5,17 @@ on:
     - cron: "15 3 * * *"   # Tous les jours à 03:15 UTC (~05:15 Paris)
   workflow_dispatch: {}     # Lancer manuellement si besoin
 
+# IMPORTANT : autoriser le push depuis le workflow
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true   # garde le GITHUB_TOKEN pour push
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
@@ -23,8 +29,7 @@ jobs:
           fi
           echo "TOKEN=$TOKEN" >> $GITHUB_ENV
 
-      # IMPORTANT: ne pas utiliser 'UID' (réservé). On stocke dans TWITCH_UID.
-      - name: Resolve user id
+      - name: Resolve user id (no UID clash)
         run: |
           TWITCH_LOGIN="riderskill"
           TWITCH_UID=$(curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
@@ -44,9 +49,7 @@ jobs:
             echo "==== DEBUG: trying type=${TYPE}"
             curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
               "https://api.twitch.tv/helix/videos?user_id=$TWITCH_UID&type=${TYPE}&first=5&sort=time" > resp.json
-            echo "---- API response (truncated) ----"
             jq '{total: (.data|length), ids: [.data[].id], titles: [.data[].title]}' resp.json || true
-            # pick first non-empty
             ID=$(jq -r '.data[0].id // empty' resp.json)
             if [ -n "$ID" ]; then
               URL=$(jq -r '.data[0].url // empty' resp.json)
@@ -61,7 +64,6 @@ jobs:
             return 1
           }
 
-          # essaie ARCHIVE, puis UPLOAD, puis HIGHLIGHT, puis ALL (juste au cas où)
           if fetch_and_pick "archive"; then
             echo "Picked: archive"
           elif fetch_and_pick "upload"; then
@@ -70,25 +72,38 @@ jobs:
             echo "Picked: highlight"
           else
             echo "==== DEBUG: trying type=all (last chance)"
-            fetch_and_pick "all" || true
+            curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
+              "https://api.twitch.tv/helix/videos?user_id=$TWITCH_UID&first=5&sort=time" > resp.json
+            jq '{total: (.data|length), ids: [.data[].id], titles: [.data[].title]}' resp.json || true
+            ID=$(jq -r '.data[0].id // empty' resp.json)
+            if [ -n "$ID" ]; then
+              URL=$(jq -r '.data[0].url // empty' resp.json)
+              TITLE=$(jq -r '.data[0].title // empty' resp.json)
+              DURATION=$(jq -r '.data[0].duration // empty' resp.json)
+              THUMB=$(jq -r '.data[0].thumbnail_url // empty' resp.json)
+              PUBLISHED=$(jq -r '.data[0].published_at // empty' resp.json)
+              jq -n --arg id "$ID" --arg url "$URL" --arg title "$TITLE" --arg duration "$DURATION" --arg thumb "$THUMB" --arg published "$PUBLISHED" \
+                '{id:$id,url:$url,title:$title,duration:$duration,thumbnail_url:$thumb,published_at:$published}' > vod.json
+            fi
           fi
 
-          # si toujours rien, écris un JSON explicite (pas vide)
           if [ ! -s vod.json ] || [ "$(jq -r '.id // empty' vod.json)" = "" ]; then
-            echo "Aucune vidéo trouvée via l'API pour uid=$TWITCH_UID. Écriture d'un placeholder."
+            echo "Aucune vidéo renvoyée par l'API pour uid=$TWITCH_UID. Placeholder."
             jq -n \
               --arg url "https://www.twitch.tv/riderskill/videos?filter=all&sort=time" \
-              '{id:"",url:$url,title:"Aucune VOD renvoyée par l API",duration:"",thumbnail_url:"",published_at:""}' > vod.json
+              '{id:"",url:$url,title:"Aucune vidéo trouvée via API",duration:"",thumbnail_url:"",published_at:""}' > vod.json
           fi
 
       - name: Commit changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if git diff --quiet vod.json; then
             echo "No changes."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add vod.json
-            git commit -m "chore: update latest video"
-            git push
+            exit 0
           fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vod.json
+          git commit -m "chore: update latest video"
+          git push
