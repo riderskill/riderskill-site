@@ -23,34 +23,63 @@ jobs:
           fi
           echo "TOKEN=$TOKEN" >> $GITHUB_ENV
 
-      # ⚠️ NE PAS utiliser 'UID' (variable système). On utilise TWITCH_UID.
+      # IMPORTANT: ne pas utiliser 'UID' (réservé). On stocke dans TWITCH_UID.
       - name: Resolve user id
         run: |
           TWITCH_LOGIN="riderskill"
           TWITCH_UID=$(curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
             "https://api.twitch.tv/helix/users?login=${TWITCH_LOGIN}" | jq -r '.data[0].id')
+          echo "DEBUG login=${TWITCH_LOGIN} -> uid=${TWITCH_UID}"
           if [ -z "$TWITCH_UID" ] || [ "$TWITCH_UID" = "null" ]; then
             echo "Fail: Twitch user id introuvable pour '${TWITCH_LOGIN}'." >&2
             exit 1
           fi
           echo "TWITCH_UID=$TWITCH_UID" >> $GITHUB_ENV
 
-      - name: Fetch latest VOD
+      - name: Fetch latest video (archive -> upload -> highlight)
         run: |
-          curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
-            "https://api.twitch.tv/helix/videos?user_id=$TWITCH_UID&type=archive&first=1" > vod_api.json
+          set -e
+          fetch_and_pick() {
+            local TYPE="$1"
+            echo "==== DEBUG: trying type=${TYPE}"
+            curl -s -H "Client-Id: ${{ secrets.TWITCH_CLIENT_ID }}" -H "Authorization: Bearer $TOKEN" \
+              "https://api.twitch.tv/helix/videos?user_id=$TWITCH_UID&type=${TYPE}&first=5&sort=time" > resp.json
+            echo "---- API response (truncated) ----"
+            jq '{total: (.data|length), ids: [.data[].id], titles: [.data[].title]}' resp.json || true
+            # pick first non-empty
+            ID=$(jq -r '.data[0].id // empty' resp.json)
+            if [ -n "$ID" ]; then
+              URL=$(jq -r '.data[0].url // empty' resp.json)
+              TITLE=$(jq -r '.data[0].title // empty' resp.json)
+              DURATION=$(jq -r '.data[0].duration // empty' resp.json)
+              THUMB=$(jq -r '.data[0].thumbnail_url // empty' resp.json)
+              PUBLISHED=$(jq -r '.data[0].published_at // empty' resp.json)
+              jq -n --arg id "$ID" --arg url "$URL" --arg title "$TITLE" --arg duration "$DURATION" --arg thumb "$THUMB" --arg published "$PUBLISHED" \
+                '{id:$id,url:$url,title:$title,duration:$duration,thumbnail_url:$thumb,published_at:$published}' > vod.json
+              return 0
+            fi
+            return 1
+          }
 
-          ID=$(jq -r '.data[0].id // empty' vod_api.json)
-          URL=$(jq -r '.data[0].url // empty' vod_api.json)
-          TITLE=$(jq -r '.data[0].title // empty' vod_api.json)
-          DURATION=$(jq -r '.data[0].duration // empty' vod_api.json)
-          THUMB=$(jq -r '.data[0].thumbnail_url // empty' vod_api.json)
-          PUBLISHED=$(jq -r '.data[0].published_at // empty' vod_api.json)
+          # essaie ARCHIVE, puis UPLOAD, puis HIGHLIGHT, puis ALL (juste au cas où)
+          if fetch_and_pick "archive"; then
+            echo "Picked: archive"
+          elif fetch_and_pick "upload"; then
+            echo "Picked: upload"
+          elif fetch_and_pick "highlight"; then
+            echo "Picked: highlight"
+          else
+            echo "==== DEBUG: trying type=all (last chance)"
+            fetch_and_pick "all" || true
+          fi
 
-          jq -n --arg id "$ID" --arg url "$URL" --arg title "$TITLE" --arg duration "$DURATION" --arg thumb "$THUMB" --arg published "$PUBLISHED" \
-            '{id:$id,url:$url,title:$title,duration:$duration,thumbnail_url:$thumb,published_at:$published}' > vod.json
-
-          rm -f vod_api.json
+          # si toujours rien, écris un JSON explicite (pas vide)
+          if [ ! -s vod.json ] || [ "$(jq -r '.id // empty' vod.json)" = "" ]; then
+            echo "Aucune vidéo trouvée via l'API pour uid=$TWITCH_UID. Écriture d'un placeholder."
+            jq -n \
+              --arg url "https://www.twitch.tv/riderskill/videos?filter=all&sort=time" \
+              '{id:"",url:$url,title:"Aucune VOD renvoyée par l API",duration:"",thumbnail_url:"",published_at:""}' > vod.json
+          fi
 
       - name: Commit changes
         run: |
@@ -60,6 +89,6 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add vod.json
-            git commit -m "chore: update latest VOD"
+            git commit -m "chore: update latest video"
             git push
           fi
