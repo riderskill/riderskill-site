@@ -10,35 +10,57 @@
   <style>
     :root{
       --bg:#0e0e12; --bg2:#12121a; --text:#e8e9ee; --muted:#9aa0aa;
-      --violet:#9146FF; --brand:#00F5D4; --radius:18px; --shadow:0 12px 30px rgba(0,0,0,.35);
+      --violet:#7b5cd6; /* mauve foncé, pas rose */
+      --violet2:#5a3fb3;
+      --brand:#00F5D4; --radius:18px; --shadow:0 12px 30px rgba(0,0,0,.35);
       --maxw:1200px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-      color:var(--text); background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(145,70,255,.12), transparent 60%),
-        radial-gradient(1200px 600px at 110% 10%, rgba(0,245,212,.08), transparent 60%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
+      margin:0; font-family:'Poppins',sans-serif; color:var(--text);
+      background:linear-gradient(180deg, var(--bg), var(--bg2));
+      overflow-x:hidden;
     }
+    /* ===== Fond SVG stylé (mauve Twitch, texte latéral) ===== */
+    .bg-art{
+      position:fixed; inset:0; z-index:-1; pointer-events:none;
+      opacity:0.55; /* discret pour ne pas gêner la lisibilité */
+    }
+
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--maxw); margin:0 auto; padding:20px}
+
+    /* Header */
     header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.2) blur(6px);
-      background:linear-gradient(180deg, rgba(18,18,26,.9), rgba(18,18,26,.5));
+      position:sticky; top:0; z-index:50; text-align:center;
+      backdrop-filter:saturate(1.2) blur(8px);
+      background:linear-gradient(180deg, rgba(18,18,26,.85), rgba(18,18,26,.55));
       border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .nav{display:flex; align-items:center; gap:16px; padding:14px 0;}
     .brand{
-      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px;
+      font-weight:800; letter-spacing:.5px; margin:6px 0 10px;
       background:linear-gradient(90deg, var(--brand), #6ee7ff 40%, var(--violet));
-      -webkit-background-clip:text; background-clip:text; color:transparent; font-size:22px;
+      -webkit-background-clip:text; background-clip:text; color:transparent; font-size:28px;
     }
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px;
-      background:#1c1c28; color:#cfd2dc; font-size:13px; border:1px solid rgba(255,255,255,.06)}
-    .pill .dot{width:8px; height:8px; border-radius:50%; background:#6b6f7a}
-    .live .dot{background:#ff3b3b; box-shadow:0 0 0 6px rgba(255,59,59,.15)}
+    .btn-main{
+      display:inline-block; margin:8px 0 14px;
+      background:#1b1b25; color:#e9ecf6; font-weight:700;
+      padding:12px 28px; border-radius:20px; font-size:18px;
+      border:2px solid var(--violet); box-shadow:var(--shadow);
+      transition:transform .08s ease;
+    }
+    .btn-main:hover{background:var(--violet); color:#fff; transform:translateY(-1px)}
+    /* Bouton fixe (mobile) */
+    .btn-main-fixed{
+      position:fixed; top:10px; left:50%; transform:translateX(-50%);
+      z-index:60; display:none;
+    }
+    @media (max-width:640px){
+      .btn-main-fixed{display:inline-block}
+      header{padding-top:58px;} /* espace pour le bouton fixe */
+    }
+
     main{padding:26px 0 60px}
     .grid{display:grid; gap:18px; grid-template-columns: 1fr;}
     @media (min-width: 1024px){ .grid{grid-template-columns: 2fr 1fr;} }
@@ -49,24 +71,18 @@
     }
     .card h2{margin:0; padding:16px 18px; font-size:18px; border-bottom:1px solid rgba(255,255,255,.06)}
     .card .body{padding:16px}
-
-    .row{display:flex; gap:10px; flex-wrap:wrap}
-    .btn{appearance:none;border:1px solid rgba(255,255,255,.12);background:#1b1b25;color:#e9ecf6;
+    .row{display:flex; gap:10px; flex-wrap:wrap; justify-content:center}
+    .btn{border:1px solid rgba(255,255,255,.12);background:#1b1b25;color:#e9ecf6;
       padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:600;font-size:14px}
     .btn:hover{filter:brightness(1.08)}
     .muted{color:var(--muted)}
 
-    /* Player 16/9 */
-    .embed{
-      position:relative; width:100%; aspect-ratio:16/9; background:#0b0b12; border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:calc(var(--radius) - 2px);}
-
-    /* Chat sombre : grande hauteur */
-    .chatEmbed{
-      position:relative; width:100%; height:720px; background:#0b0b12; border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .chatEmbed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:calc(var(--radius) - 2px)}
+    /* Player */
+    .embed{position:relative; width:100%; aspect-ratio:16/9; background:#0b0b12;}
+    .embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:var(--radius);}
+    /* Chat */
+    .chatEmbed{position:relative; width:100%; height:720px; background:#0b0b12;}
+    .chatEmbed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:var(--radius);}
     @media (max-width:1023px){ .chatEmbed{height:520px;} }
 
     /* VOD */
@@ -75,23 +91,52 @@
     .vodPlayer iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
     .vodTitle{font-weight:600}
     .vodMeta{font-size:13px; color:var(--muted)}
+
+    footer{opacity:.75; font-size:13px; text-align:center}
   </style>
 </head>
 <body>
+  <!-- ===== Fond SVG stylé en data-URI (mauve foncé + texte latéral) ===== -->
+  <svg class="bg-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#5a3fb3"/>
+        <stop offset="50%" stop-color="#7b5cd6"/>
+        <stop offset="100%" stop-color="#2b244a"/>
+      </linearGradient>
+      <radialGradient id="glow1" cx="15%" cy="10%" r="60%">
+        <stop offset="0%" stop-color="#7b5cd6" stop-opacity="0.45"/>
+        <stop offset="100%" stop-color="#7b5cd6" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="glow2" cx="85%" cy="20%" r="55%">
+        <stop offset="0%" stop-color="#00F5D4" stop-opacity="0.18"/>
+        <stop offset="100%" stop-color="#00F5D4" stop-opacity="0"/>
+      </radialGradient>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1600" height="900" fill="url(#g1)"/>
+    <rect width="1600" height="900" fill="url(#grid)"/>
+    <circle cx="200" cy="80" r="450" fill="url(#glow1)"/>
+    <circle cx="1400" cy="120" r="380" fill="url(#glow2)"/>
+    <!-- textes latéraux -->
+    <g fill="white" opacity="0.12" font-family="Poppins, sans-serif" font-size="72" font-weight="800" letter-spacing="6">
+      <text x="40" y="760" transform="rotate(-90,40,760)">RIDERSKILL • TWITCH</text>
+      <text x="1560" y="140" transform="rotate(90,1560,140)" text-anchor="end">RIDERSKILL • TWITCH</text>
+    </g>
+    <!-- rubans -->
+    <path d="M-100 700 C 300 500, 700 950, 1200 680 S 1900 650, 1800 1000" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="70"/>
+    <path d="M-100 720 C 280 520, 690 970, 1180 700 S 1880 670, 1780 1020" fill="none" stroke="rgba(0,245,212,0.08)" stroke-width="30"/>
+  </svg>
+
+  <!-- Bouton fixe mobile -->
+  <a class="btn-main btn-main-fixed" href="https://riderskill.github.io/riderskill-site/" target="_blank" rel="noopener">riderskill.fr</a>
+
   <header>
-    <div class="wrap nav">
-      <div class="brand" aria-label="RIDERSKILL">RIDERSKILL</div>
-      <div id="livePill" class="pill" title="Statut live" style="margin-left:auto">
-        <span class="dot"></span><span id="liveText">Statut inconnu</span>
-      </div>
-      <div class="row" style="margin-left:10px">
-        <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
-        <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
-        <a class="btn" href="https://www.youtube.com/@RiderSkill" target="_blank" rel="noopener">YouTube</a>
-        <!-- ✅ Nouveau bouton "riderskill.fr" -->
-        <a class="btn" href="https://riderskill.github.io/riderskill-site/" target="_blank" rel="noopener">riderskill.fr</a>
-      </div>
-    </div>
+    <div class="brand">RIDERSKILL</div>
+    <!-- Gros bouton centré (desktop & mobile) -->
+    <a class="btn-main" href="https://riderskill.github.io/riderskill-site/" target="_blank" rel="noopener">riderskill.fr</a>
   </header>
 
   <main class="wrap">
@@ -99,62 +144,53 @@
       <!-- PLAYER -->
       <article class="card">
         <h2>Live Twitch</h2>
-        <div class="embed" id="playerWrap" aria-label="Lecteur Twitch">
+        <div class="embed">
           <iframe
             id="twitchPlayer"
-            title="Lecteur Twitch RiderSkill"
+            src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&muted=true&autoplay=true"
             allow="autoplay; fullscreen; picture-in-picture"
-            loading="lazy"
-            src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&muted=true&autoplay=true">
+            allowfullscreen>
           </iframe>
         </div>
         <div class="body">
           <div class="row">
-            <a class="btn" href="https://www.twitch.tv/riderskill/clips?filter=clips&range=all" target="_blank" rel="noopener">Clips</a>
-            <a class="btn" href="https://www.twitch.tv/riderskill/schedule" target="_blank" rel="noopener">Planning</a>
-            <a class="btn" href="https://x.com/search?q=RiderSkill" target="_blank" rel="noopener">X / Twitter</a>
+            <a class="btn" href="https://www.twitch.tv/riderskill/clips?filter=clips&range=all" target="_blank">Clips</a>
+            <a class="btn" href="https://www.twitch.tv/riderskill/schedule" target="_blank">Planning</a>
+            <a class="btn" href="https://x.com/search?q=RiderSkill" target="_blank">X / Twitter</a>
           </div>
 
-          <!-- ===== Dernière VOD ===== -->
+          <!-- Dernière VOD -->
           <div class="vodWrap" style="margin-top:16px">
             <div class="vodTitle" id="vodTitle">Dernière VOD</div>
             <div class="vodMeta" id="vodMeta">Chargement…</div>
             <div class="vodPlayer">
-              <iframe id="vodPlayer"
-                title="Dernière VOD RiderSkill"
-                allow="autoplay; fullscreen; picture-in-picture"
-                loading="lazy"
-                src="">
-              </iframe>
+              <iframe id="vodPlayer" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="row">
-              <a id="vodLink" class="btn" href="https://www.twitch.tv/riderskill/videos?filter=archives&sort=time" target="_blank" rel="noopener">Voir sur Twitch</a>
-              <span class="muted">La VOD se met à jour automatiquement.</span>
+              <a id="vodLink" class="btn" href="https://www.twitch.tv/riderskill/videos" target="_blank">Voir sur Twitch</a>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CHAT sombre grand -->
+      <!-- CHAT -->
       <aside class="card">
         <h2>Chat Twitch</h2>
-        <div class="chatEmbed" aria-label="Chat Twitch sombre">
+        <div class="chatEmbed">
           <iframe
-            title="Chat Twitch RiderSkill"
-            loading="lazy"
             src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io&theme=dark"
-            allow="fullscreen">
+            allowfullscreen>
           </iframe>
         </div>
         <div class="body">
           <div class="row">
             <a class="btn" href="https://www.twitch.tv/popout/riderskill/chat?popout=" target="_blank" rel="noopener">Pop-out sombre</a>
-            <span class="muted">Si ça boucle sur la connexion : connecte-toi sur twitch.tv et autorise les cookies tiers.</span>
+            <span class="muted">Si ça boucle : connecte-toi sur twitch.tv + autorise les cookies tiers.</span>
           </div>
         </div>
       </aside>
 
-      <!-- À PROPOS -->
+      <!-- À propos -->
       <article class="card" style="grid-column:1 / -1">
         <h2>À propos</h2>
         <div class="body">
@@ -167,45 +203,33 @@
   </main>
 
   <footer>
-    <div class="wrap" style="opacity:.75; font-size:13px; text-align:center">© <span id="y"></span> RiderSkill — Tous droits réservés.</div>
+    <div class="wrap">© <span id="y"></span> RiderSkill — Tous droits réservés.</div>
   </footer>
 
   <script>
-    const $ = (s, d=document)=>d.querySelector(s);
+    const $ = (s,d=document)=>d.querySelector(s);
     $('#y').textContent = new Date().getFullYear();
 
-    // Indicateur live
-    const player = $('#twitchPlayer');
-    const pill = $('#livePill'); const txt = $('#liveText');
-    let loaded = false;
-    player?.addEventListener('load', ()=>{ loaded=true; pill.classList.add('live'); txt.textContent='En direct'; });
-    setTimeout(()=>{ if(!loaded) txt.textContent='Hors ligne ?'; },6000);
-
-    // Charger la dernière VOD depuis vod.json
+    // Charger la dernière VOD
     async function loadVOD(){
       try{
-        const res = await fetch('vod.json', { cache: 'no-store' });
-        if(!res.ok) throw new Error('vod.json introuvable');
+        const res = await fetch('vod.json', {cache:'no-store'});
+        if(!res.ok) throw new Error();
         const v = await res.json();
         $('#vodTitle').textContent = v.title || 'Dernière VOD';
         const d = v.published_at ? new Date(v.published_at) : null;
-        const dateTxt = d ? d.toLocaleString('fr-FR', { dateStyle:'medium', timeStyle:'short' }) : '';
+        const dateTxt = d ? d.toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'}) : '';
         const durTxt = v.duration ? ` • ${v.duration}` : '';
-        $('#vodMeta').textContent = (dateTxt || durTxt) ? (dateTxt + durTxt) : '—';
-        const iframe = $('#vodPlayer');
-        if (v.id) {
-          iframe.src = `https://player.twitch.tv/?video=${encodeURIComponent(v.id)}&parent=riderskill.github.io&autoplay=false&muted=false`;
-        } else if (v.url) {
+        $('#vodMeta').textContent = (dateTxt+durTxt) || '—';
+        if(v.id) $('#vodPlayer').src=`https://player.twitch.tv/?video=${encodeURIComponent(v.id)}&parent=riderskill.github.io&autoplay=false`;
+        else if(v.url){
           const vid = v.url.split('/').pop();
-          iframe.src = `https://player.twitch.tv/?video=${encodeURIComponent(vid)}&parent=riderskill.github.io&autoplay=false&muted=false`;
+          $('#vodPlayer').src=`https://player.twitch.tv/?video=${encodeURIComponent(vid)}&parent=riderskill.github.io&autoplay=false`;
         } else {
-          $('#vodMeta').textContent = 'Aucune VOD trouvée.';
+          $('#vodMeta').textContent='Aucune VOD trouvée.';
         }
-        if (v.url) $('#vodLink').href = v.url;
-      }catch(e){
-        console.error(e);
-        $('#vodMeta').textContent = 'Impossible de charger la VOD.';
-      }
+        if(v.url) $('#vodLink').href=v.url;
+      }catch{ $('#vodMeta').textContent='Impossible de charger la VOD'; }
     }
     loadVOD();
   </script>
