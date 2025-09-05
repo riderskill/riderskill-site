@@ -33,28 +33,20 @@
       backdrop-filter:saturate(1.2) blur(8px);
       background:linear-gradient(180deg, rgba(18,18,26,.85), rgba(18,18,26,.55));
       border-bottom:1px solid rgba(255,255,255,.06);
+      padding:12px 0 16px;
     }
     .brand{
       font-weight:800; letter-spacing:.5px; margin:6px 0 10px;
       background:linear-gradient(90deg, var(--brand), #6ee7ff 40%, var(--violet));
       -webkit-background-clip:text; background-clip:text; color:transparent; font-size:28px;
     }
-    .btn-main{
-      display:inline-block; margin:8px 0 14px;
-      background:#1b1b25; color:#e9ecf6; font-weight:700;
-      padding:12px 28px; border-radius:20px; font-size:18px;
-      border:2px solid var(--violet); box-shadow:var(--shadow);
-      transition:transform .08s ease;
+    .logo-twitch{
+      width:120px; height:120px; border-radius:50%;
+      border:3px solid #9146FF;
+      box-shadow:0 0 15px rgba(145,70,255,.6);
+      transition:transform .15s ease;
     }
-    .btn-main:hover{background:var(--violet); color:#fff; transform:translateY(-1px)}
-    .btn-main-fixed{
-      position:fixed; top:10px; left:50%; transform:translateX(-50%);
-      z-index:60; display:none;
-    }
-    @media (max-width:640px){
-      .btn-main-fixed{display:inline-block}
-      header{padding-top:58px;}
-    }
+    .logo-twitch:hover{transform:scale(1.05)}
     main{padding:26px 0 60px}
     .grid{display:grid; gap:18px; grid-template-columns: 1fr;}
     @media (min-width:1024px){ .grid{grid-template-columns: 2fr 1fr;} }
@@ -96,13 +88,12 @@
     <text x="100" y="450" fill="white" opacity="0.08" font-size="120" font-weight="800">RIDERSKILL • TWITCH</text>
   </svg>
 
-  <!-- Bouton fixe mobile -->
-  <a class="btn-main btn-main-fixed" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">riderskill.fr</a>
-
   <header>
     <div class="brand">RIDERSKILL</div>
-    <!-- Bouton centré qui renvoie vers ta chaîne -->
-    <a class="btn-main" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">riderskill.fr</a>
+    <!-- ✅ Logo Twitch à la place du bouton -->
+    <a href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">
+      <img src="URL_DE_TON_LOGO_TWITCH" alt="Twitch RiderSkill" class="logo-twitch">
+    </a>
   </header>
 
   <main class="wrap">
