@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://riderskill.github.io/riderskill-site/sitemap.xml
