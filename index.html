@@ -34,6 +34,14 @@
       border-bottom:1px solid rgba(255,255,255,.06);
       padding:12px 0 16px;
     }
+    /* compteur en haut à gauche */
+    .hit-badge{
+      position:absolute; top:10px; left:10px;
+    }
+    .hit-badge img{
+      height:28px; vertical-align:middle;
+    }
+
     .brand{
       font-weight:800; letter-spacing:.5px; margin:6px 0 10px;
       background:linear-gradient(90deg, var(--brand), #6ee7ff 40%, var(--violet));
@@ -101,6 +109,11 @@
   </svg>
 
   <header>
+    <!-- Compteur en haut à gauche -->
+    <div class="hit-badge">
+      <img src="https://hits.sh/riderskill.github.io/riderskill-site.svg?style=for-the-badge&label=visiteurs&color=purple" alt="Compteur de visites">
+    </div>
+
     <div class="brand">RIDERSKILL</div>
     <a href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">
       <img src="logo1.png" alt="Twitch RiderSkill" class="logo-twitch">
