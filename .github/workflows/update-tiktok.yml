@@ -1,0 +1,40 @@
+name: Update TikTok videos
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * *"  # tous les jours à ~06:30 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        run: npm i node-fetch@3
+
+      - name: Fetch latest TikToks -> tiktoks.json
+        env:
+          TIKTOK_USERNAME: ${{ secrets.TIKTOK_USERNAME }}
+        run: node scripts/fetch_tiktok.mjs
+
+      - name: Commit changes if any
+        run: |
+          if git diff --quiet; then
+            echo "No changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add tiktoks.json
+            git commit -m "Update tiktoks.json (latest 6)"
+            git push
+          fi
