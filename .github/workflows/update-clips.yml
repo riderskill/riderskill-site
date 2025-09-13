@@ -3,7 +3,7 @@ name: Update Twitch clips
 on:
   workflow_dispatch:
   schedule:
-    - cron: "13 6 * * *"  # tous les jours ~06:13 UTC
+    - cron: "13 6 * * *"
 
 permissions:
   contents: write
@@ -19,27 +19,19 @@ jobs:
         with:
           node-version: 20
 
-      # Vérifie que les 3 secrets existent (sans les afficher)
-      - name: Debug env (check secrets presence)
-        env:
-          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
-          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
-          TWITCH_USER_LOGIN: ${{ secrets.TWITCH_USER_LOGIN }}
-        run: |
-          set -e
-          test -n "$TWITCH_CLIENT_ID" || (echo "MISSING: TWITCH_CLIENT_ID" && exit 1)
-          echo "OK: TWITCH_CLIENT_ID present"
-          test -n "$TWITCH_CLIENT_SECRET" || (echo "MISSING: TWITCH_CLIENT_SECRET" && exit 1)
-          echo "OK: TWITCH_CLIENT_SECRET present"
-          test -n "$TWITCH_USER_LOGIN" || (echo "MISSING: TWITCH_USER_LOGIN" && exit 1)
-          echo "OK: TWITCH_USER_LOGIN=$TWITCH_USER_LOGIN"
+      - name: Install deps (node-fetch)
+        run: npm i node-fetch@3
+
+      # (optionnel) Voir que le fichier existe bien
+      - name: List tree
+        run: ls -R
 
       - name: Fetch latest clips -> clips.json
         env:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
           TWITCH_USER_LOGIN: ${{ secrets.TWITCH_USER_LOGIN }}
-        run: node scripts/fetch_clips.mjs
+        run: node .github/workflows/scripts/fetch_clips.mjs
 
       - name: Commit changes if any
         run: |
@@ -52,4 +44,3 @@ jobs:
             git commit -m "Update clips.json (auto)"
             git push
           fi
-
