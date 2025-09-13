@@ -3,7 +3,7 @@ name: Update TikTok videos
 on:
   workflow_dispatch:
   schedule:
-    - cron: "23 6 * * *" # tous les jours ~06:23 UTC
+    - cron: "30 6 * * *"  # tous les jours ~06:30 UTC
 
 permissions:
   contents: write
@@ -22,10 +22,19 @@ jobs:
       - name: Install deps
         run: npm i node-fetch@3
 
+      # Étape de debug pour vérifier que les secrets arrivent bien
+      - name: Check secrets presence (no values printed)
+        env:
+          HAS_KEY: ${{ secrets.TIKTOK_API_KEY }}
+          HAS_USER: ${{ secrets.TIKTOK_USERNAME }}
+        run: |
+          if [ -z "${HAS_KEY}" ]; then echo "❌ TIKTOK_API_KEY manquant"; exit 1; else echo "✅ TIKTOK_API_KEY présent"; fi
+          if [ -z "${HAS_USER}" ]; then echo "❌ TIKTOK_USERNAME manquant"; exit 1; else echo "✅ TIKTOK_USERNAME présent"; fi
+
       - name: Fetch latest TikTok videos -> tiktok.json
         env:
           TIKTOK_API_KEY: ${{ secrets.TIKTOK_API_KEY }}
-          TIKTOK_USER: ${{ secrets.TIKTOK_USER }}
+          TIKTOK_USERNAME: ${{ secrets.TIKTOK_USERNAME }}
         run: node .github/workflows/scripts/fetch_tiktok.mjs
 
       - name: Commit changes if any
@@ -36,7 +45,8 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add tiktok.json
-            git commit -m "Update tiktok.json (latest 6 by date)"
+            git commit -m "Update tiktok.json (latest 6)"
             git push
           fi
+
 
