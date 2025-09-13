@@ -37,7 +37,7 @@ async function getUserId(token) {
 }
 
 async function getLatestClips(token, userId) {
-  // récupère jusqu’à 100 clips, on trie ensuite par date
+  // récupère jusqu’à 100, on trie après par date
   const url = new URL("https://api.twitch.tv/helix/clips");
   url.searchParams.set("broadcaster_id", userId);
   url.searchParams.set("first", "100");
@@ -52,9 +52,9 @@ async function getLatestClips(token, userId) {
   const j = await r.json();
   const list = j.data || [];
 
-  const latest5 = list
+  return list
     .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
-    .slice(0, 5)
+    .slice(0, 6)
     .map(c => ({
       id: c.id,
       url: c.url,
@@ -63,8 +63,6 @@ async function getLatestClips(token, userId) {
       thumbnail_url: c.thumbnail_url,
       view_count: c.view_count
     }));
-
-  return latest5;
 }
 
 (async () => {
@@ -72,8 +70,8 @@ async function getLatestClips(token, userId) {
   const uid = await getUserId(token);
   const clips = await getLatestClips(token, uid);
 
-  // format {"data":[...]} pour compat frontal
   fs.writeFileSync("clips.json", JSON.stringify({ data: clips }, null, 2));
-  console.log(`✅ clips.json mis à jour (${clips.length} clips – les plus récents).`);
+  console.log(`✅ clips.json mis à jour (${clips.length} clips – plus récents).`);
 })();
+
 
