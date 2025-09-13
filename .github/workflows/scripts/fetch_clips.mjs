@@ -6,17 +6,11 @@ const clientSecret = process.env.TWITCH_CLIENT_SECRET;
 const userLogin = (process.env.TWITCH_USER_LOGIN || "riderskill").toLowerCase();
 
 if (!clientId || !clientSecret || !userLogin) {
-  console.error("❌ Variables manquantes.");
+  console.error("❌ TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET / TWITCH_USER_LOGIN manquant.");
   process.exit(1);
 }
 
-const isoDaysAgo = (days) => {
-  const d = new Date();
-  d.setDate(d.getDate() - days);
-  return d.toISOString();
-};
-
-async function getAccessToken() {
+async function getToken() {
   const r = await fetch(
     `https://id.twitch.tv/oauth2/token?client_id=${clientId}&client_secret=${clientSecret}&grant_type=client_credentials`,
     { method: "POST" }
@@ -42,28 +36,23 @@ async function getUserId(token) {
   return id;
 }
 
-async function fetchRecentClips(token, userId) {
-  // Fenêtre récente = 90 jours pour être sûr d’en avoir 5
-  const started_at = isoDaysAgo(90);
-
-  // On récupère plus que 5, puis on trie par date
+async function getLatestClips(token, userId) {
+  // récupère jusqu’à 100 clips, on trie ensuite par date
   const url = new URL("https://api.twitch.tv/helix/clips");
   url.searchParams.set("broadcaster_id", userId);
-  url.searchParams.set("started_at", started_at);
   url.searchParams.set("first", "100");
 
-  const headers = { "Client-ID": clientId, Authorization: `Bearer ${token}` };
-
-  const res = await fetch(url, { headers });
-  if (!res.ok) {
-    console.error("❌ Clips error:", await res.text());
+  const r = await fetch(url, {
+    headers: { "Client-ID": clientId, Authorization: `Bearer ${token}` }
+  });
+  if (!r.ok) {
+    console.error("❌ Clips error:", await r.text());
     process.exit(1);
   }
-  const data = await res.json();
-  const list = (data.data || []);
+  const j = await r.json();
+  const list = j.data || [];
 
-  // Tri par date DESC, puis on prend 5
-  const recent = list
+  const latest5 = list
     .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
     .slice(0, 5)
     .map(c => ({
@@ -75,20 +64,16 @@ async function fetchRecentClips(token, userId) {
       view_count: c.view_count
     }));
 
-  return recent;
+  return latest5;
 }
 
 (async () => {
-  try {
-    const token = await getAccessToken();
-    const userId = await getUserId(token);
-    const clips = await fetchRecentClips(token, userId);
+  const token = await getToken();
+  const uid = await getUserId(token);
+  const clips = await getLatestClips(token, uid);
 
-    fs.writeFileSync("clips.json", JSON.stringify(clips, null, 2));
-    console.log(`✅ clips.json mis à jour (${clips.length} clips récents).`);
-  } catch (e) {
-    console.error("❌ Erreur:", e);
-    process.exit(1);
-  }
+  // format {"data":[...]} pour compat frontal
+  fs.writeFileSync("clips.json", JSON.stringify({ data: clips }, null, 2));
+  console.log(`✅ clips.json mis à jour (${clips.length} clips – les plus récents).`);
 })();
 
