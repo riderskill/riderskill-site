@@ -14,13 +14,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install deps
-        run: npm i node-fetch@3
+      # DEBUG: vérifie que les 3 secrets sont bien présents
+      - name: Debug env (check secrets presence)
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          TWITCH_USER_LOGIN: ${{ secrets.TWITCH_USER_LOGIN }}
+        run: |
+          set -e
+          test -n "$TWITCH_CLIENT_ID" || (echo "MISSING: TWITCH_CLIENT_ID" && exit 1)
+          echo "OK: TWITCH_CLIENT_ID present"
+          test -n "$TWITCH_CLIENT_SECRET" || (echo "MISSING: TWITCH_CLIENT_SECRET" && exit 1)
+          echo "OK: TWITCH_CLIENT_SECRET present"
+          test -n "$TWITCH_USER_LOGIN" || (echo "MISSING: TWITCH_USER_LOGIN" && exit 1)
+          echo "OK: TWITCH_USER_LOGIN=$TWITCH_USER_LOGIN"
 
       - name: Fetch latest clips -> clips.json
         env:
