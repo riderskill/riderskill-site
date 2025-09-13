@@ -3,7 +3,7 @@ name: Update Twitch clips
 on:
   workflow_dispatch:
   schedule:
-    - cron: "13 6 * * *"
+    - cron: "17 6 * * *"  # quotidien ~06:17 UTC
 
 permissions:
   contents: write
@@ -19,12 +19,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install deps (node-fetch)
+      - name: Install deps
         run: npm i node-fetch@3
-
-      # (optionnel) Voir que le fichier existe bien
-      - name: List tree
-        run: ls -R
 
       - name: Fetch latest clips -> clips.json
         env:
@@ -41,6 +37,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add clips.json
-            git commit -m "Update clips.json (auto)"
+            git commit -m "Update clips.json (latest 5 by date)"
             git push
           fi
+
