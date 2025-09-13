@@ -11,10 +11,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://riderskill.github.io/riderskill-site/">
 
-  <!-- Couleur navigateur -->
   <meta name="theme-color" content="#121219">
-
-  <!-- Police -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
@@ -26,11 +23,8 @@
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0; font-family:'Poppins',sans-serif; color:var(--text);
-      background:linear-gradient(180deg, var(--bg), var(--bg2));
-      overflow-x:hidden;
-    }
+    body{ margin:0; font-family:'Poppins',sans-serif; color:var(--text);
+      background:linear-gradient(180deg, var(--bg), var(--bg2)); overflow-x:hidden; }
     .bg-art{position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:0.55;}
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--maxw); margin:0 auto; padding:20px}
@@ -42,25 +36,17 @@
       border-bottom:1px solid rgba(255,255,255,.06);
       padding:12px 0 16px;
     }
-    .hit-badge{
-      position:absolute; top:10px; left:10px;
-    }
-    .hit-badge img{
-      height:28px; vertical-align:middle;
-    }
+    .hit-badge{ position:absolute; top:10px; left:10px; }
+    .hit-badge img{ height:28px; vertical-align:middle; }
 
     .brand{
       font-weight:800; letter-spacing:.5px; margin:6px 0 10px;
       background:linear-gradient(90deg, var(--brand), #6ee7ff 40%, var(--violet));
       -webkit-background-clip:text; background-clip:text; color:transparent; font-size:28px;
     }
-    .logo-twitch{
-      width:120px; height:120px; border-radius:50%;
-      border:3px solid #9146FF;
-      box-shadow:0 0 15px rgba(145,70,255,.6);
-      transition:transform .15s ease;
-    }
-    .logo-twitch:hover{transform:scale(1.05)}
+    .logo-twitch{ width:120px; height:120px; border-radius:50%; border:3px solid #9146FF;
+      box-shadow:0 0 15px rgba(145,70,255,.6); transition:transform .15s ease; }
+    .logo-twitch:hover{ transform:scale(1.05) }
 
     main{padding:26px 0 60px}
     .grid{display:grid; gap:18px; grid-template-columns: 1fr;}
@@ -93,11 +79,29 @@
     .chatEmbed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:var(--radius);}
     @media (max-width:1023px){ .chatEmbed{height:520px;} }
 
+    .tabs{display:flex; gap:10px; justify-content:center; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,.06)}
+    .tab{cursor:pointer; padding:8px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.12); font-weight:600; font-size:14px; opacity:.9;}
+    .tab.active{background:#9146FF; border-color:#9146FF; color:#fff; opacity:1;}
+
     .vodWrap{display:flex; flex-direction:column; gap:10px}
     .vodPlayer{position:relative; width:100%; aspect-ratio:16/9; background:#0b0b12; border:1px solid rgba(255,255,255,.06); border-radius:14px; overflow:hidden}
     .vodPlayer iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
     .vodTitle{font-weight:600}
     .vodMeta{font-size:13px; color:var(--muted)}
+
+    /* ---- CLIPS ---- */
+    .clipsGrid{display:grid; gap:12px; grid-template-columns:1fr;}
+    @media (min-width:640px){ .clipsGrid{grid-template-columns:1fr 1fr;} }
+    @media (min-width:1024px){ .clipsGrid{grid-template-columns:1fr 1fr 1fr;} }
+    .clipCard{background:rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.08); border-radius:14px; overflow:hidden}
+    .thumbWrap{position:relative; width:100%; aspect-ratio:16/9; background:#0b0b12;}
+    .thumbWrap img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+    .playBadge{position:absolute; right:8px; bottom:8px; background:#000a; padding:4px 8px; border-radius:8px; font-size:12px}
+    .clipBody{padding:10px 12px}
+    .clipTitle{font-size:14px; font-weight:600; margin:0 0 6px}
+    .clipMeta{font-size:12px; color:var(--muted)}
+    .clipOpen{display:inline-flex; align-items:center; gap:6px; margin-top:8px; font-size:13px; border:1px solid rgba(255,255,255,.12); padding:6px 10px; border-radius:999px}
+
     footer{opacity:.75; font-size:13px; text-align:center}
   </style>
 </head>
@@ -128,21 +132,22 @@
 
   <main class="wrap">
     <section class="grid">
-      <!-- PLAYER -->
+      <!-- PLAYER MULTI-PLATEFORME -->
       <article class="card">
-        <h2>Live Twitch</h2>
-        <div class="embed">
-          <iframe
-            id="twitchPlayer"
-            src="https://player.twitch.tv/?channel=riderskill&parent=riderskill.github.io&muted=true&autoplay=true"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+        <h2>Live — Twitch / Kick / YouTube</h2>
+        <div class="tabs">
+          <button class="tab active" data-p="twitch">Twitch</button>
+          <button class="tab" data-p="kick">Kick</button>
+          <button class="tab" data-p="youtube">YouTube</button>
         </div>
+        <div class="embed">
+          <iframe id="multiPlayer" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
         <div class="body">
-          <!-- Boutons Clips & Planning -->
+          <!-- Boutons Clips & Planning Twitch -->
           <div class="row">
-            <a class="btn" href="https://www.twitch.tv/riderskill/clips" target="_blank">🎬 Clips</a>
+            <a class="btn" href="https://www.twitch.tv/riderskill/clips" target="_blank">🎬 Tous les clips</a>
             <a class="btn" href="https://www.twitch.tv/riderskill/schedule" target="_blank">📅 Planning</a>
           </div>
 
@@ -162,7 +167,7 @@
             </a>
           </div>
 
-          <!-- Dernière VOD -->
+          <!-- Dernière VOD (Twitch) -->
           <div class="vodWrap" style="margin-top:16px">
             <div class="vodTitle" id="vodTitle">Dernière VOD</div>
             <div class="vodMeta" id="vodMeta">Chargement…</div>
@@ -176,7 +181,7 @@
         </div>
       </article>
 
-      <!-- CHAT -->
+      <!-- CHAT (Twitch) -->
       <aside class="card">
         <h2>Chat Twitch</h2>
         <div class="chatEmbed">
@@ -187,16 +192,21 @@
         </div>
       </aside>
 
+      <!-- CLIPS -->
+      <article class="card" style="grid-column:1 / -1">
+        <h2>Derniers clips (5)</h2>
+        <div class="body">
+          <div id="clipsGrid" class="clipsGrid" aria-live="polite"></div>
+        </div>
+      </article>
+
       <!-- À propos -->
       <article class="card" style="grid-column:1 / -1">
         <h2>À propos</h2>
         <div class="body">
           <p>Bienvenue sur le site officiel de <b>RiderSkill</b>, streamer passionné présent en direct sur <b>Twitch</b>, <b>Kick</b> et <b>YouTube Live</b>. Depuis plus de 13 ans, je crée du contenu interactif autour du <b>gaming</b>, en partageant mon univers avec une communauté fidèle.</p>
-
           <p>Je joue principalement à <b>Rust</b> et <b>GTA</b>, mais aussi à d’autres jeux multijoueurs et indépendants. Sur ce site, vous pouvez retrouver mes <b>lives en direct</b>, mes <b>VOD récentes</b>, mes <b>clips</b> et suivre l’évolution de mes projets.</p>
-
           <p>Mon objectif est simple : offrir des streams immersifs, fun et authentiques, où chacun peut participer et profiter de l’expérience RiderSkill. Si vous aimez l’action, l’ambiance et la sincérité, vous êtes au bon endroit.</p>
-
           <p><b>E-mail pro :</b> <a href="mailto:riderskill.pro@outlook.fr">riderskill.pro@outlook.fr</a></p>
           <p>Animateur WebTV – Créateur de contenu en direct, toujours prêt à faire vivre de nouvelles aventures en stream.</p>
         </div>
@@ -212,7 +222,40 @@
     const $ = (s,d=document)=>d.querySelector(s);
     $('#y').textContent = new Date().getFullYear();
 
-    // Charger la dernière VOD depuis vod.json
+    // ------- CONFIG PLATEFORMES -------
+    const CONFIG = {
+      twitchChannel: 'riderskill',
+      kickChannel: 'riderskill',
+      // Remplace par l'ID de chaîne YouTube (commence par "UC...")
+      youtubeChannelId: 'UCxxxxxxxxxxxxxxxxxx'
+    };
+
+    // ------- PLAYER MULTI-PLATEFORME -------
+    const multiPlayer = $('#multiPlayer');
+    function srcFor(platform){
+      if(platform==='twitch'){
+        return `https://player.twitch.tv/?channel=${encodeURIComponent(CONFIG.twitchChannel)}&parent=riderskill.github.io&muted=true&autoplay=true`;
+      }
+      if(platform==='kick'){
+        return `https://player.kick.com/${encodeURIComponent(CONFIG.kickChannel)}?autoplay=true`;
+      }
+      if(platform==='youtube'){
+        return `https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(CONFIG.youtubeChannelId)}&autoplay=1`;
+      }
+      return '';
+    }
+    function setPlatform(p){
+      multiPlayer.src = srcFor(p);
+      document.querySelectorAll('.tab').forEach(b=>{
+        b.classList.toggle('active', b.dataset.p===p);
+      });
+    }
+    setPlatform('twitch');
+    document.querySelectorAll('.tab').forEach(b=>{
+      b.addEventListener('click', ()=> setPlatform(b.dataset.p));
+    });
+
+    // ------- Dernière VOD (Twitch) -------
     async function loadVOD(){
       try{
         const res = await fetch('vod.json',{cache:'no-store'});
@@ -235,6 +278,52 @@
       }
     }
     loadVOD();
+
+    // ------- Derniers CLIPS (x5) -------
+    async function loadClips(){
+      const grid = $('#clipsGrid');
+      try{
+        const res = await fetch('clips.json',{cache:'no-store'});
+        if(!res.ok) throw new Error('fetch');
+        const raw = await res.json();
+
+        // Normaliser : accepte format API Twitch (raw.data) ou tableau direct
+        const arr = Array.isArray(raw) ? raw : (Array.isArray(raw.data) ? raw.data : []);
+        const clips = arr.slice(0,5).map(c=>{
+          const id = c.id || (c.url ? c.url.split('/').pop() : '');
+          const title = c.title || 'Clip';
+          const created = c.created_at || c.createdAt || null;
+          const views = c.view_count ?? c.views ?? 0;
+          const thumb = c.thumbnail_url || c.thumbnail || '';
+          const url = c.url || (id ? `https://clips.twitch.tv/${id}` : '#');
+          return {id,title,created,views,thumb,url};
+        });
+
+        if(!clips.length){ grid.innerHTML = '<p class="clipMeta">Aucun clip trouvé.</p>'; return; }
+
+        grid.innerHTML = clips.map(cl=>{
+          const dateTxt = cl.created ? new Date(cl.created).toLocaleDateString('fr-FR',{day:'2-digit',month:'short'}) : '';
+          return `
+            <article class="clipCard">
+              <a href="${cl.url}" target="_blank" rel="noopener" aria-label="Ouvrir le clip « ${cl.title.replace(/"/g,'&quot;')} »">
+                <div class="thumbWrap">
+                  ${cl.thumb ? `<img src="${cl.thumb.replace('%{width}','640').replace('{width}','640').replace('%{height}','360').replace('{height}','360')}" alt="Miniature clip">` : ''}
+                  <div class="playBadge">▶ Voir le clip</div>
+                </div>
+              </a>
+              <div class="clipBody">
+                <h3 class="clipTitle">${cl.title}</h3>
+                <div class="clipMeta">${dateTxt} • ${cl.views} vues</div>
+                <a class="clipOpen" href="https://clips.twitch.tv/embed?clip=${encodeURIComponent(cl.id)}&parent=riderskill.github.io&autoplay=false" target="_blank" rel="noopener">▶ Lire intégré</a>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }catch(e){
+        grid.innerHTML = '<p class="clipMeta">Impossible de charger les clips.</p>';
+      }
+    }
+    loadClips();
   </script>
 </body>
 </html>
