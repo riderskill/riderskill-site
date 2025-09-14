@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>RiderSkill — Streamer FR</title>
+<title>RiderSkill — Clips</title>
 <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
 <meta name="theme-color" content="#0D0D0D" />
 
+<!-- ====== STYLES (autonomes) ====== -->
 <style>
 :root{
   --bg:#0f1014; --panel:#161616; --panel2:#1c1c1c; --line:#242424;
@@ -31,6 +32,7 @@ a{color:inherit;text-decoration:none}
 .container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
 .section{padding:26px 0}
 .muted{color:var(--muted)}
+
 /* Topbar */
 .topbar{position:sticky;top:0;z-index:1000;background:rgba(13,13,13,.86);
   backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
@@ -38,54 +40,36 @@ a{color:inherit;text-decoration:none}
 .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
 .brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
 #brandText{font-weight:900}
-.status-wrap{display:inline-flex;align-items:center;gap:8px;margin-left:6px}
-#statusDot{width:12px;height:12px;border-radius:50%;background:var(--ko);
-  box-shadow:0 0 0 2px rgba(0,0,0,.45),0 0 10px rgba(239,68,68,.35)}
-#statusLabel{font-weight:900;letter-spacing:.5px;color:var(--ko)}
 .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .btn{padding:10px 14px;background:rgba(26,26,26,.92);border:1px solid #2a2a2a;border-radius:14px;
   font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s}
 .btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a;box-shadow:0 8px 22px rgba(0,0,0,.28)}
-/* Hero / Cards */
-.hero{display:grid;gap:18px;padding:26px 0}
-.card{background:linear-gradient(180deg, rgba(22,22,22,.94), rgba(22,22,22,.90));
-  border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
-.title{margin:0 0 6px 0;font-size:2.2rem;line-height:1.2;font-weight:900}
-.subtitle{margin:0;color:var(--muted);font-size:1.05rem}
-/* Panel générique */
+
+/* Panels */
 .panel{background:linear-gradient(180deg, rgba(24,24,24,.94), rgba(24,24,24,.90));
   border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
-/* Live */
-.live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:14px}
-.player,.chat{height:540px;border-radius:16px;border:1px solid #1f1f1f;background:#0b0b0b}
-@media (max-width:900px){ .live-wrap{grid-template-columns:1fr}.player,.chat{height:420px} }
+h1{margin:0 0 10px 0;font-size:2rem;font-weight:900}
+
 /* Clips grid */
-.clips-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.clip{display:grid;gap:8px;background:#121212;border:1px solid #222;border-radius:14px;padding:12px}
-.clip a{font-weight:800}
-@media (max-width:720px){ .clips-grid{grid-template-columns:1fr} }
-/* VOD */
-.vods{display:grid;gap:12px}
-.vod{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#121212;border:1px solid #222;border-radius:14px;padding:12px}
-.vod .meta{color:var(--muted);font-size:.9rem}
-/* Radio */
-.radio{display:grid;gap:10px}
-.radio-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.radio-btn{padding:10px 14px;border-radius:12px;border:1px solid #2a2a2a;background:#1b1b1b;font-weight:900;cursor:pointer;transition:transform .15s,background .15s,border-color .15s}
-.radio-btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a}
-.radio-meta{color:var(--muted);font-size:.95rem}
-/* FAB */
-.fab-clips{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
-  background:linear-gradient(135deg,#9146FF 0%,#53FC18 100%);color:#0D0D0D;font-weight:900;letter-spacing:.5px;text-decoration:none;
-  box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .18s,box-shadow .18s}
-.fab-clips:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.45)}
-.fab-emoji{font-size:20px}.fab-text{font-size:14px}
-@media (max-width:520px){ .fab-text{display:none} .fab-clips{padding:12px} }
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 16px}
+.search{flex:1;min-width:220px;background:#141414;border:1px solid #2a2a2a;border-radius:10px;padding:10px;color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:#141414;border:1px solid #222;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{position:relative;padding-top:56.25%;background:#0b0b0b}
+.thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.card .body{padding:12px;display:flex;flex-direction:column;gap:6px}
+.title{font-weight:800}
+.meta{font-size:.9rem;color:var(--muted)}
+.actions{margin-top:8px;display:flex;gap:8px}
+.actions .btn{flex:1;justify-content:center}
+
+/* Empty / error */
+.note{margin-top:12px}
+.error{color:#ef4444;font-weight:800}
+
+/* Footer */
 footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 </style>
-
-<!-- Twitch SDK -->
-<script src="https://player.twitch.tv/js/embed/v1.js"></script>
 </head>
 <body>
 <!-- ====== TOPBAR ====== -->
@@ -94,10 +78,6 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
     <a class="brand" href="/riderskill-site/index.html" title="Accueil">
       <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
       <span id="brandText">RiderSkill</span>
-      <span class="status-wrap">
-        <span id="statusDot" title="Hors-ligne (OFF)" aria-label="Hors-ligne (OFF)"></span>
-        <span id="statusLabel">OFF</span>
-      </span>
     </a>
     <div class="links">
       <a class="btn" href="/riderskill-site/index.html">Live</a>
@@ -113,145 +93,180 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
   </div>
 </div>
 
-<!-- ====== HERO ====== -->
-<header class="hero container">
-  <div class="card">
-    <h1 class="title">Le show. Le game. <span style="color:var(--twitch)">La musique.</span></h1>
-    <p class="subtitle">Streamer FR — Rust • GTA • Sea of Thieves — vibes musicales + commu active.</p>
-  </div>
-  <div class="card">
-    <h2 class="title" style="font-size:1.4rem;margin:0">Gameplay. Vibes. <span style="color:#53FC18">Clips à gogo.</span></h2>
-    <p class="subtitle">Moments forts, highlights et best-of. Tout est ici.</p>
-  </div>
-</header>
-
-<!-- ====== LIVE ====== -->
-<section class="section container" id="live">
+<!-- ====== CLIPS ====== -->
+<section class="section container" id="clips">
   <div class="panel">
-    <h2>Live intégré</h2>
-    <div class="live-wrap">
-      <div id="twitch-player" class="player" title="Twitch player"></div>
-      <iframe id="twitch-chat" class="chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io" title="Twitch chat" allowfullscreen></iframe>
+    <h1>Clips</h1>
+    <p class="muted">Ajoute/édite tes clips dans Google Sheets (auto) ou dans <code>clips.json</code> (fallback).</p>
+    <div class="toolbar">
+      <input id="q" class="search" type="search" placeholder="Rechercher un clip (titre, créateur, jeu)..." />
+      <button id="refresh" class="btn">🔄 Actualiser</button>
     </div>
+    <div id="clipsGrid" class="grid"></div>
+    <p id="emptyMsg" class="muted note" style="display:none">Aucun clip à afficher.</p>
+    <p id="errMsg" class="error note" style="display:none"></p>
   </div>
 </section>
-
-<!-- ====== CLIPS À LA UNE (clips.json) ====== -->
-<section class="section container" id="clips-home">
-  <div class="panel">
-    <h2>Clips à la une</h2>
-    <p class="muted" style="margin-top:-6px">Tirés de <code>clips.json</code>. Pour tout voir, bouton violet en bas à droite.</p>
-    <div id="clipsGrid" class="clips-grid"></div>
-  </div>
-</section>
-
-<!-- ====== RADIO ====== -->
-<section class="section container" id="radio">
-  <div class="panel radio">
-    <div>
-      <h2 class="title" style="font-size:1.4rem;margin:0">Radio RiderSkill — tes sons en continu</h2>
-      <p class="radio-meta">Besoin de liens MP3/OGG directs (hébergés publiquement). Un clic ▶️ est requis par le navigateur.</p>
-    </div>
-    <div class="radio-wrap">
-      <button id="btnPlay" class="radio-btn">▶️ Lire</button>
-      <button id="btnNext" class="radio-btn">⏭️ Suivant</button>
-      <button id="btnPrev" class="radio-btn">⏮️ Précédent</button>
-      <button id="btnShuffle" class="radio-btn">🔀 Shuffle: OFF</button>
-      <span id="nowPlaying" class="radio-meta">Aucun titre…</span>
-    </div>
-    <audio id="player" preload="none"></audio>
-  </div>
-</section>
-
-<!-- ====== VOD ====== -->
-<section class="section container" id="vod">
-  <div class="panel">
-    <h2>VOD récentes</h2>
-    <div id="vods" class="vods"></div>
-  </div>
-</section>
-
-<!-- ====== BOUTON CLIPS (Twitch) ====== -->
-<a class="fab-clips" href="https://www.twitch.tv/riderskill/videos?featured=true&filter=clips&range=all" target="_blank" rel="noopener" aria-label="Clips Twitch">
-  <span class="fab-emoji">🎬</span><span class="fab-text">CLIPS !</span>
-</a>
 
 <!-- ====== FOOTER ====== -->
 <footer class="container">© 2025 RiderSkill — twitch.tv/riderskill · kick.com/riderskill</footer>
 
+<!-- ====== SCRIPTS ====== -->
 <script>
-/* Statut LIVE/OFF */
-function setStatus(state){
-  const dot=document.getElementById('statusDot'); const label=document.getElementById('statusLabel');
-  if(!dot||!label) return;
-  if(state==='on'){
-    dot.style.background='var(--ok)';
-    dot.style.boxShadow='0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(34,197,94,.45)';
-    label.textContent='LIVE'; label.style.color='var(--ok)'; dot.title='Live (ON)';
-  } else {
-    dot.style.background='var(--ko)';
-    dot.style.boxShadow='0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35)';
-    label.textContent='OFF'; label.style.color='var(--ko)'; dot.title='Hors-ligne (OFF)';
+/* ========= PARAMS =========
+   1) Si tu as un Google Sheets publié en CSV, mets son URL ici.
+      Format: https://docs.google.com/spreadsheets/d/TON_ID/export?format=csv
+   2) Sinon laisse vide "" : on utilisera /riderskill-site/clips.json
+*/
+const SHEET_CSV_URL = ""; // <-- mets l'URL CSV ici si tu veux l'auto-maj via Sheets
+
+/* ====== HELPERS ====== */
+const PARENT_HOST = "riderskill.github.io";
+const bust = Date.now();
+
+function parseCSV(text){
+  // simple parser; sépare par ligne, puis par virgule (sans guillemets complexes)
+  return text.split(/\r?\n/).filter(Boolean).map(l => l.split(","));
+}
+function normalizeClip(c){
+  // attend { title, url, creator?, game?, date? }
+  const title = (c.title||"Clip").trim();
+  const url = (c.url || "").trim();
+  const creator = (c.creator||"").trim();
+  const game = (c.game||"").trim();
+  const date = c.date ? new Date(c.date) : null;
+  return { title, url, creator, game, date };
+}
+function embedFromUrl(url){
+  // Twitch clip URL -> embed avec parent
+  // ex: https://clips.twitch.tv/FunnyName -> https://clips.twitch.tv/embed?clip=FunnyName&parent=...
+  try{
+    const u = new URL(url);
+    if(/clips\.twitch\.tv$/i.test(u.hostname) || /clips\.twitch\.tv$/i.test(u.host)){
+      const slug = u.pathname.split("/").filter(Boolean)[0];
+      if(slug){
+        return `https://clips.twitch.tv/embed?clip=${encodeURIComponent(slug)}&parent=${PARENT_HOST}&autoplay=false`;
+      }
+    }
+    // YouTube, Kick, etc. -> on tente dans un iframe direct
+    return url;
+  }catch{ return url; }
+}
+function fmtDate(d){
+  try{ return d ? d.toLocaleString('fr-FR') : ""; }catch{ return ""; }
+}
+
+/* ====== RENDER ====== */
+let ALL_CLIPS = [];
+
+function render(list){
+  const grid = document.getElementById('clipsGrid');
+  const empty = document.getElementById('emptyMsg');
+  const err = document.getElementById('errMsg');
+  err.style.display='none';
+
+  if(!list.length){
+    grid.innerHTML = "";
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
+
+  grid.innerHTML = list.map(c=>{
+    const safeTitle = c.title.replace(/</g,'&lt;');
+    const metaBits = [c.creator, c.game, fmtDate(c.date)].filter(Boolean);
+    const meta = metaBits.join(" · ");
+    const src = embedFromUrl(c.url);
+    return `
+      <div class="card">
+        <div class="thumb">
+          <iframe src="${src}" allowfullscreen scrolling="no"></iframe>
+        </div>
+        <div class="body">
+          <div class="title">${safeTitle}</div>
+          <div class="meta">${meta}</div>
+          <div class="actions">
+            <a class="btn" href="${c.url}" target="_blank" rel="noopener">Voir le clip</a>
+            <a class="btn" href="https://www.twitch.tv/riderskill/videos?featured=true&filter=clips&range=all" target="_blank" rel="noopener">Tous les clips</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function filterAndRender(){
+  const q = (document.getElementById('q').value || "").toLowerCase();
+  const filtered = ALL_CLIPS.filter(c=>{
+    const hay = [c.title,c.creator,c.game].join(" ").toLowerCase();
+    return hay.includes(q);
+  });
+  render(filtered);
+}
+
+/* ====== LOADERS ====== */
+async function loadFromSheet(){
+  const res = await fetch(SHEET_CSV_URL, {cache:'no-store'});
+  if(!res.ok) throw new Error('Sheets HTTP '+res.status);
+  const csv = await res.text();
+  const rows = parseCSV(csv);
+  if(!rows.length) return [];
+  const header = rows.shift().map(h=>h.trim().toLowerCase());
+  const tit = header.indexOf("title");
+  const url = header.indexOf("url");
+  const crt = header.indexOf("creator");
+  const gam = header.indexOf("game");
+  const dat = header.indexOf("date");
+
+  return rows.map(r=>{
+    const obj = {
+      title: tit>=0 ? r[tit] : "",
+      url: url>=0 ? r[url] : "",
+      creator: crt>=0 ? r[crt] : "",
+      game: gam>=0 ? r[gam] : "",
+      date: dat>=0 ? r[dat] : ""
+    };
+    return normalizeClip(obj);
+  }).filter(c=>c.url);
+}
+
+async function loadFromJson(){
+  const res = await fetch('/riderskill-site/clips.json?v='+bust, {cache:'no-store'});
+  if(!res.ok) throw new Error('JSON HTTP '+res.status);
+  const arr = await res.json();
+  if(!Array.isArray(arr)) return [];
+  return arr.map(normalizeClip).filter(c=>c.url);
+}
+
+async function loadClips(){
+  const err = document.getElementById('errMsg');
+  try{
+    if(SHEET_CSV_URL){
+      ALL_CLIPS = await loadFromSheet();
+      if(!ALL_CLIPS.length){
+        // si vide, on tente le JSON
+        const fallback = await loadFromJson().catch(()=>[]);
+        ALL_CLIPS = fallback;
+      }
+    }else{
+      ALL_CLIPS = await loadFromJson();
+    }
+    filterAndRender();
+  }catch(e){
+    console.error(e);
+    err.textContent = "Impossible de charger les clips ("+e.message+").";
+    err.style.display = "block";
+    ALL_CLIPS = [];
+    render(ALL_CLIPS);
   }
 }
-setStatus('off');
 
-/* Twitch Player */
-(function(){
-  const parentHosts=["riderskill.github.io","localhost","127.0.0.1"];
-  const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
-  player.addEventListener(Twitch.Player.ONLINE,()=>setStatus('on'));
-  player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
-})();
+/* ====== EVENTS ====== */
+document.getElementById('q').addEventListener('input', filterAndRender);
+document.getElementById('refresh').addEventListener('click', loadClips);
 
-/* Clips à la une (via /clips.json) */
-function renderClips(list){
-  const el=document.getElementById('clipsGrid');
-  if(!el) return;
-  if(!Array.isArray(list)||!list.length){ el.innerHTML='<div class="muted">Aucun clip pour l’instant (remplis clips.json).</div>'; return; }
-  el.innerHTML=list.slice(0,6).map(c=>{
-    const t=(c.title||'Clip').replace(/</g,'&lt;');
-    const a=c.album?`<span class="muted"> · ${c.album}</span>`:'';
-    let host=''; try{ host=(new URL(c.url)).hostname; }catch(e){}
-    return `<div class="clip">
-      <a href="${c.url}" target="_blank" rel="noopener">${t}${a}</a>
-      <div class="muted" style="font-size:.9rem;opacity:.9">${host}</div>
-    </div>`;
-  }).join('');
-}
-const bust=Date.now();
-fetch('/riderskill-site/clips.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(renderClips).catch(()=>{});
-
-/* Radio simple (/music/radio.json) */
-const audio=document.getElementById('player'), np=document.getElementById('nowPlaying');
-const bPlay=document.getElementById('btnPlay'), bNext=document.getElementById('btnNext'), bPrev=document.getElementById('btnPrev'), bShuf=document.getElementById('btnShuffle');
-let list=[], i=0, shuffle=false;
-function load(i0){ if(!list.length) return; i=(i0+list.length)%list.length; const t=list[i]; audio.src=t.url; audio.title=t.title||'Track'; np.textContent=`▶️ ${t.title||'Track'}${t.artist?(' — '+t.artist):''}`; localStorage.setItem('rs_radio_index', String(i)); localStorage.setItem('rs_radio_time','0'); }
-function play(){ audio.play().catch(()=>{ np.textContent='Clique ▶️ Lire pour démarrer la radio'; }); }
-function next(){ load(i + (shuffle? Math.floor(Math.random()*list.length) || 1 : 1)); play(); }
-function prev(){ load(i-1); play(); }
-bPlay.addEventListener('click', ()=>{ if(audio.paused){ play(); bPlay.textContent='⏸️ Pause'; } else { audio.pause(); bPlay.textContent='▶️ Lire'; }});
-bNext.addEventListener('click', next); bPrev.addEventListener('click', prev);
-bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent='🔀 Shuffle: '+(shuffle?'ON':'OFF'); });
-audio.addEventListener('ended', next); audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
-fetch('/riderskill-site/music/radio.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(arr=>{
-  list=Array.isArray(arr)?arr:[]; if(!list.length){ np.textContent='Aucune piste dans la radio.'; return; }
-  const idx=parseInt(localStorage.getItem('rs_radio_index')||'0',10); load(isNaN(idx)?0:idx);
-  const t=parseFloat(localStorage.getItem('rs_radio_time')||'0'); if(!isNaN(t) && t>0) audio.currentTime=t;
-}).catch(()=>{ np.textContent='Impossible de charger la radio.'; });
-
-/* VOD (/vod.json) */
-function renderVod(list){
-  const el=document.getElementById('vods');
-  if(!el) return;
-  if(!Array.isArray(list)||!list.length){ el.innerHTML='<div class="muted">Aucune VOD.</div>'; return; }
-  el.innerHTML=list.slice(0,10).map(v=>{
-    const t=(v.title||'VOD').replace(/</g,'&lt;'); const d=v.date?new Date(v.date):null;
-    const meta=d?d.toLocaleString('fr-FR'):(v.platform||'');
-    return `<div class="vod"><div><div class="title">${t}</div><div class="meta">${meta}</div></div><a class="btn" href="${v.url}" target="_blank" rel="noopener">Voir</a></div>`;
-  }).join('');
-}
-fetch('/riderskill-site/vod.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(renderVod).catch(()=>{});
+/* init */
+loadClips();
 </script>
 </body>
 </html>
