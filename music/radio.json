@@ -1,11 +1,11 @@
 [
-  { "title": "Venomless", "artist": "RiderSkill", "url": "./music/Riderskill – Venomless.mp3" },
-  { "title": "Truth in Flames", "artist": "RiderSkill", "url": "./music/Riderskill – Truth in Flames.mp3" },
-  { "title": "Gospel of the Streets", "artist": "RiderSkill", "url": "./music/Riderskill – Gospel of the Streets.mp3" },
-  { "title": "Iron Veins", "artist": "RiderSkill", "url": "./music/Riderskill – Iron Veins.mp3" },
-  { "title": "Concrete Shadows", "artist": "RiderSkill", "url": "./music/Riderskill – Concrete Shadows.mp3" },
-  { "title": "Echoes of Dust", "artist": "RiderSkill", "url": "./music/Riderskill – Echoes of Dust.mp3" },
-  { "title": "Broken Idols", "artist": "RiderSkill", "url": "./music/Riderskill – Broken Idols.mp3" },
-  { "title": "Crown of Smoke", "artist": "RiderSkill", "url": "./music/Riderskill – Crown of Smoke.mp3" },
-  { "title": "Silent Thrones", "artist": "RiderSkill", "url": "./music/Riderskill – Silent Thrones.mp3" }
+  { "title": "Venomless", "artist": "RiderSkill", "url": "./music/riderskill-venomless.mp3" },
+  { "title": "Truth in Flames", "artist": "RiderSkill", "url": "./music/riderskill-truth-in-flames.mp3" },
+  { "title": "Gospel of the Streets", "artist": "RiderSkill", "url": "./music/riderskill-gospel-of-the-streets.mp3" },
+  { "title": "Iron Veins", "artist": "RiderSkill", "url": "./music/riderskill-iron-veins.mp3" },
+  { "title": "Concrete Shadows", "artist": "RiderSkill", "url": "./music/riderskill-concrete-shadows.mp3" },
+  { "title": "Echoes of Dust", "artist": "RiderSkill", "url": "./music/riderskill-echoes-of-dust.mp3" },
+  { "title": "Broken Idols", "artist": "RiderSkill", "url": "./music/riderskill-broken-idols.mp3" },
+  { "title": "Crown of Smoke", "artist": "RiderSkill", "url": "./music/riderskill-crown-of-smoke.mp3" },
+  { "title": "Silent Thrones", "artist": "RiderSkill", "url": "./music/riderskill-silent-thrones.mp3" }
 ]
