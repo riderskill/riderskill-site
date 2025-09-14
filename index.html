@@ -9,7 +9,7 @@
 
 <style>
 :root{
-  --bg:#0f1014; --panel:#161616; --line:#242424;
+  --bg:#0f1014; --panel:#161616; --panel2:#1c1c1c; --line:#242424;
   --text:#EDEDED; --muted:#9aa0a6; --ok:#22c55e; --ko:#ef4444;
   --twitch:#9146FF; --kick:#53FC18;
 }
@@ -31,6 +31,7 @@ a{color:inherit;text-decoration:none}
 .container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
 .section{padding:26px 0}
 .muted{color:var(--muted)}
+
 /* Topbar */
 .topbar{position:sticky;top:0;z-index:1000;background:rgba(13,13,13,.86);
   backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
@@ -46,22 +47,61 @@ a{color:inherit;text-decoration:none}
 .btn{padding:10px 14px;background:rgba(26,26,26,.92);border:1px solid #2a2a2a;border-radius:14px;
   font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s}
 .btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a;box-shadow:0 8px 22px rgba(0,0,0,.28)}
-/* Hero / Panels */
+
+/* Hero / Cards */
 .hero{display:grid;gap:18px;padding:26px 0}
 .card{background:linear-gradient(180deg, rgba(22,22,22,.94), rgba(22,22,22,.90));
   border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
-.title{margin:0 0 6px 0;font-size:2.2rem;line-height:1.2;font-weight:900}
-.subtitle{margin:0;color:var(--muted);font-size:1.05rem}
+.title{margin:0 0 6px 0;font-size:2.4rem;line-height:1.2;font-weight:900}
+.subtitle{margin:0;color:var(--muted);font-size:1.1rem}
+
+/* Live */
 .panel{background:linear-gradient(180deg, rgba(24,24,24,.94), rgba(24,24,24,.90));
   border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
 .live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:14px}
 .player,.chat{height:540px;border-radius:16px;border:1px solid #1f1f1f;background:#0b0b0b}
 @media (max-width:900px){ .live-wrap{grid-template-columns:1fr}.player,.chat{height:420px} }
-/* Quick links */
-.quick{display:flex;gap:12px;flex-wrap:wrap}
-.quick .btn{font-size:1rem}
+
+/* Agenda */
+.agenda-list{display:grid;gap:12px}
+.ag-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#131313;border:1px solid #222;border-radius:14px;padding:12px 14px}
+.ag-left{display:flex;flex-direction:column}
+.ag-title{margin:0;font-weight:900}
+.ag-meta{color:var(--muted);font-size:.95rem}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 12px;font-weight:900;letter-spacing:.3px}
+.badge.live{background:#05260f;color:var(--ok);border:1px solid #135f2e}
+.badge.soon{background:#1d1b09;color:#facc15;border:1px solid #8a6d0a}
+.badge.off{background:#2a0b0b;color:var(--ko);border:1px solid #7a2020}
+
+/* VOD */
+.vods{display:grid;gap:12px}
+.vod{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#121212;border:1px solid #222;border-radius:14px;padding:12px}
+.vod .meta{color:var(--muted);font-size:.9rem}
+
+/* Radio */
+.radio{display:grid;gap:10px}
+.radio-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.radio-btn{padding:10px 14px;border-radius:12px;border:1px solid #2a2a2a;background:#1b1b1b;font-weight:900;cursor:pointer;transition:transform .15s,background .15s,border-color .15s}
+.radio-btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a}
+.radio-meta{color:var(--muted);font-size:.95rem}
+
+/* FAB */
+.fab-clips{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
+  background:linear-gradient(135deg,#9146FF 0%,#53FC18 100%);color:#0D0D0D;font-weight:900;letter-spacing:.5px;text-decoration:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .18s,box-shadow .18s}
+.fab-clips:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.45)}
+.fab-emoji{font-size:20px}.fab-text{font-size:14px}
+@media (max-width:520px){ .fab-text{display:none} .fab-clips{padding:12px} }
+
 footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 </style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK85CR5F7Z"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date()); gtag('config','G-DK85CR5F7Z');
+</script>
 
 <!-- Twitch SDK -->
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
@@ -80,15 +120,14 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
     </a>
     <div class="links">
       <a class="btn" href="/riderskill-site/index.html">Live</a>
-      <!-- UNIQUEMENT TES LIENS -->
-      <a class="btn" href="https://www.twitch.tv/riderskill/videos?featured=true&filter=clips&range=all" target="_blank" rel="noopener">Clips</a>
-      <a class="btn" href="https://www.twitch.tv/riderskill/videos?filter=archives&sort=time" target="_blank" rel="noopener">VOD</a>
+      <a class="btn" href="/riderskill-site/clips.html">Clips</a>
+      <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
       <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
       <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
       <a class="btn" href="https://www.youtube.com/@riderskill" target="_blank" rel="noopener">YouTube</a>
       <a class="btn" href="https://www.tiktok.com/@riderskill_twitch" target="_blank" rel="noopener">TikTok</a>
       <a class="btn" href="https://x.com/riderskill" target="_blank" rel="noopener">X</a>
-      <a class="btn" href="https://discord.gg/2UWwhhyY" target="_blank" rel="noopener">Discord</a>
+      <a class="btn" href="https://discord.gg/nbAZ28Z6jH" target="_blank" rel="noopener">Discord</a>
     </div>
   </div>
 </div>
@@ -99,16 +138,16 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
     <h1 class="title">Le show. Le game. <span style="color:var(--twitch)">La musique.</span></h1>
     <p class="subtitle">Streamer FR — Rust • GTA • Sea of Thieves — vibes musicales + commu active.</p>
   </div>
-  <div class="card quick">
-    <a class="btn" href="https://www.twitch.tv/riderskill/videos?featured=true&filter=clips&range=all" target="_blank" rel="noopener">🎬 Voir tous les Clips</a>
-    <a class="btn" href="https://www.twitch.tv/riderskill/videos?filter=archives&sort=time" target="_blank" rel="noopener">📺 Voir les VOD</a>
+  <div class="card">
+    <h2 class="title" style="font-size:1.4rem;margin:0">Gameplay. Vibes. <span style="color:#53FC18">Clips à gogo.</span></h2>
+    <p class="subtitle">Moments forts, highlights et best-of. Tout est ici.</p>
   </div>
 </header>
 
 <!-- ====== LIVE ====== -->
 <section class="section container" id="live">
   <div class="panel">
-    <h2 style="margin:0 0 10px 0">Live intégré</h2>
+    <h2>Live intégré</h2>
     <div class="live-wrap">
       <div id="twitch-player" class="player" title="Twitch player"></div>
       <iframe id="twitch-chat" class="chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io" title="Twitch chat" allowfullscreen></iframe>
@@ -116,12 +155,52 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
   </div>
 </section>
 
+<!-- ====== AGENDA ====== -->
+<section class="section container" id="agenda">
+  <div class="panel">
+    <h2>Agenda</h2>
+    <div id="agendaList" class="agenda-list"></div>
+    <div id="agendaError" class="muted" style="display:none;color:#ef4444;font-weight:800"></div>
+  </div>
+</section>
+
+<!-- ====== RADIO ====== -->
+<section class="section container" id="radio">
+  <div class="panel radio">
+    <div>
+      <h2 class="title" style="font-size:1.4rem;margin:0">Radio RiderSkill — tes sons en continu</h2>
+      <p class="radio-meta">Lecture en boucle, suivant auto, shuffle, reprise à la reconnexion (un clic ▶️ est requis par les navigateurs).</p>
+    </div>
+    <div class="radio-wrap">
+      <button id="btnPlay" class="radio-btn">▶️ Lire</button>
+      <button id="btnNext" class="radio-btn">⏭️ Suivant</button>
+      <button id="btnPrev" class="radio-btn">⏮️ Précédent</button>
+      <button id="btnShuffle" class="radio-btn">🔀 Shuffle: OFF</button>
+      <span id="nowPlaying" class="radio-meta">Aucun titre…</span>
+    </div>
+    <audio id="player" preload="none"></audio>
+  </div>
+</section>
+
+<!-- ====== VOD ====== -->
+<section class="section container" id="vod">
+  <div class="panel">
+    <h2>VOD récentes</h2>
+    <div id="vods" class="vods"></div>
+  </div>
+</section>
+
+<!-- ====== BOUTON CLIPS ====== -->
+<a class="fab-clips" href="https://www.twitch.tv/riderskill/videos?featured=true&filter=clips&range=all" target="_blank" rel="noopener" aria-label="Clips Twitch">
+  <span class="fab-emoji">🎬</span><span class="fab-text">CLIPS !</span>
+</a>
+
 <!-- ====== FOOTER ====== -->
 <footer class="container">© 2025 RiderSkill — twitch.tv/riderskill · kick.com/riderskill</footer>
 
 <!-- ====== SCRIPTS ====== -->
 <script>
-/* Statut LIVE/OFF (vert si online, rouge sinon) */
+/* Statut LIVE/OFF */
 function setStatus(state){
   const dot=document.getElementById('statusDot'); const label=document.getElementById('statusLabel');
   if(!dot||!label) return;
@@ -146,6 +225,70 @@ setStatus('off');
   player.addEventListener(Twitch.Player.ONLINE,()=>setStatus('on'));
   player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
 })();
+
+/* Agenda (planning.json) */
+function fmtDate(d){return d.toLocaleDateString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit'})}
+function fmtTime(d){return d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
+function renderAgenda(items){
+  const el=document.getElementById('agendaList'); const err=document.getElementById('agendaError');
+  if(!el) return;
+  const now=new Date();
+  if(!Array.isArray(items)){ el.innerHTML=''; if(err){err.style.display='block'; err.textContent='Agenda: format invalide (planning.json)'; } return; }
+  const rows=items.slice().sort((a,b)=>new Date(a.start)-new Date(b.start)).map(it=>{
+    const s=new Date(it.start); const e=it.end?new Date(it.end):null;
+    const live=s<=now && (!e||e>=now); const soon=s>now && (s-now)<=1000*60*60*6;
+    const badgeClass=live?'live':(soon?'soon':'off'); const badgeText=live?'EN LIVE':(soon?'Bientôt':'Programmé');
+    const when=`${fmtDate(s)} · ${fmtTime(s)}${e?(' → '+fmtTime(e)):""}`; const meta=[when,it.platform||''].filter(Boolean).join(' · ');
+    const title=(it.title||'Live').replace(/</g,'&lt;');
+    return `<div class="ag-item"><div class="ag-left"><h3 class="ag-title">${title}</h3><div class="ag-meta">${meta}</div></div><span class="badge ${badgeClass}">${badgeText}</span></div>`;
+  }).join('');
+  if(err) err.style.display='none';
+  el.innerHTML = rows || '<div class="ag-item"><div class="ag-left"><div class="ag-meta">Aucun événement planifié.</div></div><span class="badge off">OFF</span></div>';
+}
+const bust=Date.now();
+fetch('/riderskill-site/planning.json?v='+bust,{cache:'no-store'})
+  .then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+  .then(renderAgenda)
+  .catch(e=>{ const err=document.getElementById('agendaError'); if(err){ err.style.display='block'; err.textContent='Agenda introuvable: assure-toi que /riderskill-site/planning.json existe. ('+e.message+')'; }});
+
+/* Radio simple (/music/radio.json) */
+const audio=document.getElementById('player'), np=document.getElementById('nowPlaying');
+const bPlay=document.getElementById('btnPlay'), bNext=document.getElementById('btnNext'), bPrev=document.getElementById('btnPrev'), bShuf=document.getElementById('btnShuffle');
+let list=[], i=0, shuffle=false;
+function load(i0){ if(!list.length) return; i=(i0+list.length)%list.length; const t=list[i]; audio.src=t.url; audio.title=t.title||'Track'; np.textContent=`▶️ ${t.title||'Track'}${t.artist?(' — '+t.artist):''}`; localStorage.setItem('rs_radio_index', String(i)); localStorage.setItem('rs_radio_time','0'); }
+function play(){ audio.play().catch(()=>{ np.textContent='Clique ▶️ Lire pour démarrer la radio'; }); }
+function next(){ load(i + (shuffle? Math.floor(Math.random()*list.length) || 1 : 1)); play(); }
+function prev(){ load(i-1); play(); }
+bPlay.addEventListener('click', ()=>{ if(audio.paused){ play(); bPlay.textContent='⏸️ Pause'; } else { audio.pause(); bPlay.textContent='▶️ Lire'; }});
+bNext.addEventListener('click', next); bPrev.addEventListener('click', prev);
+bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent='🔀 Shuffle: '+(shuffle?'ON':'OFF'); });
+audio.addEventListener('ended', next);
+audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
+fetch('/riderskill-site/music/radio.json?v='+bust,{cache:'no-store'})
+  .then(r=>r.ok?r.json():[])
+  .then(arr=>{
+    list=Array.isArray(arr)?arr:[];
+    if(!list.length){ np.textContent='Aucune piste dans la radio.'; return; }
+    const idx=parseInt(localStorage.getItem('rs_radio_index')||'0',10); load(isNaN(idx)?0:idx);
+    const t=parseFloat(localStorage.getItem('rs_radio_time')||'0'); if(!isNaN(t) && t>0) audio.currentTime=t;
+  })
+  .catch(()=>{ np.textContent='Impossible de charger la radio.'; });
+
+/* VOD (/vod.json) */
+function renderVod(list){
+  const el=document.getElementById('vods');
+  if(!el) return;
+  if(!Array.isArray(list)||!list.length){ el.innerHTML='<div class="muted">Aucune VOD.</div>'; return; }
+  el.innerHTML=list.slice(0,10).map(v=>{
+    const t=(v.title||'VOD').replace(/</g,'&lt;');
+    const meta=v.date ? new Date(v.date).toLocaleString('fr-FR') : (v.platform||'');
+    return `<div class="vod"><div><div class="title">${t}</div><div class="meta">${meta}</div></div><a class="btn" href="${v.url}" target="_blank" rel="noopener">Voir</a></div>`;
+  }).join('');
+}
+fetch('/riderskill-site/vod.json?v='+bust,{cache:'no-store'})
+  .then(r=>r.ok?r.json():[])
+  .then(renderVod)
+  .catch(()=>{ /* silencieux */ });
 </script>
 </body>
 </html>
