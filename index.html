@@ -31,6 +31,7 @@ a{color:inherit;text-decoration:none}
 .container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
 .section{padding:26px 0}
 .muted{color:var(--muted)}
+
 /* Topbar */
 .topbar{position:sticky;top:0;z-index:1000;background:rgba(13,13,13,.86);
   backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
@@ -46,18 +47,21 @@ a{color:inherit;text-decoration:none}
 .btn{padding:10px 14px;background:rgba(26,26,26,.92);border:1px solid #2a2a2a;border-radius:14px;
   font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s}
 .btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+
 /* Hero / Cards */
 .hero{display:grid;gap:18px;padding:26px 0}
 .card{background:linear-gradient(180deg, rgba(22,22,22,.94), rgba(22,22,22,.90));
   border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
 .title{margin:0 0 6px 0;font-size:2.4rem;line-height:1.2;font-weight:900}
 .subtitle{margin:0;color:var(--muted);font-size:1.1rem}
+
 /* Live */
 .panel{background:linear-gradient(180deg, rgba(24,24,24,.94), rgba(24,24,24,.90));
   border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
 .live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:14px}
 .player,.chat{height:540px;border-radius:16px;border:1px solid #1f1f1f;background:#0b0b0b}
 @media (max-width:900px){ .live-wrap{grid-template-columns:1fr}.player,.chat{height:420px} }
+
 /* Agenda */
 .agenda-list{display:grid;gap:12px}
 .ag-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#131313;border:1px solid #222;border-radius:14px;padding:12px 14px}
@@ -68,16 +72,20 @@ a{color:inherit;text-decoration:none}
 .badge.live{background:#05260f;color:var(--ok);border:1px solid #135f2e}
 .badge.soon{background:#1d1b09;color:#facc15;border:1px solid #8a6d0a}
 .badge.off{background:#2a0b0b;color:var(--ko);border:1px solid #7a2020}
+
 /* VOD */
 .vods{display:grid;gap:12px}
 .vod{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#121212;border:1px solid #222;border-radius:14px;padding:12px}
 .vod .meta{color:var(--muted);font-size:.9rem}
+
 /* Radio */
 .radio{display:grid;gap:10px}
 .radio-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .radio-btn{padding:10px 14px;border-radius:12px;border:1px solid #2a2a2a;background:#1b1b1b;font-weight:900;cursor:pointer;transition:transform .15s,background .15s,border-color .15s}
 .radio-btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a}
 .radio-meta{color:var(--muted);font-size:.95rem}
+#volRange{accent-color:#9146FF}
+
 /* FAB */
 .fab-clips{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
   background:linear-gradient(135deg,#9146FF 0%,#53FC18 100%);color:#0D0D0D;font-weight:900;letter-spacing:.5px;text-decoration:none;
@@ -85,22 +93,17 @@ a{color:inherit;text-decoration:none}
 .fab-clips:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.45)}
 .fab-emoji{font-size:20px}.fab-text{font-size:14px}
 @media (max-width:520px){ .fab-text{display:none} .fab-clips{padding:12px} }
+
 footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 </style>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK85CR5F7Z"></script>
-<script>
-  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-  gtag('js', new Date()); gtag('config','G-DK85CR5F7Z');
-</script>
 
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 </head>
 <body>
+<!-- ====== TOPBAR ====== -->
 <div class="topbar">
   <div class="nav container">
-    <a class="brand" href="./index.html" title="Accueil">
+    <a class="brand" href="/riderskill-site/index.html" title="Accueil">
       <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
       <span id="brandText">RiderSkill</span>
       <span class="status-wrap">
@@ -109,9 +112,9 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
       </span>
     </a>
     <div class="links">
-      <a class="btn" href="./index.html">Live</a>
-      <a class="btn" href="./clips.html">Clips</a>
-      <a class="btn" href="./alaune.html">À la une</a>
+      <a class="btn" href="/riderskill-site/index.html">Live</a>
+      <a class="btn" href="/riderskill-site/clips.html">Clips</a>
+      <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
       <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
       <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
       <a class="btn" href="https://www.youtube.com/@riderskill" target="_blank" rel="noopener">YouTube</a>
@@ -122,6 +125,7 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
   </div>
 </div>
 
+<!-- ====== HERO ====== -->
 <header class="hero container">
   <div class="card">
     <h1 class="title">Le show. Le game. <span style="color:var(--twitch)">La musique.</span></h1>
@@ -133,16 +137,18 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
   </div>
 </header>
 
+<!-- ====== LIVE ====== -->
 <section class="section container" id="live">
   <div class="panel">
     <h2>Live intégré</h2>
     <div class="live-wrap">
       <div id="twitch-player" class="player" title="Twitch player"></div>
-      <iframe id="twitch-chat" class="chat" title="Twitch chat" allowfullscreen></iframe>
+      <iframe id="twitch-chat" class="chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io" title="Twitch chat" allowfullscreen></iframe>
     </div>
   </div>
 </section>
 
+<!-- ====== AGENDA ====== -->
 <section class="section container" id="agenda">
   <div class="panel">
     <h2>Agenda</h2>
@@ -151,23 +157,31 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
   </div>
 </section>
 
+<!-- ====== RADIO ====== -->
 <section class="section container" id="radio">
   <div class="panel radio">
     <div>
       <h2 class="title" style="font-size:1.4rem;margin:0">Radio RiderSkill — tes sons en continu</h2>
-      <p class="radio-meta">Clique ▶️ pour démarrer (bloqué par les navigateurs sans interaction).</p>
+      <p class="radio-meta">Lecture en boucle, suivant auto, shuffle, reprise à la reconnexion (un clic ▶️ est requis par les navigateurs).</p>
     </div>
     <div class="radio-wrap">
       <button id="btnPlay" class="radio-btn">▶️ Lire</button>
       <button id="btnNext" class="radio-btn">⏭️ Suivant</button>
       <button id="btnPrev" class="radio-btn">⏮️ Précédent</button>
       <button id="btnShuffle" class="radio-btn">🔀 Shuffle: OFF</button>
+
+      <!-- 🎚️ Volume -->
+      <label class="radio-meta" for="volRange">Volume</label>
+      <input id="volRange" type="range" min="0" max="100" value="80" style="width:160px;vertical-align:middle">
+      <span id="volPct" class="radio-meta">80%</span>
+
       <span id="nowPlaying" class="radio-meta">Aucun titre…</span>
     </div>
     <audio id="player" preload="none"></audio>
   </div>
 </section>
 
+<!-- ====== VOD ====== -->
 <section class="section container" id="vod">
   <div class="panel">
     <h2>VOD récentes</h2>
@@ -175,12 +189,15 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
   </div>
 </section>
 
+<!-- ====== BOUTON CLIPS ====== -->
 <a class="fab-clips" href="https://www.twitch.tv/riderskill/videos?featured=true&filter=clips&range=all" target="_blank" rel="noopener" aria-label="Clips Twitch">
   <span class="fab-emoji">🎬</span><span class="fab-text">CLIPS !</span>
 </a>
 
+<!-- ====== FOOTER ====== -->
 <footer class="container">© 2025 RiderSkill — twitch.tv/riderskill · kick.com/riderskill</footer>
 
+<!-- ====== SCRIPTS ====== -->
 <script>
 /* Statut LIVE/OFF */
 function setStatus(state){
@@ -200,20 +217,19 @@ setStatus('off');
 (function(){ const p=new URLSearchParams(location.search); const s=p.get('status')||p.get('on');
   if(s==='1'||s==='true'||s==='on') setStatus('on'); if(s==='0'||s==='false'||s==='off') setStatus('off'); })();
 
-/* Twitch Player + Chat parent dynamique */
+/* Twitch Player */
 (function(){
-  const parentHosts=[location.hostname,"riderskill.github.io","localhost","127.0.0.1"];
+  const parentHosts=["riderskill.github.io","localhost","127.0.0.1"];
   const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
   player.addEventListener(Twitch.Player.ONLINE,()=>setStatus('on'));
   player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
-  // Chat
-  document.getElementById('twitch-chat').src =
-    `https://www.twitch.tv/embed/riderskill/chat?parent=${encodeURIComponent(location.hostname)}`;
 })();
 
-/* Agenda (chemin RELATIF) */
+/* Utils Date */
 function fmtDate(d){return d.toLocaleDateString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit'})}
 function fmtTime(d){return d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
+
+/* Agenda */
 function renderAgenda(items){
   const el=document.getElementById('agendaList'); const err=document.getElementById('agendaError');
   if(!el) return;
@@ -230,44 +246,101 @@ function renderAgenda(items){
   if(err) err.style.display='none';
   el.innerHTML = rows || '<div class="ag-item"><div class="ag-left"><div class="ag-meta">Aucun événement planifié.</div></div><span class="badge off">OFF</span></div>';
 }
-const bust=Date.now();
-fetch('./planning.json?v='+bust,{cache:'no-store'})
-  .then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
-  .then(renderAgenda)
-  .catch(e=>{ const err=document.getElementById('agendaError'); if(err){ err.style.display='block'; err.textContent='Agenda introuvable: assure-toi que ./planning.json existe. ('+e.message+')'; }});
 
-/* Radio (chemin RELATIF ./music/radio.json) */
+/* ===== Radio ===== */
 const audio=document.getElementById('player'), np=document.getElementById('nowPlaying');
 const bPlay=document.getElementById('btnPlay'), bNext=document.getElementById('btnNext'), bPrev=document.getElementById('btnPrev'), bShuf=document.getElementById('btnShuffle');
+const volRange=document.getElementById('volRange'), volPct=document.getElementById('volPct');
 let list=[], i=0, shuffle=false;
-function load(i0){ if(!list.length) return; i=(i0+list.length)%list.length; const t=list[i]; audio.src=t.url; audio.title=t.title||'Track'; np.textContent=`▶️ ${t.title||'Track'}${t.artist?(' — '+t.artist):''}`; localStorage.setItem('rs_radio_index', String(i)); localStorage.setItem('rs_radio_time','0'); }
-function play(){ audio.play().catch(()=>{ np.textContent='Clique ▶️ Lire pour démarrer la radio'; }); }
+
+function load(i0){
+  if(!list.length) return;
+  i=(i0+list.length)%list.length;
+  const t=list[i];
+  audio.src=t.url;
+  audio.title=t.title||'Track';
+  np.textContent=`▶️ ${t.title||'Track'}${t.artist?(' — '+t.artist):''}`;
+  localStorage.setItem('rs_radio_index', String(i));
+  localStorage.setItem('rs_radio_time','0');
+}
+function play(){
+  audio.muted=false;
+  audio.play().catch(()=>{ np.textContent='Clique ▶️ Lire pour démarrer la radio'; });
+}
 function next(){ load(i + (shuffle? Math.floor(Math.random()*list.length) || 1 : 1)); play(); }
 function prev(){ load(i-1); play(); }
-bPlay.addEventListener('click', ()=>{ if(audio.paused){ play(); bPlay.textContent='⏸️ Pause'; } else { audio.pause(); bPlay.textContent='▶️ Lire'; }});
-bNext.addEventListener('click', next); bPrev.addEventListener('click', prev);
-bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent='🔀 Shuffle: '+(shuffle?'ON':'OFF'); });
-audio.addEventListener('ended', next); audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
-fetch('./music/radio.json?v='+bust,{cache:'no-store'})
- .then(r=>r.ok?r.json():[])
- .then(arr=>{
-   list=Array.isArray(arr)?arr:[]; if(!list.length){ np.textContent='Aucune piste dans la radio.'; return; }
-   const idx=parseInt(localStorage.getItem('rs_radio_index')||'0',10); load(isNaN(idx)?0:idx);
-   const t=parseFloat(localStorage.getItem('rs_radio_time')||'0'); if(!isNaN(t) && t>0) audio.currentTime=t;
- }).catch(()=>{ np.textContent='Impossible de charger la radio.'; });
 
-/* VOD (chemin RELATIF ./vod.json) */
-function renderVod(list){
+bPlay.addEventListener('click', ()=>{
+  if(audio.paused){ play(); bPlay.textContent='⏸️ Pause'; }
+  else{ audio.pause(); bPlay.textContent='▶️ Lire'; }
+});
+bNext.addEventListener('click', next);
+bPrev.addEventListener('click', prev);
+bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent='🔀 Shuffle: '+(shuffle?'ON':'OFF'); });
+audio.addEventListener('ended', next);
+audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
+
+/* Volume + mémorisation */
+(function(){
+  audio.muted=false;
+  const saved = parseFloat(localStorage.getItem('rs_radio_volume') || '0.8');
+  const vol = isNaN(saved) ? 0.8 : Math.min(1, Math.max(0, saved));
+  audio.volume = vol;
+  volRange.value = Math.round(vol*100);
+  volPct.textContent = `${Math.round(vol*100)}%`;
+  volRange.addEventListener('input',()=>{
+    const v = Math.round(volRange.value);
+    audio.volume = v/100;
+    audio.muted=false;
+    volPct.textContent = `${v}%`;
+    localStorage.setItem('rs_radio_volume', String(audio.volume));
+  });
+  if(bPlay){
+    bPlay.addEventListener('click',()=>{
+      audio.muted=false;
+      if(audio.volume===0){
+        audio.volume=0.8; volRange.value=80; volPct.textContent='80%';
+        localStorage.setItem('rs_radio_volume','0.8');
+      }
+    });
+  }
+})();
+
+/* ===== VOD ===== */
+function renderVod(listVod){
   const el=document.getElementById('vods');
   if(!el) return;
-  if(!Array.isArray(list)||!list.length){ el.innerHTML='<div class="muted">Aucune VOD.</div>'; return; }
-  el.innerHTML=list.slice(0,10).map(v=>{
+  if(!Array.isArray(listVod)||!listVod.length){ el.innerHTML='<div class="muted">Aucune VOD.</div>'; return; }
+  el.innerHTML=listVod.slice(0,10).map(v=>{
     const t=(v.title||'VOD').replace(/</g,'&lt;'); const d=v.date?new Date(v.date):null;
     const meta=d?d.toLocaleString('fr-FR'):(v.platform||'');
-    return `<div class="vod"><div><div class="title">${t}</div><div class="meta">${meta}</div></div><a class="btn" href="${v.url}" target="_blank" rel="noopener">Voir</a></div>`;
+    return `<div class="vod"><div><div class="title" style="font-size:1.4rem;font-weight:900">${t}</div><div class="meta">${meta}</div></div><a class="btn" href="${v.url}" target="_blank" rel="noopener">Voir</a></div>`;
   }).join('');
 }
-fetch('./vod.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(renderVod).catch(()=>{});
+
+/* Fetch des données (anti-cache) */
+const bust=Date.now();
+fetch('/riderskill-site/planning.json?v='+bust,{cache:'no-store'})
+  .then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+  .then(renderAgenda)
+  .catch(e=>{ const err=document.getElementById('agendaError'); if(err){ err.style.display='block'; err.textContent='Agenda introuvable: assure-toi que /riderskill-site/planning.json existe. ('+e.message+')'; }});
+
+fetch('/riderskill-site/music/radio.json?v='+bust,{cache:'no-store'})
+  .then(r=>r.ok?r.json():[])
+  .then(arr=>{
+    list = Array.isArray(arr)?arr:[];
+    if(!list.length){ np.textContent='Aucune piste dans la radio.'; return; }
+    const idx=parseInt(localStorage.getItem('rs_radio_index')||'0',10);
+    load(isNaN(idx)?0:idx);
+    const t=parseFloat(localStorage.getItem('rs_radio_time')||'0');
+    if(!isNaN(t) && t>0) audio.currentTime=t;
+  })
+  .catch(()=>{ np.textContent='Impossible de charger la radio.'; });
+
+fetch('/riderskill-site/vod.json?v='+bust,{cache:'no-store'})
+  .then(r=>r.ok?r.json():[])
+  .then(renderVod)
+  .catch(()=>{});
 </script>
 </body>
 </html>
