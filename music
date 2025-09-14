@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RiderSkill — Streamer FR</title>
+<link rel="icon" href="https://unavatar.io/twitch/riderskill" />
+<meta name="theme-color" content="#0D0D0D" />
 
+<style>
+:root{
+  --bg:#0f1014; --panel:#161616; --text:#EDEDED; --muted:#9aa0a6;
+  --ok:#22c55e; --ko:#ef4444; --twitch:#9146FF; --kick:#53FC18;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  min-height:100vh;color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+  background:
+    radial-gradient(ellipse at 50% 15%,
+      rgba(255,255,255,.10) 0%,
+      rgba(255,255,255,.05) 30%,
+      rgba(0,0,0,.35) 65%,
+      rgba(0,0,0,.60) 100%),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat fixed,
+    var(--bg);
+}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+.section{padding:26px 0}
+.muted{color:var(--muted)}
+
+/* Topbar */
+.topbar{position:sticky;top:0;z-index:1000;background:rgba(13,13,13,.86);
+  backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
+#brandText{font-weight:900}
+.status-wrap{display:inline-flex;align-items:center;gap:8px;margin-left:6px}
+#statusDot{width:12px;height:12px;border-radius:50%;background:var(--ko);
+  box-shadow:0 0 0 2px rgba(0,0,0,.45),0 0 10px rgba(239,68,68,.35)}
+#statusLabel{font-weight:900;letter-spacing:.5px;color:var(--ko)}
+.links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{padding:10px 14px;background:rgba(26,26,26,.92);border:1px solid #2a2a2a;border-radius:14px;
+  font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+
+/* Hero */
+.hero{display:grid;gap:18px;padding:26px 0}
+.card{background:linear-gradient(180deg, rgba(22,22,22,.94), rgba(22,22,22,.90));
+  border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
+.title{margin:0 0 6px 0;font-size:2.4rem;font-weight:900}
+.subtitle{margin:0;color:var(--muted);font-size:1.1rem}
+
+/* Live */
+.panel{background:linear-gradient(180deg, rgba(24,24,24,.94), rgba(24,24,24,.90));
+  border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
+.live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.player,.chat{
+  border-radius:16px;border:1px solid #1f1f1f;background:#0b0b0b;
+  width:100%;aspect-ratio:16/9;height:auto;overflow:hidden;
+}
+@media (max-width:900px){ .live-wrap{grid-template-columns:1fr} }
+
+/* Clips / VOD */
+.vods,.agenda-list{display:grid;gap:12px}
+.vod,.ag-item{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#121212;border:1px solid #222;border-radius:14px;padding:12px}
+.ag-title,.vod .title{margin:0;font-weight:900}
+.ag-meta,.vod .meta{color:var(--muted);font-size:.9rem}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 12px;font-weight:900;letter-spacing:.3px}
+.badge.live{background:#05260f;color:var(--ok);border:1px solid #135f2e}
+.badge.soon{background:#1d1b09;color:#facc15;border:1px solid #8a6d0a}
+.badge.off{background:#2a0b0b;color:var(--ko);border:1px solid #7a2020}
+
+footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK85CR5F7Z"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date()); gtag('config','G-DK85CR5F7Z');
+</script>
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="nav container">
+    <a class="brand" href="/riderskill-site/index.html">
+      <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
+      <span id="brandText">RiderSkill</span>
+      <span class="status-wrap"><span id="statusDot"></span><span id="statusLabel">OFF</span></span>
+    </a>
+    <div class="links">
+      <a class="btn" href="/riderskill-site/index.html">Live</a>
+      <a class="btn" href="/riderskill-site/clips.html">Clips</a>
+      <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero container">
+  <div class="card">
+    <h1 class="title">Le show. Le game. <span style="color:var(--twitch)">La musique.</span></h1>
+    <p class="subtitle">Streamer FR — Rust • GTA • Sea of Thieves.</p>
+  </div>
+</header>
+
+<!-- LIVE -->
+<section class="section container">
+  <div class="panel">
+    <h2>Live intégré</h2>
+    <div class="live-wrap">
+      <div id="twitch-player" class="player"></div>
+      <iframe id="twitch-chat" class="chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- VOD -->
+<section class="section container">
+  <div class="panel">
+    <h2>VOD récentes</h2>
+    <div id="vods" class="vods"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="container">© 2025 RiderSkill</footer>
+
+<script>
+function setStatus(state){
+  const dot=document.getElementById('statusDot'); const label=document.getElementById('statusLabel');
+  if(state==='on'){ dot.style.background='var(--ok)'; label.textContent='LIVE'; label.style.color='var(--ok)'; }
+  else { dot.style.background='var(--ko)'; label.textContent='OFF'; label.style.color='var(--ko)'; }
+}
+setStatus('off');
+
+(function(){
+  const parentHosts=["riderskill.github.io","localhost","127.0.0.1"];
+  const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
+  player.addEventListener(Twitch.Player.ONLINE,()=>setStatus('on'));
+  player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
+})();
+
+/* VOD dynamiques */
+function renderVod(list){
+  const el=document.getElementById('vods'); if(!el) return;
+  if(!Array.isArray(list)||!list.length){ el.innerHTML='<div class="muted">Aucune VOD.</div>'; return; }
+  el.innerHTML=list.slice(0,5).map(v=>{
+    return `<div class="vod"><div><div class="title">${v.title||'VOD'}</div><div class="meta">${v.date||''}</div></div><a class="btn" href="${v.url}" target="_blank">Voir</a></div>`;
+  }).join('');
+}
+fetch('/riderskill-site/vod.json?v='+Date.now()).then(r=>r.ok?r.json():[]).then(renderVod).catch(()=>{});
+</script>
+</body>
+</html>
