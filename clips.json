@@ -1,5 +1,52 @@
-[
-  { "title": "Headshot insane sur Rust", "url": "https://clips.twitch.tv/AmazingClip1", "album": "Rust" },
-  { "title": "Course poursuite GTA5", "url": "https://clips.twitch.tv/AmazingClip2", "album": "GTA" },
-  { "title": "Fails SOT mais on rigole", "url": "https://clips.twitch.tv/AmazingClip3", "album": "Sea of Thieves" }
-]
+{
+  "data": [
+    {
+      "id": "ScaryRespectfulOrangePartyTime-aK3yf0Ca_--H87Fn",
+      "url": "https://www.twitch.tv/riderskill/clip/ScaryRespectfulOrangePartyTime-aK3yf0Ca_--H87Fn",
+      "title": "une dinguerie cette cg !!!",
+      "created_at": "2025-09-13T17:04:39Z",
+      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ScaryRespectfulOrangePartyTime-aK3yf0Ca_--H87Fn/7074ca41-84a2-4257-a9f2-01c68597cd56/preview-480x272.jpg",
+      "view_count": 9
+    },
+    {
+      "id": "ElegantCulturedDovePupper-0_ZPKqCOmwRi2ZyW",
+      "url": "https://www.twitch.tv/riderskill/clip/ElegantCulturedDovePupper-0_ZPKqCOmwRi2ZyW",
+      "title": "c boooooooooooooo",
+      "created_at": "2025-09-13T07:54:22Z",
+      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ElegantCulturedDovePupper-0_ZPKqCOmwRi2ZyW/abc46c7a-36e4-4a85-a1e0-2930f86a91de/preview-480x272.jpg",
+      "view_count": 3
+    },
+    {
+      "id": "AttractiveRelentlessSwanArgieB8-7X0jZOIf8TlFVqeT",
+      "url": "https://www.twitch.tv/riderskill/clip/AttractiveRelentlessSwanArgieB8-7X0jZOIf8TlFVqeT",
+      "title": "5070 ti recu :))",
+      "created_at": "2025-09-11T10:56:09Z",
+      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AttractiveRelentlessSwanArgieB8-7X0jZOIf8TlFVqeT/b81d78cd-b5a1-4b29-9219-66687884d18a/preview-480x272.jpg",
+      "view_count": 9
+    },
+    {
+      "id": "BlushingCloudyOilTF2John-fTzhmOHTPVFGi4RY",
+      "url": "https://www.twitch.tv/riderskill/clip/BlushingCloudyOilTF2John-fTzhmOHTPVFGi4RY",
+      "title": "🎵...🎵1440p 2k🎧Rust chill 2.0 ambiance garantie ! 😎",
+      "created_at": "2025-08-14T15:44:41Z",
+      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips/m04L4X084Zjh0z1RRouEWA/324479825785-offset-1266-preview-480x272.jpg",
+      "view_count": 5
+    },
+    {
+      "id": "SneakyRelievedDugongHeyGuys-RySgiw9gnWkCgbbM",
+      "url": "https://www.twitch.tv/riderskill/clip/SneakyRelievedDugongHeyGuys-RySgiw9gnWkCgbbM",
+      "title": "yeahhhhhhhh merci spoogame",
+      "created_at": "2025-08-05T10:56:36Z",
+      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SneakyRelievedDugongHeyGuys-RySgiw9gnWkCgbbM/266b4645-d258-4075-8192-037f5c5610b1/preview-480x272.jpg",
+      "view_count": 5
+    },
+    {
+      "id": "TenuousHedonisticEggPastaThat-nFfXgA8s-mpL26gY",
+      "url": "https://www.twitch.tv/riderskill/clip/TenuousHedonisticEggPastaThat-nFfXgA8s-mpL26gY",
+      "title": "dancing base",
+      "created_at": "2025-07-26T06:31:16Z",
+      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/TenuousHedonisticEggPastaThat-nFfXgA8s-mpL26gY/aa4dbf7e-84a6-4849-9979-970faa3b7d78/preview-480x272.jpg",
+      "view_count": 5
+    }
+  ]
+}
