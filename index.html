@@ -135,13 +135,7 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 <div class="topbar">
   <div class="nav container">
     <a class="brand" href="/riderskill-site/index.html" title="Accueil">
-      <!-- Logo avec fallback -->
-      <img
-        class="brand-avatar"
-        src="https://unavatar.io/twitch/riderskill?fallback=https%3A%2F%2Fstatic-cdn.jtvnw.net%2Fjtv_user_pictures%2Fuser_placeholder.png"
-        alt="Logo RiderSkill"
-        onerror="this.onerror=null;this.src='https://static-cdn.jtvnw.net/jtv_user_pictures/user_placeholder.png';"
-      />
+      <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
       <span id="brandText">RiderSkill</span>
       <span class="status-wrap">
         <span id="statusDot" title="Hors-ligne (OFF)" aria-label="Hors-ligne (OFF)"></span>
@@ -267,36 +261,12 @@ setStatus('off');
 (function(){ const p=new URLSearchParams(location.search); const s=p.get('status')||p.get('on');
   if(s==='1'||s==='true'||s==='on') setStatus('on'); if(s==='0'||s==='false'||s==='off') setStatus('off'); })();
 
-/* Twitch Player (live) — version plus robuste (events + poll de secours) */
+/* Twitch Player (live) */
 (function(){
   const parentHosts=["riderskill.github.io","localhost","127.0.0.1"];
-  const player=new Twitch.Player("twitch-player",{
-    channel:"riderskill",
-    width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts
-  });
-
-  let liveGuess=false;
-  const setOn = ()=>{ if(!liveGuess){ liveGuess=true; setStatus('on'); } };
-  const setOff= ()=>{ if(liveGuess){ liveGuess=false; setStatus('off'); } };
-
-  player.addEventListener(Twitch.Player.READY, ()=>{
-    try{ player.play?.(); }catch(e){}
-    setOff();
-  });
-  player.addEventListener(Twitch.Player.ONLINE,  setOn);
-  player.addEventListener(Twitch.Player.PLAYING, setOn);
-  player.addEventListener(Twitch.Player.OFFLINE, setOff);
-  player.addEventListener(Twitch.Player.ENDED,  setOff);
-
-  // Certains navigateurs ne déclenchent pas ONLINE -> on “sonde” le temps du player
-  let lastT=0;
-  setInterval(()=>{
-    try{
-      const t=player.getCurrentTime?.()||0;
-      if(t && t!==lastT){ setOn(); }
-      lastT=t;
-    }catch(e){}
-  }, 4000);
+  const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
+  player.addEventListener(Twitch.Player.ONLINE,()=>setStatus('on'));
+  player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
 })();
 
 /* Agenda */
@@ -336,7 +306,7 @@ bPlay.addEventListener('click', ()=>{ if(audio.paused){ play(); bPlay.textConten
 bNext.addEventListener('click', next); bPrev.addEventListener('click', prev);
 bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent='🔀 Shuffle: '+(shuffle?'ON':'OFF'); });
 audio.addEventListener('ended', next); audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
-fetch('/riderskill-site/music/radio.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(arr=>{
+fetch('/riderskill-site/music/radio.json?v='+bust',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(arr=>{
   list=Array.isArray(arr)?arr:[]; if(!list.length){ np.textContent='Aucune piste dans la radio.'; return; }
   const idx=parseInt(localStorage.getItem('rs_radio_index')||'0',10); load(isNaN(idx)?0:idx);
   const t=parseFloat(localStorage.getItem('rs_radio_time')||'0'); if(!isNaN(t) && t>0) audio.currentTime=t;
@@ -365,9 +335,8 @@ function renderVodEmbeds(list){
   }
   if(empty) empty.style.display='none';
 
-  // tri décroissant par published_at/date si possible
   const normDate = v => new Date(v.published_at || v.date || 0).getTime();
-  const items = list.slice().sort((a,b)=> normDate(b)-normDate(a)).slice(0,4); // affiche 4 embeds
+  const items = list.slice().sort((a,b)=> normDate(b)-normDate(a)).slice(0,4);
 
   grid.innerHTML = items.map(v=>{
     const u=v.url||'';
@@ -384,7 +353,6 @@ function renderVodEmbeds(list){
         </div>
       </div>`;
     } else {
-      // fallback lien si pas d'embed compatible
       return `<div class="vod-embed" style="display:flex;align-items:center;justify-content:center;background:#111">
         <a class="btn" href="${u}" target="_blank" rel="noopener">Ouvrir la VOD</a>
       </div>
