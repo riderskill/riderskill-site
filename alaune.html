@@ -6,96 +6,218 @@
 <title>RiderSkill — À la une</title>
 <link rel="icon" href="https://unavatar.io/twitch/riderskill" />
 <meta name="theme-color" content="#0D0D0D" />
+
 <style>
-:root{ --panel:#141414; --text:#EDEDED; --muted:#9a9a9a; }
+:root{
+  --bg:#0f1014; --panel:#161616; --panel2:#1c1c1c; --line:#242424;
+  --text:#EDEDED; --muted:#9aa0a6; --ok:#22c55e; --ko:#ef4444;
+  --twitch:#9146FF; --kick:#53FC18;
+}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
-  min-height:100vh;
-  color:var(--text); background-color:#0f1014;
+  min-height:100vh;color:var(--text);
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-  background-image:
-    radial-gradient(ellipse at 50% 45%, rgba(255,255,255,.14), rgba(255,255,255,.06) 35%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.55) 100%),
-    url("/riderskill-site/assets/bg.jpg"),
-    url("https://cdn.pixabay.com/photo/2019/08/06/10/14/gaming-4381792_1920.jpg"),
-    url("https://cdn.pixabay.com/photo/2016/11/29/09/32/robot-1868736_1920.jpg");
-  background-size: cover, cover, cover, cover;
-  background-position: center 25%, 20% 50%, 20% 50%, 20% 50%;
+  background:
+    radial-gradient(ellipse at 50% 15%,
+      rgba(255,255,255,.10) 0%,
+      rgba(255,255,255,.05) 30%,
+      rgba(0,0,0,.35) 65%,
+      rgba(0,0,0,.60) 100%),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat fixed,
+    var(--bg);
 }
 a{color:inherit;text-decoration:none}
-.container{width:100%;max-width:1100px;margin:0 auto;padding:0 16px}
-.topbar{position:sticky;top:0;z-index:999;background:rgba(13,13,13,.82);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
+.container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+.section{padding:26px 0}
+.muted{color:var(--muted)}
+
+/* Topbar */
+.topbar{position:sticky;top:0;z-index:1000;background:rgba(13,13,13,.86);
+  backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
 .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
 .brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
-#brandText{font-weight:800}
-#statusDot{width:12px;height:12px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 2px rgba(0,0,0,.4), 0 0 10px rgba(239,68,68,.35);margin-left:6px}
+#brandText{font-weight:900}
 .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{padding:8px 12px;background:rgba(26,26,26,.9);border:1px solid #2a2a2a;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s}
-.btn:hover{transform:translateY(-1px);background:#1e1e1e;border-color:#3a3a3a}
-.icon{width:18px;height:18px;display:block;transition:transform .18s,filter .18s}
-.btn.social:hover .icon{transform:translateY(-1px) scale(1.06);filter:drop-shadow(0 0 6px rgba(255,255,255,.15))}
-.section{padding:20px 0}
-.panel{background:linear-gradient(180deg, rgba(20,20,20,.92), rgba(20,20,20,.88));border:1px solid #1f1f1f;border-radius:14px;padding:16px;box-shadow:0 10px 28px rgba(0,0,0,.35)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.card{background:linear-gradient(180deg, rgba(20,20,20,.96), rgba(20,20,20,.9));border:1px solid #1f1f1f;border-radius:14px;padding:16px;transition:transform .18s;box-shadow:0 6px 18px rgba(0,0,0,.28)}
-.card:hover{transform:translateY(-1px)}
-.fab-clips{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:10px;
-  padding:12px 16px;border-radius:999px;background:linear-gradient(135deg,#9146FF 0%,#53FC18 100%);color:#0D0D0D;font-weight:900;letter-spacing:.5px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .18s,box-shadow .18s}
-.fab-clips:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.45)}
-.fab-emoji{font-size:20px}.fab-text{font-size:14px}
-footer{opacity:.9;padding:24px 0;text-align:center;color:var(--muted);text-shadow:0 1px 2px rgba(0,0,0,.35)}
-@media (max-width:900px){ .grid{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:520px){ .grid{grid-template-columns:1fr} #brandText{display:none} .fab-text{display:none} .fab-clips{padding:12px} }
+.btn{padding:10px 14px;background:rgba(26,26,26,.92);border:1px solid #2a2a2a;border-radius:14px;
+  font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+
+/* Panel / cards */
+.panel{background:linear-gradient(180deg, rgba(24,24,24,.94), rgba(24,24,24,.90));
+  border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:900px){ .grid3{grid-template-columns:1fr} }
+.card{background:#131313;border:1px solid #222;border-radius:14px;padding:16px}
+.card h3{margin:0 0 8px 0;font-size:1.2rem}
+.card a{text-decoration:underline}
+
+/* À la une – mini grille responsive */
+.feat-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:16px;
+}
+.feat-card{
+  background:#111;
+  border:1px solid #1f1f1f;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 8px 18px rgba(0,0,0,.35);
+  transition:transform .15s;
+}
+.feat-card:hover{ transform:translateY(-2px) }
+.feat-cover{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#000 }
+.feat-body{ padding:12px }
+.feat-title{ font-size:14px; font-weight:600; margin:0 }
+.feat-meta{ font-size:12px; color:#aaa; margin-top:6px }
+
+footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 </style>
 </head>
 <body>
+
+<!-- ====== TOPBAR ====== -->
 <div class="topbar">
   <div class="nav container">
     <a class="brand" href="/riderskill-site/index.html" title="Accueil">
       <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
       <span id="brandText">RiderSkill</span>
-      <span id="statusDot" title="Hors-ligne (OFF)" aria-label="Hors-ligne (OFF)"></span>
     </a>
     <div class="links">
       <a class="btn" href="/riderskill-site/index.html">Live</a>
       <a class="btn" href="/riderskill-site/clips.html">Clips</a>
       <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
-      <a class="btn social" href="https://www.twitch.tv/riderskill" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/twitch/9146FF" alt="Twitch">Twitch</a>
-      <a class="btn social" href="https://kick.com/riderskill" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/kick/53FC18" alt="Kick">Kick</a>
-      <a class="btn social" href="https://www.youtube.com/@riderskill" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube">YouTube</a>
-      <a class="btn social" href="https://www.tiktok.com/@riderskill_twitch" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/tiktok/000000" alt="TikTok">TikTok</a>
-      <a class="btn social" href="https://x.com/riderskill" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/x/1DA1F2" alt="X">X</a>
-      <a class="btn social" href="https://discord.gg/2UWwhhyY" target="_blank"><img class="icon" src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord">Discord</a>
+      <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
+      <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
+      <a class="btn" href="https://www.youtube.com/@riderskill" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn" href="https://www.tiktok.com/@riderskill_twitch" target="_blank" rel="noopener">TikTok</a>
+      <a class="btn" href="https://x.com/riderskill" target="_blank" rel="noopener">X</a>
+      <a class="btn" href="https://discord.gg/nbAZ28Z6jH" target="_blank" rel="noopener">Discord</a>
     </div>
   </div>
 </div>
 
-<section class="section container" id="alaune">
+<!-- ====== À LA UNE – EN-TÊTE ====== -->
+<section class="section container">
   <div class="panel">
     <h2>À la une</h2>
-    <div class="grid">
-      <a class="card-link" href="/riderskill-site/index.html">
-        <div class="card"><strong>Prochain live</strong><br><span class="muted">Clique pour aller au live</span></div>
-      </a>
-      <a class="card-link" href="/riderskill-site/clips.html">
-        <div class="card"><strong>Moments forts</strong><br><span class="muted">Voir les clips récents</span></div>
-      </a>
-      <a class="card-link" href="https://discord.gg/2UWwhhyY" target="_blank" rel="noopener">
-        <div class="card"><strong>Communauté</strong><br><span class="muted">Rejoins la commu</span></div>
-      </a>
+    <div class="grid3">
+      <div class="card">
+        <h3>Prochain live</h3>
+        <a href="/riderskill-site/index.html">Clique pour aller au live</a>
+      </div>
+      <div class="card">
+        <h3>Moments forts</h3>
+        <a href="/riderskill-site/clips.html">Voir les clips récents</a>
+      </div>
+      <div class="card">
+        <h3>Communauté</h3>
+        <a href="https://discord.gg/nbAZ28Z6jH" target="_blank" rel="noopener">Rejoins la commu</a>
+      </div>
     </div>
   </div>
 </section>
 
-<a class="fab-clips" href="/riderskill-site/clips.html" aria-label="Aller aux clips">
-  <span class="fab-emoji">🎬</span><span class="fab-text">CLIPS !</span>
-</a>
+<!-- ====== À LA UNE – DERNIÈRES VIDÉOS (AUTO) ====== -->
+<section class="section container">
+  <div class="panel">
+    <h2>À la une (dernières vidéos)</h2>
+    <div id="featGrid" class="feat-grid"></div>
+    <p id="featEmpty" class="muted" style="display:none">Rien pour l’instant.</p>
+  </div>
+</section>
 
 <footer class="container">© 2025 RiderSkill — Page À la une</footer>
 
+<!-- ====== SCRIPT : charge VOD + YouTube + TikTok et affiche ====== -->
 <script>
-(function(){const d=document.getElementById('statusDot'); if(d){d.style.background='#ef4444';}})();
+(function(){
+  const bust = Date.now();
+
+  const getJSON = (url) =>
+    fetch(url + (url.includes('?') ? '&' : '?') + 'v=' + bust, { cache:'no-store' })
+      .then(r => r.ok ? r.json() : null)
+      .catch(() => null);
+
+  const normDate = (v) => new Date(v.published_at || v.date || v.created_at || v.time || 0).getTime();
+
+  function card({url, cover, title, date, tag}){
+    const dt = date ? new Date(date).toLocaleString('fr-FR') : '';
+    const cg = cover ? `<img class="feat-cover" src="${cover}" alt="">` : '';
+    return `
+      <a class="feat-card" href="${url}" target="_blank" rel="noopener">
+        ${cg}
+        <div class="feat-body">
+          <p class="feat-title">${(title||'').replace(/</g,'&lt;')}</p>
+          <p class="feat-meta">${tag || ''}${dt ? (tag?' · ':'')+dt : ''}</p>
+        </div>
+      </a>
+    `;
+  }
+
+  Promise.all([
+    // VOD (ex: /riderskill-site/vod.json => [{url,title,date|published_at}])
+    getJSON('/riderskill-site/vod.json'),
+    // YouTube (ex: /riderskill-site/data/youtube.json => {items:[{url|link,title,published_at,thumbnail|cover}]})
+    getJSON('/riderskill-site/data/youtube.json'),
+    // TikTok (ex: /riderskill-site/data/tiktok.json => {items:[{play,desc,cover,stats,...}]})
+    getJSON('/riderskill-site/data/tiktok.json')
+  ]).then(([vod, yt, tt]) => {
+    const list = [];
+
+    // VOD
+    if (Array.isArray(vod)) {
+      for (const v of vod) {
+        list.push({
+          tag: 'Twitch',
+          url: v.url || '#',
+          cover: v.cover || '',
+          title: v.title || 'VOD',
+          date: v.published_at || v.date
+        });
+      }
+    }
+
+    // YouTube
+    if (yt && Array.isArray(yt.items)) {
+      for (const v of yt.items) {
+        list.push({
+          tag: 'YouTube',
+          url: v.url || v.link || '#',
+          cover: v.cover || v.thumbnail || '',
+          title: v.title || 'Vidéo YouTube',
+          date: v.published_at
+        });
+      }
+    }
+
+    // TikTok
+    if (tt && Array.isArray(tt.items)) {
+      for (const v of tt.items) {
+        list.push({
+          tag: 'TikTok',
+          url: v.play || '#',
+          cover: v.cover || '',
+          title: (v.desc || 'TikTok').slice(0, 90),
+          date: v.created_at || v.time || null
+        });
+      }
+    }
+
+    // Tri + affichage
+    list.sort((a,b) => (normDate(b) - normDate(a)));
+    const out = list.slice(0, 12).map(card).join('');
+
+    const grid = document.getElementById('featGrid');
+    const empty = document.getElementById('featEmpty');
+    if (!grid) return;
+    if (!out) { grid.innerHTML = ''; if (empty) empty.style.display = 'block'; }
+    else { grid.innerHTML = out; if (empty) empty.style.display = 'none'; }
+  });
+})();
 </script>
 </body>
 </html>
+
