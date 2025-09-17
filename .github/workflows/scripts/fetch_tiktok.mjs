@@ -21,16 +21,13 @@ const MIRRORS = [
 ];
 
 async function jsonGet(url) {
-  const res = await fetch(url, {
-    headers: { "User-Agent": "Mozilla/5.0" }
-  });
+  const res = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
   const data = await res.json().catch(() => null);
   if (!res.ok || !data) throw new Error(`HTTP ${res.status}`);
   return data;
 }
 
 async function getSecUid(base) {
-  // essaie de récupérer le sec_uid depuis /api/user/info
   const url = `${base}/api/user/info?unique_id=${encodeURIComponent(USERNAME)}`;
   const data = await jsonGet(url);
   const sec =
@@ -46,10 +43,8 @@ function normalize(list) {
   return list.map(v => {
     const id = String(v?.aweme_id || v?.id || "");
     const desc = v?.title || v?.desc || "";
-    const cover =
-      v?.cover || v?.origin_cover || v?.video?.cover || null;
-    const play =
-      v?.play || v?.play_addr || v?.video?.play || null;
+    const cover = v?.cover || v?.origin_cover || v?.video?.cover || null;
+    const play = v?.play || v?.play_addr || v?.video?.play || null;
     const ct = Number(v?.create_time || v?.createTime || 0) || null;
     const s = v?.statistics || v?.stats || {};
     return {
@@ -83,31 +78,42 @@ function writeOut(items) {
 
   for (const base of MIRRORS) {
     try {
-      // 1) posts direct par unique_id (certaines instances acceptent)
+      // 1) Tentative direct par unique_id
       try {
         const d1 = await jsonGet(`${base}/api/user/posts?unique_id=${encodeURIComponent(USERNAME)}&count=24`);
         const items1 = normalize(d1?.data?.videos || d1?.data || []);
         if (items1.length) {
           console.log(`✅ TikWM (unique_id) via ${base} — ${items1.length} vidéos`);
           writeOut(items1);
-          return process.exit(0);
+          process.exit(0);
         }
-      } catch(_) {/* on tente la suite */}
+      } catch (_) {
+        // on continue
+      }
 
-      // 2) sinon: récupérer sec_uid puis posts par sec_uid (méthode fiable)
+      // 2) Fallback: sec_uid puis posts
       const sec = await getSecUid(base);
       const d2 = await jsonGet(`${base}/api/user/posts?sec_uid=${encodeURIComponent(sec)}&count=24`);
       const items2 = normalize(d2?.data?.videos || d2?.data || []);
       if (items2.length) {
         console.log(`✅ TikWM (sec_uid) via ${base} — ${items2.length} vidéos`);
         writeOut(items2);
-        return process.exit(0);
+        process.exit(0);
       }
 
       lastErr = new Error("Réponse vide");
     } catch (e) {
       lastErr = e;
-      console.warn(`⚠️ Echec via ${base
+      // <-- la ligne qui cassait : backtick FERMÉ et accolade FERMÉE
+      console.warn(`⚠️ Echec via ${base}: ${e.message}`);
+    }
+  }
+
+  console.error("❌ Impossible d’extraire des vidéos via TikWM (tous les miroirs).");
+  if (lastErr) console.error(String(lastErr));
+  process.exit(1);
+})();
+
 
 
 
