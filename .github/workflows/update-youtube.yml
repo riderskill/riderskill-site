@@ -1,12 +1,12 @@
 name: Update YouTube videos
 
 on:
-  workflow_dispatch: # lancement manuel
+  workflow_dispatch: # permet le lancement manuel
   schedule:
-    - cron: "0 */6 * * *" # toutes les 6 heures
+    - cron: "0 * * * *" # toutes les heures
 
 jobs:
-  build:
+  fetch-youtube:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -17,20 +17,15 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install deps
-        run: npm install xml2js node-fetch@2
-
-      - name: Fetch YouTube RSS
+      - name: Fetch latest YouTube videos
         run: node .github/workflows/scripts/fetch_youtube_rss.mjs
-        env:
-          YOUTUBE_HANDLE: ${{ secrets.YOUTUBE_HANDLE }}
 
       - name: Commit & push if changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data/youtube.json
-          git commit -m "Update YouTube videos" || exit 0
+          git commit -m "Update YouTube videos" || echo "No changes to commit"
           git push
 
 
