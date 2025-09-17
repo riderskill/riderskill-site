@@ -1,8 +1,61 @@
-{
-  "id": "2567745865",
-  "url": "https://www.twitch.tv/videos/2567745865",
-  "title": "[ ! drops ][ !duo ]🚫Sea of Thieves !drops (fin 26/09 12:00) → Dune !drops (fin 08/10) → Rust ❌ Pas de rageux ni suiveurs de cheaters ici !",
-  "duration": "4h11m48s",
-  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c1bfbabeff71a28f975a_riderskill_314705531748_1758012762//thumb/thumb0-%{width}x%{height}.jpg",
-  "published_at": "2025-09-16T08:52:50Z"
+<!-- ===== VOD EMBEDS (patch robuste) ===== -->
+<script>
+function twitchEmbedFromUrl(url){
+  const m=url?.match(/twitch\.tv\/videos\/(\d+)/i);
+  return m ? `https://player.twitch.tv/?video=${m[1]}&parent=riderskill.github.io&autoplay=false&muted=false` : null;
 }
+function youtubeEmbedFromUrl(url){
+  const m1=url?.match(/youtu\.be\/([A-Za-z0-9_\-]+)/i);
+  const m2=url?.match(/[?&]v=([A-Za-z0-9_\-]+)/i);
+  const id = m1?.[1] || m2?.[1];
+  return id ? `https://www.youtube.com/embed/${id}` : null;
+}
+function renderVodEmbeds(list){
+  const grid=document.getElementById('vodGrid'); const empty=document.getElementById('vodEmpty');
+  if(!grid) return;
+  const arr = Array.isArray(list) ? list : (Array.isArray(list?.items) ? list.items : []);
+  if(!arr.length){ grid.innerHTML=''; if(empty) empty.style.display='block'; return; }
+  if(empty) empty.style.display='none';
+
+  const normDate = v => new Date(v.published_at || v.date || 0).getTime();
+  const items = arr.slice().sort((a,b)=> normDate(b)-normDate(a)).slice(0,4);
+
+  grid.innerHTML = items.map(v=>{
+    const u = v.url || v.link || '';
+    let src = twitchEmbedFromUrl(u) || youtubeEmbedFromUrl(u);
+    const title=(v.title||'VOD').replace(/</g,'&lt;');
+    const dateTxt = (v.published_at||v.date) ? new Date(v.published_at||v.date).toLocaleString('fr-FR') : (v.platform||'');
+    if(src){
+      return `<div>
+        <div class="vod-embed" style="position:relative"><iframe allowfullscreen src="${src}"></iframe></div>
+        <div class="vod-meta"><p class="vod-title">${title}</p><span class="vod-date">${dateTxt||''}</span></div>
+      </div>`;
+    }
+    return `<div class="vod-embed" style="display:flex;align-items:center;justify-content:center;background:#111">
+      <a class="btn" href="${u}" target="_blank" rel="noopener">Ouvrir la VOD</a>
+    </div>
+    <div class="vod-meta"><p class="vod-title">${title}</p><span class="vod-date">${dateTxt||''}</span></div>`;
+  }).join('');
+}
+
+async function fetchJSON(url){
+  const r = await fetch(url,{cache:'no-store'}); if(!r.ok) throw new Error(r.status);
+  return r.json();
+}
+
+(async()=>{
+  const bust = Date.now();
+  // on tente les deux emplacements possibles
+  const urls = [
+    `/riderskill-site/vod.json?v=${bust}`,
+    `/vod.json?v=${bust}`
+  ];
+  let data=null, lastErr=null;
+  for(const u of urls){
+    try{ data = await fetchJSON(u); break; }
+    catch(e){ lastErr=e; }
+  }
+  if(!data){ renderVodEmbeds([]); console.warn('vod.json introuvable à /riderskill-site/ ou / :', lastErr?.message); return; }
+  renderVodEmbeds(data);
+})();
+</script>
