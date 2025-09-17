@@ -1,52 +1,43 @@
 name: Update TikTok videos
-
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "30 6 * * *"  # tous les jours ~06:30 UTC
-
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
 permissions:
   contents: write
-
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install deps
-        run: npm i node-fetch@3
-
-      # Étape de debug pour vérifier que les secrets arrivent bien
-      - name: Check secrets presence (no values printed)
-        env:
-          HAS_KEY: ${{ secrets.TIKTOK_API_KEY }}
-          HAS_USER: ${{ secrets.TIKTOK_USERNAME }}
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Check secrets
         run: |
-          if [ -z "${HAS_KEY}" ]; then echo "❌ TIKTOK_API_KEY manquant"; exit 1; else echo "✅ TIKTOK_API_KEY présent"; fi
-          if [ -z "${HAS_USER}" ]; then echo "❌ TIKTOK_USERNAME manquant"; exit 1; else echo "✅ TIKTOK_USERNAME présent"; fi
-
-      - name: Fetch latest TikTok videos -> tiktok.json
+          [ -z "${{ secrets.RAPIDAPI_KEY }}" ] && echo "RAPIDAPI_KEY manquant" && exit 1 || echo "RAPIDAPI_KEY ok"
+          if [ -z "${{ secrets.TIKTOK_USERNAME }}" ] && [ -z "${{ secrets.TIKTOK_SECUID }}" ]; then
+            echo "TIKTOK_USERNAME ou TIKTOK_SECUID requis" && exit 1
+          fi
+      - name: Install deps
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm i node-fetch@3 >/dev/null 2>&1
+      - name: Fetch latest TikTok videos -> data/tiktok.json
         env:
-          TIKTOK_API_KEY: ${{ secrets.TIKTOK_API_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          TIKTOK_SECUID: ${{ secrets.TIKTOK_SECUID }}
           TIKTOK_USERNAME: ${{ secrets.TIKTOK_USERNAME }}
         run: node .github/workflows/scripts/fetch_tiktok.mjs
-
-      - name: Commit changes if any
+      - name: Commit & push if changed
         run: |
-          if git diff --quiet; then
-            echo "No changes."
-          else
+          if [ -n "$(git status --porcelain data/tiktok.json 2>/dev/null)" ]; then
             git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add tiktok.json
-            git commit -m "Update tiktok.json (latest 6)"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/tiktok.json
+            git commit -m "chore: update tiktok.json"
             git push
+          else
+            echo "No changes"
           fi
-
 
