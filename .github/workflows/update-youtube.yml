@@ -1,43 +1,36 @@
-name: Update YouTube videos (RSS)
+name: Update YouTube videos
 
 on:
+  workflow_dispatch: # lancement manuel
   schedule:
-    - cron: "0 */6 * * *"   # toutes les 6h
-  workflow_dispatch:
-
-permissions:
-  contents: write
+    - cron: "0 */6 * * *" # toutes les 6 heures
 
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Install deps
-        run: |
-          npm init -y >/dev/null 2>&1
-          npm i node-fetch@3 xml2js >/dev/null 2>&1
+        run: npm install xml2js node-fetch@2
 
-      - name: Fetch latest YouTube videos -> data/youtube.json
-        env:
-          # Mets ici ton handle YouTube SANS @ (ex: riderskill)
-          YOUTUBE_HANDLE: ${{ secrets.YOUTUBE_HANDLE }}
+      - name: Fetch YouTube RSS
         run: node .github/workflows/scripts/fetch_youtube_rss.mjs
+        env:
+          YOUTUBE_HANDLE: ${{ secrets.YOUTUBE_HANDLE }}
 
       - name: Commit & push if changed
         run: |
-          if [ -n "$(git status --porcelain data/youtube.json 2>/dev/null)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/youtube.json
-            git commit -m "chore: update youtube.json"
-            git push
-          else
-            echo "No changes"
-          fi
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/youtube.json
+          git commit -m "Update YouTube videos" || exit 0
+          git push
+
 
