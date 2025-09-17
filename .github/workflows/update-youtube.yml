@@ -1,37 +1,43 @@
-name: Update YouTube videos
+name: Update YouTube videos (RSS)
 
 on:
   schedule:
     - cron: "0 */6 * * *"   # toutes les 6h
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  update-youtube:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Fetch YouTube RSS
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
         run: |
-          mkdir -p data
-          curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCXMAENGwZqE-jiWOcLtuD1A" \
-            | jq -r '
-              {
-                updated_at: (now | todate),
-                items: [
-                  .entry[]? | {
-                    id: .["yt:videoId"],
-                    title: .title,
-                    url: .link["@href"],
-                    published_at: .published,
-                    cover: .["media:group"]["media:thumbnail"]["@url"]
-                  }
-                ]
-              }' > data/youtube.json
+          npm init -y >/dev/null 2>&1
+          npm i node-fetch@3 xml2js >/dev/null 2>&1
+
+      - name: Fetch latest YouTube videos -> data/youtube.json
+        env:
+          # Mets ici ton handle YouTube SANS @ (ex: riderskill)
+          YOUTUBE_HANDLE: ${{ secrets.YOUTUBE_HANDLE }}
+        run: node .github/workflows/scripts/fetch_youtube_rss.mjs
 
       - name: Commit & push if changed
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update YouTube videos"
-          file_pattern: data/youtube.json
+        run: |
+          if [ -n "$(git status --porcelain data/youtube.json 2>/dev/null)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/youtube.json
+            git commit -m "chore: update youtube.json"
+            git push
+          else
+            echo "No changes"
+          fi
+
