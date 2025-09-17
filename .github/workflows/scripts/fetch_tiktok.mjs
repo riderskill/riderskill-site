@@ -1,121 +1,83 @@
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import fetch from "node-fetch";
 
-const apiKey = process.env.TIKTOK_API_KEY;
-const username = process.env.TIKTOK_USERNAME;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-if (!apiKey || !username) {
-  console.error("❌ Manque TIKTOK_API_KEY ou TIKTOK_USERNAME.");
-  process.exit(1);
-}
+const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
+const SECUID = process.env.TIKTOK_SECUID?.trim();
+const USERNAME = process.env.TIKTOK_USERNAME?.trim();
 
-const HEADERS = {
-  "x-rapidapi-key": apiKey,
-  "x-rapidapi-host": "tiktok-api23.p.rapidapi.com",
-};
+if (!RAPIDAPI_KEY) { console.error("❌ RAPIDAPI_KEY manquant"); process.exit(1); }
 
-/**
- * Certaines versions de l’API "tiktok-api23" exposent des endpoints différents :
- * - /api/user/posts?unique_id=
- * - /api/user/posts?uniqueId=
- * - /user/posts?unique_id=
- * - /user/posts?uniqueId=
- * On essaie tous dans l’ordre jusqu’à ce que l’un réponde correctement.
- */
-const CANDIDATE_URLS = [
-  `https://tiktok-api23.p.rapidapi.com/api/user/posts?unique_id=${encodeURIComponent(username)}&count=24`,
-  `https://tiktok-api23.p.rapidapi.com/api/user/posts?uniqueId=${encodeURIComponent(username)}&count=24`,
-  `https://tiktok-api23.p.rapidapi.com/user/posts?unique_id=${encodeURIComponent(username)}&count=24`,
-  `https://tiktok-api23.p.rapidapi.com/user/posts?uniqueId=${encodeURIComponent(username)}&count=24`,
+const HOSTS = [
+  { host: "tiktok85.p.rapidapi.com", userPosts: "/api/user/posts", userInfo: "/api/user/info" },
+  { host: "tiktok-api23.p.rapidapi.com", userPosts: "/api/user/posts", userInfo: "/api/user/info" },
+  { host: "tiktok-scraper7.p.rapidapi.com", userPosts: "/user/posts", userInfo: "/user/info" },
 ];
 
-async function tryFetch(url) {
-  console.log("🔎 Test endpoint:", url);
-  const res = await fetch(url, { headers: HEADERS });
-  const text = await res.text();
-
-  if (!res.ok) {
-    console.error(`❌ ${res.status} ${res.statusText} ->`, text.slice(0, 500));
-    return null;
-  }
-
-  let json;
-  try {
-    json = JSON.parse(text);
-  } catch (e) {
-    console.error("❌ Réponse non-JSON:", text.slice(0, 500));
-    return null;
-  }
-  return json;
+async function call(host, path, params) {
+  const url = new URL(`https://${host}${path}`);
+  Object.entries(params||{}).forEach(([k,v])=>v&&url.searchParams.set(k,v));
+  const res = await fetch(url, { headers: { "X-RapidAPI-Key": RAPIDAPI_KEY, "X-RapidAPI-Host": host }});
+  const text = await res.text(); let data; try { data = JSON.parse(text); } catch { data = text; }
+  if (!res.ok) throw new Error(`${host}${path} -> ${res.status} ${typeof data==="string"?data:JSON.stringify(data)}`);
+  return data;
 }
 
-function normalize(json) {
-  // Selon l’API, la structure change. On tente plusieurs chemins.
-  const raw =
-    json?.data?.videos ||
-    json?.data ||
-    json?.videos ||
-    json?.aweme_list ||
-    [];
-
-  // Normalisation -> 6 plus récentes
-  const six = raw
-    .sort((a, b) => Number(b.createTime || b.create_time || 0) - Number(a.createTime || a.create_time || 0))
-    .slice(0, 6)
-    .map((v) => {
-      const id = v.id || v.aweme_id;
-      const created = v.createTime || v.create_time;
-      const thumb =
-        v.cover ||
-        v.originCover ||
-        v.dynamicCover ||
-        v?.video?.cover ||
-        v?.video?.originCover ||
-        v?.video?.dynamicCover ||
-        "";
-
-      const title = v.desc || v.title || v?.share_info?.share_title || "TikTok";
-      const views =
-        v?.stats?.playCount ??
-        v?.statistics?.play_count ??
-        null;
-
-      return {
-        id,
-        url: id ? `https://www.tiktok.com/@${username}/video/${id}` : null,
-        title,
-        created_at: created ? new Date(Number(created) * 1000).toISOString() : null,
-        thumbnail_url: thumb,
-        view_count: views,
-      };
-    })
-    .filter((x) => x.id && x.url);
-
-  return six;
+async function resolveSecUid() {
+  if (SECUID) return SECUID;
+  if (!USERNAME) return null;
+  for (const h of HOSTS) {
+    try {
+      const d = await call(h.host, h.userInfo, { unique_id: USERNAME, username: USERNAME });
+      const sec = d?.data?.sec_uid || d?.user?.sec_uid || d?.sec_uid || d?.userInfo?.sec_uid || d?.secUid;
+      if (sec) return sec;
+    } catch { /* next host */ }
+  }
+  return null;
 }
 
-async function run() {
-  let json = null;
-
-  for (const url of CANDIDATE_URLS) {
-    json = await tryFetch(url);
-    if (json) break;
-  }
-
-  if (!json) {
-    console.error("❌ Impossible d'obtenir les posts TikTok sur tous les endpoints testés.");
-    process.exit(1);
-  }
-
-  const six = normalize(json);
-  console.log(`✅ ${six.length} vidéo(s) trouvée(s).`);
-
-  fs.writeFileSync("tiktok.json", JSON.stringify({ data: six }, null, 2));
-  console.log("💾 tiktok.json écrit.");
+function normalize(listWrapper) {
+  const items = listWrapper?.data?.aweme_list || listWrapper?.aweme_list || listWrapper?.data?.posts || listWrapper?.posts || [];
+  return items.map(it => {
+    const id = it?.aweme_id || it?.id || it?.awemeId || it?.video_id || "";
+    const desc = it?.desc || it?.title || it?.share_info?.share_title || "";
+    const cover = it?.video?.cover?.url_list?.[0] || it?.video?.origin_cover?.url_list?.[0] || it?.cover || it?.cover_url || null;
+    const play = it?.video?.play_addr?.url_list?.[0] || it?.video?.download_addr?.url_list?.[0] || it?.play || null;
+    const ct = it?.create_time || it?.createTime || it?.timestamp || null;
+    const s = it?.statistics || it?.stats || {};
+    return {
+      id: String(id), desc, cover, play, create_time: ct?Number(ct):null,
+      stats: {
+        digg_count: s.digg_count ?? null,
+        comment_count: s.comment_count ?? null,
+        share_count: s.share_count ?? null,
+        play_count: s.play_count ?? null,
+        collect_count: s.collect_count ?? null,
+      },
+    };
+  });
 }
 
-run().catch((e) => {
-  console.error("❌ Erreur fatale:", e);
-  process.exit(1);
-});
+(async () => {
+  const sec = await resolveSecUid();
+  if (!sec) { console.error("❌ Pas de sec_uid (donne TIKTOK_USERNAME ou TIKTOK_SECUID)"); process.exit(1); }
+
+  let lastErr = null;
+  for (const h of HOSTS) {
+    try {
+      const data = await call(h.host, h.userPosts, { sec_uid: sec, secUid: sec, count: "24" });
+      const list = normalize(data);
+      if (!list.length) throw new Error("Réponse vide (aucune vidéo)");
+      const outDir = path.join(process.cwd(), "data"); fs.mkdirSync(outDir, { recursive: true });
+      fs.writeFileSync(path.join(outDir,"tiktok.json"), JSON.stringify({ updated_at: new Date().toISOString(), items: list }, null, 2));
+      console.log(`✅ ${list.length} vidéos écrites dans data/tiktok.json via ${h.host}`);
+      process.exit(0);
+    } catch (e) { console.warn(`⚠️ ${h.host}: ${e.message}`); lastErr = e; }
+  }
+  console.error("❌ Impossible de récupérer les posts sur tous les endpoints."); if (lastErr) console.error(String(lastErr)); process.exit(1);
+})();
 
