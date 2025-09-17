@@ -135,7 +135,13 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 <div class="topbar">
   <div class="nav container">
     <a class="brand" href="/riderskill-site/index.html" title="Accueil">
-      <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
+      <!-- Logo avec fallback -->
+      <img
+        class="brand-avatar"
+        src="https://unavatar.io/twitch/riderskill?fallback=https%3A%2F%2Fstatic-cdn.jtvnw.net%2Fjtv_user_pictures%2Fuser_placeholder.png"
+        alt="Logo RiderSkill"
+        onerror="this.onerror=null;this.src='https://static-cdn.jtvnw.net/jtv_user_pictures/user_placeholder.png';"
+      />
       <span id="brandText">RiderSkill</span>
       <span class="status-wrap">
         <span id="statusDot" title="Hors-ligne (OFF)" aria-label="Hors-ligne (OFF)"></span>
@@ -261,12 +267,36 @@ setStatus('off');
 (function(){ const p=new URLSearchParams(location.search); const s=p.get('status')||p.get('on');
   if(s==='1'||s==='true'||s==='on') setStatus('on'); if(s==='0'||s==='false'||s==='off') setStatus('off'); })();
 
-/* Twitch Player (live) */
+/* Twitch Player (live) — version plus robuste (events + poll de secours) */
 (function(){
   const parentHosts=["riderskill.github.io","localhost","127.0.0.1"];
-  const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
-  player.addEventListener(Twitch.Player.ONLINE,()=>setStatus('on'));
-  player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
+  const player=new Twitch.Player("twitch-player",{
+    channel:"riderskill",
+    width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts
+  });
+
+  let liveGuess=false;
+  const setOn = ()=>{ if(!liveGuess){ liveGuess=true; setStatus('on'); } };
+  const setOff= ()=>{ if(liveGuess){ liveGuess=false; setStatus('off'); } };
+
+  player.addEventListener(Twitch.Player.READY, ()=>{
+    try{ player.play?.(); }catch(e){}
+    setOff();
+  });
+  player.addEventListener(Twitch.Player.ONLINE,  setOn);
+  player.addEventListener(Twitch.Player.PLAYING, setOn);
+  player.addEventListener(Twitch.Player.OFFLINE, setOff);
+  player.addEventListener(Twitch.Player.ENDED,  setOff);
+
+  // Certains navigateurs ne déclenchent pas ONLINE -> on “sonde” le temps du player
+  let lastT=0;
+  setInterval(()=>{
+    try{
+      const t=player.getCurrentTime?.()||0;
+      if(t && t!==lastT){ setOn(); }
+      lastT=t;
+    }catch(e){}
+  }, 4000);
 })();
 
 /* Agenda */
@@ -428,4 +458,5 @@ fetch('/riderskill-site/data/youtube.json?v='+bust,{cache:'no-store'})
 </script>
 </body>
 </html>
+
 
