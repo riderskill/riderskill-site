@@ -4,7 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>RiderSkill — Streamer FR</title>
-<link rel="icon" href="https://unavatar.io/twitch/riderskill" />
+
+<!-- Favicon / Logo -->
+<link rel="icon" href="/riderskill-site/logo1.png" type="image/png" />
+<link rel="apple-touch-icon" href="/riderskill-site/logo1.png" />
 <meta name="theme-color" content="#0D0D0D" />
 
 <!-- ====== STYLES (autonomes) ====== -->
@@ -135,7 +138,8 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 <div class="topbar">
   <div class="nav container">
     <a class="brand" href="/riderskill-site/index.html" title="Accueil">
-      <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
+      <!-- Logo topbar = TON image -->
+      <img class="brand-avatar" src="/riderskill-site/logo1.png" alt="Logo RiderSkill">
       <span id="brandText">RiderSkill</span>
       <span class="status-wrap">
         <span id="statusDot" title="Hors-ligne (OFF)" aria-label="Hors-ligne (OFF)"></span>
@@ -306,7 +310,8 @@ bPlay.addEventListener('click', ()=>{ if(audio.paused){ play(); bPlay.textConten
 bNext.addEventListener('click', next); bPrev.addEventListener('click', prev);
 bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent='🔀 Shuffle: '+(shuffle?'ON':'OFF'); });
 audio.addEventListener('ended', next); audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
-fetch('/riderskill-site/music/radio.json?v='+bust',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(arr=>{
+/* ⚠️ fix du bug: suppression de l'apostrophe de trop après bust */
+fetch('/riderskill-site/music/radio.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(arr=>{
   list=Array.isArray(arr)?arr:[]; if(!list.length){ np.textContent='Aucune piste dans la radio.'; return; }
   const idx=parseInt(localStorage.getItem('rs_radio_index')||'0',10); load(isNaN(idx)?0:idx);
   const t=parseFloat(localStorage.getItem('rs_radio_time')||'0'); if(!isNaN(t) && t>0) audio.currentTime=t;
