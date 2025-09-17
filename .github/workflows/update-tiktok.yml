@@ -1,34 +1,42 @@
 name: Update TikTok videos
+
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */6 * * *"   # toutes les 6h
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
-      - name: Check secrets
+        with:
+          node-version: 20
+
+      - name: Check username
         run: |
-          [ -z "${{ secrets.RAPIDAPI_KEY }}" ] && echo "RAPIDAPI_KEY manquant" && exit 1 || echo "RAPIDAPI_KEY ok"
-          if [ -z "${{ secrets.TIKTOK_USERNAME }}" ] && [ -z "${{ secrets.TIKTOK_SECUID }}" ]; then
-            echo "TIKTOK_USERNAME ou TIKTOK_SECUID requis" && exit 1
+          if [ -z "${{ secrets.TIKTOK_USERNAME }}" ]; then
+            echo "❌ TIKTOK_USERNAME manquant (ex: riderskill_twitch)"; exit 1
+          else
+            echo "✅ TIKTOK_USERNAME ok"
           fi
+
       - name: Install deps
         run: |
           npm init -y >/dev/null 2>&1
           npm i node-fetch@3 >/dev/null 2>&1
+
       - name: Fetch latest TikTok videos -> data/tiktok.json
         env:
-          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-          TIKTOK_SECUID: ${{ secrets.TIKTOK_SECUID }}
           TIKTOK_USERNAME: ${{ secrets.TIKTOK_USERNAME }}
         run: node .github/workflows/scripts/fetch_tiktok.mjs
+
       - name: Commit & push if changed
         run: |
           if [ -n "$(git status --porcelain data/tiktok.json 2>/dev/null)" ]; then
@@ -40,4 +48,5 @@ jobs:
           else
             echo "No changes"
           fi
+
 
