@@ -20,10 +20,10 @@ jobs:
         with:
           node-version: "20"
 
+      # ⬇️ On met TON Channel ID ici. Pas de secret.
       - name: Fetch latest YouTube videos
         env:
-          # ⚠️ tu as stocké l'ID de chaîne dans ce secret
-          YOUTUBE_HANDLE: ${{ secrets.YOUTUBE_HANDLE }}
+          YOUTUBE_HANDLE: UCXMAENGwZqE-jiWOcLtuD1A
         run: node .github/workflows/scripts/fetch_youtube_rss.mjs
 
       - name: Commit and push YouTube videos
@@ -33,3 +33,4 @@ jobs:
           git add data/youtube.json
           git commit -m "chore: update youtube.json" || echo "no changes"
           git push
+
