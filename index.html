@@ -100,6 +100,15 @@ a{color:inherit;text-decoration:none}
 .tiktok-title{font-size:14px;font-weight:600;margin:0}
 .tiktok-stats{font-size:12px;color:#aaa;margin-top:6px}
 
+/* YouTube grid */
+.youtube-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.youtube-card{background:#111;border:1px solid #1f1f1f;border-radius:14px;overflow:hidden;box-shadow:0 8px 18px rgba(0,0,0,.35);transition:transform .15s}
+.youtube-card:hover{transform:translateY(-2px)}
+.youtube-cover{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
+.youtube-body{padding:12px}
+.youtube-title{font-size:14px;font-weight:600;margin:0}
+.youtube-date{font-size:12px;color:#aaa;margin-top:6px}
+
 /* FAB */
 .fab-clips{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
   background:linear-gradient(135deg,#9146FF 0%,#53FC18 100%);color:#0D0D0D;font-weight:900;letter-spacing:.5px;text-decoration:none;
@@ -215,6 +224,15 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
   </div>
 </section>
 
+<!-- ====== YOUTUBE ====== -->
+<section class="section container" id="youtube">
+  <div class="panel">
+    <h2>Dernières vidéos YouTube</h2>
+    <div id="youtubeGrid" class="youtube-grid"></div>
+    <p class="muted" id="youtubeEmpty" style="display:none">Rien pour l’instant.</p>
+  </div>
+</section>
+
 <!-- ====== BOUTON CLIPS ====== -->
 <a class="fab-clips" href="https://www.twitch.tv/riderskill/videos?featured=true&filter=clips&range=all" target="_blank" rel="noopener" aria-label="Clips Twitch">
   <span class="fab-emoji">🎬</span><span class="fab-text">CLIPS !</span>
@@ -317,8 +335,9 @@ function renderVodEmbeds(list){
   }
   if(empty) empty.style.display='none';
 
+  // tri décroissant par published_at/date si possible
   const normDate = v => new Date(v.published_at || v.date || 0).getTime();
-  const items = list.slice().sort((a,b)=> normDate(b)-normDate(a)).slice(0,4);
+  const items = list.slice().sort((a,b)=> normDate(b)-normDate(a)).slice(0,4); // affiche 4 embeds
 
   grid.innerHTML = items.map(v=>{
     const u=v.url||'';
@@ -335,6 +354,7 @@ function renderVodEmbeds(list){
         </div>
       </div>`;
     } else {
+      // fallback lien si pas d'embed compatible
       return `<div class="vod-embed" style="display:flex;align-items:center;justify-content:center;background:#111">
         <a class="btn" href="${u}" target="_blank" rel="noopener">Ouvrir la VOD</a>
       </div>
@@ -375,10 +395,37 @@ fetch('/riderskill-site/data/tiktok.json?v='+bust,{cache:'no-store'})
   .then(r=>r.ok?r.json():{items:[]})
   .then(j=>renderTikTok(j.items||[]))
   .catch(()=>{ const g=document.getElementById('tiktokGrid'); const e=document.getElementById('tiktokEmpty'); if(g) g.innerHTML=''; if(e) e.style.display='block'; });
+
+/* YOUTUBE (/data/youtube.json) */
+function renderYouTube(items){
+  const grid=document.getElementById('youtubeGrid'); const empty=document.getElementById('youtubeEmpty');
+  if(!grid) return;
+  if(!Array.isArray(items) || !items.length){
+    grid.innerHTML=''; if(empty) empty.style.display='block'; return;
+  }
+  if(empty) empty.style.display='none';
+
+  const sorted = items.slice().sort((a,b)=> new Date(b.published_at||0) - new Date(a.published_at||0));
+  grid.innerHTML = sorted.slice(0,12).map(v=>{
+    const title=(v.title||'Vidéo YouTube').replace(/</g,'&lt;');
+    const dateTxt = v.published_at ? new Date(v.published_at).toLocaleString('fr-FR') : '';
+    const url = v.url || v.link || '#';
+    const cover = v.cover || v.thumbnail || '';
+    return `
+      <a class="youtube-card" href="${url}" target="_blank" rel="noopener">
+        <img class="youtube-cover" src="${cover}" alt="">
+        <div class="youtube-body">
+          <p class="youtube-title">${title.slice(0,90)}</p>
+          <p class="youtube-date">${dateTxt}</p>
+        </div>
+      </a>`;
+  }).join('');
+}
+fetch('/riderskill-site/data/youtube.json?v='+bust,{cache:'no-store'})
+  .then(r=>r.ok?r.json():{items:[]})
+  .then(j=>renderYouTube(j.items||[]))
+  .catch(()=>{ const g=document.getElementById('youtubeGrid'); const e=document.getElementById('youtubeEmpty'); if(g) g.innerHTML=''; if(e) e.style.display='block'; });
 </script>
 </body>
 </html>
-
-  process.exit(1);
-})();
 
