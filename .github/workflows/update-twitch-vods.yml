@@ -2,12 +2,14 @@ name: Update Twitch VODs
 
 on:
   schedule:
-    - cron: "0 3 * * *" # Tous les jours à 3h du matin
-  workflow_dispatch: # Lancement manuel
+    - cron: "0 3 * * *"   # Tous les jours à 03:00 UTC
+  workflow_dispatch:       # Lancement manuel possible
 
 jobs:
   update-twitch-vods:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # nécessaire pour git push
 
     steps:
       - name: Checkout repo
@@ -16,15 +18,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Run fetch_twitch_vods.mjs
+      - name: Fetch Twitch VODs -> vod.json
         run: node .github/workflows/scripts/fetch_twitch_vods.mjs
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          TWITCH_USER_LOGIN: ${{ secrets.TWITCH_USER_LOGIN }}
 
-      - name: Commit and push VODs
+      - name: Commit & push if changed
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add vod.json
-          git commit -m "Update Twitch VODs [auto]" || echo "No changes"
+          git commit -m "Update Twitch VODs (auto)" || exit 0
           git push
