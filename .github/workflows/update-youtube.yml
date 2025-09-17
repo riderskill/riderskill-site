@@ -1,0 +1,37 @@
+name: Update YouTube videos
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # toutes les 6h
+  workflow_dispatch:
+
+jobs:
+  update-youtube:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch YouTube RSS
+        run: |
+          mkdir -p data
+          curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCXMAENGwZqE-jiWOcLtuD1A" \
+            | jq -r '
+              {
+                updated_at: (now | todate),
+                items: [
+                  .entry[]? | {
+                    id: .["yt:videoId"],
+                    title: .title,
+                    url: .link["@href"],
+                    published_at: .published,
+                    cover: .["media:group"]["media:thumbnail"]["@url"]
+                  }
+                ]
+              }' > data/youtube.json
+
+      - name: Commit & push if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update YouTube videos"
+          file_pattern: data/youtube.json
