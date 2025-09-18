@@ -4,13 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>RiderSkill — Streamer FR</title>
-
-<!-- Favicon / Logo -->
-<link rel="icon" href="/riderskill-site/logo1.png" type="image/png" />
-<link rel="apple-touch-icon" href="/riderskill-site/logo1.png" />
+<link rel="icon" href="https://unavatar.io/twitch/riderskill" />
 <meta name="theme-color" content="#0D0D0D" />
 
-<!-- ====== STYLES (autonomes) ====== -->
 <style>
 :root{
   --bg:#0f1014; --panel:#161616; --panel2:#1c1c1c; --line:#242424;
@@ -81,7 +77,7 @@ a{color:inherit;text-decoration:none}
 .vod-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media (max-width:900px){ .vod-grid{grid-template-columns:1fr} }
 .vod-embed{position:relative;width:100%;border-radius:14px;overflow:hidden;border:1px solid #1f1f1f;background:#000}
-.vod-embed::before{content:"";display:block;padding-top:56.25%;} /* 16:9 */
+.vod-embed::before{content:"";display:block;padding-top:56.25%;}
 .vod-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vod-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px}
 .vod-title{font-weight:900;margin:0}
@@ -94,23 +90,14 @@ a{color:inherit;text-decoration:none}
 .radio-btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a}
 .radio-meta{color:var(--muted);font-size:.95rem}
 
-/* TikTok grid */
-.tiktok-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-.tiktok-card{background:#111;border:1px solid #1f1f1f;border-radius:14px;overflow:hidden;box-shadow:0 8px 18px rgba(0,0,0,.35);transition:transform .15s}
-.tiktok-card:hover{transform:translateY(-2px)}
+/* TikTok & YouTube grids */
+.tiktok-grid,.youtube-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.tiktok-card,.youtube-card{background:#111;border:1px solid #1f1f1f;border-radius:14px;overflow:hidden;box-shadow:0 8px 18px rgba(0,0,0,.35);transition:transform .15s}
+.tiktok-card:hover,.youtube-card:hover{transform:translateY(-2px)}
 .tiktok-cover{width:100%;height:300px;object-fit:cover;display:block;background:#000}
-.tiktok-body{padding:12px}
-.tiktok-title{font-size:14px;font-weight:600;margin:0}
-.tiktok-stats{font-size:12px;color:#aaa;margin-top:6px}
-
-/* YouTube grid */
-.youtube-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-.youtube-card{background:#111;border:1px solid #1f1f1f;border-radius:14px;overflow:hidden;box-shadow:0 8px 18px rgba(0,0,0,.35);transition:transform .15s}
-.youtube-card:hover{transform:translateY(-2px)}
-.youtube-cover{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
-.youtube-body{padding:12px}
-.youtube-title{font-size:14px;font-weight:600;margin:0}
-.youtube-date{font-size:12px;color:#aaa;margin-top:6px}
+.tiktok-body,.youtube-body{padding:12px}
+.tiktok-title,.youtube-title{font-size:14px;font-weight:600;margin:0}
+.tiktok-stats,.youtube-date{font-size:12px;color:#aaa;margin-top:6px}
 
 /* FAB */
 .fab-clips{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
@@ -138,8 +125,7 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 <div class="topbar">
   <div class="nav container">
     <a class="brand" href="/riderskill-site/index.html" title="Accueil">
-      <!-- Logo topbar = TON image -->
-      <img class="brand-avatar" src="/riderskill-site/logo1.png" alt="Logo RiderSkill">
+      <img class="brand-avatar" src="https://unavatar.io/twitch/riderskill" alt="Logo RiderSkill">
       <span id="brandText">RiderSkill</span>
       <span class="status-wrap">
         <span id="statusDot" title="Hors-ligne (OFF)" aria-label="Hors-ligne (OFF)"></span>
@@ -196,14 +182,15 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 <section class="section container" id="radio">
   <div class="panel radio">
     <div>
-      <h2 class="title" style="font-size:1.4rem;margin:0">Radio RiderSkill — tes sons en continu</h2>
-      <p class="radio-meta">Lecture en boucle, suivant auto, shuffle, reprise à la reconnexion (un clic ▶️ est requis par les navigateurs).</p>
+      <h2 class="title" style="font-size:1.4rem;margin:0">Radio RiderSkill — tes sons en continu (Archive.org)</h2>
+      <p class="radio-meta" id="radioInfo">Chargement de la playlist…</p>
     </div>
     <div class="radio-wrap">
       <button id="btnPlay" class="radio-btn">▶️ Lire</button>
       <button id="btnNext" class="radio-btn">⏭️ Suivant</button>
       <button id="btnPrev" class="radio-btn">⏮️ Précédent</button>
       <button id="btnShuffle" class="radio-btn">🔀 Shuffle: OFF</button>
+      <button id="btnReload" class="radio-btn">♻️ Recharger</button>
       <span id="nowPlaying" class="radio-meta">Aucun titre…</span>
     </div>
     <audio id="player" preload="none" controls></audio>
@@ -247,7 +234,7 @@ footer{opacity:.9;padding:28px 0;text-align:center;color:var(--muted)}
 
 <!-- ====== SCRIPTS ====== -->
 <script>
-/* Statut LIVE/OFF */
+/* ===== Statut LIVE/OFF ===== */
 function setStatus(state){
   const dot=document.getElementById('statusDot'); const label=document.getElementById('statusLabel');
   if(!dot||!label) return;
@@ -265,7 +252,7 @@ setStatus('off');
 (function(){ const p=new URLSearchParams(location.search); const s=p.get('status')||p.get('on');
   if(s==='1'||s==='true'||s==='on') setStatus('on'); if(s==='0'||s==='false'||s==='off') setStatus('off'); })();
 
-/* Twitch Player (live) */
+/* ===== Twitch Player ===== */
 (function(){
   const parentHosts=["riderskill.github.io","localhost","127.0.0.1"];
   const player=new Twitch.Player("twitch-player",{channel:"riderskill",width:"100%",height:"100%",autoplay:true,muted:true,parent:parentHosts});
@@ -273,7 +260,7 @@ setStatus('off');
   player.addEventListener(Twitch.Player.OFFLINE,()=>setStatus('off'));
 })();
 
-/* Agenda */
+/* ===== Agenda ===== */
 function fmtDate(d){return d.toLocaleDateString('fr-FR',{weekday:'short',day:'2-digit',month:'2-digit'})}
 function fmtTime(d){return d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
 function renderAgenda(items){
@@ -298,26 +285,72 @@ fetch('/riderskill-site/planning.json?v='+bust,{cache:'no-store'})
   .then(renderAgenda)
   .catch(e=>{ const err=document.getElementById('agendaError'); if(err){ err.style.display='block'; err.textContent='Agenda introuvable: assure-toi que /riderskill-site/planning.json existe. ('+e.message+')'; }});
 
-/* Radio simple (/music/radio.json) */
-const audio=document.getElementById('player'), np=document.getElementById('nowPlaying');
-const bPlay=document.getElementById('btnPlay'), bNext=document.getElementById('btnNext'), bPrev=document.getElementById('btnPrev'), bShuf=document.getElementById('btnShuffle');
-let list=[], i=0, shuffle=false;
-function load(i0){ if(!list.length) return; i=(i0+list.length)%list.length; const t=list[i]; audio.src=t.url; audio.title=t.title||'Track'; np.textContent=`▶️ ${t.title||'Track'}${t.artist?(' — '+t.artist):''}`; localStorage.setItem('rs_radio_index', String(i)); localStorage.setItem('rs_radio_time','0'); }
-function play(){ audio.play().catch(()=>{ np.textContent='Clique ▶️ Lire pour démarrer la radio'; }); }
-function next(){ load(i + (shuffle? Math.floor(Math.random()*list.length) || 1 : 1)); play(); }
-function prev(){ load(i-1); play(); }
-bPlay.addEventListener('click', ()=>{ if(audio.paused){ play(); bPlay.textContent='⏸️ Pause'; } else { audio.pause(); bPlay.textContent='▶️ Lire'; }});
-bNext.addEventListener('click', next); bPrev.addEventListener('click', prev);
-bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent='🔀 Shuffle: '+(shuffle?'ON':'OFF'); });
-audio.addEventListener('ended', next); audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
-/* ⚠️ fix du bug: suppression de l'apostrophe de trop après bust */
-fetch('/riderskill-site/music/radio.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(arr=>{
-  list=Array.isArray(arr)?arr:[]; if(!list.length){ np.textContent='Aucune piste dans la radio.'; return; }
-  const idx=parseInt(localStorage.getItem('rs_radio_index')||'0',10); load(isNaN(idx)?0:idx);
-  const t=parseFloat(localStorage.getItem('rs_radio_time')||'0'); if(!isNaN(t) && t>0) audio.currentTime=t;
-}).catch(()=>{ np.textContent='Impossible de charger la radio.'; });
+/* ===== RADIO — Archive.org ===== */
+const ARCHIVE_ID = '2h-58-cowboys-de-rust_20250918'; // <— ton identifiant Archive.org
+const audio=document.getElementById('player'), np=document.getElementById('nowPlaying'), info=document.getElementById('radioInfo');
+const bPlay=document.getElementById('btnPlay'), bNext=document.getElementById('btnNext'), bPrev=document.getElementById('btnPrev'), bShuf=document.getElementById('btnShuffle'), bReload=document.getElementById('btnReload');
 
-/* VOD EMBEDS (/vod.json) */
+let list=[], i=0, shuffle=false;
+
+function updateInfo(){
+  info.textContent = list.length ? `Playlist : ${list.length} titres (source: archive.org/details/${ARCHIVE_ID})` : 'Aucune piste trouvée';
+}
+
+function load(i0){
+  if(!list.length) return;
+  i=(i0+list.length)%list.length;
+  const t=list[i];
+  audio.src=t.url;
+  audio.title=t.title||'Track';
+  np.textContent=`▶️ ${t.title||'Track'}${t.artist?(' — '+t.artist):''}`;
+  localStorage.setItem('rs_radio_index', String(i));
+  localStorage.setItem('rs_radio_time','0');
+}
+
+function play(){ audio.play().then(()=>{ bPlay.textContent='⏸️ Pause'; }).catch(()=>{ np.textContent='Clique ▶️ Lire pour démarrer la radio'; }); }
+function pause(){ audio.pause(); bPlay.textContent='▶️ Lire'; }
+function next(){ load(i + (shuffle? (Math.floor(Math.random()*list.length)||1) : 1)); play(); }
+function prev(){ load(i-1); play(); }
+
+bPlay.addEventListener('click', ()=>{ if(audio.paused){ play(); } else { pause(); }});
+bNext.addEventListener('click', next);
+bPrev.addEventListener('click', prev);
+bShuf.addEventListener('click', ()=>{ shuffle=!shuffle; bShuf.textContent='🔀 Shuffle: '+(shuffle?'ON':'OFF'); });
+bReload.addEventListener('click', ()=>{ fetchArchive(true); });
+
+audio.addEventListener('ended', next);
+audio.addEventListener('timeupdate', ()=>{ localStorage.setItem('rs_radio_time', String(audio.currentTime|0)); });
+
+function fetchArchive(force=false){
+  if(!force && list.length) return;
+  info.textContent='Chargement de la playlist…';
+  fetch(`https://archive.org/metadata/${ARCHIVE_ID}`)
+    .then(r=>r.json())
+    .then(meta=>{
+      const files = Array.isArray(meta.files) ? meta.files : [];
+      const mp3s = files.filter(f => /\.mp3$/i.test(f.name));
+      list = mp3s.map(f => {
+        const name = f.name || '';
+        const title = (f.title || name).replace(/\.mp3$/i,'').replace(/_/g,' ').trim();
+        const url = `https://archive.org/download/${ARCHIVE_ID}/${encodeURIComponent(name)}`;
+        return {url, title, artist:'RiderSkill'};
+      });
+      updateInfo();
+      if(!list.length){ np.textContent='Aucune piste trouvée dans la collection.'; return; }
+      const savedIdx=parseInt(localStorage.getItem('rs_radio_index')||'0',10);
+      load(isNaN(savedIdx)?0:savedIdx);
+      const t=parseFloat(localStorage.getItem('rs_radio_time')||'0');
+      if(!isNaN(t) && t>0) audio.currentTime=t;
+    })
+    .catch(err=>{
+      console.error(err);
+      info.textContent='Erreur de chargement Archive.org. (Vérifie l’identifiant)';
+      np.textContent='Impossible de charger la radio.';
+    });
+}
+fetchArchive();
+
+/* ===== VOD EMBEDS ===== */
 function twitchEmbedFromUrl(url){
   const m=url.match(/twitch\.tv\/videos\/(\d+)/i);
   if(!m) return null;
@@ -332,30 +365,23 @@ function youtubeEmbedFromUrl(url){
   if(!id) return null;
   return `https://www.youtube.com/embed/${id}`;
 }
-function renderVodEmbeds(list){
+function renderVodEmbeds(listVod){
   const grid=document.getElementById('vodGrid'); const empty=document.getElementById('vodEmpty');
   if(!grid) return;
-  if(!Array.isArray(list) || !list.length){
+  if(!Array.isArray(listVod) || !listVod.length){
     grid.innerHTML=''; if(empty) empty.style.display='block'; return;
   }
   if(empty) empty.style.display='none';
-
   const normDate = v => new Date(v.published_at || v.date || 0).getTime();
-  const items = list.slice().sort((a,b)=> normDate(b)-normDate(a)).slice(0,4);
-
+  const items = listVod.slice().sort((a,b)=> normDate(b)-normDate(a)).slice(0,4);
   grid.innerHTML = items.map(v=>{
-    const u=v.url||'';
-    let src=twitchEmbedFromUrl(u);
-    if(!src) src=youtubeEmbedFromUrl(u);
+    const u=v.url||''; let src=twitchEmbedFromUrl(u); if(!src) src=youtubeEmbedFromUrl(u);
     const title=(v.title||'VOD').replace(/</g,'&lt;');
     const dateTxt = (v.published_at||v.date) ? new Date(v.published_at||v.date).toLocaleString('fr-FR') : (v.platform||'');
     if(src){
       return `<div>
         <div class="vod-embed"><iframe allowfullscreen src="${src}"></iframe></div>
-        <div class="vod-meta">
-          <p class="vod-title">${title}</p>
-          <span class="vod-date">${dateTxt||''}</span>
-        </div>
+        <div class="vod-meta"><p class="vod-title">${title}</p><span class="vod-date">${dateTxt||''}</span></div>
       </div>`;
     } else {
       return `<div class="vod-embed" style="display:flex;align-items:center;justify-content:center;background:#111">
@@ -365,12 +391,9 @@ function renderVodEmbeds(list){
     }
   }).join('');
 }
-fetch('/riderskill-site/vod.json?v='+bust,{cache:'no-store'})
-  .then(r=>r.ok?r.json():[])
-  .then(renderVodEmbeds)
-  .catch(()=>{ const g=document.getElementById('vodGrid'); const e=document.getElementById('vodEmpty'); if(g) g.innerHTML=''; if(e) e.style.display='block'; });
+fetch('/riderskill-site/vod.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(renderVodEmbeds).catch(()=>{const g=document.getElementById('vodGrid'); const e=document.getElementById('vodEmpty'); if(g) g.innerHTML=''; if(e) e.style.display='block';});
 
-/* TIKTOK (/data/tiktok.json) */
+/* ===== TIKTOK ===== */
 function renderTikTok(items){
   const grid=document.getElementById('tiktokGrid'); const empty=document.getElementById('tiktokEmpty');
   if(!grid) return;
@@ -378,7 +401,6 @@ function renderTikTok(items){
     grid.innerHTML=''; if(empty) empty.style.display='block'; return;
   }
   if(empty) empty.style.display='none';
-
   grid.innerHTML = items.slice(0,12).map(v=>{
     const d=(v.desc||'Vidéo TikTok').replace(/</g,'&lt;');
     const likes = v?.stats?.digg_count ?? 0;
@@ -394,12 +416,9 @@ function renderTikTok(items){
     `;
   }).join('');
 }
-fetch('/riderskill-site/data/tiktok.json?v='+bust,{cache:'no-store'})
-  .then(r=>r.ok?r.json():{items:[]})
-  .then(j=>renderTikTok(j.items||[]))
-  .catch(()=>{ const g=document.getElementById('tiktokGrid'); const e=document.getElementById('tiktokEmpty'); if(g) g.innerHTML=''; if(e) e.style.display='block'; });
+fetch('/riderskill-site/data/tiktok.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():{items:[]}).then(j=>renderTikTok(j.items||[])).catch(()=>{ const g=document.getElementById('tiktokGrid'); const e=document.getElementById('tiktokEmpty'); if(g) g.innerHTML=''; if(e) e.style.display='block'; });
 
-/* YOUTUBE (/data/youtube.json) */
+/* ===== YOUTUBE ===== */
 function renderYouTube(items){
   const grid=document.getElementById('youtubeGrid'); const empty=document.getElementById('youtubeEmpty');
   if(!grid) return;
@@ -407,7 +426,6 @@ function renderYouTube(items){
     grid.innerHTML=''; if(empty) empty.style.display='block'; return;
   }
   if(empty) empty.style.display='none';
-
   const sorted = items.slice().sort((a,b)=> new Date(b.published_at||0) - new Date(a.published_at||0));
   grid.innerHTML = sorted.slice(0,12).map(v=>{
     const title=(v.title||'Vidéo YouTube').replace(/</g,'&lt;');
@@ -424,10 +442,7 @@ function renderYouTube(items){
       </a>`;
   }).join('');
 }
-fetch('/riderskill-site/data/youtube.json?v='+bust,{cache:'no-store'})
-  .then(r=>r.ok?r.json():{items:[]})
-  .then(j=>renderYouTube(j.items||[]))
-  .catch(()=>{ const g=document.getElementById('youtubeGrid'); const e=document.getElementById('youtubeEmpty'); if(g) g.innerHTML=''; if(e) e.style.display='block'; });
+fetch('/riderskill-site/data/youtube.json?v='+bust,{cache:'no-store'}).then(r=>r.ok?r.json():{items:[]}).then(j=>renderYouTube(j.items||[])).catch(()=>{ const g=document.getElementById('youtubeGrid'); const e=document.getElementById('youtubeEmpty'); if(g) g.innerHTML=''; if(e) e.style.display='block'; });
 </script>
 </body>
 </html>
