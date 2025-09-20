@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2570255196",
-    "url": "https://www.twitch.tv/videos/2570255196",
-    "title": "[Drops Enabled] !drops Rust Kingdoms 3 🎁 Drops actifs du 20/09 21h au 01/10 09h (Paris) 🔗 twitch.facepunch.com",
-    "published_at": "2025-09-19T11:56:46Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/e87ab3f871f33ded1215_riderskill_314722558436_1758282997/thumb/custom-bf3f0965-d9ce-4f81-8392-c51f9c663c7b-%{width}x%{height}.png"
-  },
-  {
-    "id": "2567745865",
-    "url": "https://www.twitch.tv/videos/2567745865",
-    "title": "[ ! drops ][ !duo ]🚫Sea of Thieves !drops (fin 26/09 12:00) → Dune !drops (fin 08/10) → Rust ❌ Pas de rageux ni suiveurs de cheaters ici !",
-    "published_at": "2025-09-16T08:52:50Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c1bfbabeff71a28f975a_riderskill_314705531748_1758012762//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2566971917",
-    "url": "https://www.twitch.tv/videos/2566971917",
-    "title": "[ ! drops ][ !duo ]🚫Sea of Thieves !drops (fin 26/09 12:00) → Dune !drops (fin 08/10) → Rust ❌ Pas de rageux ni suiveurs de cheaters ici !",
-    "published_at": "2025-09-15T09:32:16Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9f5d3db297899ce2e45a_riderskill_314720188386_1757928728//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2565321065",
-    "url": "https://www.twitch.tv/videos/2565321065",
-    "title": "🚫❌ Pas de rageux ni suiveurs de cheaters | Ici c’est Riderskill : vrai, franc, légit | ✅ Loyal & chill only, bref le chill 2.0 quoi ...",
-    "published_at": "2025-09-13T10:22:48Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c5a043da61b6aa36450d_riderskill_314702703587_1757758960//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2565235356",
-    "url": "https://www.twitch.tv/videos/2565235356",
-    "title": "🚫❌ Pas de rageux ni suiveurs de cheaters | Ici c’est Riderskill : vrai, franc, légit | ✅ Loyal & chill only, bref le chill 2.0 quoi ...",
-    "published_at": "2025-09-13T06:19:20Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/08e4285ac3c07bf0c242_riderskill_314701939043_1757744351//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2570255196",
+  "url": "https://www.twitch.tv/videos/2570255196",
+  "title": "[Drops Enabled] !drops Rust Kingdoms 3 🎁 Drops actifs du 20/09 21h au 01/10 09h (Paris) 🔗 twitch.facepunch.com",
+  "duration": "15h12m45s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/e87ab3f871f33ded1215_riderskill_314722558436_1758282997/thumb/custom-bf3f0965-d9ce-4f81-8392-c51f9c663c7b-%{width}x%{height}.png",
+  "published_at": "2025-09-19T11:56:46Z"
+}
