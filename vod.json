@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2572107074",
-    "url": "https://www.twitch.tv/videos/2572107074",
-    "title": "[Drops Enabled] !drops !rustdrops Rust 2.0 PVE Chill — on farm, on build, on papote. Drops actifs, prenez un café et installez-vous  ☕",
-    "published_at": "2025-09-21T14:12:28Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/2d7a699a29ea9acf37c1_riderskill_314739251428_1758463940/thumb/custom-ccd315c4-9a7d-42da-b52b-58a1a37756bf-%{width}x%{height}.png"
-  },
-  {
-    "id": "2571135408",
-    "url": "https://www.twitch.tv/videos/2571135408",
-    "title": "[Drops Enabled] !drops Rust PVE Chill — on farm, on build, on papote. Drops actifs, prenez un café et installez-vous ☕",
-    "published_at": "2025-09-20T11:47:12Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/0a41fdc49984ebf9d284_riderskill_314743759075_1758368823/thumb/custom-0824ad67-99b8-48be-8b68-4aa9558e805f-%{width}x%{height}.png"
-  },
-  {
-    "id": "2570255196",
-    "url": "https://www.twitch.tv/videos/2570255196",
-    "title": "[Drops Enabled] !drops Rust Kingdoms 3 🎁 Drops actifs du 20/09 21h au 01/10 09h (Paris) 🔗 twitch.facepunch.com",
-    "published_at": "2025-09-19T11:56:46Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/e87ab3f871f33ded1215_riderskill_314722558436_1758282997/thumb/custom-bf3f0965-d9ce-4f81-8392-c51f9c663c7b-%{width}x%{height}.png"
-  },
-  {
-    "id": "2567745865",
-    "url": "https://www.twitch.tv/videos/2567745865",
-    "title": "[ ! drops ][ !duo ]🚫Sea of Thieves !drops (fin 26/09 12:00) → Dune !drops (fin 08/10) → Rust ❌ Pas de rageux ni suiveurs de cheaters ici !",
-    "published_at": "2025-09-16T08:52:50Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c1bfbabeff71a28f975a_riderskill_314705531748_1758012762//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2566971917",
-    "url": "https://www.twitch.tv/videos/2566971917",
-    "title": "[ ! drops ][ !duo ]🚫Sea of Thieves !drops (fin 26/09 12:00) → Dune !drops (fin 08/10) → Rust ❌ Pas de rageux ni suiveurs de cheaters ici !",
-    "published_at": "2025-09-15T09:32:16Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9f5d3db297899ce2e45a_riderskill_314720188386_1757928728//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2572107074",
+  "url": "https://www.twitch.tv/videos/2572107074",
+  "title": "[Drops Enabled] !drops !rustdrops Rust 2.0 PVE Chill — on farm, on build, on papote. Drops actifs, prenez un café et installez-vous  ☕",
+  "duration": "8h14m16s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/2d7a699a29ea9acf37c1_riderskill_314739251428_1758463940/thumb/custom-ccd315c4-9a7d-42da-b52b-58a1a37756bf-%{width}x%{height}.png",
+  "published_at": "2025-09-21T14:12:28Z"
+}
