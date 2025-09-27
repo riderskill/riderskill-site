@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2575782044",
-    "url": "https://www.twitch.tv/videos/2575782044",
-    "title": "[Drops Enabled] 2K Rust Kingdoms 3 ⚔️ PVP, Farm & Drops 🎁 Viens récupérer tes skins !",
-    "published_at": "2025-09-25T23:30:06Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/6cfb15456c15f7afee8a_riderskill_314769560292_1758842997/thumb/custom-929a082f-029e-4068-9ce0-30e4ee039582-%{width}x%{height}.png"
-  },
-  {
-    "id": "2575363898",
-    "url": "https://www.twitch.tv/videos/2575363898",
-    "title": "[Drops Enabled] Rust Kingdoms 3 ⚔️ PVP, Farm & Drops 🎁 Viens récupérer tes skins !",
-    "published_at": "2025-09-25T13:17:42Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/2988f392ff64b99f1be5_riderskill_314777679203_1758806254/thumb/custom-831b29cb-797f-4803-8cc4-186a9d823251-%{width}x%{height}.png"
-  },
-  {
-    "id": "2574460148",
-    "url": "https://www.twitch.tv/videos/2574460148",
-    "title": "[Drops Enabled] !drops | Rust Kingdoms 3 🎁 Farm, Chill & Raids — Drops actifs jusqu’au 1er octobre",
-    "published_at": "2025-09-24T10:40:00Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/ae046e8d44154a1888d7_riderskill_314777490274_1758710392/thumb/custom-0f799173-7cb3-469d-ab2a-4d8110b0587b-%{width}x%{height}.png"
-  },
-  {
-    "id": "2573711322",
-    "url": "https://www.twitch.tv/videos/2573711322",
-    "title": "[Drops Enabled] !drops !rustdrops Rust 2.0 PVE Chill — Farm, build & détente... avec ma musique exclusive en live 🎶🔥 .",
-    "published_at": "2025-09-23T13:48:58Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/f263b3d88ce017f2c272_riderskill_314764659939_1758635329/thumb/custom-2571bdac-cd19-47f5-8f49-8d6f209ac8d8-%{width}x%{height}.png"
-  },
-  {
-    "id": "2572107074",
-    "url": "https://www.twitch.tv/videos/2572107074",
-    "title": "[Drops Enabled] !drops !rustdrops Rust 2.0 PVE Chill — on farm, on build, on papote. Drops actifs, prenez un café et installez-vous  ☕",
-    "published_at": "2025-09-21T14:12:28Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/2d7a699a29ea9acf37c1_riderskill_314739251428_1758463940/thumb/custom-ccd315c4-9a7d-42da-b52b-58a1a37756bf-%{width}x%{height}.png"
-  }
-]
+{
+  "id": "2575782044",
+  "url": "https://www.twitch.tv/videos/2575782044",
+  "title": "[Drops Enabled] 2K Rust Kingdoms 3 ⚔️ PVP, Farm & Drops 🎁 Viens récupérer tes skins !",
+  "duration": "7h15m19s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/6cfb15456c15f7afee8a_riderskill_314769560292_1758842997/thumb/custom-929a082f-029e-4068-9ce0-30e4ee039582-%{width}x%{height}.png",
+  "published_at": "2025-09-25T23:30:06Z"
+}
