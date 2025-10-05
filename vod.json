@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2583544455",
-    "url": "https://www.twitch.tv/videos/2583544455",
-    "title": "RUST 🧨 Raidoff ou pas raidoff ? On découvre ensemble avant les Drops et un peu de GTA RP !",
-    "published_at": "2025-10-05T01:16:52Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
-  },
-  {
-    "id": "2581652885",
-    "url": "https://www.twitch.tv/videos/2581652885",
-    "title": "2k Full ultra sur GTA RP (Votre Ashil Brooks JR. International sur le serveur Altrada) → puis Rust 🎁 | RP, fun & survie !rp !config",
-    "published_at": "2025-10-02T22:53:40Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/24c5f871030e4921243d_riderskill_314831132515_1759445612//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2581510258",
-    "url": "https://www.twitch.tv/videos/2581510258",
-    "title": "2k Full ultra sur GTA RP (Votre Ashil Brooks JR. International sur le serveur Altrada) → puis Rust 🎁 | RP, fun & survie !rp !config",
-    "published_at": "2025-10-02T19:36:10Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a5a2c9bff9cec9d2ff7d_riderskill_314829902947_1759433762//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2581423368",
-    "url": "https://www.twitch.tv/videos/2581423368",
-    "title": "2k ultra GTA RP (Votre Ashil Brooks JR. International sur le serveur Altrada) → puis Rust 🎁 | RP, fun & survie !rp !config",
-    "published_at": "2025-10-02T17:54:41Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/5a5f626f0fd5bbf86394_riderskill_314828894819_1759427672/thumb/custom-46a9a91a-3d3d-4c0d-99a0-ae4e3316ee39-%{width}x%{height}.jpeg"
-  },
-  {
-    "id": "2580802249",
-    "url": "https://www.twitch.tv/videos/2580802249",
-    "title": "2k ultra GTA RP (Votre Ashil Brooks JR. International sur le serveur Altrada) → puis Rust 🎁 | RP, fun & survie !rp",
-    "published_at": "2025-10-01T23:01:26Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/8cd13345c02b40f27b6a_riderskill_314828168674_1759359677/thumb/custom-0f85134e-c8af-4556-82b6-b69afa7da353-%{width}x%{height}.png"
-  }
-]
+{
+  "id": "2583544455",
+  "url": "https://www.twitch.tv/videos/2583544455",
+  "title": "RUST 🧨 Raidoff ou pas raidoff ? On découvre ensemble avant les Drops et un peu de GTA RP !",
+  "duration": "2h24m30s",
+  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+  "published_at": "2025-10-05T01:16:52Z"
+}
