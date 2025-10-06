@@ -1,8 +1,37 @@
-{
-  "id": "2583544455",
-  "url": "https://www.twitch.tv/videos/2583544455",
-  "title": "RUST 🧨 Raidoff ou pas raidoff ? On découvre ensemble avant les Drops et un peu de GTA RP !",
-  "duration": "2h24m30s",
-  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-  "published_at": "2025-10-05T01:16:52Z"
-}
+[
+  {
+    "id": "2584260464",
+    "url": "https://www.twitch.tv/videos/2584260464",
+    "title": "RUST 🧱 Si ma base existe encore, c’est un miracle ! 😭 | Préparation des Drops twitch rival Rust & GTA RP ensuite !",
+    "published_at": "2025-10-05T21:26:14Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
+    "id": "2583544455",
+    "url": "https://www.twitch.tv/videos/2583544455",
+    "title": "RUST 🧨 Raidoff ou pas raidoff ? On découvre ensemble avant les Drops et un peu de GTA RP !",
+    "published_at": "2025-10-05T01:16:52Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f7c37bf2183502f05b54_riderskill_314851393506_1759627003//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2582626321",
+    "url": "https://www.twitch.tv/videos/2582626321",
+    "title": "[Bientôt les Drops Rust 🎁] – Countdown et training pour ne rien rater des prochains Drops officiels, ensuite GTARP a GOGO !!",
+    "published_at": "2025-10-04T00:59:53Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2eaa0b3c0ec0ce1b1446_riderskill_314842933090_1759539584//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2581652885",
+    "url": "https://www.twitch.tv/videos/2581652885",
+    "title": "2k Full ultra sur GTA RP (Votre Ashil Brooks JR. International sur le serveur Altrada) → puis Rust 🎁 | RP, fun & survie !rp !config",
+    "published_at": "2025-10-02T22:53:40Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/24c5f871030e4921243d_riderskill_314831132515_1759445612//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2581510258",
+    "url": "https://www.twitch.tv/videos/2581510258",
+    "title": "2k Full ultra sur GTA RP (Votre Ashil Brooks JR. International sur le serveur Altrada) → puis Rust 🎁 | RP, fun & survie !rp !config",
+    "published_at": "2025-10-02T19:36:10Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a5a2c9bff9cec9d2ff7d_riderskill_314829902947_1759433762//thumb/thumb0-%{width}x%{height}.jpg"
+  }
+]
