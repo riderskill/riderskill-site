@@ -1,6 +1,22 @@
 {
-  "updated_at": "2025-10-06T13:01:43.893Z",
+  "updated_at": "2025-10-06T18:44:38.147Z",
   "items": [
+    {
+      "id": "3l2Z4RpsnZs",
+      "title": "RUST 🧨 Raidoff ou pas raidoff ? On découvre ensemble avant les Drops et un peu de GTA RP !",
+      "url": "https://www.youtube.com/watch?v=3l2Z4RpsnZs",
+      "published_at": "2025-10-06T15:08:05+00:00",
+      "cover": "https://i4.ytimg.com/vi/3l2Z4RpsnZs/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/3l2Z4RpsnZs/hqdefault.jpg"
+    },
+    {
+      "id": "Bg4JK5D1kbc",
+      "title": "[Bientôt les Drops Rust 🎁] – Countdown et training pour ne rien rater des  (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=Bg4JK5D1kbc",
+      "published_at": "2025-10-06T15:07:16+00:00",
+      "cover": "https://i3.ytimg.com/vi/Bg4JK5D1kbc/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/Bg4JK5D1kbc/hqdefault.jpg"
+    },
     {
       "id": "TgiA2fnq6ig",
       "title": "2k Full ultra sur GTA RP (Votre Ashil Brooks JR. International sur le serveur Altrada) → puis Rust",
@@ -104,22 +120,6 @@
       "published_at": "2025-10-02T02:16:25+00:00",
       "cover": "https://i3.ytimg.com/vi/FQ4x7j3IDUE/hqdefault.jpg",
       "thumbnail": "https://i3.ytimg.com/vi/FQ4x7j3IDUE/hqdefault.jpg"
-    },
-    {
-      "id": "UNUowZvfhQU",
-      "title": "ashil brooks jr. ... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/UNUowZvfhQU",
-      "published_at": "2025-10-02T02:02:35+00:00",
-      "cover": "https://i2.ytimg.com/vi/UNUowZvfhQU/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/UNUowZvfhQU/hqdefault.jpg"
-    },
-    {
-      "id": "E5Y20kgHF8Y",
-      "title": "[Drops Enabled] GTA RP (Votre Ashil Brooks JR. International test  le serveur Altrada) → puis Rust",
-      "url": "https://www.youtube.com/watch?v=E5Y20kgHF8Y",
-      "published_at": "2025-10-01T13:27:15+00:00",
-      "cover": "https://i2.ytimg.com/vi/E5Y20kgHF8Y/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/E5Y20kgHF8Y/hqdefault.jpg"
     }
   ]
 }
