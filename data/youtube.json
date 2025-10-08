@@ -1,6 +1,22 @@
 {
-  "updated_at": "2025-10-07T18:45:10.676Z",
+  "updated_at": "2025-10-08T02:01:12.161Z",
   "items": [
+    {
+      "id": "Kh2rtoPt8bU",
+      "title": "[DROPS LE 8/10] RUST 🧱 Si ma base existe encore, c’est un miracle ! 😭 | Préparation des Dro",
+      "url": "https://www.youtube.com/watch?v=Kh2rtoPt8bU",
+      "published_at": "2025-10-07T22:50:17+00:00",
+      "cover": "https://i4.ytimg.com/vi/Kh2rtoPt8bU/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/Kh2rtoPt8bU/hqdefault.jpg"
+    },
+    {
+      "id": "vAKqN_dhVBM",
+      "title": "[DROPS LE 8/10] DUO AVEC @BERABAS RUST 🧱 Si ma base existe encore, c’est un miracle ! 😭 | Pr",
+      "url": "https://www.youtube.com/watch?v=vAKqN_dhVBM",
+      "published_at": "2025-10-07T22:50:07+00:00",
+      "cover": "https://i3.ytimg.com/vi/vAKqN_dhVBM/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/vAKqN_dhVBM/hqdefault.jpg"
+    },
     {
       "id": "3l2Z4RpsnZs",
       "title": "RUST 🧨 Raidoff ou pas raidoff ? On découvre ensemble avant les Drops et un peu de GTA RP !",
@@ -104,22 +120,6 @@
       "published_at": "2025-10-02T18:10:22+00:00",
       "cover": "https://i3.ytimg.com/vi/FcmXJu07Lgc/hqdefault.jpg",
       "thumbnail": "https://i3.ytimg.com/vi/FcmXJu07Lgc/hqdefault.jpg"
-    },
-    {
-      "id": "GBUnrU7_s-I",
-      "title": "victoire assurééééééééééé | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/GBUnrU7_s-I",
-      "published_at": "2025-10-02T04:46:15+00:00",
-      "cover": "https://i4.ytimg.com/vi/GBUnrU7_s-I/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/GBUnrU7_s-I/hqdefault.jpg"
-    },
-    {
-      "id": "FQ4x7j3IDUE",
-      "title": "la rue m'engloutis | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/FQ4x7j3IDUE",
-      "published_at": "2025-10-02T02:16:25+00:00",
-      "cover": "https://i3.ytimg.com/vi/FQ4x7j3IDUE/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/FQ4x7j3IDUE/hqdefault.jpg"
     }
   ]
 }
