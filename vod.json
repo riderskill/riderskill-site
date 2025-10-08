@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2585784229",
-    "url": "https://www.twitch.tv/videos/2585784229",
-    "title": "[DROPS LE 8/10] RUST avec @berabas et @jackomo832607 :  🧱 😭 | Préparation des Drops twitch rival Rust",
-    "published_at": "2025-10-07T19:47:24Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/619c947d00acd7a98903_riderskill_314868924131_1759866435//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2585655561",
-    "url": "https://www.twitch.tv/videos/2585655561",
-    "title": "[DROPS LE 8/10] RUST 🧱 Si ma base existe encore, c’est un miracle ! 😭 | Préparation des Drops twitch rival Rust & test 4k upscal",
-    "published_at": "2025-10-07T17:05:02Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a9c4e647598ada168cda_riderskill_314869224418_1759856694//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2585321040",
-    "url": "https://www.twitch.tv/videos/2585321040",
-    "title": "[DROPS LE 8/10] DUO AVEC @BERABAS RUST 🧱 Si ma base existe encore, c’est un miracle ! 😭 | Préparation des Drops twitch rival Rust",
-    "published_at": "2025-10-07T04:09:50Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cfaddb03dc54d289e586_riderskill_314866389986_1759810181//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2584595580",
-    "url": "https://www.twitch.tv/videos/2584595580",
-    "title": "[DROPS LE 8/10] RUST 🧱 Si ma base existe encore, c’est un miracle ! 😭 | Préparation des Drops twitch rival Rust & GTA RP ensuite !",
-    "published_at": "2025-10-06T07:50:12Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4b215cc27f8594a8789f_riderskill_314856050787_1759737004//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2584260464",
-    "url": "https://www.twitch.tv/videos/2584260464",
-    "title": "RUST 🧱 Si ma base existe encore, c’est un miracle ! 😭 | Préparation des Drops twitch rival Rust & GTA RP ensuite !",
-    "published_at": "2025-10-05T21:26:14Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3e0f2ffb53c5e28702b2_riderskill_314854383715_1759699566//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2585784229",
+  "url": "https://www.twitch.tv/videos/2585784229",
+  "title": "[DROPS LE 8/10] RUST avec @berabas et @jackomo832607 :  🧱 😭 | Préparation des Drops twitch rival Rust",
+  "duration": "2h50m29s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/619c947d00acd7a98903_riderskill_314868924131_1759866435//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2025-10-07T19:47:24Z"
+}
