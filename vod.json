@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2587736471",
-    "url": "https://www.twitch.tv/videos/2587736471",
-    "title": "[ DROP ON ] !drops !site🚨 RUST DROPS NOW 🔥 FARMING MADNESS & RAIDS 😱 Avec @berabas et  @jackomo832607",
-    "published_at": "2025-10-10T01:50:10Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
-  },
-  {
-    "id": "2587141029",
-    "url": "https://www.twitch.tv/videos/2587141029",
-    "title": "[ DROP ON ] !drops 🚨 RUST DROPS NOW 🔥 FARMING MADNESS & RAIDS 😱 Avec @berabas et  @jackomo832607",
-    "published_at": "2025-10-09T11:32:57Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cbc4b3921251d1e8b233_riderskill_314871201508_1760009568//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2587088530",
-    "url": "https://www.twitch.tv/videos/2587088530",
-    "title": "[ DROP ON ] !drops 🚨 RUST DROPS NOW 🔥 FARMING MADNESS & RAIDS 😱 Avec @berabas et  @jackomo832607",
-    "published_at": "2025-10-09T08:59:57Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/65a8849f81a49bac639b_riderskill_314880584803_1760000389//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2586676626",
-    "url": "https://www.twitch.tv/videos/2586676626",
-    "title": "[ DROP ON ] !drops 🚨 RUST DROPS NOW 🔥 FARMING MADNESS & RAIDS 😱 Avec @berabas et  @jackomo832607 4k/2k",
-    "published_at": "2025-10-08T20:57:08Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/12624b00179b01b3e359_riderskill_314878128355_1759957020//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2586308557",
-    "url": "https://www.twitch.tv/videos/2586308557",
-    "title": "[ DROP ON ] !drops 🚨 RUST DROPS NOW 🔥 FARMING MADNESS & RAIDS 😱 Avec @berabas et  @jackomo832607",
-    "published_at": "2025-10-08T11:50:54Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/baaa1ad5347825118b94_riderskill_314863451364_1759924245//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2587736471",
+  "url": "https://www.twitch.tv/videos/2587736471",
+  "title": "[ DROP ON ] !drops !site🚨 RUST DROPS NOW 🔥 FARMING MADNESS & RAIDS 😱 Avec @berabas et  @jackomo832607",
+  "duration": "1h50m28s",
+  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+  "published_at": "2025-10-10T01:50:10Z"
+}
