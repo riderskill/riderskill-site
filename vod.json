@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2592292908",
-    "url": "https://www.twitch.tv/videos/2592292908",
-    "title": "Trio –  @berabas @jackomo832607 et moi prêts à dominer le serveur , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-15T06:29:33Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2779f4fdafc2289d768a_riderskill_314919821540_1760509765//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2591671682",
-    "url": "https://www.twitch.tv/videos/2591671682",
-    "title": "Trio –  @berabas @jackomo832607 et moi prêts à dominer le serveur , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-14T15:19:55Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c852e170aef2fe7f9338_riderskill_314926754147_1760455187//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2591565492",
-    "url": "https://www.twitch.tv/videos/2591565492",
-    "title": "Trio –  @berabas @jackomo832607 et moi prêts à dominer le serveur , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-14T12:05:25Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a3bce8478746eaf5d873_riderskill_314913274084_1760443517//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2591510146",
-    "url": "https://www.twitch.tv/videos/2591510146",
-    "title": "Trio –  @berabas @jackomo832607 et moi prêts à dominer le serveur , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-14T09:35:57Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cc267b5e087e53fa433c_riderskill_314912570852_1760434550//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2590725866",
-    "url": "https://www.twitch.tv/videos/2590725866",
-    "title": "Trio – @berabas @jackomo832607 et moi prêts à dominer le serveur , chill 2.0 , !tiktok !x !site !rp",
-    "published_at": "2025-10-13T12:04:24Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ca6673b9f3109d079972_riderskill_314917383011_1760357056//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2592292908",
+  "url": "https://www.twitch.tv/videos/2592292908",
+  "title": "Trio –  @berabas @jackomo832607 et moi prêts à dominer le serveur , chill 2.0 , !tiktok !x !site !rp !rustdrops",
+  "duration": "12h22m23s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2779f4fdafc2289d768a_riderskill_314919821540_1760509765//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2025-10-15T06:29:33Z"
+}
