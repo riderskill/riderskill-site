@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2600867437",
-    "url": "https://www.twitch.tv/videos/2600867437",
-    "title": "quintette prêts à dominer le serveur ? , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-25T10:41:04Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/896d408d5a93ced0292a_riderskill_315007571684_1761388855//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2599990253",
-    "url": "https://www.twitch.tv/videos/2599990253",
-    "title": "prêts à dominer le serveur ? , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-24T10:40:28Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fbbf9e333f5616a62ae4_riderskill_314997953124_1761302420//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2599153159",
-    "url": "https://www.twitch.tv/videos/2599153159",
-    "title": "prêts à dominer le serveur ? , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-23T10:36:35Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d4f9d28934763001612c_riderskill_314988934628_1761215787//thumb/thumb2-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2598362909",
-    "url": "https://www.twitch.tv/videos/2598362909",
-    "title": "prêts à dominer le serveur , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-22T12:17:06Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8a05d85c578fc7877488_riderskill_314997511523_1761135417//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2597473351",
-    "url": "https://www.twitch.tv/videos/2597473351",
-    "title": "Disclosure: I received a free review copy of this product from https://www.keymailer.co #junkyardbuilder #keymailer",
-    "published_at": "2025-10-21T10:04:33Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8e6c91b41b340be1236f_riderskill_314954554210_1761041065//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2600867437",
+  "url": "https://www.twitch.tv/videos/2600867437",
+  "title": "quintette prêts à dominer le serveur ? , chill 2.0 , !tiktok !x !site !rp !rustdrops",
+  "duration": "4h4m53s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/896d408d5a93ced0292a_riderskill_315007571684_1761388855//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2025-10-25T10:41:04Z"
+}
