@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2602191119",
-    "url": "https://www.twitch.tv/videos/2602191119",
-    "title": "⚔️    ILS ONT OSÉ M’ATTAQUER… MA RÉPONSE VA LES TRAUMATISER 😈",
-    "published_at": "2025-10-26T21:08:20Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/420e8b0164c8f02499e1_riderskill_315042100707_1761512892//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2601805503",
-    "url": "https://www.twitch.tv/videos/2601805503",
-    "title": "⚔️ RUST FR : ILS ONT OSÉ M’ATTAQUER… MA RÉPONSE VA LES TRAUMATISER 😈",
-    "published_at": "2025-10-26T12:23:30Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/10062995d4a06acbaa88_riderskill_315017712484_1761481401//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2600867437",
-    "url": "https://www.twitch.tv/videos/2600867437",
-    "title": "quintette prêts à dominer le serveur ? , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-25T10:41:04Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/896d408d5a93ced0292a_riderskill_315007571684_1761388855//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2599990253",
-    "url": "https://www.twitch.tv/videos/2599990253",
-    "title": "prêts à dominer le serveur ? , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-24T10:40:28Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fbbf9e333f5616a62ae4_riderskill_314997953124_1761302420//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2599153159",
-    "url": "https://www.twitch.tv/videos/2599153159",
-    "title": "prêts à dominer le serveur ? , chill 2.0 , !tiktok !x !site !rp !rustdrops",
-    "published_at": "2025-10-23T10:36:35Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d4f9d28934763001612c_riderskill_314988934628_1761215787//thumb/thumb2-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2602191119",
+  "url": "https://www.twitch.tv/videos/2602191119",
+  "title": "⚔️    ILS ONT OSÉ M’ATTAQUER… MA RÉPONSE VA LES TRAUMATISER 😈",
+  "duration": "5h55m21s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/420e8b0164c8f02499e1_riderskill_315042100707_1761512892//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2025-10-26T21:08:20Z"
+}
