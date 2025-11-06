@@ -1,6 +1,30 @@
 {
-  "updated_at": "2025-11-06T06:48:21.986Z",
+  "updated_at": "2025-11-06T13:03:41.049Z",
   "items": [
+    {
+      "id": "SNyTiSimDl8",
+      "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣 (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=SNyTiSimDl8",
+      "published_at": "2025-11-06T10:46:09+00:00",
+      "cover": "https://i4.ytimg.com/vi/SNyTiSimDl8/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/SNyTiSimDl8/hqdefault.jpg"
+    },
+    {
+      "id": "0wm43PFlDjg",
+      "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
+      "url": "https://www.youtube.com/watch?v=0wm43PFlDjg",
+      "published_at": "2025-11-06T10:46:06+00:00",
+      "cover": "https://i1.ytimg.com/vi/0wm43PFlDjg/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/0wm43PFlDjg/hqdefault.jpg"
+    },
+    {
+      "id": "lI149hiiVtU",
+      "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
+      "url": "https://www.youtube.com/watch?v=lI149hiiVtU",
+      "published_at": "2025-11-06T10:46:02+00:00",
+      "cover": "https://i1.ytimg.com/vi/lI149hiiVtU/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/lI149hiiVtU/hqdefault.jpg"
+    },
     {
       "id": "3kNBChVRsvE",
       "title": "arc riderskill | #riderskill sur #Twitch",
@@ -96,30 +120,6 @@
       "published_at": "2025-11-01T19:15:52+00:00",
       "cover": "https://i3.ytimg.com/vi/BmXw4ElZVAE/hqdefault.jpg",
       "thumbnail": "https://i3.ytimg.com/vi/BmXw4ElZVAE/hqdefault.jpg"
-    },
-    {
-      "id": "OCNP5YQP7vo",
-      "title": "j'ai toujour raison ! | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/OCNP5YQP7vo",
-      "published_at": "2025-10-31T23:26:45+00:00",
-      "cover": "https://i4.ytimg.com/vi/OCNP5YQP7vo/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/OCNP5YQP7vo/hqdefault.jpg"
-    },
-    {
-      "id": "mr5-hB-QY8A",
-      "title": "truc de ouf ! | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/mr5-hB-QY8A",
-      "published_at": "2025-10-31T23:19:45+00:00",
-      "cover": "https://i2.ytimg.com/vi/mr5-hB-QY8A/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/mr5-hB-QY8A/hqdefault.jpg"
-    },
-    {
-      "id": "blFniQ1g2Zw",
-      "title": "c'est rust pas gta ta cru quoi pti soldat | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/blFniQ1g2Zw",
-      "published_at": "2025-10-31T21:30:26+00:00",
-      "cover": "https://i3.ytimg.com/vi/blFniQ1g2Zw/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/blFniQ1g2Zw/hqdefault.jpg"
     }
   ]
 }
