@@ -1,6 +1,14 @@
 {
-  "updated_at": "2025-11-06T02:17:43.525Z",
+  "updated_at": "2025-11-06T06:48:21.986Z",
   "items": [
+    {
+      "id": "3kNBChVRsvE",
+      "title": "arc riderskill | #riderskill sur #Twitch",
+      "url": "https://www.youtube.com/shorts/3kNBChVRsvE",
+      "published_at": "2025-11-06T04:29:54+00:00",
+      "cover": "https://i4.ytimg.com/vi/3kNBChVRsvE/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/3kNBChVRsvE/hqdefault.jpg"
+    },
     {
       "id": "u1oU3vCpAOM",
       "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣 (Part 2/2)",
@@ -112,14 +120,6 @@
       "published_at": "2025-10-31T21:30:26+00:00",
       "cover": "https://i3.ytimg.com/vi/blFniQ1g2Zw/hqdefault.jpg",
       "thumbnail": "https://i3.ytimg.com/vi/blFniQ1g2Zw/hqdefault.jpg"
-    },
-    {
-      "id": "Rm8NyjeRfSA",
-      "title": "⚔️DUO/TRIO ILS ONT OSÉ ATTAQUER moi et ma radio ! … MA RÉPONSE VA LES TR (Part 2/2)",
-      "url": "https://www.youtube.com/watch?v=Rm8NyjeRfSA",
-      "published_at": "2025-10-31T03:30:06+00:00",
-      "cover": "https://i3.ytimg.com/vi/Rm8NyjeRfSA/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/Rm8NyjeRfSA/hqdefault.jpg"
     }
   ]
 }
