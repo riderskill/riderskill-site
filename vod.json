@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2609812540",
-    "url": "https://www.twitch.tv/videos/2609812540",
-    "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
-    "published_at": "2025-11-04T20:45:00Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/438984fdba177475b395_riderskill_315093486564_1762289092//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2608845564",
-    "url": "https://www.twitch.tv/videos/2608845564",
-    "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
-    "published_at": "2025-11-03T17:52:58Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/93b88ef3cee8aa89678f_riderskill_315051731426_1762192370//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2607936602",
-    "url": "https://www.twitch.tv/videos/2607936602",
-    "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
-    "published_at": "2025-11-02T15:59:00Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bc28a4d6ba01788957bd_riderskill_315097189731_1762099131//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2607002340",
-    "url": "https://www.twitch.tv/videos/2607002340",
-    "title": "⚔️ annif des 4 ans affilié 😈",
-    "published_at": "2025-11-01T15:15:25Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8fa01d2e02039a02f882_riderskill_315036081378_1762010117//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2606112650",
-    "url": "https://www.twitch.tv/videos/2606112650",
-    "title": "⚔️ annif des 4 ans affilié 😈",
-    "published_at": "2025-10-31T15:39:15Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fcd4c2e3f67cb84e4521_riderskill_315027751266_1761925146//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2609812540",
+  "url": "https://www.twitch.tv/videos/2609812540",
+  "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
+  "duration": "7h3m42s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/438984fdba177475b395_riderskill_315093486564_1762289092//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2025-11-04T20:45:00Z"
+}
