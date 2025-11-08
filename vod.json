@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2612268110",
-    "url": "https://www.twitch.tv/videos/2612268110",
-    "title": "[DROPS ✅] -J2 ⚔️ Opération vengeance sur ARC RAIDERS : ILS ONT OSÉ NOUS ATTAQUER… RIP 😈",
-    "published_at": "2025-11-07T19:49:33Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
-  },
-  {
-    "id": "2611459647",
-    "url": "https://www.twitch.tv/videos/2611459647",
-    "title": "[DROPS ✅] -J2 ⚔️ Opération vengeance sur ARC RAIDERS : ILS ONT OSÉ NOUS ATTAQUER… RIP 😈",
-    "published_at": "2025-11-06T20:21:33Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/82156e4be0bdce02dd86_riderskill_315106366564_1762460484//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2610986648",
-    "url": "https://www.twitch.tv/videos/2610986648",
-    "title": "[DROPS ✅] ⚔️ Opération vengeance sur ARC RAIDERS : ILS ONT OSÉ NOUS ATTAQUER… RIP 😈",
-    "published_at": "2025-11-06T04:25:55Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/dc24b63f895c472ac8d8_riderskill_315121573859_1762403147//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2609812540",
-    "url": "https://www.twitch.tv/videos/2609812540",
-    "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
-    "published_at": "2025-11-04T20:45:00Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/438984fdba177475b395_riderskill_315093486564_1762289092//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2608845564",
-    "url": "https://www.twitch.tv/videos/2608845564",
-    "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
-    "published_at": "2025-11-03T17:52:58Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/93b88ef3cee8aa89678f_riderskill_315051731426_1762192370//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2612268110",
+  "url": "https://www.twitch.tv/videos/2612268110",
+  "title": "[DROPS ✅] -J2 ⚔️ Opération vengeance sur ARC RAIDERS : ILS ONT OSÉ NOUS ATTAQUER… RIP 😈",
+  "duration": "7h53m30s",
+  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+  "published_at": "2025-11-07T19:49:33Z"
+}
