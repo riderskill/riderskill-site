@@ -1,6 +1,14 @@
 {
-  "updated_at": "2025-11-10T02:21:57.824Z",
+  "updated_at": "2025-11-10T06:48:59.911Z",
   "items": [
+    {
+      "id": "O2RhjWhzSi8",
+      "title": "electrique puls | #riderskill sur #Twitch",
+      "url": "https://www.youtube.com/shorts/O2RhjWhzSi8",
+      "published_at": "2025-11-10T05:36:47+00:00",
+      "cover": "https://i4.ytimg.com/vi/O2RhjWhzSi8/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/O2RhjWhzSi8/hqdefault.jpg"
+    },
     {
       "id": "2gnYonVqDwc",
       "title": "[DROPS ✅] -J2 ⚔️ Opération vengeance sur ARC RAIDERS : ILS ONT OSÉ NOUS  (Part 2/2)",
@@ -112,14 +120,6 @@
       "published_at": "2025-11-01T19:19:39+00:00",
       "cover": "https://i1.ytimg.com/vi/LXtIuzY9tJo/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/LXtIuzY9tJo/hqdefault.jpg"
-    },
-    {
-      "id": "icC23rS6j6s",
-      "title": "⚔️DUO/TRIO ILS ONT OSÉ ATTAQUER moi et ma radio ! … MA RÉPONSE VA LES TR (Part 1/2)",
-      "url": "https://www.youtube.com/watch?v=icC23rS6j6s",
-      "published_at": "2025-11-01T19:19:35+00:00",
-      "cover": "https://i2.ytimg.com/vi/icC23rS6j6s/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/icC23rS6j6s/hqdefault.jpg"
     }
   ]
 }
