@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2617049497",
-    "url": "https://www.twitch.tv/videos/2617049497",
-    "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
-    "published_at": "2025-11-13T03:10:53Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
-  },
-  {
-    "id": "2616104660",
-    "url": "https://www.twitch.tv/videos/2616104660",
-    "title": "Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
-    "published_at": "2025-11-12T01:46:03Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3a1e13d9736e085536fc_riderskill_315112571490_1762911954//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2615178247",
-    "url": "https://www.twitch.tv/videos/2615178247",
-    "title": "Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure ! avec @spoogam",
-    "published_at": "2025-11-11T01:08:05Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a28266cf743994eaf447_riderskill_315137472228_1762823276//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2614274640",
-    "url": "https://www.twitch.tv/videos/2614274640",
-    "title": "Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure ! avec @spoogam",
-    "published_at": "2025-11-09T22:51:24Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f928a50da160e82d56a8_riderskill_315149886051_1762728676//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2613487317",
-    "url": "https://www.twitch.tv/videos/2613487317",
-    "title": "[DROPS ✅] j-3⚔️ Opération vengeance sur ARC RAIDERS : ILS ONT OSÉ NOUS ATTAQUER… RIP 😈",
-    "published_at": "2025-11-09T01:17:41Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/00dc489ff2c31d67e701_riderskill_315122519396_1762651052//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2617049497",
+  "url": "https://www.twitch.tv/videos/2617049497",
+  "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
+  "duration": "43m22s",
+  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+  "published_at": "2025-11-13T03:10:53Z"
+}
