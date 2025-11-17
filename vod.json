@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2619765197",
-    "url": "https://www.twitch.tv/videos/2619765197",
-    "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
-    "published_at": "2025-11-16T04:48:50Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/69236054bb3f080eb6e0_riderskill_315174326116_1763268522//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2618896504",
-    "url": "https://www.twitch.tv/videos/2618896504",
-    "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
-    "published_at": "2025-11-15T06:54:33Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0d458de5cc21026c0d0d_riderskill_315166627556_1763189665//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2617981194",
-    "url": "https://www.twitch.tv/videos/2617981194",
-    "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
-    "published_at": "2025-11-14T06:15:09Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/33cbd538e39d9640468e_riderskill_315126749410_1763100901//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2617049497",
-    "url": "https://www.twitch.tv/videos/2617049497",
-    "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
-    "published_at": "2025-11-13T03:10:53Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/349682a3c83e23c81bd9_riderskill_315152250724_1763003445//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2616104660",
-    "url": "https://www.twitch.tv/videos/2616104660",
-    "title": "Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
-    "published_at": "2025-11-12T01:46:03Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3a1e13d9736e085536fc_riderskill_315112571490_1762911954//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2619765197",
+  "url": "https://www.twitch.tv/videos/2619765197",
+  "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
+  "duration": "8h17m8s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/69236054bb3f080eb6e0_riderskill_315174326116_1763268522//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2025-11-16T04:48:50Z"
+}
