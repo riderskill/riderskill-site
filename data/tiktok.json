@@ -1,12 +1,26 @@
 {
-  "updated_at": "2025-11-25T00:50:15.250Z",
+  "updated_at": "2025-11-25T06:17:33.541Z",
   "items": [
     {
       "id": "7576392566774533408",
       "desc": "depart imminent | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oEtA2kiIuGLpxkzPYjBfw3oEBPC3iBBs0AC0mI~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=9dfd5a6d&x-expires=1764115200&x-signature=lBLzzLvB0SUd7SxYwfjVsfkTVEo%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/9f04ee75419625af6729a9e97e3700f5/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oMwBBQBRiDsfkwkzjAItCA0YL2uIEzQPo0mjyi/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1940&bt=970&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=OzhpNjZoN2k5OTRlaTs5aEBpamZ1cnA5cnlmNzQzZjM2NUA2NmI2Ni0xNi8xYi9gYWJjYSNqNnEyMmQ0LmZhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oEtA2kiIuGLpxkzPYjBfw3oEBPC3iBBs0AC0mI~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=43ebc237&x-expires=1764136800&x-signature=tnAKfja3k%2F8QS9N2%2Fq3UKy45Ens%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oMwBBQBRiDsfkwkzjAItCA0YL2uIEzQPo0mjyi/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1940&bt=970&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=OzhpNjZoN2k5OTRlaTs5aEBpamZ1cnA5cnlmNzQzZjM2NUA2NmI2Ni0xNi8xYi9gYWJjYSNqNnEyMmQ0LmZhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=TVhJM_8U1JHKeqT-nPthZw&btag=e00088000",
       "create_time": 1764016381,
+      "stats": {
+        "digg_count": 0,
+        "comment_count": 0,
+        "share_count": 0,
+        "play_count": 255,
+        "collect_count": 0
+      }
+    },
+    {
+      "id": "7576391607264529696",
+      "desc": "un nom que rien ne peut etteindre | #riderskill sur #Twitch",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/okesJm3JGCDIydgRb0GvMSQDSIMAfgDuYL2gRf~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=c71cc479&x-expires=1764136800&x-signature=lHqnLN4cHo0jlsol0R6GZad3A6A%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/ooHMvsIIQGgS3jSefgLMJyBd2EAsfgJRGDYDgb/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1960&bt=980&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=M2U5NTM5NTs1ZDk5NGRkaEBpanFyOnA5cjlmNzQzZjM2NUAuMmE0NC1jX2AxYy9eLi4xYSNxcXJuMmRzLWZhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=eIJwHqiR2s5N1nGXniFKNA&btag=e00088000",
+      "create_time": 1764016156,
       "stats": {
         "digg_count": 0,
         "comment_count": 0,
@@ -16,66 +30,52 @@
       }
     },
     {
-      "id": "7576391607264529696",
-      "desc": "un nom que rien ne peut etteindre | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/okesJm3JGCDIydgRb0GvMSQDSIMAfgDuYL2gRf~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=e4ca3cd1&x-expires=1764115200&x-signature=SVQlIw5as0MFB6RO9RLLXtzvEpM%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/e429d16ce6287a05cfcab0082b853a62/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/ooHMvsIIQGgS3jSefgLMJyBd2EAsfgJRGDYDgb/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1960&bt=980&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=M2U5NTM5NTs1ZDk5NGRkaEBpanFyOnA5cjlmNzQzZjM2NUAuMmE0NC1jX2AxYy9eLi4xYSNxcXJuMmRzLWZhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
-      "create_time": 1764016156,
-      "stats": {
-        "digg_count": 0,
-        "comment_count": 0,
-        "share_count": 0,
-        "play_count": 251,
-        "collect_count": 0
-      }
-    },
-    {
       "id": "7576391180921916705",
       "desc": "pres pour l'expédition ! a vos marque prés ..... | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oUSgEkNgJGIjfgTGSvEDeL7g9GMmvIO9DXSfSB~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=92253f8f&x-expires=1764115200&x-signature=ezBfp7R3fmAQtN7T9pYUU6ryarA%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/a91178deda22f03d3ce6e089c09af057/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oc9I8mNOGGvSfMfkwSLcg9EIDJgMQ5vegDDSmX/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1964&bt=982&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=Zjw8OjM8ZWVlaTRpZzg0ZEBpM2d5bnI5cmdlNzQzZjM2NUBhMTEzY2BeXjMxM2MxYDQwYSM2cnE0MmRzc2ZhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oUSgEkNgJGIjfgTGSvEDeL7g9GMmvIO9DXSfSB~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=cbeedf99&x-expires=1764136800&x-signature=uI1oExHjLlhWdT57ADRtPhjEG4s%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oc9I8mNOGGvSfMfkwSLcg9EIDJgMQ5vegDDSmX/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1964&bt=982&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=Zjw8OjM8ZWVlaTRpZzg0ZEBpM2d5bnI5cmdlNzQzZjM2NUBhMTEzY2BeXjMxM2MxYDQwYSM2cnE0MmRzc2ZhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=PEgQ325DN7WJ_V172hxnFw&btag=e00088000",
       "create_time": 1764016056,
       "stats": {
         "digg_count": 1,
         "comment_count": 0,
         "share_count": 0,
-        "play_count": 254,
+        "play_count": 258,
         "collect_count": 0
       }
     },
     {
       "id": "7576361574517067040",
       "desc": "RIDERSKILL LES A CAPTé | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oMwEgT4bILJevSAgIDrGMVcJUepymgSkPGneDM~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=9f374e44&x-expires=1764115200&x-signature=lQDpH1tsILqFYe1wESmYBbvzo0U%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/acfd742f4ad61b2547b83bcf90710854/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oceSVomcDJIgQD7XgILbSpMGVeneJNUIGgDckE/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1708&bt=854&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=OjxnODVkZjY2Mzg0aGRlaUBpanhybnI5cmxkNzQzZjM2NUAtLS8zYi41XzIxMDYvXmExYSNhNnE0MmRrNmZhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oMwEgT4bILJevSAgIDrGMVcJUepymgSkPGneDM~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=53005c16&x-expires=1764136800&x-signature=yzSa6EoKJnHppMdhvVh3K9%2Bn90U%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oceSVomcDJIgQD7XgILbSpMGVeneJNUIGgDckE/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1708&bt=854&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=OjxnODVkZjY2Mzg0aGRlaUBpanhybnI5cmxkNzQzZjM2NUAtLS8zYi41XzIxMDYvXmExYSNhNnE0MmRrNmZhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=aP0QKTYwS2YznnCAMPMtjg&btag=e00088000",
       "create_time": 1764009164,
       "stats": {
         "digg_count": 2,
         "comment_count": 0,
         "share_count": 0,
-        "play_count": 241,
+        "play_count": 242,
         "collect_count": 1
       }
     },
     {
       "id": "7576361284271213856",
       "desc": "... | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ooEkIADcBpCJEvDpKFACffTlYSnwLEyQmjKIBw~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=b25a7530&x-expires=1764115200&x-signature=JJe%2FeT45ZkyKW2iky5qKZJxl%2B48%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/f9c0e5d91f52c2a2d1f0f0ea850dd730/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o8KSSgGwSJGp2eFJDOLIgkGXgSJDfrgIQVeHMU/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1772&bt=886&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=NmRpOjVoOjwzOzNpOGZnNEBpM3k4bm05cjVkNzQzZjM2NUAzNS4vMGFhNmIxNS9jLjUzYSNgMGhmMmRzNmZhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ooEkIADcBpCJEvDpKFACffTlYSnwLEyQmjKIBw~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=5e6dc1ec&x-expires=1764136800&x-signature=wfH%2B3G86yfJ1EC%2B2pfoe%2BxL1Fn4%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o8KSSgGwSJGp2eFJDOLIgkGXgSJDfrgIQVeHMU/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1772&bt=886&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=NmRpOjVoOjwzOzNpOGZnNEBpM3k4bm05cjVkNzQzZjM2NUAzNS4vMGFhNmIxNS9jLjUzYSNgMGhmMmRzNmZhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=zbbIQTP4xF4d5woHXNxYOQ&btag=e00088000",
       "create_time": 1764009100,
       "stats": {
         "digg_count": 1,
         "comment_count": 0,
         "share_count": 0,
-        "play_count": 248,
+        "play_count": 249,
         "collect_count": 1
       }
     },
     {
       "id": "7575615952708980000",
       "desc": "on lache rien | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ooEAZG1IM1LfNCHeAAYDWYkqfhGFhTryIQeGBQ~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=d710aaf8&x-expires=1764115200&x-signature=3ya%2BRGqyTm%2FAjg3neyRW849YzCM%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/273b492a09f65887cba56332f57fd85c/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oEiGGIA8gAkAKZAVRGHJIYLSWhYBfNefYsTe1H/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=2474&bt=1237&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=ZTdpZTw0OjlmPGdoNmdnO0BpMzV2NHA5cjt5NzQzZjM2NUAvYWFfNjRiNi8xNDQ0MjIzYSMwMmEtMmRzcWRhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ooEAZG1IM1LfNCHeAAYDWYkqfhGFhTryIQeGBQ~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=cabbed5c&x-expires=1764136800&x-signature=%2FdZNTFT0qRfrwOto5QUCWrTf%2Bko%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oEiGGIA8gAkAKZAVRGHJIYLSWhYBfNefYsTe1H/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=2474&bt=1237&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=ZTdpZTw0OjlmPGdoNmdnO0BpMzV2NHA5cjt5NzQzZjM2NUAvYWFfNjRiNi8xNDQ0MjIzYSMwMmEtMmRzcWRhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=NLPyrBWsDE-7Igo9GENHQw&btag=e00088000",
       "create_time": 1763835556,
       "stats": {
         "digg_count": 1,
@@ -88,8 +88,8 @@
     {
       "id": "7575597194464562464",
       "desc": "morning vibes | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oU7Sh0QwaJtoHXZZBTUBgE1zAnstiPMEBB9iI~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=d5f99be1&x-expires=1764115200&x-signature=Gg6fKfVX2JSq7CjVJSnXCDwOCUM%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/e8dda9c1ea489e51bce34d2347523c03/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o0DQfE7g2I7QcFTgaMYfkopaWvGSDDgZhSQeJG/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1906&bt=953&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=aGU0ZWllZ2VpNjtpODQ5PEBpamdrZHc5cjp4NzQzZjM2NUAyLzYzYTBjNi8xXl9hMy80YSMxYy9qMmQ0b2RhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oU7Sh0QwaJtoHXZZBTUBgE1zAnstiPMEBB9iI~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=8c938e31&x-expires=1764136800&x-signature=Xe4HimJx2rmkvcwrxpptHRY1QyQ%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o0DQfE7g2I7QcFTgaMYfkopaWvGSDDgZhSQeJG/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1906&bt=953&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=aGU0ZWllZ2VpNjtpODQ5PEBpamdrZHc5cjp4NzQzZjM2NUAyLzYzYTBjNi8xXl9hMy80YSMxYy9qMmQ0b2RhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=wWyaGk1WOkYqdo9Ahm2y1w&btag=e00088000",
       "create_time": 1763831197,
       "stats": {
         "digg_count": 0,
@@ -102,8 +102,8 @@
     {
       "id": "7574118405935074592",
       "desc": "adios los santos | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oMfKcEaIKmAtoEIpQHFfDBQYQriiy3EoBzDtwq~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=d8b684a7&x-expires=1764115200&x-signature=%2BiAj35m9rPbOtYVy9hjApfTLToU%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/cb24d4bed502688a509f3478e4df1fa6/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oUEQcFaqyHoLDrYCBffBKPwtQmE3DAJEQphoI3/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1168&bt=584&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=Zjc1ZmU6NWdmNzU5N2g2ZUBpamo0OnA5cmRkNzQzZjM2NUAzYWAxYy9fXmMxMzVhY2NeYSNvaHFuMmRrbWJhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oMfKcEaIKmAtoEIpQHFfDBQYQriiy3EoBzDtwq~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=98c09be7&x-expires=1764136800&x-signature=3d1DieRKOVAM243ZGxI4AKyRr80%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oUEQcFaqyHoLDrYCBffBKPwtQmE3DAJEQphoI3/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1168&bt=584&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=Zjc1ZmU6NWdmNzU5N2g2ZUBpamo0OnA5cmRkNzQzZjM2NUAzYWAxYy9fXmMxMzVhY2NeYSNvaHFuMmRrbWJhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=UH-fN_b1heJM9JATYnb8wA&btag=e00088000",
       "create_time": 1763486891,
       "stats": {
         "digg_count": 1,
@@ -116,8 +116,8 @@
     {
       "id": "7573701219890384160",
       "desc": "... | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/o8MwpEZDQExBaF2FfNpBDAEtEobfUGIQzCM8Pm~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=2c35e2b4&x-expires=1764115200&x-signature=fC1pBzQx7QA2rE7xVNFADIvh7CI%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/a34e4e9f17ede9325e91f561ab13bb09/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oAeSNgGsQGDIIIbeegJgI8IL1m2FcyIKpCRDMY/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=2216&bt=1108&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=ZjM0NDQ8Ozg5aWk1OjRoOkBpajdlOnA5cmptNzQzZjM2NUBfYGM2NTEyNi0xXjNjMjZiYSNgYG9uMmRrL2FhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/o8MwpEZDQExBaF2FfNpBDAEtEobfUGIQzCM8Pm~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=5fbb0b6a&x-expires=1764136800&x-signature=fnQXeiADp6o6Z1PAx2svrKW0v38%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oAeSNgGsQGDIIIbeegJgI8IL1m2FcyIKpCRDMY/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=2216&bt=1108&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=ZjM0NDQ8Ozg5aWk1OjRoOkBpajdlOnA5cmptNzQzZjM2NUBfYGM2NTEyNi0xXjNjMjZiYSNgYG9uMmRrL2FhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=LVlM5O__g81-1dv9dbS6vw&btag=e00088000",
       "create_time": 1763389763,
       "stats": {
         "digg_count": 2,
@@ -130,8 +130,8 @@
     {
       "id": "7573693768818298144",
       "desc": "... | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/o8qD2pp4AKB5E6wwFyEwCEIDbQTmGzfBRqf5n8~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=598311d7&x-expires=1764115200&x-signature=easTDL9lIXdw8s9MXcGuARc8kXY%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/b39b17af9fc76caf16df5d0306667fbf/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oEIaIBBpuGbKpFfG8REDoQQwm5DfE6wZ2EC4Ey/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1304&bt=652&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=Nzw5PDU6ZDMzMzU2Zjo3PEBpanNnOng5cnhsNzQzZjM2NUA1M14vNmM2XjAxLWMwNV8xYSM1czBgMmRraGFhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/o8qD2pp4AKB5E6wwFyEwCEIDbQTmGzfBRqf5n8~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=542fba17&x-expires=1764136800&x-signature=poeIWbqabzrT%2B0lLOMrJ6z1RxeM%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oEIaIBBpuGbKpFfG8REDoQQwm5DfE6wZ2EC4Ey/?a=1233&bti=MzU8OGYpNHYpNzo5ZjEuLjpkLTptNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1304&bt=652&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=Nzw5PDU6ZDMzMzU2Zjo3PEBpanNnOng5cnhsNzQzZjM2NUA1M14vNmM2XjAxLWMwNV8xYSM1czBgMmRraGFhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=_Poo5ULc_VggD6vcicp1bQ&btag=e00088000",
       "create_time": 1763388026,
       "stats": {
         "digg_count": 3,
@@ -144,8 +144,8 @@
     {
       "id": "7572971522055310625",
       "desc": "LOL | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/owKfDBfDmEtxBopwomUGMGGJYBZEKEmiFBARIQ~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=650f11bb&x-expires=1764115200&x-signature=X%2FbdQHMwUtmnNlJp7BAz8jhQeqM%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/037233506eeb50c319d4e8370727a1bf/69264ee1/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o8IBYpow5BJILQBftBEEsFEDmmDjGGQuofGRZm/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&br=4864&bt=2432&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=Nzs3ZmY7Ozk8OGQzOjxlZ0BpMzk5OnA5cjc8NzQzZjM2NUAwMi9fNTJeNTAxNmI0NjJjYSMwZGxuMmRjZ2BhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e000b8000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/owKfDBfDmEtxBopwomUGMGGJYBZEKEmiFBARIQ~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=309271a5&x-expires=1764136800&x-signature=wsSYHdKocfBPZkrlHYnq4ecL36o%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o8IBYpow5BJILQBftBEEsFEDmmDjGGQuofGRZm/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&br=4864&bt=2432&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=Nzs3ZmY7Ozk8OGQzOjxlZ0BpMzk5OnA5cjc8NzQzZjM2NUAwMi9fNTJeNTAxNmI0NjJjYSMwZGxuMmRjZ2BhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137880&VSignature=iRRLa8pdlbPhN-bVpgPTvQ&btag=e000b8000",
       "create_time": 1763219859,
       "stats": {
         "digg_count": 3,
@@ -158,8 +158,8 @@
     {
       "id": "7572918189470879009",
       "desc": "ouep | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/osFkgoJpGEm4DCEBEiLGwB0BmuwfQeUMwtGQID~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=f01d4dac&x-expires=1764115200&x-signature=%2FK9mSZ1rOD%2BkifFNjmY1iHnDVM4%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/54a4658ecad7c450c01103b041a3b5b3/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/ooTPlIBgWE0R1QZcxNEpDBpiBRqhaMaRiBcAY/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=2636&bt=1318&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=NDtlOWQ6OjRpMzZoOzwzM0BpajQ8PGs5cjQ5NzQzZjM2NUAuMzYwNF8yXy8xYzEyY2JgYSMubGFfMmQ0ZmBhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/osFkgoJpGEm4DCEBEiLGwB0BmuwfQeUMwtGQID~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=ec94b58e&x-expires=1764136800&x-signature=dXNE6e7zszZmR%2BjcOK8WdjrBZrw%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/ooTPlIBgWE0R1QZcxNEpDBpiBRqhaMaRiBcAY/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=2636&bt=1318&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=NDtlOWQ6OjRpMzZoOzwzM0BpajQ8PGs5cjQ5NzQzZjM2NUAuMzYwNF8yXy8xYzEyY2JgYSMubGFfMmQ0ZmBhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=LGB3Wzcm8R0bToKtDYK-fA&btag=e00088000",
       "create_time": 1763207429,
       "stats": {
         "digg_count": 3,
@@ -172,8 +172,8 @@
     {
       "id": "7571691290044157216",
       "desc": "et wesh gros sa ce passe comme sa avec riderskill | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ocLBma0sBDAtiVxYigCY6EIBUoSziZWAw1fiSy~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=bb403218&x-expires=1764115200&x-signature=zUyW%2BgxEjs%2FGDxgvMY%2BcLH0DK5Q%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/784b3e31d66ae7575e8a5e08dd4243f2/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oMAkCDtiLiYJxYgQI0iByTfwEBUPoamsBzUVWA/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=4920&bt=2460&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=PGdnOmhmNDg0Zzo8NDw4OEBpM2dzdWw5cmQzNzQzZjM2NUAzLi8uMWE1XzUxNV5iMV8wYSNsYTFsMmRzbl5hLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ocLBma0sBDAtiVxYigCY6EIBUoSziZWAw1fiSy~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=268fe92e&x-expires=1764136800&x-signature=9pf%2BjoxIGmcy82%2FZVxWMvTxFpQc%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oMAkCDtiLiYJxYgQI0iByTfwEBUPoamsBzUVWA/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=4920&bt=2460&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=PGdnOmhmNDg0Zzo8NDw4OEBpM2dzdWw5cmQzNzQzZjM2NUAzLi8uMWE1XzUxNV5iMV8wYSNsYTFsMmRzbl5hLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=QBEeZHAnSZ95IDH4Yax6lQ&btag=e00088000",
       "create_time": 1762921773,
       "stats": {
         "digg_count": 3,
@@ -186,8 +186,8 @@
     {
       "id": "7571676181271956768",
       "desc": "reborn | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oofADTCYeW7uTGYWfkuZGOAF7QIL8NNMQnf27T~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=477bd411&x-expires=1764115200&x-signature=qn%2FE93rmnbnlJz1IsOlQL%2BnnbMI%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/4b88347ac05a1142ae30b6c78e8f673c/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oIIMkTguSfZfAGuech7NV7GTQgY3nNRQDA8WGf/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=4664&bt=2332&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=NDc8ZTs3N2VoNjk5NTs5aUBpajl5cm85cnV5NzQzZjM2NUAuLjEtMzYtNjIxYDRfNS8wYSNvbzRvMmQ0cjZhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oofADTCYeW7uTGYWfkuZGOAF7QIL8NNMQnf27T~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=c8ffab79&x-expires=1764136800&x-signature=uTAC%2FbM3cVmAJS%2F7U2DVupm1JH0%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oIIMkTguSfZfAGuech7NV7GTQgY3nNRQDA8WGf/?a=1233&bti=MzU8OGYpNHYpNzo5ZjEuLjpkLTptNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=4664&bt=2332&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=NDc8ZTs3N2VoNjk5NTs5aUBpajl5cm85cnV5NzQzZjM2NUAuLjEtMzYtNjIxYDRfNS8wYSNvbzRvMmQ0cjZhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=PAcxNgV3uYOOTUYx2_exWA&btag=e00088000",
       "create_time": 1762918254,
       "stats": {
         "digg_count": 2,
@@ -200,8 +200,8 @@
     {
       "id": "7571509942218165526",
       "desc": "Merci pour tous vos Cadeaux et votre gratitude. Vous représentez beaucoup pour moi.",
-      "cover": "https://p16-pu-sign-no.tiktokcdn-eu.com/tos-no1a-p-6123-no/oQ1QtFHdpEIpedLfXDEFkcwEILDA0YL8lAfMCz~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=394359e2&x-expires=1764115200&x-signature=fB18jC7ljXe0elQfxUXkDSa74gE%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/db0fd183a39c932297cb42d7ba47db8a/69264ee6/video/tos/no1a/tos-no1a-ve-0068c001-no/oIkDDCiIE0IQEDFgpzwA0a2fmgpVBwCETIFpTe/?a=1233&bti=MzU8OGYpNHYpNzo5ZjEuLjpkLTptNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1092&bt=546&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=NzplNzY6ZGhmOTs0Zzk3ZEBpamo8bG45cmZwNzMzbzgzNUA2XjQwNTQuXmIxM19jYzIvYSMucWNtMmQ0ZDZhLS1kLzFzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p16-pu-sign-no.tiktokcdn-eu.com/tos-no1a-p-6123-no/oQ1QtFHdpEIpedLfXDEFkcwEILDA0YL8lAfMCz~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=c72325b2&x-expires=1764136800&x-signature=0WLjKtOyX%2BNFtpBnzIzmIG2ni0s%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/no1a/tos-no1a-ve-0068c001-no/oIkDDCiIE0IQEDFgpzwA0a2fmgpVBwCETIFpTe/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1092&bt=546&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=NzplNzY6ZGhmOTs0Zzk3ZEBpamo8bG45cmZwNzMzbzgzNUA2XjQwNTQuXmIxM19jYzIvYSMucWNtMmQ0ZDZhLS1kLzFzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137885&VSignature=ofiiuW4ACCou2_DzLaaX4Q&btag=e00088000",
       "create_time": 1762879536,
       "stats": {
         "digg_count": 3,
@@ -214,8 +214,8 @@
     {
       "id": "7571509864636091670",
       "desc": "Merci pour tous vos Cadeaux et votre gratitude. Vous représentez beaucoup pour moi.",
-      "cover": "https://p16-pu-sign-no.tiktokcdn-eu.com/tos-no1a-p-6123-no/o4waRLdBbIAUIEIpkEFfLDAYesQ4GwEJtkDoek~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=3e7e02b4&x-expires=1764115200&x-signature=e1bGyIlrEIXHupZlTD3B%2BUgF0tQ%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/852401b815477d48cbb8fcef152e610a/69264ee6/video/tos/no1a/tos-no1a-ve-0068c001-no/okwTrtBUSIIBE2LpaDJF00AEE0DQmlAeeAf1CT/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=948&bt=474&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=NGQ6MzM6NDw3aGlmPGU1Z0Bpamo8bG45cjpwNzMzbzgzNUA1LWJhNDIzXy0xL2NiMy4vYSMtcWNtMmRrZDZhLS1kLzFzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p16-pu-sign-no.tiktokcdn-eu.com/tos-no1a-p-6123-no/o4waRLdBbIAUIEIpkEFfLDAYesQ4GwEJtkDoek~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=b3996a34&x-expires=1764136800&x-signature=o3hBoYpZa8Gnup8TDD8FP5Dptho%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/no1a/tos-no1a-ve-0068c001-no/okwTrtBUSIIBE2LpaDJF00AEE0DQmlAeeAf1CT/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=948&bt=474&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=NGQ6MzM6NDw3aGlmPGU1Z0Bpamo8bG45cjpwNzMzbzgzNUA1LWJhNDIzXy0xL2NiMy4vYSMtcWNtMmRrZDZhLS1kLzFzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137885&VSignature=5R3bEz0lQoWETQ-b0tOTwQ&btag=e00088000",
       "create_time": 1762879518,
       "stats": {
         "digg_count": 3,
@@ -228,8 +228,8 @@
     {
       "id": "7571394220150344992",
       "desc": "pret pour le prochain gta , je suis la , je suis pret | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ok8EDf4iwElmQyf7OBpQFBAlIqBvEI9owDPhRP~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=a265d8f3&x-expires=1764115200&x-signature=iRiBjZ%2BhBGwC94wgw2y6BGZJ7ZM%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/b0938f70c415579990a308403b9da7c5/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/ocDA1E4g8IfEiF7w7mrfgRHyQ9DoBBQOlpQvED/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1046&bt=523&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=NmYzMzZkZzVpZ2U3MzpoOUBpM3c2anY5cjtpNzQzZjM2NUAvNl4wMi1iX2ExYS5gX2IvYSNucS4wMmRrcjZhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ok8EDf4iwElmQyf7OBpQFBAlIqBvEI9owDPhRP~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=db13c1aa&x-expires=1764136800&x-signature=YP0%2F3wClyg0rCLE%2Fn%2FQP03B51wE%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/ocDA1E4g8IfEiF7w7mrfgRHyQ9DoBBQOlpQvED/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1046&bt=523&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=NmYzMzZkZzVpZ2U3MzpoOUBpM3c2anY5cjtpNzQzZjM2NUAvNl4wMi1iX2ExYS5gX2IvYSNucS4wMmRrcjZhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=cAiPsK_kot7csOpPythlYw&btag=e00088000",
       "create_time": 1762852644,
       "stats": {
         "digg_count": 5,
@@ -242,8 +242,8 @@
     {
       "id": "7571393240679697697",
       "desc": "adieu los santos | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oon1IYeKbGTqfFb3afL1NGkBYAWA5GdSQCeJlI~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=e05470f3&x-expires=1764115200&x-signature=7lATF4VgjEsiVDg2P9HkwdPW254%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/f5ac945b2975d6a075624479653ded3a/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o82b11geQI5CUKDNffkAlGrGSIEFYWqeATKLwG/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1000&bt=500&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=ZmlkODpnNDxmMzs8MzxmOEBpamg1O3c5cmVpNzQzZjM2NUBhLi41L15gXjUxXjZiXi5gYSNjX142MmRjcTZhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oon1IYeKbGTqfFb3afL1NGkBYAWA5GdSQCeJlI~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=2e2e23d9&x-expires=1764136800&x-signature=75je2U0Ifshvgd8bm1EEe0s2Wks%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o82b11geQI5CUKDNffkAlGrGSIEFYWqeATKLwG/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1000&bt=500&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=ZmlkODpnNDxmMzs8MzxmOEBpamg1O3c5cmVpNzQzZjM2NUBhLi41L15gXjUxXjZiXi5gYSNjX142MmRjcTZhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=CoFCIiXw-te40PSLiVkF6g&btag=e00088000",
       "create_time": 1762852526,
       "stats": {
         "digg_count": 2,
@@ -256,8 +256,8 @@
     {
       "id": "7571043374233373985",
       "desc": "oulalalala | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oUHLMZlGEigRqI3AbSAiABAIABaw0syBvT1R0~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=0657e2ab&x-expires=1764115200&x-signature=zG8msVNz4Cm1wmd%2B3IiQLGfKMb8%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/c443c307e4f11272a4c7815de69a7d1b/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/owABQE00A3BAHQ1ZJJQ8MIaAw6RqagTiAyiRv/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=5048&bt=2524&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=NDllaWRkODk6ZTc7MzpkZUBpM2xod245cjN2NzQzZjM2NUAyLzNiYzBeNV4xX14zNjAvYSMtaW5uMmRrLTVhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oUHLMZlGEigRqI3AbSAiABAIABaw0syBvT1R0~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=32425d44&x-expires=1764136800&x-signature=X2hxYi7iWhIiaitijoYfsywkPdc%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/owABQE00A3BAHQ1ZJJQ8MIaAw6RqagTiAyiRv/?a=1233&bti=MzU8OGYpNHYpNzo5ZjEuLjpkLTptNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=5048&bt=2524&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=NDllaWRkODk6ZTc7MzpkZUBpM2xod245cjN2NzQzZjM2NUAyLzNiYzBeNV4xX14zNjAvYSMtaW5uMmRrLTVhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=_1woZBCNPEfOf9cHp9tHAA&btag=e00088000",
       "create_time": 1762770948,
       "stats": {
         "digg_count": 3,
@@ -270,8 +270,8 @@
     {
       "id": "7571030050489765153",
       "desc": "chill 3.0 | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/o82CsQKFjPkTuORZ46ITGLRAGNeGYAfYSIe4He~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=9f9d8ace&x-expires=1764115200&x-signature=i4edD%2B%2BjIXR8muP7f4%2FBg%2BsiFSY%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/9babbfd0119075550a1d9b4729a9ffcf/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/osgISZHegYPAY8RG9j9GeNcGfFTLAfsAgyEkR4/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=4498&bt=2249&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=OTY3ZjQ2ZWg1Z2QzNDNnZ0BpanlsNm05cnJ1NzQzZjM2NUBiNDA0L2MvX18xMTYtYWI2YSNfMGRvMmRrNDVhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/o82CsQKFjPkTuORZ46ITGLRAGNeGYAfYSIe4He~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=b010c0b6&x-expires=1764136800&x-signature=CkdCWrRJyopk5vWFEhmrlHCBkYI%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/osgISZHegYPAY8RG9j9GeNcGfFTLAfsAgyEkR4/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=4498&bt=2249&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=OTY3ZjQ2ZWg1Z2QzNDNnZ0BpanlsNm05cnJ1NzQzZjM2NUBiNDA0L2MvX18xMTYtYWI2YSNfMGRvMmRrNDVhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=30shpImvX_Nc89ujGo46Rw&btag=e00088000",
       "create_time": 1762767844,
       "stats": {
         "digg_count": 3,
@@ -284,8 +284,8 @@
     {
       "id": "7570965557651033377",
       "desc": "electrique puls | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ocgejQvnSGWheFvCJMDR4hJIWCOQMg8DdgfviM~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=281bee68&x-expires=1764115200&x-signature=oQmVzcWkuR3ECmHEQMV7%2BedRwE0%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/f43f0d941e57651a4690ffe85df8abf5/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o4GXieeOgzivSLPgjwBDJvMmIIIG8QfgDxogHl/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=4230&bt=2115&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=Ozs3NDxpZjY1ZTozZGY5OkBpams6eWo5cm9xNzQzZjM2NUBiXi82M2ItXi8xYi8yMGI0YSM2ZXNeMmRzZzVhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/ocgejQvnSGWheFvCJMDR4hJIWCOQMg8DdgfviM~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=53edc5d7&x-expires=1764136800&x-signature=VW5rBcAJTJtPyJzYUKlvO6I8Pr0%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/o4GXieeOgzivSLPgjwBDJvMmIIIG8QfgDxogHl/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=4230&bt=2115&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=Ozs3NDxpZjY1ZTozZGY5OkBpams6eWo5cm9xNzQzZjM2NUBiXi82M2ItXi8xYi8yMGI0YSM2ZXNeMmRzZzVhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=STd_Iy299mhuQhd45J4N9A&btag=e00088000",
       "create_time": 1762752984,
       "stats": {
         "digg_count": 2,
@@ -298,8 +298,8 @@
     {
       "id": "7570308298281372960",
       "desc": "meme endormis jvaut mieu qu\"eux :p | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oAgM8APU6jZGkI0QNBE1iPs3KA1laUBIgBN7i~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=de799b10&x-expires=1764115200&x-signature=M6uFXibsxi%2F4r6DY75qcfJrjabI%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/279376b9305b75e3bd5b339ee941809f/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oogOeQkWSGC3RShcJMDbQDeHXAagMR8Drghqew/?a=1233&bti=MzU8OGYpNHYpNzo5ZjEuLjpkLTptNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1914&bt=957&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=ZWhkNjw2NTM3ZTg6ZjdlOEBpMzdlb3U5cm5sNzQzZjM2NUBgYjVfMzBfXjYxYTMtY2AzYSNqYy5mMmQ0MzRhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oAgM8APU6jZGkI0QNBE1iPs3KA1laUBIgBN7i~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=c4b68ce0&x-expires=1764136800&x-signature=irG%2FjAjTxGnjMaXVjC82cHDab6g%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oogOeQkWSGC3RShcJMDbQDeHXAagMR8Drghqew/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1914&bt=957&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=ZWhkNjw2NTM3ZTg6ZjdlOEBpMzdlb3U5cm5sNzQzZjM2NUBgYjVfMzBfXjYxYTMtY2AzYSNqYy5mMmQ0MzRhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=t0HDk1R1KEaKZ97HcSqSSg&btag=e00088000",
       "create_time": 1762599764,
       "stats": {
         "digg_count": 2,
@@ -312,8 +312,8 @@
     {
       "id": "7570298393193467169",
       "desc": "vers l'infini mais pas au dela ! | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/o03D1ppQPixDoBEGQUmlxfE3FwEB8AD6XisaeI~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=821089ad&x-expires=1764115200&x-signature=QPXUsUvor2QQ5DG93tOk7sI6dms%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/6407e3c2bf56041e75f9c6b42f27bc8c/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oAQgMRNsgJSJG10jDLeEjSGDfKHtEIgZL3JpAe/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1482&bt=741&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=PDc3ZzdnOGVoNmVoNGQ4OUBpanI8bnc5cm9rNzQzZjM2NUAuNGNfL2A2NS4xMV8yMTJgYSNsYDUzMmQ0aDRhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/o03D1ppQPixDoBEGQUmlxfE3FwEB8AD6XisaeI~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=60f7ff53&x-expires=1764136800&x-signature=2eM1xP%2B7MvtbjFFduKsn0t5xJT4%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/oAQgMRNsgJSJG10jDLeEjSGDfKHtEIgZL3JpAe/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=1482&bt=741&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=PDc3ZzdnOGVoNmVoNGQ4OUBpanI8bnc5cm9rNzQzZjM2NUAuNGNfL2A2NS4xMV8yMTJgYSNsYDUzMmQ0aDRhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=n66qlzpfuxaMFb6Wx99g5Q&btag=e00088000",
       "create_time": 1762597461,
       "stats": {
         "digg_count": 2,
@@ -326,8 +326,8 @@
     {
       "id": "7569734973855517984",
       "desc": "whaouuuuu !! jeu insane bro !!!!!!!!!!!!! | #riderskill sur #Twitch",
-      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oUfrMRmmDBDFAN4IBQ29lgEbzjnQeptZDwBaEw~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=b896f521&x-expires=1764115200&x-signature=djn%2FbcGLFvD5jrISfdulLl8ZjnA%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
-      "play": "https://v77.tiktokcdn-eu.com/c7791a7e0c4265c94c3ef4576695b864/69264ee4/video/tos/useast2a/tos-useast2a-ve-4864-euttp/okgEAM2fQjlwmSDBzaADfD4BnmEFg0RQHcHpIZ/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=2132&bt=1066&cs=0&ds=6&ft=_A7anvvOQ1IUxxpKW.v-ShisYlE9Q3E1Gbn-V8QP8Z4ka&mime_type=video_mp4&qs=0&rc=O2dnZzhkNzZpaTY7OjU1O0BpM3M0dWw5cnNrNzQzZjM2NUAxYzUzNTRgNjIxXzEtYWJfYSNyajFsMmRrZzNhLS1kLTNzcw%3D%3D&vvpl=1&l=202511250850147C1F3C59A9342261946D&btag=e00088000",
+      "cover": "https://p19-common-sign-useastred.tiktokcdn-eu.com/tos-useast2a-p-4864-euttp/oUfrMRmmDBDFAN4IBQ29lgEbzjnQeptZDwBaEw~tplv-tiktokx-cropcenter:300:400.jpeg?dr=10399&refresh_token=9ba5e305&x-expires=1764136800&x-signature=JtMv0X4Q2o6Ag2DIXF9rPYQw1hw%3D&t=4d5b0474&ps=13740610&shp=d05b14bd&shcp=34ff8df6&idc=useast2b&s=PUBLISH",
+      "play": "https://v58.tiktokcdn-eu.com/video/tos/useast2a/tos-useast2a-ve-4864-euttp/okgEAM2fQjlwmSDBzaADfD4BnmEFg0RQHcHpIZ/?a=1233&bti=M0BzMzU8OGYpNzo5Zi5wIzEuLjpkNDQwOg%3D%3D&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=2132&bt=1066&cs=0&ds=6&ft=XsF-uqSpm--PD12yLmYs3wUZNknCjeF~O5&mime_type=video_mp4&qs=0&rc=O2dnZzhkNzZpaTY7OjU1O0BpM3M0dWw5cnNrNzQzZjM2NUAxYzUzNTRgNjIxXzEtYWJfYSNyajFsMmRrZzNhLS1kLTNzcw%3D%3D&vvpl=1&l=20251125141733CE265489BCEDA813E313&VExpiration=1764137883&VSignature=LFJdByb0xelOJsT87m0s6Q&btag=e00088000",
       "create_time": 1762466279,
       "stats": {
         "digg_count": 3,
