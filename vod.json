@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2627636217",
-    "url": "https://www.twitch.tv/videos/2627636217",
-    "title": "⚡️2K FULL ULTRA blablabla 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨",
-    "published_at": "2025-11-25T13:23:10Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
-  },
-  {
-    "id": "2627075488",
-    "url": "https://www.twitch.tv/videos/2627075488",
-    "title": "LVL50⚡️2K FULL ULTRA😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨",
-    "published_at": "2025-11-24T20:01:01Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/61eb41b3e8e30ae617e9_riderskill_315407528549_1764014453//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2626780305",
-    "url": "https://www.twitch.tv/videos/2626780305",
-    "title": "⚡️ INVASION EN COURS 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨.",
-    "published_at": "2025-11-24T11:48:06Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d8a3d94b1247d9662c9e_riderskill_315242057700_1763984877//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2626289958",
-    "url": "https://www.twitch.tv/videos/2626289958",
-    "title": "⚡️ INVASION EN COURS 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨",
-    "published_at": "2025-11-23T20:18:55Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6e9727cd7824442c3a08_riderskill_315257996771_1763929127//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2625980323",
-    "url": "https://www.twitch.tv/videos/2625980323",
-    "title": "⚡️ INVASION EN COURS 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨",
-    "published_at": "2025-11-23T13:16:53Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/840999b1e37c45331456_riderskill_315233740644_1763903805//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2627636217",
+  "url": "https://www.twitch.tv/videos/2627636217",
+  "title": "⚡️2K FULL ULTRA blablabla 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨",
+  "duration": "14h31m20s",
+  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+  "published_at": "2025-11-25T13:23:10Z"
+}
