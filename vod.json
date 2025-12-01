@@ -1,8 +1,37 @@
-{
-  "id": "2631080683",
-  "url": "https://www.twitch.tv/videos/2631080683",
-  "title": "[DROP SUBS enabled]⚡️2K FULL ULTRA du gaming 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨.",
-  "duration": "9h52m18s",
-  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-  "published_at": "2025-11-29T18:11:17Z"
-}
+[
+  {
+    "id": "2631948997",
+    "url": "https://www.twitch.tv/videos/2631948997",
+    "title": "[DROP SUBS enabled]⚡️2K FULL ULTRA 😱🚀 | 🤖🔥 75 ?💰✨.",
+    "published_at": "2025-11-30T16:46:08Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
+    "id": "2631080683",
+    "url": "https://www.twitch.tv/videos/2631080683",
+    "title": "[DROP SUBS enabled]⚡️2K FULL ULTRA du gaming 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨.",
+    "published_at": "2025-11-29T18:11:17Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/068c1d10709b850725a5_riderskill_315286082404_1764439870//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2630374023",
+    "url": "https://www.twitch.tv/videos/2630374023",
+    "title": "[DROP SUBS enabled]⚡️2K FULL ULTRA du gaming 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨",
+    "published_at": "2025-11-28T21:47:50Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/58af93b346a235c3eea4_riderskill_315246742882_1764366462//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2630070399",
+    "url": "https://www.twitch.tv/videos/2630070399",
+    "title": "[DROP SUBS]⚡️2K FULL ULTRA vulgarisation du gaming 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨",
+    "published_at": "2025-11-28T14:42:28Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c3ec2a698a482bf6a3e7_riderskill_315242219618_1764340940//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2629274937",
+    "url": "https://www.twitch.tv/videos/2629274937",
+    "title": "[DROP SUBS]⚡️2K FULL ULTRA vulgarisation du gaming 😱🚀 | JE SURVIS AUX HORDES 🤖🔥 | LOOT LÉGENDAIRE ?! 💰✨",
+    "published_at": "2025-11-27T13:01:16Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/032bf0aa06b399ecf4f4_riderskill_315233900002_1764248467//thumb/thumb0-%{width}x%{height}.jpg"
+  }
+]
