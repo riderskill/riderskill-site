@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2622390905",
-    "url": "https://www.twitch.tv/videos/2622390905",
-    "title": "👽  On tombe du ciel… mais eux tombent plus vite 💥",
-    "published_at": "2025-11-19T08:38:51Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6a12b1da42cc4270969d_riderskill_315164771170_1763541523//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2617049497",
-    "url": "https://www.twitch.tv/videos/2617049497",
-    "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
-    "published_at": "2025-11-13T03:10:53Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/349682a3c83e23c81bd9_riderskill_315152250724_1763003445//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2614274640",
-    "url": "https://www.twitch.tv/videos/2614274640",
-    "title": "Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure ! avec @spoogam",
-    "published_at": "2025-11-09T22:51:24Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f928a50da160e82d56a8_riderskill_315149886051_1762728676//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2612268110",
-    "url": "https://www.twitch.tv/videos/2612268110",
-    "title": "[DROPS ✅] -J2 ⚔️ Opération vengeance sur ARC RAIDERS : ILS ONT OSÉ NOUS ATTAQUER… RIP 😈",
-    "published_at": "2025-11-07T19:49:33Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1faceb1ef09b439a3b31_riderskill_315079830498_1762544965//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2607936602",
-    "url": "https://www.twitch.tv/videos/2607936602",
-    "title": "🚨 RUST – BASE RAIDÉE ? JE VAIS FAIRE PAYER TOUT LE SERVEUR 💣",
-    "published_at": "2025-11-02T15:59:00Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bc28a4d6ba01788957bd_riderskill_315097189731_1762099131//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2622390905",
+  "url": "https://www.twitch.tv/videos/2622390905",
+  "title": "👽  On tombe du ciel… mais eux tombent plus vite 💥",
+  "duration": "15h16m14s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6a12b1da42cc4270969d_riderskill_315164771170_1763541523//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2025-11-19T08:38:51Z"
+}
