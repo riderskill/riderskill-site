@@ -1,8 +1,37 @@
-{
-  "id": "2640000008",
-  "url": "https://www.twitch.tv/videos/2640000008",
-  "title": "[ DROPS RUST ] !drops !rustdrops⚡️🎵 🎶 2K FULL ULTRA chill 😱🚀🔥 TOTAL  chill🤖💥 | JE TENTE 😵🚨 | lets go chill bro💀💰",
-  "duration": "8h43m13s",
-  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1e2f73a2cd4ded765c95_riderskill_315344085986_1765337926//thumb/thumb0-%{width}x%{height}.jpg",
-  "published_at": "2025-12-10T03:38:54Z"
-}
+[
+  {
+    "id": "2640000008",
+    "url": "https://www.twitch.tv/videos/2640000008",
+    "title": "[ DROPS RUST ] !drops !rustdrops⚡️🎵 🎶 2K FULL ULTRA chill 😱🚀🔥 TOTAL  chill🤖💥 | JE TENTE 😵🚨 | lets go chill bro💀💰",
+    "published_at": "2025-12-10T03:38:54Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1e2f73a2cd4ded765c95_riderskill_315344085986_1765337926//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2638229362",
+    "url": "https://www.twitch.tv/videos/2638229362",
+    "title": "[ DROPS RUST 24/7 ] !drops !rustdrops⚡️2K FULL ULTRA 😱🚀🔥 chill TOTAL 🤖💥 | JE TENTE 😵🚨 | countdown drops rust in stream💀💰",
+    "published_at": "2025-12-08T00:23:26Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fb71aa9a1a111cb4fa09_riderskill_315359355492_1765153397//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2622390905",
+    "url": "https://www.twitch.tv/videos/2622390905",
+    "title": "👽  On tombe du ciel… mais eux tombent plus vite 💥",
+    "published_at": "2025-11-19T08:38:51Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6a12b1da42cc4270969d_riderskill_315164771170_1763541523//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2617049497",
+    "url": "https://www.twitch.tv/videos/2617049497",
+    "title": "A ben Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure !",
+    "published_at": "2025-11-13T03:10:53Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/349682a3c83e23c81bd9_riderskill_315152250724_1763003445//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2614274640",
+    "url": "https://www.twitch.tv/videos/2614274640",
+    "title": "Si ça bouge, je loot. Si ça bouge pas, je loot aussi . Diplomatie ? Jamais entendu . J’farm jusqu’à ce que le caillou pleure ! avec @spoogam",
+    "published_at": "2025-11-09T22:51:24Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f928a50da160e82d56a8_riderskill_315149886051_1762728676//thumb/thumb0-%{width}x%{height}.jpg"
+  }
+]
