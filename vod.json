@@ -1,8 +1,37 @@
-{
-  "id": "2651323160",
-  "url": "https://www.twitch.tv/videos/2651323160",
-  "title": "[drop on] 💣🔥 Survie, loot et décisions propres ⚔️🤖 | suite du wipe.",
-  "duration": "7h41m14s",
-  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/c5208adaedc9d7820987_riderskill_315508442979_1766515968//thumb/thumb0-%{width}x%{height}.jpg",
-  "published_at": "2025-12-23T18:52:56Z"
-}
+[
+  {
+    "id": "2652041449",
+    "url": "https://www.twitch.tv/videos/2652041449",
+    "title": "[drop on] 💣⚡ Survie hardcore, pas d’erreur possible 💥 | Live",
+    "published_at": "2025-12-24T16:48:00Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/889e275568d54fa296c9_riderskill_315465343458_1766594872//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2651323160",
+    "url": "https://www.twitch.tv/videos/2651323160",
+    "title": "[drop on] 💣🔥 Survie, loot et décisions propres ⚔️🤖 | suite du wipe.",
+    "published_at": "2025-12-23T18:52:56Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/c5208adaedc9d7820987_riderskill_315508442979_1766515968//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2650317204",
+    "url": "https://www.twitch.tv/videos/2650317204",
+    "title": "[drop on] 💣le grand depart | Mission dangereuse, loot garanti 🤖⚡suite",
+    "published_at": "2025-12-22T13:56:18Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/1ef5f3397a49365860e6_riderskill_315446831714_1766411770//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2649491990",
+    "url": "https://www.twitch.tv/videos/2649491990",
+    "title": "[drop on] 💣 | Mission dangereuse, loot garanti 🤖⚡suite",
+    "published_at": "2025-12-21T13:55:49Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/cc068429275eaa856049_riderskill_315488265699_1766325340//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2648597911",
+    "url": "https://www.twitch.tv/videos/2648597911",
+    "title": "[drop on] 💣 ARC Raiders | Mission dangereuse, loot garanti 🤖⚡",
+    "published_at": "2025-12-20T12:38:54Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/3ad1df1de9010d2a3928_riderskill_315478913123_1766234325//thumb/thumb0-%{width}x%{height}.jpg"
+  }
+]
