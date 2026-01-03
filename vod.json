@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2659064652",
-    "url": "https://www.twitch.tv/videos/2659064652",
-    "title": "[drop on] 🔥 1ere partie Arc Raiders et 2eme Rust 🤖 Tres long stream comme tous les jours ⚔ ou presque...",
-    "published_at": "2026-01-02T10:22:31Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/c30b2a1b5919d904f438_riderskill_315537021666_1767349342//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2658154100",
-    "url": "https://www.twitch.tv/videos/2658154100",
-    "title": "[drop on] 🔥 1er stream de l'année | Zone instable, aucune seconde de répit 🤖🧠⚔ Bonne année a toutes et a tous !!",
-    "published_at": "2026-01-01T06:01:42Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/ccd3e78e807d38297805_riderskill_315577949027_1767247293//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2657182962",
-    "url": "https://www.twitch.tv/videos/2657182962",
-    "title": "[drop on] 🔥 ARC Raiders | Zone instable, aucune seconde de répit 🤖🧠⚔️Des abonnements-cadeaux , 35 % de réduction pour vous.",
-    "published_at": "2025-12-31T00:44:07Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/265ca95a8fc7ea8b745c_riderskill_315569421411_1767141839//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2652041449",
-    "url": "https://www.twitch.tv/videos/2652041449",
-    "title": "[drop on] 💣⚡ Survie hardcore, pas d’erreur possible 💥 | Live",
-    "published_at": "2025-12-24T16:48:00Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/889e275568d54fa296c9_riderskill_315465343458_1766594872//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2651323160",
-    "url": "https://www.twitch.tv/videos/2651323160",
-    "title": "[drop on] 💣🔥 Survie, loot et décisions propres ⚔️🤖 | suite du wipe.",
-    "published_at": "2025-12-23T18:52:56Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/c5208adaedc9d7820987_riderskill_315508442979_1766515968//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2659064652",
+  "url": "https://www.twitch.tv/videos/2659064652",
+  "title": "[drop on] 🔥 1ere partie Arc Raiders et 2eme Rust 🤖 Tres long stream comme tous les jours ⚔ ou presque...",
+  "duration": "3h43m29s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/c30b2a1b5919d904f438_riderskill_315537021666_1767349342//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2026-01-02T10:22:31Z"
+}
