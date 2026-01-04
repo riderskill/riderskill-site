@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2660378822",
-    "url": "https://www.twitch.tv/videos/2660378822",
-    "title": "[drop on]  🧠 ARC Raiders | Tactique, danger et extraction tendue ⚔️🤖.",
-    "published_at": "2026-01-03T21:12:44Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
-  },
-  {
-    "id": "2659841505",
-    "url": "https://www.twitch.tv/videos/2659841505",
-    "title": "[drop on] 🔥 1ere partie Arc Raiders et 2eme Rust 🤖 Tres long stream comme tous les jours ⚔ ou presque...",
-    "published_at": "2026-01-03T05:35:04Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/c7ca774723d53cea0e71_riderskill_315577323876_1767418496//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2658154100",
-    "url": "https://www.twitch.tv/videos/2658154100",
-    "title": "[drop on] 🔥 1er stream de l'année | Zone instable, aucune seconde de répit 🤖🧠⚔ Bonne année a toutes et a tous !!",
-    "published_at": "2026-01-01T06:01:42Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/ccd3e78e807d38297805_riderskill_315577949027_1767247293//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2657182962",
-    "url": "https://www.twitch.tv/videos/2657182962",
-    "title": "[drop on] 🔥 ARC Raiders | Zone instable, aucune seconde de répit 🤖🧠⚔️Des abonnements-cadeaux , 35 % de réduction pour vous.",
-    "published_at": "2025-12-31T00:44:07Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/265ca95a8fc7ea8b745c_riderskill_315569421411_1767141839//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2652041449",
-    "url": "https://www.twitch.tv/videos/2652041449",
-    "title": "[drop on] 💣⚡ Survie hardcore, pas d’erreur possible 💥 | Live",
-    "published_at": "2025-12-24T16:48:00Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/889e275568d54fa296c9_riderskill_315465343458_1766594872//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2660378822",
+  "url": "https://www.twitch.tv/videos/2660378822",
+  "title": "[drop on]  🧠 ARC Raiders | Tactique, danger et extraction tendue ⚔️🤖.",
+  "duration": "7h6m8s",
+  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+  "published_at": "2026-01-03T21:12:44Z"
+}
