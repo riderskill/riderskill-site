@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-01-06T06:54:34.630Z",
+  "updated_at": "2026-01-06T13:08:36.278Z",
   "items": [
+    {
+      "id": "FmXzadbBI24",
+      "title": "[drop on] ⚡ ARC Raiders | Mission sous pression, survie pure 💥 (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=FmXzadbBI24",
+      "published_at": "2026-01-06T13:01:09+00:00",
+      "cover": "https://i3.ytimg.com/vi/FmXzadbBI24/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/FmXzadbBI24/hqdefault.jpg"
+    },
+    {
+      "id": "4odXDaenqWo",
+      "title": "[drop on]  🧠 ARC Raiders | Tactique, danger et extraction tendue ⚔️🤖.",
+      "url": "https://www.youtube.com/watch?v=4odXDaenqWo",
+      "published_at": "2026-01-06T09:48:30+00:00",
+      "cover": "https://i1.ytimg.com/vi/4odXDaenqWo/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/4odXDaenqWo/hqdefault.jpg"
+    },
     {
       "id": "Oi0PlhuPMlY",
       "title": "[drop on] 🔥 1er stream de l'année | Zone instable, aucune seconde de répit  (Part 1/2)",
@@ -32,14 +48,6 @@
       "published_at": "2026-01-02T08:57:56+00:00",
       "cover": "https://i2.ytimg.com/vi/5R6bVLA32lA/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/5R6bVLA32lA/hqdefault.jpg"
-    },
-    {
-      "id": "0ygOPBUN8Rc",
-      "title": "🔥 ARC Raiders | Zone instable, aucune seconde de répit 🤖🧠⚔️Des abo (Part 1/2)",
-      "url": "https://www.youtube.com/watch?v=0ygOPBUN8Rc",
-      "published_at": "2026-01-02T08:57:53+00:00",
-      "cover": "https://i1.ytimg.com/vi/0ygOPBUN8Rc/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/0ygOPBUN8Rc/hqdefault.jpg"
     },
     {
       "id": "R-NLbZNGy4s",
@@ -112,14 +120,6 @@
       "published_at": "2025-12-28T09:33:11+00:00",
       "cover": "https://i2.ytimg.com/vi/MBJCvdojdNY/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/MBJCvdojdNY/hqdefault.jpg"
-    },
-    {
-      "id": "1vacFBzRbcs",
-      "title": "[drop on] 💣online or offline⚡ Survie hardcore, pas d’erreur possible 💥 | Live",
-      "url": "https://www.youtube.com/watch?v=1vacFBzRbcs",
-      "published_at": "2025-12-28T09:33:01+00:00",
-      "cover": "https://i2.ytimg.com/vi/1vacFBzRbcs/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/1vacFBzRbcs/hqdefault.jpg"
     }
   ]
 }
