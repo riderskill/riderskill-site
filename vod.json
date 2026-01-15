@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2669910286",
-    "url": "https://www.twitch.tv/videos/2669910286",
-    "title": "[drop on] ⚡ ARC Raiders =recrutement team ouverte 2 joueurs",
-    "published_at": "2026-01-14T17:29:57Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/935a7f5d692007a0c103_riderskill_315947017445_1768411788//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2665154446",
-    "url": "https://www.twitch.tv/videos/2665154446",
-    "title": "🎵🤖 Live inédit : j’écris les paroles et la musique en temps réel 🎶💻Création de musique IA en live – Voyez tout : paroles + génération.",
-    "published_at": "2026-01-09T08:54:46Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/b3aafe04311741d6a976_riderskill_315631115108_1767948878//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2663421265",
-    "url": "https://www.twitch.tv/videos/2663421265",
-    "title": "[drop on] ⚡ ARC Raiders =recrutement team ouverte 2 joueurs (500h mini)-RUST=need 2 aussi pour le 9, tournois esport RUST( 4500 heures mini)",
-    "published_at": "2026-01-07T08:28:34Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/9858bbc87559e2b1386a_riderskill_315632506595_1767774506//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2662338970",
-    "url": "https://www.twitch.tv/videos/2662338970",
-    "title": "[drop on] ⚡ ARC Raiders =recrutement team ouverte 2 joueurs 500h mini-RUST=need 2 personne solide aussi pour le 9, tournois esport RUST",
-    "published_at": "2026-01-06T01:40:32Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/b6b87370d4950880d90d_riderskill_315623034979_1767663623//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2661670620",
-    "url": "https://www.twitch.tv/videos/2661670620",
-    "title": "[drop on] ⚡ ARC Raiders | Mission sous pression, survie pure 💥",
-    "published_at": "2026-01-05T06:54:30Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/5f0dc5ed28980238339a_riderskill_315565759074_1767596062//thumb/thumb0-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2669910286",
+  "url": "https://www.twitch.tv/videos/2669910286",
+  "title": "[drop on] ⚡ ARC Raiders =recrutement team ouverte 2 joueurs",
+  "duration": "5h50m52s",
+  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/935a7f5d692007a0c103_riderskill_315947017445_1768411788//thumb/thumb0-%{width}x%{height}.jpg",
+  "published_at": "2026-01-14T17:29:57Z"
+}
