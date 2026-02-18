@@ -1,37 +1,8 @@
-[
-  {
-    "id": "2700877504",
-    "url": "https://www.twitch.tv/videos/2700877504",
-    "title": "stream en 2k twitch🚨i5 14600kf+5070ti upscale 4k 🚨 |désoler pour l’irrégularité mais je prépare le déménagement | !bonjour",
-    "published_at": "2026-02-18T04:14:33Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
-  },
-  {
-    "id": "2700595125",
-    "url": "https://www.twitch.tv/videos/2700595125",
-    "title": "MusicProduction stream en 2k twitch🚨i5 14600kf+5070ti upscale 4k 🚨 |désoler pour l’irrégularité mais je prépare le déménagement | !bonjour",
-    "published_at": "2026-02-17T22:08:15Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/f48de94553bcf0cbc830_riderskill_316417212518_1771366086//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2696914537",
-    "url": "https://www.twitch.tv/videos/2696914537",
-    "title": "S01EP03🚨i5 14600kf+5070ti upscale 4k 🚨 on continue| Farm, build et survie ⚠️ | !bonjour",
-    "published_at": "2026-02-13T20:10:46Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/587023b2e0c42d3ddebe_riderskill_315922025314_1771013437//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2695953790",
-    "url": "https://www.twitch.tv/videos/2695953790",
-    "title": "S01EP02🚨i5 14600kf+5070ti upscale 4k 🚨 on continue| Farm, build et survie ⚠️ | !bonjour",
-    "published_at": "2026-02-12T18:19:33Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/3c8969816ff0b72acc50_riderskill_315943220324_1770920364//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2695109804",
-    "url": "https://www.twitch.tv/videos/2695109804",
-    "title": "[DROPS ON] !bonjour🚨i5 14600kf+5070ti upscale 4k 🚨 PVE 4k full | Farm, build et survie ⚠️ | !drop",
-    "published_at": "2026-02-11T18:31:13Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/5d9a97c5d18348ea036f_riderskill_315934868452_1770834665//thumb/thumb2-%{width}x%{height}.jpg"
-  }
-]
+{
+  "id": "2700877504",
+  "url": "https://www.twitch.tv/videos/2700877504",
+  "title": "stream en 2k twitch🚨i5 14600kf+5070ti upscale 4k 🚨 |désoler pour l’irrégularité mais je prépare le déménagement | !bonjour",
+  "duration": "48m45s",
+  "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+  "published_at": "2026-02-18T04:14:33Z"
+}
