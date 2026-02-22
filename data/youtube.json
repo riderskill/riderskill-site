@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-02-22T03:18:57.001Z",
+  "updated_at": "2026-02-22T13:14:24.810Z",
   "items": [
+    {
+      "id": "PmKGQsyl7N8",
+      "title": "L'OFFENSIVE",
+      "url": "https://www.youtube.com/watch?v=PmKGQsyl7N8",
+      "published_at": "2026-02-22T03:23:48+00:00",
+      "cover": "https://i1.ytimg.com/vi/PmKGQsyl7N8/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/PmKGQsyl7N8/hqdefault.jpg"
+    },
     {
       "id": "ysuDFerg0bo",
       "title": "RIDERSKILL : L'ALGORITHME DU SURVIVANT 3.0",
@@ -112,14 +120,6 @@
       "published_at": "2026-02-17T23:35:09+00:00",
       "cover": "https://i1.ytimg.com/vi/0SYkxoLSwSE/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/0SYkxoLSwSE/hqdefault.jpg"
-    },
-    {
-      "id": "98k_G4YzAX0",
-      "title": "RIDERSKILL  THE APEX ENTITY",
-      "url": "https://www.youtube.com/watch?v=98k_G4YzAX0",
-      "published_at": "2026-02-17T05:22:03+00:00",
-      "cover": "https://i2.ytimg.com/vi/98k_G4YzAX0/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/98k_G4YzAX0/hqdefault.jpg"
     }
   ]
 }
