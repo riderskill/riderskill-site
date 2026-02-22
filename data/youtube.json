@@ -1,6 +1,30 @@
 {
-  "updated_at": "2026-02-21T18:56:11.188Z",
+  "updated_at": "2026-02-22T03:18:57.001Z",
   "items": [
+    {
+      "id": "ysuDFerg0bo",
+      "title": "RIDERSKILL : L'ALGORITHME DU SURVIVANT 3.0",
+      "url": "https://www.youtube.com/watch?v=ysuDFerg0bo",
+      "published_at": "2026-02-22T03:10:48+00:00",
+      "cover": "https://i2.ytimg.com/vi/ysuDFerg0bo/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/ysuDFerg0bo/hqdefault.jpg"
+    },
+    {
+      "id": "gvC27rEUs4o",
+      "title": "RIDERSKILL : L'ALGORITHME DU SURVIVANT 2.0",
+      "url": "https://www.youtube.com/watch?v=gvC27rEUs4o",
+      "published_at": "2026-02-22T02:55:56+00:00",
+      "cover": "https://i4.ytimg.com/vi/gvC27rEUs4o/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/gvC27rEUs4o/hqdefault.jpg"
+    },
+    {
+      "id": "5cWegv-KlIQ",
+      "title": "RIDERSKILL   L'ALGORITHME DU SURVIVANT",
+      "url": "https://www.youtube.com/watch?v=5cWegv-KlIQ",
+      "published_at": "2026-02-22T02:47:47+00:00",
+      "cover": "https://i2.ytimg.com/vi/5cWegv-KlIQ/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/5cWegv-KlIQ/hqdefault.jpg"
+    },
     {
       "id": "qPLwybuHaOU",
       "title": "🌍  100% RELAXING SPACE • 4kPC to 2k ttv  •  Chill Stream | #riderskill sur #Twitch",
@@ -96,30 +120,6 @@
       "published_at": "2026-02-17T05:22:03+00:00",
       "cover": "https://i2.ytimg.com/vi/98k_G4YzAX0/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/98k_G4YzAX0/hqdefault.jpg"
-    },
-    {
-      "id": "XnqXYTI0qcw",
-      "title": "RIDERSKILL  NEON PRIMAL RiderSkill Musique",
-      "url": "https://www.youtube.com/watch?v=XnqXYTI0qcw",
-      "published_at": "2026-02-15T22:11:17+00:00",
-      "cover": "https://i1.ytimg.com/vi/XnqXYTI0qcw/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/XnqXYTI0qcw/hqdefault.jpg"
-    },
-    {
-      "id": "LNnqm-ncZso",
-      "title": "DUST &amp; STEEL RiderSkill Musique",
-      "url": "https://www.youtube.com/watch?v=LNnqm-ncZso",
-      "published_at": "2026-02-15T22:11:14+00:00",
-      "cover": "https://i1.ytimg.com/vi/LNnqm-ncZso/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/LNnqm-ncZso/hqdefault.jpg"
-    },
-    {
-      "id": "T7pKl56VqSY",
-      "title": "S01EP02🚨i5 14600kf+5070ti upscale 4k 🚨 on continue| Farm, build et survie ⚠️ | !bonjour",
-      "url": "https://www.youtube.com/watch?v=T7pKl56VqSY",
-      "published_at": "2026-02-15T00:58:44+00:00",
-      "cover": "https://i1.ytimg.com/vi/T7pKl56VqSY/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/T7pKl56VqSY/hqdefault.jpg"
     }
   ]
 }
