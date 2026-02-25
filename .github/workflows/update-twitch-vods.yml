@@ -2,7 +2,7 @@ name: Update Twitch VODs
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # Tous les jours à 03:00 UTC
+    - cron: " 0 * * *"   # Tous les jours à 03:00 UTC
   workflow_dispatch:       # Lancement manuel possible
 
 jobs:
