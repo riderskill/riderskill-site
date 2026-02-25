@@ -1,234 +1,289 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>RiderSkill — Streamer FR</title>
-<link rel="icon" href="logo1.png" />
-<meta name="theme-color" content="#0D0D0D" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiderSkill — Streamer FR</title>
+    <link rel="icon" href="logo1.png" />
+    <meta name="theme-color" content="#0D0D0D" />
 
-<style>
-:root{
-  --bg:#0f1014; --panel:#161616; --panel2:#1c1c1c; --line:#242424;
-  --text:#EDEDED; --muted:#9aa0a6; --ok:#22c55e; --ko:#ef4444;
-  --twitch:#9146FF; --kick:#53FC18;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  min-height:100vh;color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-  background:
-    radial-gradient(ellipse at 50% 15%,
-      rgba(255,255,255,.10) 0%,
-      rgba(255,255,255,.05) 30%,
-      rgba(0,0,0,.35) 65%,
-      rgba(0,0,0,.60) 100%),
-    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat fixed,
-    var(--bg);
-}
-a{color:inherit;text-decoration:none}
-.container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
-.section{padding:26px 0}
-.muted{color:var(--muted)}
+    <style>
+        :root {
+            --bg: #0f1014;
+            --panel: #161616;
+            --panel2: #1c1c1c;
+            --line: #242424;
+            --text: #EDEDED;
+            --muted: #9aa0a6;
+            --ok: #22c55e;
+            --ko: #ef4444;
+            --twitch: #9146FF;
+            --kick: #53FC18;
+        }
 
-/* TOPBAR */
-.topbar{position:sticky;top:0;z-index:1000;background:rgba(13,13,13,.86);
-  backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
-.brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-.brand-avatar{width:28px;height:28px;border-radius:6px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
-#brandText{font-weight:900}
-.status-wrap{display:inline-flex;align-items:center;gap:8px;margin-left:6px}
-#statusDot{width:12px;height:12px;border-radius:50%;background:var(--ko);
-  box-shadow:0 0 0 2px rgba(0,0,0,.45),0 0 10px rgba(239,68,68,.35)}
-#statusLabel{font-weight:900;letter-spacing:.5px;color:var(--ko)}
-.links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{padding:10px 14px;background:rgba(26,26,26,.92);border:1px solid #2a2a2a;border-radius:14px;
-  font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s}
-.btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
 
-/* PANELS */
-.hero{display:grid;gap:18px;padding:26px 0}
-.card{background:linear-gradient(180deg, rgba(22,22,22,.94), rgba(22,22,22,.90));
-  border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
-.title{margin:0 0 6px 0;font-size:2.4rem;line-height:1.2;font-weight:900}
-.subtitle{margin:0;color:var(--muted);font-size:1.1rem}
+        body {
+            min-height: 100vh;
+            color: var(--text);
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+            background: 
+                radial-gradient(ellipse at 50% 15%, 
+                    rgba(255,255,255,0.10) 0%, 
+                    rgba(255,255,255,0.05) 30%, 
+                    rgba(0,0,0,0.35) 65%, 
+                    rgba(0,0,0,0.60) 100%),
+                url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat fixed,
+                var(--bg);
+        }
 
-/* LIVE INTEGRATION */
-.panel{background:linear-gradient(180deg, rgba(24,24,24,.94), rgba(24,24,24,.90));
-  border:1px solid #1f1f1f;border-radius:22px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.38)}
-.live-wrap{display:grid;grid-template-columns:2fr 1fr;gap:14px}
-.player,.chat{height:540px;border-radius:16px;border:1px solid #1f1f1f;background:#0b0b0b}
-@media (max-width:900px){ .live-wrap{grid-template-columns:1fr}.player,.chat{height:420px} }
+        a { color: inherit; text-decoration: none; }
+        .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+        .section { padding: 26px 0; }
+        .muted { color: var(--muted); }
 
-/* AGENDA */
-.agenda-list{display:grid;gap:12px}
-.ag-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#131313;border:1px solid #222;border-radius:14px;padding:12px 14px}
-.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 12px;font-weight:900}
-.badge.live{background:#05260f;color:var(--ok);border:1px solid #135f2e}
+        /* --- TOPBAR --- */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(13, 13, 13, 0.86);
+            backdrop-filter: saturate(160%) blur(8px);
+            border-bottom: 1px solid #1f1f1f;
+        }
 
-/* RADIO COMPLEX */
-.radio-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:15px}
-.radio-btn{padding:10px 14px;border-radius:12px;border:1px solid #2a2a2a;background:#1b1b1b;font-weight:900;cursor:pointer}
-audio{width:100%;margin-top:15px;filter:invert(100%) opacity(0.8)}
+        .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+        .brand { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+        /* Correction Logo */
+        .brand-avatar { width: 28px; height: 28px; border-radius: 6px; box-shadow: 0 0 0 2px rgba(0,0,0,0.35); }
+        #brandText { font-weight: 900; }
 
-/* GRID SYSTEMS */
-.vod-grid, .tiktok-grid, .youtube-grid {
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:15px
-}
-.card-item{background:#111;border:1px solid #1f1f1f;border-radius:14px;overflow:hidden;transition:0.2s}
-.card-item:hover{transform:scale(1.02);border-color:var(--twitch)}
+        .status-wrap { display: inline-flex; align-items: center; gap: 8px; margin-left: 6px; }
+        #statusDot {
+            width: 12px; height: 12px; border-radius: 50%; background: var(--ko);
+            box-shadow: 0 0 0 2px rgba(0,0,0,0.45), 0 0 10px rgba(239,68,68,0.35);
+        }
+        #statusLabel { font-weight: 900; letter-spacing: 0.5px; color: var(--ko); }
 
-/* FAB */
-.fab-clips{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
-  background:linear-gradient(135deg,#9146FF 0%,#53FC18 100%);color:#0D0D0D;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-</style>
+        .links { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+        .btn {
+            padding: 10px 14px; background: rgba(26,26,26,0.92); border: 1px solid #2a2a2a; border-radius: 14px;
+            font-weight: 800; display: inline-flex; align-items: center; gap: 8px;
+            transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s;
+        }
+        .btn:hover { transform: translateY(-1px); background: #202020; border-color: #3a3a3a; box-shadow: 0 8px 22px rgba(0,0,0,0.28); }
 
-<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+        /* --- HERO / CARDS --- */
+        .hero { display: grid; gap: 18px; padding: 26px 0; }
+        .card {
+            background: linear-gradient(180deg, rgba(22, 22, 22, 0.94), rgba(22, 22, 22, 0.90));
+            border: 1px solid #1f1f1f; border-radius: 22px; padding: 22px; box-shadow: 0 12px 30px rgba(0,0,0,0.38);
+        }
+        .title { margin: 0 0 6px 0; font-size: 2.4rem; line-height: 1.2; font-weight: 900; }
+        .subtitle { margin: 0; color: var(--muted); font-size: 1.1rem; }
+
+        /* --- LIVE --- */
+        .panel {
+            background: linear-gradient(180deg, rgba(24, 24, 24, 0.94), rgba(24, 24, 24, 0.90));
+            border: 1px solid #1f1f1f; border-radius: 22px; padding: 22px; box-shadow: 0 12px 30px rgba(0,0,0,0.38);
+        }
+        .live-wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; }
+        .player, .chat { height: 540px; border-radius: 16px; border: 1px solid #1f1f1f; background: #0b0b0b; }
+        @media (max-width: 900px) { .live-wrap { grid-template-columns: 1fr; } .player, .chat { height: 420px; } }
+
+        /* --- AGENDA --- */
+        .agenda-list { display: grid; gap: 12px; }
+        .ag-item {
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+            background: #131313; border: 1px solid #222; border-radius: 14px; padding: 12px 14px;
+        }
+        .ag-left { display: flex; flex-direction: column; }
+        .ag-title { margin: 0; font-weight: 900; }
+        .ag-meta { color: var(--muted); font-size: 0.95rem; }
+
+        .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 7px 12px; font-weight: 900; letter-spacing: 0.3px; }
+        .badge.live { background: #05260f; color: var(--ok); border: 1px solid #135f2e; }
+        .badge.soon { background: #1d1b09; color: #facc15; border: 1px solid #8a6d0a; }
+        .badge.off { background: #2a0b0b; color: var(--ko); border: 1px solid #7a2020; }
+
+        /* --- VOD / YT / TIKTOK GRIDS --- */
+        .grid-auto { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+        .card-media { background: #111; border: 1px solid #1f1f1f; border-radius: 14px; overflow: hidden; transition: 0.2s; }
+        .card-media:hover { transform: translateY(-3px); border-color: var(--twitch); }
+        .media-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #000; }
+        .media-body { padding: 12px; }
+        .media-title { font-size: 14px; font-weight: 700; margin: 0; height: 40px; overflow: hidden; }
+
+        /* --- RADIO --- */
+        .radio-controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 15px; }
+        .radio-btn { padding: 10px 16px; background: #1b1b1b; border: 1px solid #2a2a2a; border-radius: 12px; font-weight: 900; cursor: pointer; color: white; }
+        .radio-btn:hover { background: #252525; border-color: #444; }
+
+        /* --- FAB --- */
+        .fab-clips {
+            position: fixed; right: 18px; bottom: 18px; z-index: 9999; display: inline-flex; align-items: center; gap: 10px;
+            padding: 12px 16px; border-radius: 999px; background: linear-gradient(135deg, #9146FF 0%, #53FC18 100%);
+            color: #0D0D0D; font-weight: 900; text-decoration: none; box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        }
+
+        footer { opacity: 0.9; padding: 40px 0; text-align: center; color: var(--muted); font-weight: 600; }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK85CR5F7Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DK85CR5F7Z');
+    </script>
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 </head>
+
 <body>
+    <div class="topbar">
+        <div class="nav container">
+            <a class="brand" href="index.html">
+                <img class="brand-avatar" src="logo1.png" alt="Logo" />
+                <span id="brandText">RiderSkill</span>
+                <span class="status-wrap">
+                    <span id="statusDot"></span>
+                    <span id="statusLabel">OFF</span>
+                </span>
+            </a>
+            <div class="links">
+                <a class="btn" href="index.html">Live</a>
+                <a class="btn" href="clips.html">Clips</a>
+                <a class="btn" href="alaune.html">À la une</a>
+                <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank">Twitch</a>
+                <a class="btn" href="https://kick.com/riderskill" target="_blank">Kick</a>
+                <a class="btn" href="https://discord.gg/nbAZ28Z6jH" target="_blank">Discord</a>
+            </div>
+        </div>
+    </div>
 
-<div class="topbar">
-  <div class="nav container">
-    <a class="brand" href="index.html">
-      <img class="brand-avatar" src="logo1.png" alt="RiderSkill">
-      <span id="brandText">RiderSkill</span>
-      <span class="status-wrap">
-        <span id="statusDot"></span>
-        <span id="statusLabel">OFF</span>
-      </span>
+    <header class="hero container">
+        <div class="card">
+            <h1 class="title">Le show. Le game. <span style="color:var(--twitch)">La musique.</span></h1>
+            <p class="subtitle">Streamer FR — i5-14600KF @ 5.5 GHz | RTX 5070 Ti</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <div class="panel">
+                <div class="live-wrap">
+                    <div id="twitch-player" class="player"></div>
+                    <iframe class="chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <h2 style="margin:0">📻 Radio RiderSkill</h2>
+                <p id="radioInfo" class="muted">Chargement du flux Archive.org...</p>
+                <div class="radio-controls">
+                    <button class="radio-btn" onclick="radioPrev()">⏮</button>
+                    <button class="radio-btn" id="playBtn" onclick="radioToggle()">▶ Jouer</button>
+                    <button class="radio-btn" onclick="radioNext()">⏭</button>
+                    <audio id="audioPlayer" onended="radioNext()"></audio>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📺 Dernières Vidéos YouTube</h2>
+            <div id="youtubeGrid" class="grid-auto"></div>
+        </section>
+
+        <section class="section">
+            <h2>📱 TikTok Highlights</h2>
+            <div id="tiktokGrid" class="grid-auto"></div>
+        </section>
+
+        <section class="section">
+            <h2>🎬 VOD Twitch</h2>
+            <div id="vodGrid" class="grid-auto"></div>
+        </section>
+    </div>
+
+    <a class="fab-clips" href="https://www.twitch.tv/riderskill/videos?filter=clips" target="_blank">
+        <span>🎬</span> CLIPS !
     </a>
-    <div class="links">
-      <a class="btn" href="index.html">Live</a>
-      <a class="btn" href="clips.html">Clips</a>
-      <a class="btn" href="alaune.html">À la une</a>
-      <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank">Twitch</a>
-      <a class="btn" href="https://kick.com/riderskill" target="_blank">Kick</a>
-      <a class="btn" href="https://discord.gg/nbAZ28Z6jH" target="_blank">Discord</a>
-    </div>
-  </div>
-</div>
 
-<header class="hero container">
-  <div class="card">
-    <h1 class="title">Le show. Le game. <span style="color:var(--twitch)">La musique.</span></h1>
-    <p class="subtitle">Streamer FR — Rust • GTA • Sea of Thieves — i5-14600KF @ 5.5 GHz</p>
-  </div>
-</header>
+    <footer>
+        © 2026 RiderSkill — RivaTuner Stealth Mode Active
+    </footer>
 
-<section class="section container" id="live">
-  <div class="panel">
-    <div class="live-wrap">
-      <div id="twitch-player" class="player"></div>
-      <iframe id="twitch-chat" class="chat" src="https://www.twitch.tv/embed/riderskill/chat?parent=riderskill.github.io" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
+    <script>
+        const bust = Date.now();
+        
+        // --- LIVE STATUS ---
+        const player = new Twitch.Player("twitch-player", { channel: "riderskill", width: "100%", height: "100%", parent: ["riderskill.github.io"] });
+        player.addEventListener(Twitch.Player.ONLINE, () => {
+            document.getElementById('statusDot').style.background = 'var(--ok)';
+            document.getElementById('statusLabel').textContent = 'LIVE';
+            document.getElementById('statusLabel').style.color = 'var(--ok)';
+        });
 
-<section class="section container" id="radio">
-  <div class="panel">
-    <h2>📻 Radio RiderSkill</h2>
-    <p id="nowPlaying" class="muted">Sélectionne un morceau...</p>
-    <div class="radio-wrap">
-      <button class="radio-btn" onclick="prevTrack()">⏮️</button>
-      <button class="radio-btn" id="playBtn" onclick="togglePlay()">▶️ Jouer</button>
-      <button class="radio-btn" onclick="nextTrack()">⏭️</button>
-      <button class="radio-btn" id="shuffleBtn" onclick="toggleShuffle()">🔀 Shuffle: OFF</button>
-    </div>
-    <audio id="mainAudio" controls></audio>
-  </div>
-</section>
+        // --- RADIO LOGIC ---
+        const ARCHIVE_ID = '2h-58-cowboys-de-rust_20250918';
+        let playlist = [];
+        let radioIdx = 0;
+        const audio = document.getElementById('audioPlayer');
 
-<section class="section container" id="vod">
-  <div class="panel">
-    <h2>🎬 Dernières VOD</h2>
-    <div id="vodGrid" class="vod-grid"></div>
-  </div>
-</section>
+        fetch(`https://archive.org/metadata/${ARCHIVE_ID}`)
+            .then(r => r.json()).then(data => {
+                playlist = data.files.filter(f => f.name.endsWith('.mp3'));
+                if(playlist.length) loadTrack(0);
+            });
 
-<section class="section container" id="tiktok">
-  <div class="panel">
-    <h2>📱 TikTok Highlights</h2>
-    <div id="tiktokGrid" class="tiktok-grid"></div>
-  </div>
-</section>
+        function loadTrack(i) {
+            radioIdx = i;
+            const track = playlist[i];
+            audio.src = `https://archive.org/download/${ARCHIVE_ID}/${encodeURIComponent(track.name)}`;
+            document.getElementById('radioInfo').textContent = "En cours : " + track.name;
+        }
 
-<footer class="container">© 2026 RiderSkill — PC Master Race</footer>
+        function radioToggle() {
+            if(audio.paused) { audio.play(); document.getElementById('playBtn').textContent = "⏸ Pause"; }
+            else { audio.pause(); document.getElementById('playBtn').textContent = "▶ Jouer"; }
+        }
 
-<script>
-const bust = Date.now();
-let playlist = [];
-let currentIndex = 0;
-let isShuffle = false;
+        function radioNext() { radioIdx = (radioIdx + 1) % playlist.length; loadTrack(radioIdx); audio.play(); }
+        function radioPrev() { radioIdx = (radioIdx - 1 + playlist.length) % playlist.length; loadTrack(radioIdx); audio.play(); }
 
-/* LIVE STATUS */
-function setStatus(state){
-  const dot=document.getElementById('statusDot');
-  const label=document.getElementById('statusLabel');
-  if(state==='on'){
-    dot.style.background='var(--ok)'; label.textContent='LIVE'; label.style.color='var(--ok)';
-  } else {
-    dot.style.background='var(--ko)'; label.textContent='OFF'; label.style.color='var(--ko)';
-  }
-}
+        // --- CONTENT FETCHING ---
+        // VOD
+        fetch('vod.json?v=' + bust).then(r => r.json()).then(data => {
+            document.getElementById('vodGrid').innerHTML = data.slice(0, 4).map(v => `
+                <div class="card-media">
+                    <iframe src="https://player.twitch.tv/?video=${v.url.split('/').pop()}&parent=riderskill.github.io&autoplay=false" width="100%" height="180"></iframe>
+                </div>
+            `).join('');
+        });
 
-const player = new Twitch.Player("twitch-player", {channel:"riderskill", width:"100%", height:"100%", parent:["riderskill.github.io"]});
-player.addEventListener(Twitch.Player.ONLINE, ()=>setStatus('on'));
-player.addEventListener(Twitch.Player.OFFLINE, ()=>setStatus('off'));
+        // TIKTOK
+        fetch('clips.json?v=' + bust).then(r => r.json()).then(data => {
+            document.getElementById('tiktokGrid').innerHTML = data.slice(0, 4).map(t => `
+                <a href="${t.url}" target="_blank" class="card-media">
+                    <img src="${t.cover}" class="media-thumb">
+                    <div class="media-body"><div class="media-title">${t.title}</div></div>
+                </a>
+            `).join('');
+        });
 
-/* RADIO ENGINE */
-const ARCHIVE_ID = '2h-58-cowboys-de-rust_20250918';
-const audio = document.getElementById('mainAudio');
-
-fetch(`https://archive.org/metadata/${ARCHIVE_ID}`)
-  .then(r=>r.json()).then(data=>{
-    playlist = data.files.filter(f => f.name.endsWith('.mp3'));
-    if(playlist.length) loadTrack(0);
-  });
-
-function loadTrack(index){
-  currentIndex = index;
-  const track = playlist[index];
-  audio.src = `https://archive.org/download/${ARCHIVE_ID}/${encodeURIComponent(track.name)}`;
-  document.getElementById('nowPlaying').textContent = track.name;
-}
-
-function togglePlay(){
-  if(audio.paused) { audio.play(); document.getElementById('playBtn').textContent = "⏸️ Pause"; }
-  else { audio.pause(); document.getElementById('playBtn').textContent = "▶️ Jouer"; }
-}
-
-function nextTrack(){
-  let next = isShuffle ? Math.floor(Math.random()*playlist.length) : (currentIndex + 1) % playlist.length;
-  loadTrack(next); audio.play();
-}
-
-function prevTrack(){
-  let prev = (currentIndex - 1 + playlist.length) % playlist.length;
-  loadTrack(prev); audio.play();
-}
-
-function toggleShuffle(){
-  isShuffle = !isShuffle;
-  document.getElementById('shuffleBtn').textContent = `🔀 Shuffle: ${isShuffle?'ON':'OFF'}`;
-}
-
-/* CONTENT LOADERS */
-fetch('vod.json?v='+bust).then(r=>r.json()).then(data=>{
-  document.getElementById('vodGrid').innerHTML = data.slice(0,4).map(v=>`
-    <div class="card-item"><iframe src="https://player.twitch.tv/?video=${v.url.split('/').pop()}&parent=riderskill.github.io&autoplay=false" width="100%" height="200"></iframe></div>
-  `).join('');
-});
-
-fetch('clips.json?v='+bust).then(r=>r.json()).then(data=>{
-  document.getElementById('tiktokGrid').innerHTML = data.slice(0,4).map(t=>`
-    <div class="card-item" style="padding:10px;text-align:center">
-      <a href="${t.url}" target="_blank"><img src="${t.cover}" width="100%" style="border-radius:8px"></a>
-      <p style="font-size:12px;margin-top:8px">${t.title}</p>
-    </div>
-  `).join('');
-});
-</script>
+        // YOUTUBE
+        fetch('data/youtube.json?v=' + bust).then(r => r.json()).then(data => {
+            const items = data.items || data;
+            document.getElementById('youtubeGrid').innerHTML = items.slice(0, 4).map(y => `
+                <a href="${y.url}" target="_blank" class="card-media">
+                    <img src="${y.cover}" class="media-thumb">
+                    <div class="media-body"><div class="media-title">${y.title}</div></div>
+                </a>
+            `).join('');
+        });
+    </script>
 </body>
 </html>
