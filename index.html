@@ -3,258 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RiderSkill — Hub Production Officiel</title>
+    <title>RiderSkill — Hub Production</title>
     <link rel="icon" href="logo1.png">
-    
     <style>
-        /* --- CONFIGURATION TECHNIQUE --- */
         :root {
-            --bg: #050505;
-            --panel: rgba(15, 15, 15, 0.98);
+            --bg: #0a0a0b;
+            --panel: rgba(20, 20, 22, 0.95);
             --accent: #9146FF;
-            --kick: #53FC18;
-            --live: #ff0000;
+            --live-green: #53FC18;
+            --off-red: #ff4444;
             --text: #ffffff;
-            --muted: #808080;
-            --border: rgba(255, 255, 255, 0.08);
-            --glow: 0 0 20px rgba(145, 70, 255, 0.3);
+            --border: rgba(255, 255, 255, 0.1);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(145, 70, 255, 0.15) 0%, transparent 50%),
-                linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
-                url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1920');
-            background-size: cover; background-attachment: fixed;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--text); overflow-x: hidden; }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 30px; }
-
-        /* --- HEADER & LIVE ENGINE --- */
+        /* --- HEADER & STATUS --- */
         header { 
             background: rgba(10, 10, 10, 0.98); border-bottom: 1px solid var(--border); 
-            position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(20px);
+            position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(15px);
+            padding: 15px 0;
         }
-        .nav { display: flex; align-items: center; justify-content: space-between; height: 80px; }
-        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
-        .brand img { width: 42px; border-radius: 12px; border: 2px solid var(--accent); }
-        .brand h1 { font-weight: 900; font-size: 26px; letter-spacing: -1px; }
+        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        
+        .brand-block { display: flex; align-items: center; gap: 15px; }
+        .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: white; }
+        .brand img { width: 40px; border-radius: 10px; }
+        .brand span { font-weight: 900; font-size: 24px; letter-spacing: -1px; }
 
-        .live-status {
-            display: flex; align-items: center; gap: 10px;
-            background: #000; padding: 8px 18px; border-radius: 50px;
+        /* TON BOUTON ON/OFF ROUGE/VERT */
+        .status-indicator {
+            display: flex; align-items: center; gap: 8px;
+            background: #000; padding: 6px 14px; border-radius: 20px;
             border: 1px solid var(--border); font-size: 11px; font-weight: 900;
         }
-        .pulse { width: 10px; height: 10px; border-radius: 50%; background: #333; }
-        .pulse.active { background: var(--live); box-shadow: 0 0 15px var(--live); animation: blink 1s infinite; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--off-red); transition: 0.3s; }
+        .status-text { color: var(--off-red); transition: 0.3s; }
 
-        .menu { display: flex; gap: 10px; }
-        .menu a {
-            background: rgba(255,255,255,0.03); padding: 10px 20px; border-radius: 12px;
-            font-size: 13px; font-weight: 800; text-decoration: none; color: white;
-            border: 1px solid var(--border);
+        /* Classe active quand tu es en stream */
+        .is-live .dot { background: var(--live-green); box-shadow: 0 0 10px var(--live-green); }
+        .is-live .status-text { color: var(--live-green); }
+
+        .menu-links { display: flex; gap: 10px; }
+        .menu-links a { 
+            background: #1a1a1c; border: 1px solid var(--border); padding: 8px 18px; 
+            border-radius: 10px; color: white; text-decoration: none; font-size: 13px; font-weight: 700;
         }
-        .menu a:hover { border-color: var(--accent); transform: translateY(-3px); background: #1a1a1a; }
 
-        /* --- SETUP DATA STRIP --- */
+        /* --- SETUP BANNER --- */
         .setup-strip {
-            background: linear-gradient(90deg, var(--accent), var(--kick));
-            color: #000; text-align: center; padding: 12px; font-weight: 900;
-            font-size: 11px; border-radius: 0 0 25px 25px; text-transform: uppercase;
+            background: linear-gradient(90deg, var(--accent), var(--live-green));
+            color: black; text-align: center; padding: 10px; font-weight: 900;
+            font-size: 12px; margin-bottom: 30px;
         }
 
-        /* --- FILTRES & RECHERCHE --- */
-        .controls { margin: 40px 0; display: flex; gap: 20px; flex-wrap: wrap; }
-        .search-input {
-            flex: 1; background: var(--panel); border: 1px solid var(--border);
-            padding: 18px 30px; border-radius: 50px; color: white; font-weight: 600; font-size: 16px;
-        }
-        .filter-btn {
-            background: var(--panel); border: 1px solid var(--border);
-            padding: 10px 25px; border-radius: 50px; color: white; font-weight: 800; cursor: pointer;
-        }
-        .filter-btn.active { background: var(--accent); border-color: var(--accent); }
-
-        /* --- RADIO INTEGRATION --- */
-        .radio-box {
-            background: var(--panel); border-radius: 30px; border: 1px solid var(--border);
-            padding: 30px; margin-bottom: 50px; text-align: center;
-        }
-
-        /* --- GRID & CARDS (PRODUCTION STYLE) --- */
-        .section-header { font-size: 28px; font-weight: 900; margin: 60px 0 30px; display: flex; align-items: center; gap: 15px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+        /* --- GRID & CARDS --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        .section-title { font-size: 26px; font-weight: 900; margin: 40px 0 20px; display: flex; align-items: center; gap: 12px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
         
         .card { 
-            background: var(--panel); border-radius: 25px; border: 1px solid var(--border); 
-            overflow: hidden; text-decoration: none; color: white; display: flex; flex-direction: column;
+            background: var(--panel); border-radius: 22px; border: 1px solid var(--border); 
+            overflow: hidden; text-decoration: none; color: white; display: block; transition: 0.3s;
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: var(--glow); }
+        .card:hover { transform: translateY(-8px); border-color: var(--accent); }
         .card-img { width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; }
-        .card-info { padding: 22px; }
-        .card-title { font-size: 14px; font-weight: 900; text-transform: uppercase; height: 40px; overflow: hidden; margin-bottom: 12px; }
-        .card-footer { 
-            font-size: 10px; color: var(--muted); font-weight: 800; border-top: 1px solid rgba(255,255,255,0.05); 
-            padding-top: 15px; display: flex; align-items: center; gap: 8px;
-        }
+        .card-body { padding: 20px; }
+        .card-title { font-size: 14px; font-weight: 900; text-transform: uppercase; margin-bottom: 12px; height: 40px; overflow: hidden; }
+        .card-footer { font-size: 10px; color: #777; font-weight: 800; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 12px; }
 
-        footer { text-align: center; padding: 100px 0; color: var(--muted); font-weight: 900; border-top: 1px solid var(--border); }
+        #player-twitch { width: 100%; aspect-ratio: 16/9; border-radius: 25px; overflow: hidden; background: #000; margin-bottom: 30px; border: 1px solid var(--border); }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="container nav">
-        <a href="index.html" class="brand">
-            <img src="logo1.png" alt="R">
-            <h1>RIDERSKILL</h1>
-        </a>
-        <div class="live-status">
-            <div id="status-dot" class="pulse"></div>
-            <span id="status-text">OFFLINE</span>
+    <div class="nav">
+        <div class="brand-block">
+            <a href="index.html" class="brand">
+                <img src="logo1.png" alt="R">
+                <span>RIDERSKILL</span>
+            </a>
+            <div class="status-indicator" id="live-indicator">
+                <div class="dot"></div>
+                <span class="status-text" id="live-label">OFF</span>
+            </div>
         </div>
-        <div class="menu">
+        <div class="menu-links">
             <a href="index.html">LIVE</a>
             <a href="clips.html">CLIPS</a>
             <a href="alaune.html">À LA UNE</a>
-            <a href="https://twitch.tv/riderskill" target="_blank">TWITCH</a>
             <a href="https://discord.gg/nbAZ28Z6jH" target="_blank">DISCORD</a>
         </div>
     </div>
 </header>
 
-<div class="container">
-    <div class="setup-strip">
-        i5-14600KF @ 5.5 GHz | RTX 5070 Ti | 32 Go DDR5 | Stealth Mode Active | Zoom 40%
-    </div>
-
-    <div id="player" style="width:100%; aspect-ratio:16/9; border-radius:30px; overflow:hidden; background:#000; margin: 40px 0; border: 1px solid var(--border);"></div>
-
-    <section class="radio-box">
-        <h3 style="color:var(--accent); font-weight:900; margin-bottom:15px;">📻 RADIO ARCHIVES RIDERSKILL</h3>
-        <p id="track-name" style="font-weight:700; color:var(--muted); margin-bottom:20px;">Chargement playlist...</p>
-        <div style="display:flex; justify-content:center; gap:20px;">
-            <button onclick="radio.prev()" class="filter-btn">⏮</button>
-            <button id="p-btn" onclick="radio.toggle()" class="filter-btn" style="background:var(--accent)">▶</button>
-            <button onclick="radio.next()" class="filter-btn">⏭</button>
-        </div>
-        <audio id="audio"></audio>
-    </section>
-
-    <div class="controls">
-        <input type="text" id="search" class="search-input" placeholder="Rechercher une vidéo ou un titre..." onkeyup="engine.filter()">
-        <button class="filter-btn active" onclick="engine.setCat('all')">TOUT</button>
-        <button class="filter-btn" onclick="engine.setCat('yt')">YOUTUBE</button>
-        <button class="filter-btn" onclick="engine.setCat('tk')">TIKTOK</button>
-        <button class="filter-btn" onclick="engine.setCat('vd')">VOD</button>
-    </div>
-
-    <h2 class="section-header">📺 YouTube Production</h2>
-    <div id="yt-grid" class="grid"></div>
-
-    <h2 class="section-header">📱 TikTok Highlights</h2>
-    <div id="tk-grid" class="grid"></div>
-
-    <h2 class="section-header">🎬 VOD Twitch</h2>
-    <div id="vd-grid" class="grid"></div>
+<div class="setup-strip">
+    i5-14600KF @ 5.5 GHZ | RTX 5070 TI | 32 GO DDR5 | RIVATUNER STEALTH MODE
 </div>
 
-<footer>© 2026 RIDERSKILL PRODUCTION — RIVATUNER STEALTH MODE ACTIVE</footer>
+<div class="container">
+    <div id="player-twitch"></div>
+
+    <h2 class="section-title">📺 YouTube Production</h2>
+    <div id="yt-grid" class="grid"></div>
+
+    <h2 class="section-header" style="margin-top:50px; font-size:26px; font-weight:900;">📱 TikTok Highlights</h2>
+    <div id="tk-grid" class="grid" style="margin-top:20px;"></div>
+</div>
 
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 <script>
-    const BUST = Date.now();
-
-    // 1. LIVE STATUS ENGINE
-    const twitch = new Twitch.Player("player", { channel: "riderskill", width: "100%", height: "100%", parent: ["riderskill.github.io"] });
-    
-    twitch.addEventListener(Twitch.Player.ONLINE, () => {
-        document.getElementById('status-dot').classList.add('active');
-        document.getElementById('status-text').textContent = "LIVE";
-        document.getElementById('status-text').style.color = "#ff0000";
+    // 1. GESTION DU LIVE & STATUS ROUGE/VERT
+    const player = new Twitch.Player("player-twitch", {
+        channel: "riderskill",
+        width: "100%", height: "100%",
+        parent: ["riderskill.github.io"]
     });
 
-    // 2. RADIO ENGINE (ARCHIVE.ORG)
-    const radio = {
-        tracks: [], cur: 0, el: document.getElementById('audio'),
-        async init() {
-            const r = await fetch('https://archive.org/metadata/2h-58-cowboys-de-rust_20250918');
-            const d = await r.json();
-            this.tracks = d.files.filter(f => f.name.endsWith('.mp3'));
-            this.set(0);
-        },
-        set(i) {
-            this.cur = i; const s = this.tracks[i];
-            this.el.src = `https://archive.org/download/2h-58-cowboys-de-rust_20250918/${encodeURIComponent(s.name)}`;
-            document.getElementById('track-name').textContent = s.name.replace('.mp3', '');
-        },
-        toggle() {
-            if(this.el.paused) { this.el.play(); document.getElementById('p-btn').textContent = "⏸"; }
-            else { this.el.pause(); document.getElementById('p-btn').textContent = "▶"; }
-        },
-        next() { this.cur = (this.cur + 1) % this.tracks.length; this.set(this.cur); this.el.play(); },
-        prev() { this.cur = (this.cur - 1 + this.tracks.length) % this.tracks.length; this.set(this.cur); this.el.play(); }
-    };
-    radio.init();
+    player.addEventListener(Twitch.Player.ONLINE, () => {
+        document.getElementById('live-indicator').classList.add('is-live');
+        document.getElementById('live-label').textContent = "ON";
+    });
 
-    // 3. GLOBAL CONTENT ENGINE (SEARCH, FILTER, FETCH)
-    const engine = {
-        cat: 'all',
-        async load() {
-            try {
-                const [ry, rt, rv] = await Promise.all([
-                    fetch(`data/youtube.json?v=${BUST}`).then(r => r.json()),
-                    fetch(`clips.json?v=${BUST}`).then(r => r.json()),
-                    fetch(`vod.json?v=${BUST}`).then(r => r.json())
-                ]);
+    player.addEventListener(Twitch.Player.OFFLINE, () => {
+        document.getElementById('live-indicator').classList.remove('is-live');
+        document.getElementById('live-label').textContent = "OFF";
+    });
 
-                this.render('yt-grid', ry.items || ry, "ARCHIVES YOUTUBE");
-                this.render('tk-grid', rt, "TIKTOK HIGHLIGHT");
-                this.renderVOD(rv);
-            } catch(e) { console.error("Liaison JSON échouée."); }
-        },
-        render(id, data, label) {
-            document.getElementById(id).innerHTML = data.slice(0, 8).map(v => `
-                <a href="${v.url}" target="_blank" class="card" data-title="${v.title.toLowerCase()}">
-                    <div class="card-img" style="background-image:url('${v.cover}')"></div>
-                    <div class="card-info">
-                        <div class="card-title">${v.title}</div>
-                        <div class="card-footer">🔊 RIDERSKILL PRODUCTION • ${label} 📀</div>
+    // 2. CHARGEMENT COMPLET DES DONNÉES (YouTube & TikTok)
+    const v = Date.now();
+
+    // YouTube
+    fetch('data/youtube.json?v=' + v)
+        .then(r => r.json())
+        .then(data => {
+            const items = data.items || data;
+            document.getElementById('yt-grid').innerHTML = items.slice(0, 8).map(item => `
+                <a href="${item.url}" target="_blank" class="card">
+                    <div class="card-img" style="background-image: url('${item.cover}')"></div>
+                    <div class="card-body">
+                        <div class="card-title">${item.title}</div>
+                        <div class="card-footer">🔊 RIDERSKILL PRODUCTION • ARCHIVES TOTALES 📀</div>
                     </div>
                 </a>
             `).join('');
-        },
-        renderVOD(data) {
-            document.getElementById('vd-grid').innerHTML = data.slice(0, 4).map(v => {
-                const id = v.url.split('/').pop();
-                return `
-                    <div class="card">
-                        <iframe src="https://player.twitch.tv/?video=${id}&parent=riderskill.github.io&autoplay=false" width="100%" height="200"></iframe>
-                        <div class="card-info"><div class="card-title">REPLAY PRODUCTION</div></div>
+        });
+
+    // TikTok
+    fetch('clips.json?v=' + v)
+        .then(r => r.json())
+        .then(data => {
+            document.getElementById('tk-grid').innerHTML = data.slice(0, 8).map(item => `
+                <a href="${item.url}" target="_blank" class="card">
+                    <div class="card-img" style="background-image: url('${item.cover}')"></div>
+                    <div class="card-body">
+                        <div class="card-title">${item.title}</div>
+                        <div class="card-footer">📱 TIKTOK HIGHLIGHT • PRODUCTION 💿</div>
                     </div>
-                `;
-            }).join('');
-        },
-        filter() {
-            const q = document.getElementById('search').value.toLowerCase();
-            document.querySelectorAll('.card').forEach(c => {
-                const t = c.dataset.title || "";
-                c.style.display = t.includes(q) ? "flex" : "none";
-            });
-        },
-        setCat(c) {
-            this.cat = c;
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            // Logique de masquage des sections selon la catégorie
-        }
-    };
-    engine.load();
+                </a>
+            `).join('');
+        });
 </script>
 </body>
 </html>
