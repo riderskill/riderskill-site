@@ -3,7 +3,7 @@ name: Update Twitch clips
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 6 * * *"  # quotidien ~06:17 UTC
+    - cron: " 0 * * *"  # quotidien ~06:17 UTC
 
 permissions:
   contents: write
