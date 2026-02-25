@@ -3,162 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RiderSkill — Production</title>
+    <title>RiderSkill — Site Officiel</title>
     <link rel="icon" href="logo1.png">
     <style>
         :root {
             --bg: #0a0a0b;
-            --panel: rgba(20, 20, 22, 0.95);
+            --panel: #111112;
             --accent: #9146FF;
-            --kick-green: #53FC18;
-            --off-red: #ff4444;
+            --kick: #53FC18;
             --text: #ffffff;
             --border: rgba(255, 255, 255, 0.1);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-        body { background: var(--bg); color: var(--text); overflow-x: hidden; }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
 
-        /* --- HEADER --- */
+        /* --- HEADER (CONFORME À TON IMAGE) --- */
         header { 
-            background: rgba(10, 10, 10, 0.98); border-bottom: 1px solid var(--border); 
-            position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(15px);
-            padding: 12px 0;
+            background: #000; padding: 15px 0; border-bottom: 1px solid var(--border);
+            position: sticky; top: 0; z-index: 9999;
         }
         .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
         
-        .brand-block { display: flex; align-items: center; gap: 15px; }
-        .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: white; }
-        .brand img { width: 40px; border-radius: 10px; }
-        .brand span { font-weight: 900; font-size: 24px; letter-spacing: -1px; }
+        .brand-area { display: flex; align-items: center; gap: 10px; }
+        .twitch-logo { background: #fff; border-radius: 4px; padding: 4px; display: flex; align-items: center; }
+        .twitch-logo img { width: 24px; height: 24px; }
+        .brand-name { font-weight: 900; font-size: 20px; text-decoration: none; color: white; }
+        
+        /* Bouton ON/OFF rouge/vert */
+        .status-dot { width: 12px; height: 12px; border-radius: 50%; background: #ff4444; margin-left: 5px; box-shadow: 0 0 10px rgba(255,68,68,0.5); }
+        .is-live .status-dot { background: #ff0000; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
 
-        /* INDICATEUR ON/OFF (DYNAMIQUE) */
-        .status-indicator {
-            display: flex; align-items: center; gap: 8px;
-            background: #000; padding: 6px 14px; border-radius: 20px;
-            border: 1px solid var(--border); font-size: 11px; font-weight: 900;
+        /* Boutons de navigation */
+        .menu-links { display: flex; gap: 8px; align-items: center; }
+        .btn { 
+            background: #1a1a1c; border: 1px solid #2a2a2a; color: white; 
+            padding: 8px 16px; border-radius: 12px; font-weight: 800; font-size: 13px;
+            text-decoration: none; display: flex; align-items: center; gap: 8px; transition: 0.2s;
         }
-        .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--off-red); transition: 0.3s; }
-        .status-text { color: var(--off-red); transition: 0.3s; }
-
-        /* Mode LIVE activé via JavaScript */
-        .is-live .dot { background: var(--kick-green); box-shadow: 0 0 10px var(--kick-green); }
-        .is-live .status-text { color: var(--kick-green); }
-
-        /* MENU (BOUTON CLIP SUPPRIMÉ) */
-        .menu-links { display: flex; gap: 8px; }
-        .menu-links a { 
-            background: #1a1a1c; border: 1px solid var(--border); padding: 8px 15px; 
-            border-radius: 10px; color: white; text-decoration: none; font-size: 12px; font-weight: 800;
-            transition: 0.2s;
-        }
-        .menu-links a:hover { border-color: var(--accent); background: #222; transform: translateY(-2px); }
-        .btn-kick:hover { border-color: var(--kick-green) !important; color: var(--kick-green); }
+        .btn:hover { background: #222; border-color: #444; transform: translateY(-2px); }
+        .btn.active { background: #252528; border-color: #444; }
+        .btn img { width: 16px; height: 16px; }
 
         /* --- SETUP STRIP --- */
-        .setup-strip {
-            background: linear-gradient(90deg, var(--accent), var(--kick-green));
-            color: black; text-align: center; padding: 8px; font-weight: 900; font-size: 11px;
+        .setup-banner {
+            background: linear-gradient(90deg, #9146FF, #53FC18);
+            color: #000; text-align: center; padding: 8px; font-weight: 900; font-size: 11px;
         }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
-        #player-twitch { width: 100%; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; background: #000; margin-bottom: 40px; border: 1px solid var(--border); }
-        
-        .section-title { font-size: 24px; font-weight: 900; margin: 40px 0 20px; text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
-        
-        .card { 
-            background: var(--panel); border-radius: 20px; border: 1px solid var(--border); 
-            overflow: hidden; text-decoration: none; color: white; display: block;
-        }
-        .card-img { width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; }
-        .card-body { padding: 18px; }
-        .card-title { font-size: 14px; font-weight: 900; height: 40px; overflow: hidden; margin-bottom: 10px; }
-        .card-footer { font-size: 10px; color: #777; font-weight: 800; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+        #player-twitch { width: 100%; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
     </style>
 </head>
 <body>
 
 <header>
     <div class="nav">
-        <div class="brand-block">
-            <a href="index.html" class="brand">
-                <img src="logo1.png" alt="R">
-                <span>RIDERSKILL</span>
-            </a>
-            <div class="status-indicator" id="live-indicator">
-                <div class="dot"></div>
-                <span class="status-text" id="live-label">OFF</span>
-            </div>
+        <div class="brand-area" id="live-indicator">
+            <div class="twitch-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Twitch_Glitch_Logo_Purple.svg" alt="T"></div>
+            <a href="index.html" class="brand-name">RiderSkill</a>
+            <div class="status-dot"></div>
         </div>
-        
+
         <div class="menu-links">
-            <a href="index.html">LIVE</a>
-            <a href="alaune.html">À LA UNE</a>
-            <a href="https://kick.com/riderskill" target="_blank" class="btn-kick">KICK</a>
-            <a href="https://youtube.com/@riderskill" target="_blank">YOUTUBE</a>
-            <a href="https://discord.gg/nbAZ28Z6jH" target="_blank">DISCORD</a>
+            <a href="index.html" class="btn active">Live</a>
+            <a href="alaune.html" class="btn">À la une</a>
+            <a href="https://twitch.tv/riderskill" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png"> Twitch</a>
+            <a href="https://kick.com/riderskill" target="_blank" class="btn" style="color:#53FC18;"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Kick_logo.svg"> Kick</a>
+            <a href="https://youtube.com/@riderskill" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"> YouTube</a>
+            <a href="https://tiktok.com/@riderskill" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"> TikTok</a>
+            <a href="https://discord.gg/nbAZ28Z6jH" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png"> Discord</a>
         </div>
     </div>
 </header>
 
-<div class="setup-strip">
-    i5-14600KF @ 5.5 GHZ | RTX 5070 TI | 32 GO DDR5 | RIVATUNER STEALTH MODE
+<div class="setup-banner">
+    i5-14600KF @ 5.5 GHZ | RTX 5070 TI | 32 GO DDR5 | STEALTH MODE ACTIVE
 </div>
 
 <div class="container">
     <div id="player-twitch"></div>
-
-    <h2 class="section-title">📺 YouTube Production</h2>
-    <div id="yt-grid" class="grid"></div>
-
-    <h2 class="section-title">📱 TikTok Highlights</h2>
-    <div id="tk-grid" class="grid"></div>
 </div>
 
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 <script>
-    // GESTION DU LIVE (ON/OFF)
     const player = new Twitch.Player("player-twitch", {
         channel: "riderskill", width: "100%", height: "100%", parent: ["riderskill.github.io"]
     });
 
     player.addEventListener(Twitch.Player.ONLINE, () => {
         document.getElementById('live-indicator').classList.add('is-live');
-        document.getElementById('live-label').textContent = "ON";
     });
 
     player.addEventListener(Twitch.Player.OFFLINE, () => {
         document.getElementById('live-indicator').classList.remove('is-live');
-        document.getElementById('live-label').textContent = "OFF";
-    });
-
-    // CHARGEMENT DES JSON (YouTube & TikTok)
-    const v = Date.now();
-    
-    fetch('data/youtube.json?v=' + v).then(r => r.json()).then(data => {
-        const items = data.items || data;
-        document.getElementById('yt-grid').innerHTML = items.slice(0, 8).map(item => `
-            <a href="${item.url}" target="_blank" class="card">
-                <div class="card-img" style="background-image: url('${item.cover}')"></div>
-                <div class="card-body">
-                    <div class="card-title">${item.title}</div>
-                    <div class="card-footer">🔊 RIDERSKILL PRODUCTION • YOUTUBE 📀</div>
-                </div>
-            </a>
-        `).join('');
-    });
-
-    fetch('clips.json?v=' + v).then(r => r.json()).then(data => {
-        document.getElementById('tk-grid').innerHTML = data.slice(0, 8).map(item => `
-            <a href="${item.url}" target="_blank" class="card">
-                <div class="card-img" style="background-image: url('${item.cover}')"></div>
-                <div class="card-body">
-                    <div class="card-title">${item.title}</div>
-                    <div class="card-footer">📱 TIKTOK HIGHLIGHT • PRODUCTION 💿</div>
-                </div>
-            </a>
-        `).join('');
     });
 </script>
 </body>
