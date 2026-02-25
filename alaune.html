@@ -3,78 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RiderSkill — Page À la une</title>
+  <title>À la une — RiderSkill Production</title>
   <link rel="icon" href="logo avecfond.jpg" />
-  <meta name="theme-color" content="#0D0D0D" />
   <style>
-    body{
-      margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-      background:#0f1014;color:#EDEDED
-    }
-    .topbar{position:sticky;top:0;z-index:1000;background:rgba(13,13,13,.86);
-      backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #1f1f1f}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:0 16px}
-    .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-    .brand-avatar{width:28px;height:28px;border-radius:6px}
-    #brandText{font-weight:900}
-    .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-    .btn{padding:10px 14px;background:rgba(26,26,26,.92);border:1px solid #2a2a2a;border-radius:14px;
-      font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:.18s}
-    .btn:hover{transform:translateY(-1px);background:#202020;border-color:#3a3a3a}
-    .section{padding:26px 16px;max-width:1120px;margin:0 auto}
-    .panel{background:#161616;border:1px solid #1f1f1f;border-radius:22px;padding:22px}
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .card{background:#131313;border:1px solid #222;border-radius:16px;padding:18px}
-    .card h3{margin:0 0 8px 0;font-size:1.2rem;font-weight:900}
-    .card a{color:#53FC18;font-weight:700;text-decoration:underline}
-    footer{opacity:.9;padding:28px 0;text-align:center;color:#9aa0a6}
+    body{ margin:0;padding:0;font-family:system-ui,-apple-system,sans-serif; background:#0f1014;color:#EDEDED }
+    .topbar{position:sticky;top:0;z-index:1000;background:rgba(13,13,13,.9); backdrop-filter:blur(8px);border-bottom:1px solid #1f1f1f}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;max-width:1400px;margin:0 auto;padding:0 20px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:white}
+    .brand-avatar{width:32px;height:32px;border-radius:6px}
+    .brand span{font-weight:900; font-size: 22px; letter-spacing: -1px;}
+    .links{display:flex;gap:10px;align-items:center}
+    .btn{padding:10px 16px;background:#1a1a1c;border:1px solid #2a2a2a;border-radius:12px;
+      font-weight:800;text-decoration:none;color:white;font-size:12px;transition:0.2s}
+    .btn:hover{border-color:#9146FF; transform:translateY(-2px)}
+    .section{padding:40px 20px;max-width:1200px;margin:0 auto}
+    .panel{background:#161616;border:1px solid #1f1f1f;border-radius:22px;padding:30px}
+    .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); margin-top:25px}
+    .v-card{background:#131313;border:1px solid #222;border-radius:16px;overflow:hidden;text-decoration:none;color:white;transition:0.3s;display:block}
+    .v-card:hover{border-color:#9146FF;transform:translateY(-5px)}
+    .v-img{width:100%;aspect-ratio:16/9;background-size:cover;background-position:center}
+    .v-info{padding:15px}
+    .v-title{font-weight:900;font-size:14px;height:40px;overflow:hidden}
+    footer{padding:50px;text-align:center;color:#666;font-weight:800;font-size:12px}
   </style>
 </head>
 <body>
-  <!-- ====== TOPBAR ====== -->
   <div class="topbar">
     <div class="nav">
-      <a class="brand" href="/riderskill-site/index.html">
-        <img class="brand-avatar" src="logo avecfond.jpg" alt="Logo RiderSkill">
-        <span id="brandText">RiderSkill</span>
+      <a class="brand" href="index.html">
+        <img class="brand-avatar" src="logo avecfond.jpg" alt="Logo">
+        <span>RIDERSKILL</span>
       </a>
       <div class="links">
-        <a class="btn" href="/riderskill-site/index.html">Live</a>
-        <a class="btn" href="/riderskill-site/clips.html">Clips</a>
-        <a class="btn" href="/riderskill-site/alaune.html">À la une</a>
-        <a class="btn" href="https://www.twitch.tv/riderskill" target="_blank" rel="noopener">Twitch</a>
-        <a class="btn" href="https://kick.com/riderskill" target="_blank" rel="noopener">Kick</a>
-        <a class="btn" href="https://www.youtube.com/@riderskill" target="_blank" rel="noopener">YouTube</a>
-        <a class="btn" href="https://www.tiktok.com/@riderskill_twitch" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn" href="https://x.com/riderskill" target="_blank" rel="noopener">X</a>
-        <a class="btn" href="https://discord.gg/nbAZ28Z6jH" target="_blank" rel="noopener">Discord</a>
+        <a class="btn" href="index.html">LIVE</a>
+        <a class="btn" href="alaune.html" style="border-color:#9146FF">À LA UNE</a>
+        <a class="btn" href="https://kick.com/riderskill" target="_blank">KICK</a>
+        <a class="btn" href="https://youtube.com/@riderskill" target="_blank">YOUTUBE</a>
+        <a class="btn" href="https://discord.gg/nbAZ28Z6jH" target="_blank">DISCORD</a>
       </div>
     </div>
   </div>
 
-  <!-- ====== A LA UNE ====== -->
   <section class="section">
     <div class="panel">
-      <h2 style="margin-top:0">À la une</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Prochain live</h3>
-          <a href="/riderskill-site/index.html">Clique pour aller au live</a>
-        </div>
-        <div class="card">
-          <h3>Moments forts</h3>
-          <a href="/riderskill-site/clips.html">Voir les clips récents</a>
-        </div>
-        <div class="card">
-          <h3>Communauté</h3>
-          <a href="https://discord.gg/nbAZ28Z6jH" target="_blank" rel="noopener">Rejoins la commu</a>
-        </div>
+      <h2 style="margin:0;font-weight:900">⭐ PRODUCTIONS À LA UNE</h2>
+      <div class="grid" id="grid-alaune">
+        <p>Chargement des productions...</p>
       </div>
     </div>
   </section>
 
-  <!-- ====== FOOTER ====== -->
-  <footer>© 2025 RiderSkill — Page À la une</footer>
+  <footer>© 2026 RIDERSKILL PRODUCTION</footer>
+
+  <script>
+    // Chargement des vidéos uniquement
+    fetch('data/youtube.json?v=' + Date.now())
+      .then(r => r.json())
+      .then(data => {
+        const items = data.items || data;
+        document.getElementById('grid-alaune').innerHTML = items.slice(0, 9).map(v => `
+          <a href="${v.url}" target="_blank" class="v-card">
+            <div class="v-img" style="background-image:url('${v.cover}')"></div>
+            <div class="v-info">
+              <div class="v-title">${v.title}</div>
+              <div style="font-size:10px;color:#9146FF;font-weight:800;margin-top:10px">PRODUCTION OFFICIELLE 📀</div>
+            </div>
+          </a>
+        `).join('');
+      });
+  </script>
 </body>
 </html>
 
