@@ -2,7 +2,7 @@ name: Update latest Twitch VOD
 
 on:
   schedule:
-    - cron: "15 3 * * *"   # Tous les jours à 03:15 UTC (~05:15 Paris)
+    - cron: " 0 * * *"   # Tous les jours à 03:15 UTC (~05:15 Paris)
   workflow_dispatch: {}     # Lancer manuellement si besoin
 
 # IMPORTANT : autoriser le push depuis le workflow
