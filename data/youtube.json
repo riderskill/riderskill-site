@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-03-18T14:12:27.881Z",
+  "updated_at": "2026-03-18T15:57:40.763Z",
   "items": [
+    {
+      "id": "xoq--y2kkMk",
+      "title": "Riderskill  Fast Lane Survival Twitch Special",
+      "url": "https://www.youtube.com/watch?v=xoq--y2kkMk",
+      "published_at": "2026-03-18T14:48:05+00:00",
+      "cover": "https://i1.ytimg.com/vi/xoq--y2kkMk/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/xoq--y2kkMk/hqdefault.jpg"
+    },
+    {
+      "id": "RUslTornQ20",
+      "title": "Riderskill   L'Héritage du Fer",
+      "url": "https://www.youtube.com/watch?v=RUslTornQ20",
+      "published_at": "2026-03-18T14:45:07+00:00",
+      "cover": "https://i3.ytimg.com/vi/RUslTornQ20/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/RUslTornQ20/hqdefault.jpg"
+    },
     {
       "id": "J3mYR-zKu70",
       "title": "15[FR] ARC RAIDERS : LE PATCH 1.20 EST LÀ ! 🛠️ Test du nouveau meta | cheers (Part 47/47)",
@@ -104,22 +120,6 @@
       "published_at": "2026-03-18T10:51:21+00:00",
       "cover": "https://i1.ytimg.com/vi/0u0aqE7RIQI/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/0u0aqE7RIQI/hqdefault.jpg"
-    },
-    {
-      "id": "_j4Y2VFwyhs",
-      "title": "2[FR] ARC RAIDERS : LE PATCH 1.20 EST LÀ ! 🛠️ Test du nouveau meta | cheers (Part 34/47)",
-      "url": "https://www.youtube.com/watch?v=_j4Y2VFwyhs",
-      "published_at": "2026-03-18T10:51:17+00:00",
-      "cover": "https://i4.ytimg.com/vi/_j4Y2VFwyhs/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/_j4Y2VFwyhs/hqdefault.jpg"
-    },
-    {
-      "id": "DTrkes8I2W0",
-      "title": "1[FR] ARC RAIDERS : LE PATCH 1.20 EST LÀ ! 🛠️ Test du nouveau meta | cheers (Part 33/47)",
-      "url": "https://www.youtube.com/watch?v=DTrkes8I2W0",
-      "published_at": "2026-03-18T10:51:13+00:00",
-      "cover": "https://i1.ytimg.com/vi/DTrkes8I2W0/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/DTrkes8I2W0/hqdefault.jpg"
     }
   ]
 }
