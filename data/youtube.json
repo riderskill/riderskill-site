@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-03-30T19:44:51.829Z",
+  "updated_at": "2026-03-30T20:31:34.263Z",
   "items": [
+    {
+      "id": "lLaMwwxgPrU",
+      "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! �... | #riderskill sur #Twitch",
+      "url": "https://www.youtube.com/watch?v=lLaMwwxgPrU",
+      "published_at": "2026-03-30T20:03:55+00:00",
+      "cover": "https://i1.ytimg.com/vi/lLaMwwxgPrU/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/lLaMwwxgPrU/hqdefault.jpg"
+    },
+    {
+      "id": "dLytUXpxRxQ",
+      "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! �... | #riderskill sur #Twitch",
+      "url": "https://www.youtube.com/watch?v=dLytUXpxRxQ",
+      "published_at": "2026-03-30T20:00:25+00:00",
+      "cover": "https://i1.ytimg.com/vi/dLytUXpxRxQ/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/dLytUXpxRxQ/hqdefault.jpg"
+    },
     {
       "id": "euTDFisOgvI",
       "title": "look dance | #riderskill sur #Twitch",
@@ -104,22 +120,6 @@
       "published_at": "2026-03-30T07:40:08+00:00",
       "cover": "https://i1.ytimg.com/vi/h9tQTjK5rKA/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/h9tQTjK5rKA/hqdefault.jpg"
-    },
-    {
-      "id": "tZQfK17PiRk",
-      "title": "[DROP RUST] 🇨🇵⚔️🎶 Bataille Sonore &amp; ensuite survie sauvage sur Rust ... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=tZQfK17PiRk",
-      "published_at": "2026-03-30T07:40:08+00:00",
-      "cover": "https://i1.ytimg.com/vi/tZQfK17PiRk/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/tZQfK17PiRk/hqdefault.jpg"
-    },
-    {
-      "id": "90V7zB3qbJg",
-      "title": "dancing base | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/90V7zB3qbJg",
-      "published_at": "2026-03-30T07:39:11+00:00",
-      "cover": "https://i2.ytimg.com/vi/90V7zB3qbJg/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/90V7zB3qbJg/hqdefault.jpg"
     }
   ]
 }
