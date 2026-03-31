@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-03-31T22:22:10.071Z",
+  "updated_at": "2026-03-31T23:22:07.527Z",
   "items": [
+    {
+      "id": "mMS9oBeVy8I",
+      "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! �... | #riderskill sur #Twitch",
+      "url": "https://www.youtube.com/watch?v=mMS9oBeVy8I",
+      "published_at": "2026-03-31T23:03:23+00:00",
+      "cover": "https://i2.ytimg.com/vi/mMS9oBeVy8I/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/mMS9oBeVy8I/hqdefault.jpg"
+    },
     {
       "id": "r6mzEo6vreo",
       "title": "[FR] GTARP | ALTRADA : Développement de projet &amp; Ascension financière |... | #riderskill sur #Twitch",
@@ -112,14 +120,6 @@
       "published_at": "2026-03-30T07:41:15+00:00",
       "cover": "https://i2.ytimg.com/vi/InTA6OeQJpY/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/InTA6OeQJpY/hqdefault.jpg"
-    },
-    {
-      "id": "8oeHHHpFk2o",
-      "title": "🇨🇵 [📣  prochains drop annoncé pour le 08/08🎉]🎁pour + d'info tapez ... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=8oeHHHpFk2o",
-      "published_at": "2026-03-30T07:41:12+00:00",
-      "cover": "https://i1.ytimg.com/vi/8oeHHHpFk2o/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/8oeHHHpFk2o/hqdefault.jpg"
     }
   ]
 }
