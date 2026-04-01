@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-04-01T11:40:40.237Z",
+  "updated_at": "2026-04-01T12:45:28.972Z",
   "items": [
+    {
+      "id": "f98Suw2P7gk",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 7/14)",
+      "url": "https://www.youtube.com/watch?v=f98Suw2P7gk",
+      "published_at": "2026-04-01T11:56:36+00:00",
+      "cover": "https://i3.ytimg.com/vi/f98Suw2P7gk/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/f98Suw2P7gk/hqdefault.jpg"
+    },
     {
       "id": "2RlSPIAKQpo",
       "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 11/14)",
@@ -112,14 +120,6 @@
       "published_at": "2026-03-31T23:03:23+00:00",
       "cover": "https://i2.ytimg.com/vi/mMS9oBeVy8I/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/mMS9oBeVy8I/hqdefault.jpg"
-    },
-    {
-      "id": "r6mzEo6vreo",
-      "title": "[FR] GTARP | ALTRADA : Développement de projet &amp; Ascension financière |... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=r6mzEo6vreo",
-      "published_at": "2026-03-31T04:21:29+00:00",
-      "cover": "https://i3.ytimg.com/vi/r6mzEo6vreo/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/r6mzEo6vreo/hqdefault.jpg"
     }
   ]
 }
