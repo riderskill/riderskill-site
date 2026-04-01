@@ -1,6 +1,86 @@
 {
-  "updated_at": "2026-04-01T06:19:00.226Z",
+  "updated_at": "2026-04-01T08:06:38.019Z",
   "items": [
+    {
+      "id": "eRv3mJD6prg",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 1/14)",
+      "url": "https://www.youtube.com/watch?v=eRv3mJD6prg",
+      "published_at": "2026-04-01T07:36:09+00:00",
+      "cover": "https://i2.ytimg.com/vi/eRv3mJD6prg/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/eRv3mJD6prg/hqdefault.jpg"
+    },
+    {
+      "id": "HptVbu6S3A8",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 9/14)",
+      "url": "https://www.youtube.com/watch?v=HptVbu6S3A8",
+      "published_at": "2026-04-01T07:33:57+00:00",
+      "cover": "https://i1.ytimg.com/vi/HptVbu6S3A8/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/HptVbu6S3A8/hqdefault.jpg"
+    },
+    {
+      "id": "8lcxMK9EwgY",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 3/14)",
+      "url": "https://www.youtube.com/watch?v=8lcxMK9EwgY",
+      "published_at": "2026-04-01T07:02:52+00:00",
+      "cover": "https://i1.ytimg.com/vi/8lcxMK9EwgY/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/8lcxMK9EwgY/hqdefault.jpg"
+    },
+    {
+      "id": "lQbFe-WpTqs",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 14/14)",
+      "url": "https://www.youtube.com/watch?v=lQbFe-WpTqs",
+      "published_at": "2026-04-01T07:01:29+00:00",
+      "cover": "https://i1.ytimg.com/vi/lQbFe-WpTqs/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/lQbFe-WpTqs/hqdefault.jpg"
+    },
+    {
+      "id": "RpcbQP2v_OI",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 10/14)",
+      "url": "https://www.youtube.com/watch?v=RpcbQP2v_OI",
+      "published_at": "2026-04-01T06:58:03+00:00",
+      "cover": "https://i3.ytimg.com/vi/RpcbQP2v_OI/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/RpcbQP2v_OI/hqdefault.jpg"
+    },
+    {
+      "id": "8iT0bGgP8Mk",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 2/14)",
+      "url": "https://www.youtube.com/watch?v=8iT0bGgP8Mk",
+      "published_at": "2026-04-01T06:46:43+00:00",
+      "cover": "https://i1.ytimg.com/vi/8iT0bGgP8Mk/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/8iT0bGgP8Mk/hqdefault.jpg"
+    },
+    {
+      "id": "nO9vHx0bo6Q",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 5/14)",
+      "url": "https://www.youtube.com/watch?v=nO9vHx0bo6Q",
+      "published_at": "2026-04-01T06:40:10+00:00",
+      "cover": "https://i3.ytimg.com/vi/nO9vHx0bo6Q/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/nO9vHx0bo6Q/hqdefault.jpg"
+    },
+    {
+      "id": "Tgly7opkfSs",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 6/14)",
+      "url": "https://www.youtube.com/watch?v=Tgly7opkfSs",
+      "published_at": "2026-04-01T06:38:31+00:00",
+      "cover": "https://i1.ytimg.com/vi/Tgly7opkfSs/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/Tgly7opkfSs/hqdefault.jpg"
+    },
+    {
+      "id": "xHthRBMcQYM",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 8/14)",
+      "url": "https://www.youtube.com/watch?v=xHthRBMcQYM",
+      "published_at": "2026-04-01T06:33:22+00:00",
+      "cover": "https://i1.ytimg.com/vi/xHthRBMcQYM/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/xHthRBMcQYM/hqdefault.jpg"
+    },
+    {
+      "id": "0WEgh8qPuTE",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 13/14)",
+      "url": "https://www.youtube.com/watch?v=0WEgh8qPuTE",
+      "published_at": "2026-04-01T06:30:00+00:00",
+      "cover": "https://i1.ytimg.com/vi/0WEgh8qPuTE/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/0WEgh8qPuTE/hqdefault.jpg"
+    },
     {
       "id": "s5LIa_CLW34",
       "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 4/14)",
@@ -40,86 +120,6 @@
       "published_at": "2026-03-31T04:20:31+00:00",
       "cover": "https://i3.ytimg.com/vi/FOAW-tKBdbw/hqdefault.jpg",
       "thumbnail": "https://i3.ytimg.com/vi/FOAW-tKBdbw/hqdefault.jpg"
-    },
-    {
-      "id": "lLaMwwxgPrU",
-      "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! �... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=lLaMwwxgPrU",
-      "published_at": "2026-03-30T20:03:55+00:00",
-      "cover": "https://i1.ytimg.com/vi/lLaMwwxgPrU/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/lLaMwwxgPrU/hqdefault.jpg"
-    },
-    {
-      "id": "dLytUXpxRxQ",
-      "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! �... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=dLytUXpxRxQ",
-      "published_at": "2026-03-30T20:00:25+00:00",
-      "cover": "https://i1.ytimg.com/vi/dLytUXpxRxQ/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/dLytUXpxRxQ/hqdefault.jpg"
-    },
-    {
-      "id": "euTDFisOgvI",
-      "title": "look dance | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=euTDFisOgvI",
-      "published_at": "2026-03-30T07:44:40+00:00",
-      "cover": "https://i2.ytimg.com/vi/euTDFisOgvI/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/euTDFisOgvI/hqdefault.jpg"
-    },
-    {
-      "id": "BABixVOUBds",
-      "title": "attend je met le son chef | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/BABixVOUBds",
-      "published_at": "2026-03-30T07:42:55+00:00",
-      "cover": "https://i3.ytimg.com/vi/BABixVOUBds/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/BABixVOUBds/hqdefault.jpg"
-    },
-    {
-      "id": "mysjY3wfWAg",
-      "title": "+18 Ashil Brooks🎶 mafia vs world | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=mysjY3wfWAg",
-      "published_at": "2026-03-30T07:42:29+00:00",
-      "cover": "https://i2.ytimg.com/vi/mysjY3wfWAg/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/mysjY3wfWAg/hqdefault.jpg"
-    },
-    {
-      "id": "o4_1n6W2Th0",
-      "title": "🇨🇵 [ BoomerGamers PC since 1989 ] ⭐🟦🟦🟦⬜⬜⬜🟥🟥🟥⭐_merch !clip !ig !... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=o4_1n6W2Th0",
-      "published_at": "2026-03-30T07:41:48+00:00",
-      "cover": "https://i4.ytimg.com/vi/o4_1n6W2Th0/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/o4_1n6W2Th0/hqdefault.jpg"
-    },
-    {
-      "id": "3BFbCdfr8N4",
-      "title": "[ 22eme clé offerte a la chaine🎁] Craft Farm  😍 Tous ce que l'on aime... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/3BFbCdfr8N4",
-      "published_at": "2026-03-30T07:41:41+00:00",
-      "cover": "https://i4.ytimg.com/vi/3BFbCdfr8N4/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/3BFbCdfr8N4/hqdefault.jpg"
-    },
-    {
-      "id": "WcoclJ7oBz4",
-      "title": "🌊 Pirates à l'horizon ! Embarquez avec Riderskill pour une quête épiqu... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=WcoclJ7oBz4",
-      "published_at": "2026-03-30T07:41:38+00:00",
-      "cover": "https://i4.ytimg.com/vi/WcoclJ7oBz4/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/WcoclJ7oBz4/hqdefault.jpg"
-    },
-    {
-      "id": "mPGkZeTp_qI",
-      "title": "deep deep deep | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/shorts/mPGkZeTp_qI",
-      "published_at": "2026-03-30T07:41:32+00:00",
-      "cover": "https://i2.ytimg.com/vi/mPGkZeTp_qI/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/mPGkZeTp_qI/hqdefault.jpg"
-    },
-    {
-      "id": "5tSBM6JwxsI",
-      "title": "🇨🇵  hight pop trio😍 LETS GOOOO !⭐🟦🟦🟦⬜⬜⬜🟥🟥🟥⭐!drop | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=5tSBM6JwxsI",
-      "published_at": "2026-03-30T07:41:18+00:00",
-      "cover": "https://i2.ytimg.com/vi/5tSBM6JwxsI/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/5tSBM6JwxsI/hqdefault.jpg"
     }
   ]
 }
