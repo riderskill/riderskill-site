@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-04-01T01:13:08.976Z",
+  "updated_at": "2026-04-01T06:19:00.226Z",
   "items": [
+    {
+      "id": "s5LIa_CLW34",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 4/14)",
+      "url": "https://www.youtube.com/watch?v=s5LIa_CLW34",
+      "published_at": "2026-04-01T06:18:31+00:00",
+      "cover": "https://i4.ytimg.com/vi/s5LIa_CLW34/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/s5LIa_CLW34/hqdefault.jpg"
+    },
     {
       "id": "mMS9oBeVy8I",
       "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! �... | #riderskill sur #Twitch",
@@ -112,14 +120,6 @@
       "published_at": "2026-03-30T07:41:18+00:00",
       "cover": "https://i2.ytimg.com/vi/5tSBM6JwxsI/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/5tSBM6JwxsI/hqdefault.jpg"
-    },
-    {
-      "id": "InTA6OeQJpY",
-      "title": "è🇨🇵 [sponso !stormshot🎉]🇨🇵 [ Rust +sponso !Stormshot #Ad #Sponsors... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=InTA6OeQJpY",
-      "published_at": "2026-03-30T07:41:15+00:00",
-      "cover": "https://i2.ytimg.com/vi/InTA6OeQJpY/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/InTA6OeQJpY/hqdefault.jpg"
     }
   ]
 }
