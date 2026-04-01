@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-04-01T08:06:38.019Z",
+  "updated_at": "2026-04-01T09:55:22.056Z",
   "items": [
+    {
+      "id": "2RlSPIAKQpo",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 11/14)",
+      "url": "https://www.youtube.com/watch?v=2RlSPIAKQpo",
+      "published_at": "2026-04-01T08:54:52+00:00",
+      "cover": "https://i3.ytimg.com/vi/2RlSPIAKQpo/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/2RlSPIAKQpo/hqdefault.jpg"
+    },
+    {
+      "id": "XEqt9Obia7Y",
+      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 12/14)",
+      "url": "https://www.youtube.com/watch?v=XEqt9Obia7Y",
+      "published_at": "2026-04-01T08:33:21+00:00",
+      "cover": "https://i1.ytimg.com/vi/XEqt9Obia7Y/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/XEqt9Obia7Y/hqdefault.jpg"
+    },
     {
       "id": "eRv3mJD6prg",
       "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 1/14)",
@@ -104,22 +120,6 @@
       "published_at": "2026-03-31T04:21:29+00:00",
       "cover": "https://i3.ytimg.com/vi/r6mzEo6vreo/hqdefault.jpg",
       "thumbnail": "https://i3.ytimg.com/vi/r6mzEo6vreo/hqdefault.jpg"
-    },
-    {
-      "id": "go9xi9cuKbk",
-      "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! �... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=go9xi9cuKbk",
-      "published_at": "2026-03-31T04:21:11+00:00",
-      "cover": "https://i4.ytimg.com/vi/go9xi9cuKbk/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/go9xi9cuKbk/hqdefault.jpg"
-    },
-    {
-      "id": "FOAW-tKBdbw",
-      "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! �... | #riderskill sur #Twitch",
-      "url": "https://www.youtube.com/watch?v=FOAW-tKBdbw",
-      "published_at": "2026-03-31T04:20:31+00:00",
-      "cover": "https://i3.ytimg.com/vi/FOAW-tKBdbw/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/FOAW-tKBdbw/hqdefault.jpg"
     }
   ]
 }
