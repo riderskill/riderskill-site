@@ -1,8 +1,37 @@
-{
-  "id": "2706362070",
-  "url": "https://www.twitch.tv/videos/2706362070",
-  "title": "JE DÉTRUIS TOUT EN 5.5 GHz ! ⚡🤖 | ARC RAIDERS 4K, MA RTX 5070 Ti VA EXPLOSER SUR ARC RAIDERS ! 🤯💥",
-  "duration": "5h33m6s",
-  "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/b92b4c31a6b358792da3_riderskill_316419597029_1771928701//thumb/thumb0-%{width}x%{height}.jpg",
-  "published_at": "2026-02-24T10:25:09Z"
-}
+[
+  {
+    "id": "2736898798",
+    "url": "https://www.twitch.tv/videos/2736898798",
+    "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riderskill 🎵 !pro !rustdrops !ig !config !drops",
+    "published_at": "2026-04-01T02:10:44Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/33a3b6ff0b0447986712_riderskill_316812879461_1775009435//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2735660805",
+    "url": "https://www.twitch.tv/videos/2735660805",
+    "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! 💣💸 !pro !rustdrops !ig !config !drop",
+    "published_at": "2026-03-30T16:30:16Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/2b29436bfddb5ac9720b_riderskill_316642159975_1774888207//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2733029024",
+    "url": "https://www.twitch.tv/videos/2733029024",
+    "title": "🔥[Fr] ARC Raiders : La résistance s'organise avec Riderskill 🦾⚙️💨 !carte",
+    "published_at": "2026-03-27T14:53:38Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/dfaffb2eab1ece2c6ace_riderskill_316759510117_1774623209//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2732351911",
+    "url": "https://www.twitch.tv/videos/2732351911",
+    "title": "🔥[Fr] Un caillou, un rêve et beaucoup de patience 🪨⛏️🏎️💨 !carte",
+    "published_at": "2026-03-26T18:15:43Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/9af17e1a81b493e649d8_riderskill_316751601637_1774548934//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2731496891",
+    "url": "https://www.twitch.tv/videos/2731496891",
+    "title": "🔥100% ACTION : Loot sur Arc Raiders 🛰️, Raid sur Rust 🏹 et Cavale sur GTA RP ! 🏎️💨 !carte",
+    "published_at": "2026-03-25T17:18:14Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/06c921093e7372f50d8a_riderskill_316806680038_1774459085//thumb/thumb0-%{width}x%{height}.jpg"
+  }
+]
