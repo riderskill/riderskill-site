@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-04-05T04:25:23.816Z",
+  "updated_at": "2026-04-05T07:45:13.129Z",
   "items": [
+    {
+      "id": "RRxhX-MOaPY",
+      "title": "[FR] 🎶 Mix &amp; Gaming : Je passe du son, vous décidez du programme ! (Part 2/13)",
+      "url": "https://www.youtube.com/watch?v=RRxhX-MOaPY",
+      "published_at": "2026-04-05T05:00:16+00:00",
+      "cover": "https://i3.ytimg.com/vi/RRxhX-MOaPY/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/RRxhX-MOaPY/hqdefault.jpg"
+    },
     {
       "id": "JuuTjxo503s",
       "title": "[FR] 🎶 Mix &amp; Gaming : Je passe du son, vous décidez du programme ! (Part 10/13)",
@@ -112,14 +120,6 @@
       "published_at": "2026-04-01T11:56:36+00:00",
       "cover": "https://i3.ytimg.com/vi/f98Suw2P7gk/hqdefault.jpg",
       "thumbnail": "https://i3.ytimg.com/vi/f98Suw2P7gk/hqdefault.jpg"
-    },
-    {
-      "id": "2RlSPIAKQpo",
-      "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riders (Part 11/14)",
-      "url": "https://www.youtube.com/watch?v=2RlSPIAKQpo",
-      "published_at": "2026-04-01T08:54:52+00:00",
-      "cover": "https://i3.ytimg.com/vi/2RlSPIAKQpo/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/2RlSPIAKQpo/hqdefault.jpg"
     }
   ]
 }
