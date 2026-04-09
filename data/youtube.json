@@ -1,6 +1,30 @@
 {
-  "updated_at": "2026-04-09T00:58:15.046Z",
+  "updated_at": "2026-04-09T07:06:17.003Z",
   "items": [
+    {
+      "id": "6FyXX_iBI_c",
+      "title": "LE CODE DE L'ACIER",
+      "url": "https://www.youtube.com/watch?v=6FyXX_iBI_c",
+      "published_at": "2026-04-09T05:10:20+00:00",
+      "cover": "https://i3.ytimg.com/vi/6FyXX_iBI_c/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/6FyXX_iBI_c/hqdefault.jpg"
+    },
+    {
+      "id": "e5nMyPu9ads",
+      "title": "RIDERSKILL TWITCH LIVE",
+      "url": "https://www.youtube.com/watch?v=e5nMyPu9ads",
+      "published_at": "2026-04-09T05:09:45+00:00",
+      "cover": "https://i2.ytimg.com/vi/e5nMyPu9ads/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/e5nMyPu9ads/hqdefault.jpg"
+    },
+    {
+      "id": "4CqlT8ZFoB8",
+      "title": "LE MANIFESTE RIDERSKILL",
+      "url": "https://www.youtube.com/watch?v=4CqlT8ZFoB8",
+      "published_at": "2026-04-09T04:36:13+00:00",
+      "cover": "https://i1.ytimg.com/vi/4CqlT8ZFoB8/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/4CqlT8ZFoB8/hqdefault.jpg"
+    },
     {
       "id": "d7cA8q9l2xQ",
       "title": "Trop pauvre pour équiper mon perso   L'enfer du jeu vidéo !",
@@ -96,30 +120,6 @@
       "published_at": "2026-04-07T03:13:57+00:00",
       "cover": "https://i1.ytimg.com/vi/PMe7SqCPOS4/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/PMe7SqCPOS4/hqdefault.jpg"
-    },
-    {
-      "id": "evEHvmN5axs",
-      "title": "[DROPS ON] 🎵 Musique Originale &amp; Services PC [RIDERSKILL] 🛠️ Bientôt su (Part 29/30)",
-      "url": "https://www.youtube.com/watch?v=evEHvmN5axs",
-      "published_at": "2026-04-07T03:13:52+00:00",
-      "cover": "https://i2.ytimg.com/vi/evEHvmN5axs/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/evEHvmN5axs/hqdefault.jpg"
-    },
-    {
-      "id": "NOrg45aEDJo",
-      "title": "[DROPS ON] 🎵 Musique Originale &amp; Services PC [RIDERSKILL] 🛠️ Bientôt su (Part 28/30)",
-      "url": "https://www.youtube.com/watch?v=NOrg45aEDJo",
-      "published_at": "2026-04-07T03:13:49+00:00",
-      "cover": "https://i3.ytimg.com/vi/NOrg45aEDJo/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/NOrg45aEDJo/hqdefault.jpg"
-    },
-    {
-      "id": "zLJ6ep3kbZk",
-      "title": "[DROPS ON] 🎵 Musique Originale &amp; Services PC [RIDERSKILL] 🛠️ Bientôt su (Part 27/30)",
-      "url": "https://www.youtube.com/watch?v=zLJ6ep3kbZk",
-      "published_at": "2026-04-07T03:13:47+00:00",
-      "cover": "https://i3.ytimg.com/vi/zLJ6ep3kbZk/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/zLJ6ep3kbZk/hqdefault.jpg"
     }
   ]
 }
