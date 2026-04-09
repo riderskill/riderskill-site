@@ -14,13 +14,6 @@
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/216af9637b9fd0017ab3_riderskill_316715447911_1775454467//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
-    "id": "2741133009",
-    "url": "https://www.twitch.tv/videos/2741133009",
-    "title": "[DROPS ON] 🎵 Musique Originale & Services PC [RIDERSKILL] 🛠️ Bientôt sur ARC RAIDERS 🚀",
-    "published_at": "2026-04-06T03:23:57Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/cea7edfc3688b5bcc121_riderskill_316715000295_1775445828//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
     "id": "2740130117",
     "url": "https://www.twitch.tv/videos/2740130117",
     "title": "[FR] 🎶 Mix & Gaming : Je passe du son, vous décidez du programme !",
@@ -33,5 +26,12 @@
     "title": "🛠️ Préparation du stream | [PC Builder Services] | Musique Chill by Riderskill 🎵 !pro !rustdrops !ig !config !drops",
     "published_at": "2026-04-01T02:10:44Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/33a3b6ff0b0447986712_riderskill_316812879461_1775009435//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2735660805",
+    "url": "https://www.twitch.tv/videos/2735660805",
+    "title": "[FR] Riderskill : On pille des bases pour payer les frais bancaires ! 💣💸 !pro !rustdrops !ig !config !drop",
+    "published_at": "2026-03-30T16:30:16Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/2b29436bfddb5ac9720b_riderskill_316642159975_1774888207//thumb/thumb0-%{width}x%{height}.jpg"
   }
 ]
