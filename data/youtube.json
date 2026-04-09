@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-04-09T14:46:12.728Z",
+  "updated_at": "2026-04-09T16:09:04.406Z",
   "items": [
+    {
+      "id": "ljn5d2KU6Bo",
+      "title": "RIDERSKILL L'EMPIRE",
+      "url": "https://www.youtube.com/watch?v=ljn5d2KU6Bo",
+      "published_at": "2026-04-09T15:36:37+00:00",
+      "cover": "https://i1.ytimg.com/vi/ljn5d2KU6Bo/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/ljn5d2KU6Bo/hqdefault.jpg"
+    },
+    {
+      "id": "6Cpo9LAy6gI",
+      "title": "L'OUVERTURE DE L'EMPIRE",
+      "url": "https://www.youtube.com/watch?v=6Cpo9LAy6gI",
+      "published_at": "2026-04-09T15:35:52+00:00",
+      "cover": "https://i3.ytimg.com/vi/6Cpo9LAy6gI/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/6Cpo9LAy6gI/hqdefault.jpg"
+    },
     {
       "id": "1P_WQWvVBFw",
       "title": "[DROPS ON] ARC RAIDERS ☄️ ➔ RUST ☢️ [DROPS ON] ➔ GTA RP 🎭 ! ON ENCHAIN... | #riderskill sur #Twitch",
@@ -104,22 +120,6 @@
       "published_at": "2026-04-07T17:15:43+00:00",
       "cover": "https://i1.ytimg.com/vi/t5gr3N7dwok/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/t5gr3N7dwok/hqdefault.jpg"
-    },
-    {
-      "id": "V0FLuOO93w8",
-      "title": "#Shorts ARC Riders   L'alliance qui gagne, unie pour la victoire !",
-      "url": "https://www.youtube.com/shorts/V0FLuOO93w8",
-      "published_at": "2026-04-07T17:09:42+00:00",
-      "cover": "https://i3.ytimg.com/vi/V0FLuOO93w8/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/V0FLuOO93w8/hqdefault.jpg"
-    },
-    {
-      "id": "DH4jqRwx6cM",
-      "title": "[DROPS ON] 🎵 Musique Originale &amp; Services PC [RIDERSKILL] 🛠️ Bientôt sur ARC RAIDERS 🚀",
-      "url": "https://www.youtube.com/watch?v=DH4jqRwx6cM",
-      "published_at": "2026-04-07T13:11:05+00:00",
-      "cover": "https://i1.ytimg.com/vi/DH4jqRwx6cM/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/DH4jqRwx6cM/hqdefault.jpg"
     }
   ]
 }
