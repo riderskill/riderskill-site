@@ -1,6 +1,30 @@
 {
-  "updated_at": "2026-04-12T04:35:03.353Z",
+  "updated_at": "2026-04-12T07:54:38.585Z",
   "items": [
+    {
+      "id": "_MldW7-MYpI",
+      "title": "SIGNAL D'EXTRACTION",
+      "url": "https://www.youtube.com/watch?v=_MldW7-MYpI",
+      "published_at": "2026-04-12T06:20:54+00:00",
+      "cover": "https://i4.ytimg.com/vi/_MldW7-MYpI/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/_MldW7-MYpI/hqdefault.jpg"
+    },
+    {
+      "id": "_sabDsJOP6Q",
+      "title": "L'OUVERTURE DE L'EMPIRE2",
+      "url": "https://www.youtube.com/watch?v=_sabDsJOP6Q",
+      "published_at": "2026-04-12T06:19:50+00:00",
+      "cover": "https://i4.ytimg.com/vi/_sabDsJOP6Q/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/_sabDsJOP6Q/hqdefault.jpg"
+    },
+    {
+      "id": "GARhk7n-kJo",
+      "title": "L'EMPIRE DES TROIS FRONTIÈRES",
+      "url": "https://www.youtube.com/watch?v=GARhk7n-kJo",
+      "published_at": "2026-04-12T06:19:20+00:00",
+      "cover": "https://i4.ytimg.com/vi/GARhk7n-kJo/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/GARhk7n-kJo/hqdefault.jpg"
+    },
     {
       "id": "s6u-aRTOMPI",
       "title": "🎶 MUSIC &amp; CHILL ➜ 🛸 ARC RAIDERS (DROPS) ➜ 👮 GTA RP : 1.000.000$ À GAGNER !",
@@ -96,30 +120,6 @@
       "published_at": "2026-04-12T03:37:45+00:00",
       "cover": "https://i2.ytimg.com/vi/AEXee6vZIA0/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/AEXee6vZIA0/hqdefault.jpg"
-    },
-    {
-      "id": "HhkCtaxpNJA",
-      "title": "[DROPS ON]🛸 ARC RAIDERS ➜ 🚔 GTA RP : 1.000.000$ &amp; TENUE POLICE À GAGNER (Part 39/50)",
-      "url": "https://www.youtube.com/watch?v=HhkCtaxpNJA",
-      "published_at": "2026-04-12T03:37:40+00:00",
-      "cover": "https://i1.ytimg.com/vi/HhkCtaxpNJA/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/HhkCtaxpNJA/hqdefault.jpg"
-    },
-    {
-      "id": "ntQicq7kV70",
-      "title": "[DROPS ON]🛸 ARC RAIDERS ➜ 🚔 GTA RP : 1.000.000$ &amp; TENUE POLICE À GAGNER (Part 38/50)",
-      "url": "https://www.youtube.com/watch?v=ntQicq7kV70",
-      "published_at": "2026-04-12T03:37:38+00:00",
-      "cover": "https://i3.ytimg.com/vi/ntQicq7kV70/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/ntQicq7kV70/hqdefault.jpg"
-    },
-    {
-      "id": "nw732n1WBYo",
-      "title": "[DROPS ON]🛸 ARC RAIDERS ➜ 🚔 GTA RP : 1.000.000$ &amp; TENUE POLICE À GAGNER (Part 37/50)",
-      "url": "https://www.youtube.com/watch?v=nw732n1WBYo",
-      "published_at": "2026-04-12T03:37:35+00:00",
-      "cover": "https://i3.ytimg.com/vi/nw732n1WBYo/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/nw732n1WBYo/hqdefault.jpg"
     }
   ]
 }
