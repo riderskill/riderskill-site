@@ -4,7 +4,7 @@
     "url": "https://www.twitch.tv/videos/2749283415",
     "title": "🤠 RDR2 RP : NOUVELLE VIE, NOUVELLES RÈGLES ! 🌵 ➜ 🛸 ARC RAIDERS (DROPS)    !bonjour",
     "published_at": "2026-04-16T06:39:13Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/4ae76cab876bf8010a8c_riderskill_316520389347_1776321544//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
     "id": "2748588963",
@@ -12,13 +12,6 @@
     "title": "🤠 RDR2 RP : NOUVELLE VIE, NOUVELLES RÈGLES ! 🌵 ➜ 🛸 ARC RAIDERS (DROPS)    !bonjour",
     "published_at": "2026-04-15T11:30:30Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/06882f6436ebed899af8_riderskill_316971954661_1776252621//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2748535728",
-    "url": "https://www.twitch.tv/videos/2748535728",
-    "title": "🤠 RDR2 RP : NOUVELLE VIE, NOUVELLES RÈGLES ! 🌵 ➜ 🛸 ARC RAIDERS (DROPS)    !bonjour",
-    "published_at": "2026-04-15T08:46:59Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/79850bef28e5c969d192_riderskill_316814852711_1776242810//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
     "id": "2747644780",
@@ -33,5 +26,12 @@
     "title": "[DROPS ON]🛸 ARC RAIDERS (DROPS) ➜ 🚔 GTA RP : 1.000.000$ & TENUE POLICE À GAGNER !",
     "published_at": "2026-04-13T03:49:36Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/c5cf204b172351d72df0_riderskill_316948352613_1776052167//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
+    "id": "2745220036",
+    "url": "https://www.twitch.tv/videos/2745220036",
+    "title": "[DROPS ON]🛸 ARC RAIDERS ➜ 🚔 GTA RP : 1.000.000$ & TENUE POLICE À GAGNER !",
+    "published_at": "2026-04-11T05:37:25Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/cf77a069ae61b875900b_riderskill_316989357542_1775885836//thumb/thumb0-%{width}x%{height}.jpg"
   }
 ]
