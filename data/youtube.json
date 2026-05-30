@@ -1,6 +1,38 @@
 {
-  "updated_at": "2026-05-30T21:45:55.120Z",
+  "updated_at": "2026-05-30T22:43:09.873Z",
   "items": [
+    {
+      "id": "moBtdDWc-rg",
+      "title": "[FR] 007 : CE JEU EST UN SCANDALE ! 🤬TOUS CE QUE LES STREAMERS NE VOUS DISENT (Part 1/12)",
+      "url": "https://www.youtube.com/watch?v=moBtdDWc-rg",
+      "published_at": "2026-05-30T22:30:01+00:00",
+      "cover": "https://i2.ytimg.com/vi/moBtdDWc-rg/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/moBtdDWc-rg/hqdefault.jpg"
+    },
+    {
+      "id": "QvhbI3nciCA",
+      "title": "[FR] TOUS CE QUE LES STREAMERS PETITS ET GRANDS NE VOUS DISENT JAMAIS (EN DIRECT (Part 12/17)",
+      "url": "https://www.youtube.com/watch?v=QvhbI3nciCA",
+      "published_at": "2026-05-30T22:01:12+00:00",
+      "cover": "https://i2.ytimg.com/vi/QvhbI3nciCA/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/QvhbI3nciCA/hqdefault.jpg"
+    },
+    {
+      "id": "4qNnnxcaA4E",
+      "title": "ARRÊTEZ DE PAYER TROP CHER : L'EXPERTISE RIDERSKILL SUR VOS PC GAMING",
+      "url": "https://www.youtube.com/shorts/4qNnnxcaA4E",
+      "published_at": "2026-05-30T21:56:39+00:00",
+      "cover": "https://i1.ytimg.com/vi/4qNnnxcaA4E/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/4qNnnxcaA4E/hqdefault.jpg"
+    },
+    {
+      "id": "Jb_WE4G3TB8",
+      "title": "RIDERSKILL : J'AI TESTÉ LA CONFIGURATION ULTIME (RTX 5070 Ti) !",
+      "url": "https://www.youtube.com/shorts/Jb_WE4G3TB8",
+      "published_at": "2026-05-30T21:53:36+00:00",
+      "cover": "https://i3.ytimg.com/vi/Jb_WE4G3TB8/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/Jb_WE4G3TB8/hqdefault.jpg"
+    },
     {
       "id": "XkAIjl86vQo",
       "title": "LE CODE DE L'ACIER , Montage PC sur mesure à Cosne-Cours-sur-Loire | Riderskill",
@@ -88,38 +120,6 @@
       "published_at": "2026-05-30T02:52:09+00:00",
       "cover": "https://i3.ytimg.com/vi/28KNIRDFUH0/hqdefault.jpg",
       "thumbnail": "https://i3.ytimg.com/vi/28KNIRDFUH0/hqdefault.jpg"
-    },
-    {
-      "id": "FBVwrYdfoOs",
-      "title": "[FR] TOUS CE QUE LES STREAMERS PETITS ET GRANDS NE VOUS DISENT JAMAIS (EN DIRECT (Part 7/17)",
-      "url": "https://www.youtube.com/watch?v=FBVwrYdfoOs",
-      "published_at": "2026-05-30T02:52:07+00:00",
-      "cover": "https://i3.ytimg.com/vi/FBVwrYdfoOs/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/FBVwrYdfoOs/hqdefault.jpg"
-    },
-    {
-      "id": "6qH5SmrAaMU",
-      "title": "[FR] TOUS CE QUE LES STREAMERS PETITS ET GRANDS NE VOUS DISENT JAMAIS (EN DIRECT (Part 6/17)",
-      "url": "https://www.youtube.com/watch?v=6qH5SmrAaMU",
-      "published_at": "2026-05-30T02:52:04+00:00",
-      "cover": "https://i3.ytimg.com/vi/6qH5SmrAaMU/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/6qH5SmrAaMU/hqdefault.jpg"
-    },
-    {
-      "id": "LfBtnqL8MIg",
-      "title": "[FR] TOUS CE QUE LES STREAMERS PETITS ET GRANDS NE VOUS DISENT JAMAIS (EN DIRECT (Part 5/17)",
-      "url": "https://www.youtube.com/watch?v=LfBtnqL8MIg",
-      "published_at": "2026-05-30T02:52:01+00:00",
-      "cover": "https://i1.ytimg.com/vi/LfBtnqL8MIg/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/LfBtnqL8MIg/hqdefault.jpg"
-    },
-    {
-      "id": "pKxBeoVc6Z4",
-      "title": "[FR] TOUS CE QUE LES STREAMERS PETITS ET GRANDS NE VOUS DISENT JAMAIS (EN DIRECT (Part 4/17)",
-      "url": "https://www.youtube.com/watch?v=pKxBeoVc6Z4",
-      "published_at": "2026-05-30T02:51:58+00:00",
-      "cover": "https://i1.ytimg.com/vi/pKxBeoVc6Z4/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/pKxBeoVc6Z4/hqdefault.jpg"
     }
   ]
 }
