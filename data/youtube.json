@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-06-01T14:42:25.604Z",
+  "updated_at": "2026-06-01T19:48:02.166Z",
   "items": [
+    {
+      "id": "Wp4OqLbEcPE",
+      "title": "[act1] Setup, Réglages &amp; Expertise :Je vous annonce mon projet vidéo avec un invité spécial !",
+      "url": "https://www.youtube.com/watch?v=Wp4OqLbEcPE",
+      "published_at": "2026-06-01T18:47:07+00:00",
+      "cover": "https://i4.ytimg.com/vi/Wp4OqLbEcPE/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/Wp4OqLbEcPE/hqdefault.jpg"
+    },
     {
       "id": "HMRNeIl0fFU",
       "title": "Je vous dit tous sur 007 vs Rust : Pourquoi ma 5070 Ti change tout ! | RIDERSKILL",
@@ -112,14 +120,6 @@
       "published_at": "2026-05-31T00:27:48+00:00",
       "cover": "https://i2.ytimg.com/vi/eyW6ax6ZiF8/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/eyW6ax6ZiF8/hqdefault.jpg"
-    },
-    {
-      "id": "A9SU3rcYrhQ",
-      "title": "[FR] 007 : CE JEU EST UN SCANDALE ! 🤬TOUS CE QUE LES STREAMERS NE VOUS DISENT (Part 10/12)",
-      "url": "https://www.youtube.com/watch?v=A9SU3rcYrhQ",
-      "published_at": "2026-05-31T00:27:46+00:00",
-      "cover": "https://i2.ytimg.com/vi/A9SU3rcYrhQ/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/A9SU3rcYrhQ/hqdefault.jpg"
     }
   ]
 }
