@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-03T00:20:43.438Z",
+  "updated_at": "2026-06-03T10:26:25.554Z",
   "items": [
     {
       "id": "3q-bEnldR9w",
@@ -48,14 +48,6 @@
       "published_at": "2026-06-02T07:14:32+00:00",
       "cover": "https://i1.ytimg.com/vi/h9IYDvkuQMc/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/h9IYDvkuQMc/hqdefault.jpg"
-    },
-    {
-      "id": "Wp4OqLbEcPE",
-      "title": "[act1] Setup, Réglages &amp; Expertise :Je vous annonce mon projet vidéo avec un invité spécial !",
-      "url": "https://www.youtube.com/watch?v=Wp4OqLbEcPE",
-      "published_at": "2026-06-01T18:47:07+00:00",
-      "cover": "https://i4.ytimg.com/vi/Wp4OqLbEcPE/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/Wp4OqLbEcPE/hqdefault.jpg"
     },
     {
       "id": "HMRNeIl0fFU",
@@ -120,6 +112,14 @@
       "published_at": "2026-05-31T00:57:13+00:00",
       "cover": "https://i2.ytimg.com/vi/yLlkQJDd3-Q/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/yLlkQJDd3-Q/hqdefault.jpg"
+    },
+    {
+      "id": "CLzhBJnbipY",
+      "title": "CONFIEZ VOTRE SURVIE À RIDERSKILL : LES SECRETS DE PACIFICA #cyberpunk2077 #roleplay",
+      "url": "https://www.youtube.com/shorts/CLzhBJnbipY",
+      "published_at": "2026-05-31T00:55:21+00:00",
+      "cover": "https://i4.ytimg.com/vi/CLzhBJnbipY/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/CLzhBJnbipY/hqdefault.jpg"
     }
   ]
 }
