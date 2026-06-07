@@ -1,10 +1,17 @@
 [
   {
+    "id": "2790795963",
+    "url": "https://www.twitch.tv/videos/2790795963",
+    "title": "🤯 Ma meilleure action ? Réussir à taper un arbre sans mourir ! 🌲 🦺 RIDERSKILL : Experts en construction de ruines ! 🏚️",
+    "published_at": "2026-06-07T09:30:43Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
     "id": "2790714928",
     "url": "https://www.twitch.tv/videos/2790714928",
     "title": "🤯 Ma meilleure action ? Réussir à taper un arbre sans mourir ! 🌲 🦺 RIDERSKILL : Experts en construction de ruines ! 🏚️",
     "published_at": "2026-06-07T05:43:32Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/8968cf1ca34597b75e80_riderskill_316911084386_1780811004//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
     "id": "2789848501",
@@ -26,12 +33,5 @@
     "title": "[FR] Un an de plus aujourd'hui 🎂(47) | Multi-gaming (Rust / GTA / ARC Raiders)🚀 Qualité max activée !",
     "published_at": "2026-05-25T12:10:59Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/ed5c997edb9bca2b38d0_riderskill_316831324132_1779711051/thumb/custom-8b15a2e3-e1fa-4ee9-96f5-3e341fd8917f-%{width}x%{height}.jpeg"
-  },
-  {
-    "id": "2778864932",
-    "url": "https://www.twitch.tv/videos/2778864932",
-    "title": "[PROGRAMME] ARC RAIDERS (Full 2K) ➔ RUST (Survie) ➔ FiveM (Immersion RP) 🌌🛠️🎭",
-    "published_at": "2026-05-23T11:09:24Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/9ea69f58769d95414c48_riderskill_316834299491_1779534555/thumb/custom-5decaf2e-3edf-4546-a94f-026fd9acdf7f-%{width}x%{height}.jpeg"
   }
 ]
