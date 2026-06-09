@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-06-09T11:51:22.677Z",
+  "updated_at": "2026-06-09T14:11:49.777Z",
   "items": [
+    {
+      "id": "DRjp2Px9ULQ",
+      "title": "Ma Musique et après c'est Rust | Live relax &amp; bonne ambiance 🎧 | #riderskill sur #Twitch",
+      "url": "https://www.youtube.com/shorts/DRjp2Px9ULQ",
+      "published_at": "2026-06-09T12:18:24+00:00",
+      "cover": "https://i1.ytimg.com/vi/DRjp2Px9ULQ/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/DRjp2Px9ULQ/hqdefault.jpg"
+    },
+    {
+      "id": "JRS1dPL3CP8",
+      "title": "Ma Musique et après c'est Rust | Live relax &amp; bonne ambiance 🎧 | #riderskill sur #Twitch",
+      "url": "https://www.youtube.com/shorts/JRS1dPL3CP8",
+      "published_at": "2026-06-09T12:09:13+00:00",
+      "cover": "https://i3.ytimg.com/vi/JRS1dPL3CP8/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/JRS1dPL3CP8/hqdefault.jpg"
+    },
     {
       "id": "kCmpuurC2Nc",
       "title": "Ma Musique et après c'est Rust | Live relax &amp; bonne ambiance 🎧 | #riderskill sur #Twitch",
@@ -104,22 +120,6 @@
       "published_at": "2026-06-05T17:22:26+00:00",
       "cover": "https://i1.ytimg.com/vi/xFlGSHlnF-8/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/xFlGSHlnF-8/hqdefault.jpg"
-    },
-    {
-      "id": "xx5RY_55WGQ",
-      "title": "ARC RAIDERS : 50 minutes de survie en solitaire [Full Run]",
-      "url": "https://www.youtube.com/watch?v=xx5RY_55WGQ",
-      "published_at": "2026-06-04T09:26:01+00:00",
-      "cover": "https://i1.ytimg.com/vi/xx5RY_55WGQ/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/xx5RY_55WGQ/hqdefault.jpg"
-    },
-    {
-      "id": "vWB0OFYZebs",
-      "title": "FIN DE BROADCAST ? (LA SITUATION DÉRAPE GRAVE !)",
-      "url": "https://www.youtube.com/shorts/vWB0OFYZebs",
-      "published_at": "2026-06-04T06:33:28+00:00",
-      "cover": "https://i3.ytimg.com/vi/vWB0OFYZebs/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/vWB0OFYZebs/hqdefault.jpg"
     }
   ]
 }
