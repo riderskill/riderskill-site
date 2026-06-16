@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-06-15T23:26:43.285Z",
+  "updated_at": "2026-06-16T08:35:02.382Z",
   "items": [
+    {
+      "id": "ijv3THTyR8w",
+      "title": "Jour 4 : Plus je pratique, plus je crée de désastres... c'est peut-être ça,  (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=ijv3THTyR8w",
+      "published_at": "2026-06-16T02:42:29+00:00",
+      "cover": "https://i2.ytimg.com/vi/ijv3THTyR8w/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/ijv3THTyR8w/hqdefault.jpg"
+    },
     {
       "id": "TRW5qwaJDH8",
       "title": "WzBot CLIP | Jour 5 : L'École des Sorciers💻🪄 : Montage PC Version Mag... | #riderskill sur #Twitch",
@@ -112,14 +120,6 @@
       "published_at": "2026-06-14T14:23:41+00:00",
       "cover": "https://i2.ytimg.com/vi/mWDHnpRPNlQ/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/mWDHnpRPNlQ/hqdefault.jpg"
-    },
-    {
-      "id": "u8Skl78Ud1s",
-      "title": "Jour 3 : Toujours pas renvoyé de l'école malgré mes catastrophes magiques ! � (Part 50/59)",
-      "url": "https://www.youtube.com/watch?v=u8Skl78Ud1s",
-      "published_at": "2026-06-14T14:23:40+00:00",
-      "cover": "https://i2.ytimg.com/vi/u8Skl78Ud1s/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/u8Skl78Ud1s/hqdefault.jpg"
     }
   ]
 }
