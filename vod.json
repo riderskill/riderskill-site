@@ -1,10 +1,17 @@
 [
   {
+    "id": "2799042016",
+    "url": "https://www.twitch.tv/videos/2799042016",
+    "title": "SURVIE 🚀 Gameplay posé, entraide et échanges en direct ⚙️ Venez profiter d'un moment détente ! 🎙️",
+    "published_at": "2026-06-17T19:35:52Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
     "id": "2798920460",
     "url": "https://www.twitch.tv/videos/2798920460",
     "title": "RUST : SURVIE & CONSTRUCTION 🚀 Gameplay posé, entraide et échanges en direct ⚙️ Venez profiter d'un moment détente ! 🎙️",
     "published_at": "2026-06-17T16:50:23Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/ee841a745c66464ce778_riderskill_317021875172_1781715014//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
     "id": "2798102979",
@@ -26,12 +33,5 @@
     "title": "Jour 5 : L'École des Sorciers💻🪄 : Montage PC Version Magique 🧪🛠️",
     "published_at": "2026-06-15T21:11:39Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/29b2244547943566eb77_riderskill_316984850786_1781557891/thumb/custom-55d4c05a-cdce-44be-8f83-bb2e53b72e40-%{width}x%{height}.png"
-  },
-  {
-    "id": "2797359537",
-    "url": "https://www.twitch.tv/videos/2797359537",
-    "title": "Jour 5 : L'École des Sorciers💻🪄 : Montage PC Version Magique 🧪🛠️",
-    "published_at": "2026-06-15T17:03:57Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/b29cb939c21fdac22a74_riderskill_316982251618_1781543029/thumb/custom-60b99680-5252-4fc4-9cec-8b56ba550c22-%{width}x%{height}.png"
   }
 ]
