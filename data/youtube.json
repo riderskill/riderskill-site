@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-06-18T07:21:11.275Z",
+  "updated_at": "2026-06-18T11:40:49.508Z",
   "items": [
+    {
+      "id": "ZPtTykGcLW8",
+      "title": "Jour 6 : Je tabasse tout ce qui bouge 🔥 avec un niveau de skill  qui ferait passer Harry Potter p",
+      "url": "https://www.youtube.com/watch?v=ZPtTykGcLW8",
+      "published_at": "2026-06-18T10:41:52+00:00",
+      "cover": "https://i3.ytimg.com/vi/ZPtTykGcLW8/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/ZPtTykGcLW8/hqdefault.jpg"
+    },
     {
       "id": "gmX5bN1It-o",
       "title": "SURVIE 🚀 Gameplay posé, entraide et échanges en direct ⚙️ Venez profiter d'un moment cool",
@@ -112,14 +120,6 @@
       "published_at": "2026-06-14T14:24:11+00:00",
       "cover": "https://i2.ytimg.com/vi/15CEQH7jiXY/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/15CEQH7jiXY/hqdefault.jpg"
-    },
-    {
-      "id": "yKmLcZyVFJo",
-      "title": "Jour 3 : Toujours pas renvoyé de l'école malgré mes catastrophes magiques ! � (Part 58/59)",
-      "url": "https://www.youtube.com/watch?v=yKmLcZyVFJo",
-      "published_at": "2026-06-14T14:24:08+00:00",
-      "cover": "https://i2.ytimg.com/vi/yKmLcZyVFJo/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/yKmLcZyVFJo/hqdefault.jpg"
     }
   ]
 }
