@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-06-21T07:20:44.162Z",
+  "updated_at": "2026-06-21T10:56:24.665Z",
   "items": [
+    {
+      "id": "mgcknRyl6E0",
+      "title": "DOMINATION MODE : RUST 🔫 // BY RIDERSKILL",
+      "url": "https://www.youtube.com/watch?v=mgcknRyl6E0",
+      "published_at": "2026-06-21T10:32:22+00:00",
+      "cover": "https://i2.ytimg.com/vi/mgcknRyl6E0/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/mgcknRyl6E0/hqdefault.jpg"
+    },
     {
       "id": "UVB8LMAbXF0",
       "title": "on retest apres le fiasco total du vertical twitch",
@@ -112,14 +120,6 @@
       "published_at": "2026-06-17T01:49:33+00:00",
       "cover": "https://i1.ytimg.com/vi/dgeEj7gPLzs/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/dgeEj7gPLzs/hqdefault.jpg"
-    },
-    {
-      "id": "mNqKplxVZ2k",
-      "title": "Jour 5 : L'École des Sorciers💻🪄 : Montage PC Version Magique 🧪🛠️",
-      "url": "https://www.youtube.com/watch?v=mNqKplxVZ2k",
-      "published_at": "2026-06-17T01:49:27+00:00",
-      "cover": "https://i2.ytimg.com/vi/mNqKplxVZ2k/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/mNqKplxVZ2k/hqdefault.jpg"
     }
   ]
 }
