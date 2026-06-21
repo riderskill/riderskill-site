@@ -1,17 +1,24 @@
 [
   {
+    "id": "2801666670",
+    "url": "https://www.twitch.tv/videos/2801666670",
+    "title": "DOMINATION MODE : RUST 🔫 // BY RIDERSKILL",
+    "published_at": "2026-06-21T01:56:18Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/f9f0d87349c6d4e5c009_riderskill_317025883618_1782006970//thumb/thumb0-%{width}x%{height}.jpg"
+  },
+  {
     "id": "2801530321",
     "url": "https://www.twitch.tv/videos/2801530321",
     "title": "on retest apres le fiasco total du vertical twitch",
     "published_at": "2026-06-20T22:27:39Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/64ce24680eddbfb35e1f_riderskill_317025029090_1781994451//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
     "id": "2800982150",
     "url": "https://www.twitch.tv/videos/2800982150",
     "title": "on retest apres le fiasco total du vertical twitch",
     "published_at": "2026-06-20T05:01:37Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/2e1e55de72588d22145a_riderskill_317017985890_1781931689//thumb/thumb0-%{width}x%{height}.jpg"
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/2e1e55de72588d22145a_riderskill_317017985890_1781931689/thumb/custom-e7b7e585-9fac-4127-938b-7b6f07a26f4f-%{width}x%{height}.jpeg"
   },
   {
     "id": "2799042016",
@@ -26,12 +33,5 @@
     "title": "RUST : SURVIE & CONSTRUCTION 🚀 Gameplay posé, entraide et échanges en direct ⚙️ Venez profiter d'un moment détente ! 🎙️",
     "published_at": "2026-06-17T16:50:23Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/ee841a745c66464ce778_riderskill_317021875172_1781715014//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2798102979",
-    "url": "https://www.twitch.tv/videos/2798102979",
-    "title": "Jour 6 : Je tabasse tout ce qui bouge 🔥 avec un niveau de skill  qui ferait passer Harry Potter pour un stagiaire ✨",
-    "published_at": "2026-06-16T16:14:28Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/09521d0695a03803f970_riderskill_317031247587_1781626460/thumb/custom-f00747b5-9706-4af8-a60c-c17c53df57b1-%{width}x%{height}.jpeg"
   }
 ]
