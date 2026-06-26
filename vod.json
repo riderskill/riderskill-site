@@ -1,10 +1,17 @@
 [
   {
+    "id": "2805689911",
+    "url": "https://www.twitch.tv/videos/2805689911",
+    "title": "CANICULE 🚀 ARC RAIDERS : ILS ONT CACHÉ ÇA ! Ultra  | RIDERSKILL)",
+    "published_at": "2026-06-26T09:01:01Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
     "id": "2805645199",
     "url": "https://www.twitch.tv/videos/2805645199",
     "title": "🚀 ARC RAIDERS : ILS ONT CACHÉ ÇA ! (Ultra 300 FPS+ | RIDERSKILL)",
     "published_at": "2026-06-26T06:34:20Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/76ee46bf81028fb89e7e_riderskill_317106253923_1782455652//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
     "id": "2804807087",
@@ -26,12 +33,5 @@
     "title": "DOMINATION MODE : RUST 🔫 // BY RIDERSKILL",
     "published_at": "2026-06-21T01:56:18Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/f9f0d87349c6d4e5c009_riderskill_317025883618_1782006970//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2801530321",
-    "url": "https://www.twitch.tv/videos/2801530321",
-    "title": "on retest apres le fiasco total du vertical twitch",
-    "published_at": "2026-06-20T22:27:39Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/64ce24680eddbfb35e1f_riderskill_317025029090_1781994451//thumb/thumb0-%{width}x%{height}.jpg"
   }
 ]
