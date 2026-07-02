@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-02T15:01:17.826Z",
+  "updated_at": "2026-07-02T17:22:01.994Z",
   "items": [
+    {
+      "id": "GcvU3kEAjl8",
+      "title": "Marre du gaming jetable : retour aux sources avec Tetris (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=GcvU3kEAjl8",
+      "published_at": "2026-07-02T15:06:51+00:00",
+      "cover": "https://i4.ytimg.com/vi/GcvU3kEAjl8/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/GcvU3kEAjl8/hqdefault.jpg"
+    },
+    {
+      "id": "gWDAXkqUI64",
+      "title": "Marre du gaming jetable : retour aux sources avec Tetris (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=gWDAXkqUI64",
+      "published_at": "2026-07-02T15:06:49+00:00",
+      "cover": "https://i4.ytimg.com/vi/gWDAXkqUI64/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/gWDAXkqUI64/hqdefault.jpg"
+    },
     {
       "id": "0H8fPMi7kgc",
       "title": "FONDA, on est sur mon serveur gtarp pour les viewers (tous admin, + de sub = + de place)",
@@ -104,22 +120,6 @@
       "published_at": "2026-06-26T03:34:30+00:00",
       "cover": "https://i4.ytimg.com/vi/c0Kjy_uyUf4/hqdefault.jpg",
       "thumbnail": "https://i4.ytimg.com/vi/c0Kjy_uyUf4/hqdefault.jpg"
-    },
-    {
-      "id": "QD279ncxcOc",
-      "title": "Canicule, on t'en. ! ❄️ Un peu de fraîcheur ? ❄️ Jeu offert par le stud (Part 47/55)",
-      "url": "https://www.youtube.com/watch?v=QD279ncxcOc",
-      "published_at": "2026-06-26T03:34:28+00:00",
-      "cover": "https://i2.ytimg.com/vi/QD279ncxcOc/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/QD279ncxcOc/hqdefault.jpg"
-    },
-    {
-      "id": "Xe8tb6Vhw18",
-      "title": "Canicule, on t'en. ! ❄️ Un peu de fraîcheur ? ❄️ Jeu offert par le stud (Part 46/55)",
-      "url": "https://www.youtube.com/watch?v=Xe8tb6Vhw18",
-      "published_at": "2026-06-26T03:34:25+00:00",
-      "cover": "https://i1.ytimg.com/vi/Xe8tb6Vhw18/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/Xe8tb6Vhw18/hqdefault.jpg"
     }
   ]
 }
