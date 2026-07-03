@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-03T11:21:44.767Z",
+  "updated_at": "2026-07-03T13:25:16.288Z",
   "items": [
+    {
+      "id": "4mnte3TZ48Q",
+      "title": "#2 Marre du gaming jetable : on se concentre sur l'essentiel dans Rust et arc ra (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=4mnte3TZ48Q",
+      "published_at": "2026-07-03T11:47:27+00:00",
+      "cover": "https://i1.ytimg.com/vi/4mnte3TZ48Q/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/4mnte3TZ48Q/hqdefault.jpg"
+    },
+    {
+      "id": "DSmhZgYuGE0",
+      "title": "#2 Marre du gaming jetable : on se concentre sur l'essentiel dans Rust et arc ra (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=DSmhZgYuGE0",
+      "published_at": "2026-07-03T11:47:23+00:00",
+      "cover": "https://i1.ytimg.com/vi/DSmhZgYuGE0/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/DSmhZgYuGE0/hqdefault.jpg"
+    },
     {
       "id": "DfR_j1DIVCs",
       "title": "boom boom sur ta base | #riderskill sur #Twitch",
@@ -104,22 +120,6 @@
       "published_at": "2026-06-26T03:34:38+00:00",
       "cover": "https://i2.ytimg.com/vi/U8Jms06VWYQ/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/U8Jms06VWYQ/hqdefault.jpg"
-    },
-    {
-      "id": "lm_blaGeoVM",
-      "title": "Canicule, on t'en. ! ❄️ Un peu de fraîcheur ? ❄️ Jeu offert par le stud (Part 50/55)",
-      "url": "https://www.youtube.com/watch?v=lm_blaGeoVM",
-      "published_at": "2026-06-26T03:34:35+00:00",
-      "cover": "https://i1.ytimg.com/vi/lm_blaGeoVM/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/lm_blaGeoVM/hqdefault.jpg"
-    },
-    {
-      "id": "-hJH5kxufdI",
-      "title": "Canicule, on t'en. ! ❄️ Un peu de fraîcheur ? ❄️ Jeu offert par le stud (Part 49/55)",
-      "url": "https://www.youtube.com/watch?v=-hJH5kxufdI",
-      "published_at": "2026-06-26T03:34:32+00:00",
-      "cover": "https://i2.ytimg.com/vi/-hJH5kxufdI/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/-hJH5kxufdI/hqdefault.jpg"
     }
   ]
 }
