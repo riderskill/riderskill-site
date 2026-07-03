@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-03T20:06:12.497Z",
+  "updated_at": "2026-07-03T21:52:02.116Z",
   "items": [
+    {
+      "id": "86oRzoa9cvg",
+      "title": "💎Go to forced, BUTIN MYTHIQUE ! LA CHASSE AUX LÉGENDES (RUST / ARCRAIDERS) (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=86oRzoa9cvg",
+      "published_at": "2026-07-03T21:21:57+00:00",
+      "cover": "https://i1.ytimg.com/vi/86oRzoa9cvg/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/86oRzoa9cvg/hqdefault.jpg"
+    },
+    {
+      "id": "Adq2Ay0UeEw",
+      "title": "💎Go to forced, BUTIN MYTHIQUE ! LA CHASSE AUX LÉGENDES (RUST / ARCRAIDERS) (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=Adq2Ay0UeEw",
+      "published_at": "2026-07-03T21:21:54+00:00",
+      "cover": "https://i2.ytimg.com/vi/Adq2Ay0UeEw/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/Adq2Ay0UeEw/hqdefault.jpg"
+    },
     {
       "id": "4mnte3TZ48Q",
       "title": "#2 Marre du gaming jetable : on se concentre sur l'essentiel dans Rust et arc ra (Part 2/2)",
@@ -104,22 +120,6 @@
       "published_at": "2026-06-26T03:34:46+00:00",
       "cover": "https://i4.ytimg.com/vi/OBNDgfx1sy8/hqdefault.jpg",
       "thumbnail": "https://i4.ytimg.com/vi/OBNDgfx1sy8/hqdefault.jpg"
-    },
-    {
-      "id": "xxRzSI2Re1k",
-      "title": "Canicule, on t'en. ! ❄️ Un peu de fraîcheur ? ❄️ Jeu offert par le stud (Part 52/55)",
-      "url": "https://www.youtube.com/watch?v=xxRzSI2Re1k",
-      "published_at": "2026-06-26T03:34:40+00:00",
-      "cover": "https://i1.ytimg.com/vi/xxRzSI2Re1k/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/xxRzSI2Re1k/hqdefault.jpg"
-    },
-    {
-      "id": "U8Jms06VWYQ",
-      "title": "Canicule, on t'en. ! ❄️ Un peu de fraîcheur ? ❄️ Jeu offert par le stud (Part 51/55)",
-      "url": "https://www.youtube.com/watch?v=U8Jms06VWYQ",
-      "published_at": "2026-06-26T03:34:38+00:00",
-      "cover": "https://i2.ytimg.com/vi/U8Jms06VWYQ/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/U8Jms06VWYQ/hqdefault.jpg"
     }
   ]
 }
