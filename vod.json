@@ -1,5 +1,12 @@
 [
   {
+    "id": "2812773018",
+    "url": "https://www.twitch.tv/videos/2812773018",
+    "title": "💣 FARM INTENSIF : JE CRAFT LES C4 ET J'ACHÈTE LA MORT DES HÉLICOS ! puis ⚠️ ARC RAIDERS : FARMER POUR ACHETER LA GUERRE !",
+    "published_at": "2026-07-05T14:48:50Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
     "id": "2811956119",
     "url": "https://www.twitch.tv/videos/2811956119",
     "title": "[DROPS ON]🏗️ 🤫 LE SECRET ABSOLU POUR PVE TRANQUILLE SUR RUST",
@@ -26,12 +33,5 @@
     "title": "Marre du gaming jetable : on se concentre sur l'essentiel dans Rust",
     "published_at": "2026-07-01T10:22:07Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/0464ca4650a30a4e443e_riderskill_317146015843_1782901319//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2808834434",
-    "url": "https://www.twitch.tv/videos/2808834434",
-    "title": "Marre du gaming jetable : retour aux sources avec Tetris",
-    "published_at": "2026-06-30T11:55:56Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/808ff6d1f4b332d45f2e_riderskill_317098103906_1782820547//thumb/thumb0-%{width}x%{height}.jpg"
   }
 ]
