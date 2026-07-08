@@ -1,5 +1,12 @@
 [
   {
+    "id": "2815126492",
+    "url": "https://www.twitch.tv/videos/2815126492",
+    "title": "⚠️ ARC RAIDERS [DROPS ON] DÉBLOQUE TES RÉCOMPENSES VIA ABONNEMENTS !",
+    "published_at": "2026-07-08T17:17:52Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
     "id": "2812773018",
     "url": "https://www.twitch.tv/videos/2812773018",
     "title": "💣 FARM INTENSIF : JE CRAFT LES C4 ET J'ACHÈTE LA MORT DES HÉLICOS ! puis ⚠️ ARC RAIDERS : FARMER POUR ACHETER LA GUERRE !",
@@ -26,12 +33,5 @@
     "title": "💎Go to forced, BUTIN MYTHIQUE ! LA CHASSE AUX LÉGENDES (RUST / ARCRAIDERS)",
     "published_at": "2026-07-02T15:21:16Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/82b24f942f6c8a0be473_riderskill_317140282980_1783005667//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2809563111",
-    "url": "https://www.twitch.tv/videos/2809563111",
-    "title": "Marre du gaming jetable : on se concentre sur l'essentiel dans Rust",
-    "published_at": "2026-07-01T10:22:07Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/0464ca4650a30a4e443e_riderskill_317146015843_1782901319//thumb/thumb0-%{width}x%{height}.jpg"
   }
 ]
