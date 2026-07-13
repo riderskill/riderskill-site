@@ -1,5 +1,12 @@
 [
   {
+    "id": "2819291966",
+    "url": "https://www.twitch.tv/videos/2819291966",
+    "title": "🎉 Live spécial ! Je célèbre mon passage Kick Partner 💚 Merci à toute la communauté !",
+    "published_at": "2026-07-13T21:03:18Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
     "id": "2815877381",
     "url": "https://www.twitch.tv/videos/2815877381",
     "title": "⚠️  [DROPS ON] RÉCUPÈRE LES DROPS EXCLUSIFS (Système par SUBS)",
@@ -26,12 +33,5 @@
     "title": "[DROPS ON]🏗️ 🤫 LE SECRET ABSOLU POUR PVE TRANQUILLE SUR RUST",
     "published_at": "2026-07-04T12:26:45Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/c7431c372d38ea77784b_riderskill_317130407906_1783167997/thumb/custom-fc585e14-1052-4b9c-adc1-64e93e2e6ef4-%{width}x%{height}.jpeg"
-  },
-  {
-    "id": "2811181314",
-    "url": "https://www.twitch.tv/videos/2811181314",
-    "title": "[DROPS ON]🏗️ ON BÂTIT, ON FARM, ON SURVIT ! RUST (PvE / Aventure)",
-    "published_at": "2026-07-03T13:00:12Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/a9c2ba3f15a0bed86162_riderskill_317122879202_1783083604/thumb/custom-1213b8a0-56d4-4d4d-97c5-9d8b4cdb4d49-%{width}x%{height}.jpeg"
   }
 ]
