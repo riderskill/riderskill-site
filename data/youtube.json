@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-07-15T01:04:15.717Z",
+  "updated_at": "2026-07-15T07:02:51.524Z",
   "items": [
+    {
+      "id": "a9j-h6L3-vc",
+      "title": "🎉 Live spécial ! Je célèbre mon passage Kick Partner 💚 Merci à toute la communauté !",
+      "url": "https://www.youtube.com/watch?v=a9j-h6L3-vc",
+      "published_at": "2026-07-15T05:22:23+00:00",
+      "cover": "https://i2.ytimg.com/vi/a9j-h6L3-vc/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/a9j-h6L3-vc/hqdefault.jpg"
+    },
     {
       "id": "9SQd_rdyyz8",
       "title": "⚠️  [DROPS ON] RÉCUPÈRE LES DROPS EXCLUSIFS (Système par SUBS)",
@@ -112,14 +120,6 @@
       "published_at": "2026-07-03T21:21:54+00:00",
       "cover": "https://i2.ytimg.com/vi/Adq2Ay0UeEw/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/Adq2Ay0UeEw/hqdefault.jpg"
-    },
-    {
-      "id": "4mnte3TZ48Q",
-      "title": "#2 Marre du gaming jetable : on se concentre sur l'essentiel dans Rust et arc ra (Part 2/2)",
-      "url": "https://www.youtube.com/watch?v=4mnte3TZ48Q",
-      "published_at": "2026-07-03T11:47:27+00:00",
-      "cover": "https://i1.ytimg.com/vi/4mnte3TZ48Q/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/4mnte3TZ48Q/hqdefault.jpg"
     }
   ]
 }
