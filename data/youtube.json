@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-17T18:46:09.077Z",
+  "updated_at": "2026-07-17T19:54:01.696Z",
   "items": [
+    {
+      "id": "ZwCbabRJ9Ds",
+      "title": "#3 🎉 Live spécial ! Je célèbre mon passage Kick Partner 💚 Merci à tout (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=ZwCbabRJ9Ds",
+      "published_at": "2026-07-17T18:56:13+00:00",
+      "cover": "https://i3.ytimg.com/vi/ZwCbabRJ9Ds/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/ZwCbabRJ9Ds/hqdefault.jpg"
+    },
+    {
+      "id": "1X8-rkA25qU",
+      "title": "#3 🎉 Live spécial ! Je célèbre mon passage Kick Partner 💚 Merci à tout (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=1X8-rkA25qU",
+      "published_at": "2026-07-17T18:55:51+00:00",
+      "cover": "https://i2.ytimg.com/vi/1X8-rkA25qU/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/1X8-rkA25qU/hqdefault.jpg"
+    },
     {
       "id": "TG7d63RfSMA",
       "title": "#2 🎉 Live spécial ! Je célèbre mon passage Kick Partner 💚 Merci à tout (Part 36/36)",
@@ -104,22 +120,6 @@
       "published_at": "2026-07-16T12:30:42+00:00",
       "cover": "https://i4.ytimg.com/vi/c-3qFI-9y9c/hqdefault.jpg",
       "thumbnail": "https://i4.ytimg.com/vi/c-3qFI-9y9c/hqdefault.jpg"
-    },
-    {
-      "id": "xSP_gCqjm8g",
-      "title": "#2 🎉 Live spécial ! Je célèbre mon passage Kick Partner 💚 Merci à tout (Part 23/36)",
-      "url": "https://www.youtube.com/watch?v=xSP_gCqjm8g",
-      "published_at": "2026-07-16T12:30:32+00:00",
-      "cover": "https://i1.ytimg.com/vi/xSP_gCqjm8g/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/xSP_gCqjm8g/hqdefault.jpg"
-    },
-    {
-      "id": "RL1Qvn6_fcU",
-      "title": "#2 🎉 Live spécial ! Je célèbre mon passage Kick Partner 💚 Merci à tout (Part 22/36)",
-      "url": "https://www.youtube.com/watch?v=RL1Qvn6_fcU",
-      "published_at": "2026-07-16T12:30:29+00:00",
-      "cover": "https://i3.ytimg.com/vi/RL1Qvn6_fcU/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/RL1Qvn6_fcU/hqdefault.jpg"
     }
   ]
 }
