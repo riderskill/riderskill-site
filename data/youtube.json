@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-24T07:23:28.260Z",
+  "updated_at": "2026-07-24T10:02:09.212Z",
   "items": [
+    {
+      "id": "3Xtt1GEcV_Y",
+      "title": "🚜 RIDERSKILL | CAFÉ &amp; LABOUR : Live matinal, chill et réveil dans les champ (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=3Xtt1GEcV_Y",
+      "published_at": "2026-07-24T08:33:03+00:00",
+      "cover": "https://i4.ytimg.com/vi/3Xtt1GEcV_Y/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/3Xtt1GEcV_Y/hqdefault.jpg"
+    },
+    {
+      "id": "_UPwj4AHfWw",
+      "title": "🚜 RIDERSKILL | CAFÉ &amp; LABOUR : Live matinal, chill et réveil dans les champ (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=_UPwj4AHfWw",
+      "published_at": "2026-07-24T08:32:59+00:00",
+      "cover": "https://i4.ytimg.com/vi/_UPwj4AHfWw/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/_UPwj4AHfWw/hqdefault.jpg"
+    },
     {
       "id": "FBIEDVm2upg",
       "title": "Music time by riderskill + célébration Kick Partner 💚 (Part 22/22)",
@@ -104,22 +120,6 @@
       "published_at": "2026-07-22T21:22:28+00:00",
       "cover": "https://i2.ytimg.com/vi/YS8QOFDRb4Q/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/YS8QOFDRb4Q/hqdefault.jpg"
-    },
-    {
-      "id": "3RCxRqE_H98",
-      "title": "Music time by riderskill + célébration Kick Partner 💚 (Part 9/22)",
-      "url": "https://www.youtube.com/watch?v=3RCxRqE_H98",
-      "published_at": "2026-07-22T21:22:25+00:00",
-      "cover": "https://i4.ytimg.com/vi/3RCxRqE_H98/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/3RCxRqE_H98/hqdefault.jpg"
-    },
-    {
-      "id": "R-KfMDYC5jY",
-      "title": "Music time by riderskill + célébration Kick Partner 💚 (Part 8/22)",
-      "url": "https://www.youtube.com/watch?v=R-KfMDYC5jY",
-      "published_at": "2026-07-22T21:22:22+00:00",
-      "cover": "https://i3.ytimg.com/vi/R-KfMDYC5jY/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/R-KfMDYC5jY/hqdefault.jpg"
     }
   ]
 }
