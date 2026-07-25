@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-25T11:58:48.967Z",
+  "updated_at": "2026-07-25T13:16:19.001Z",
   "items": [
+    {
+      "id": "Bki1aCj7OAk",
+      "title": "🚜 RIDERSKILL | CAFÉ &amp; RÉCOLTES : Live matinal, détente et début de journ� (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=Bki1aCj7OAk",
+      "published_at": "2026-07-25T12:28:50+00:00",
+      "cover": "https://i3.ytimg.com/vi/Bki1aCj7OAk/hqdefault.jpg",
+      "thumbnail": "https://i3.ytimg.com/vi/Bki1aCj7OAk/hqdefault.jpg"
+    },
+    {
+      "id": "0O8BedSZoRE",
+      "title": "🚜 RIDERSKILL | CAFÉ &amp; RÉCOLTES : Live matinal, détente et début de journ� (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=0O8BedSZoRE",
+      "published_at": "2026-07-25T12:28:47+00:00",
+      "cover": "https://i1.ytimg.com/vi/0O8BedSZoRE/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/0O8BedSZoRE/hqdefault.jpg"
+    },
     {
       "id": "3Xtt1GEcV_Y",
       "title": "🚜 RIDERSKILL | CAFÉ &amp; LABOUR : Live matinal, chill et réveil dans les champ (Part 2/2)",
@@ -104,22 +120,6 @@
       "published_at": "2026-07-22T21:22:35+00:00",
       "cover": "https://i4.ytimg.com/vi/oPOvSHCuZjQ/hqdefault.jpg",
       "thumbnail": "https://i4.ytimg.com/vi/oPOvSHCuZjQ/hqdefault.jpg"
-    },
-    {
-      "id": "fvaxTF1CF7Q",
-      "title": "Music time by riderskill + célébration Kick Partner 💚 (Part 11/22)",
-      "url": "https://www.youtube.com/watch?v=fvaxTF1CF7Q",
-      "published_at": "2026-07-22T21:22:32+00:00",
-      "cover": "https://i3.ytimg.com/vi/fvaxTF1CF7Q/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/fvaxTF1CF7Q/hqdefault.jpg"
-    },
-    {
-      "id": "YS8QOFDRb4Q",
-      "title": "Music time by riderskill + célébration Kick Partner 💚 (Part 10/22)",
-      "url": "https://www.youtube.com/watch?v=YS8QOFDRb4Q",
-      "published_at": "2026-07-22T21:22:28+00:00",
-      "cover": "https://i2.ytimg.com/vi/YS8QOFDRb4Q/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/YS8QOFDRb4Q/hqdefault.jpg"
     }
   ]
 }
