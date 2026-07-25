@@ -1,10 +1,17 @@
 [
   {
+    "id": "2828580944",
+    "url": "https://www.twitch.tv/videos/2828580944",
+    "title": "🤖 RIDERSKILL | ARC RAIDERS : Loot, combats et survie dans les terres sauvages ! 🔥",
+    "published_at": "2026-07-25T09:56:35Z",
+    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+  },
+  {
     "id": "2828506826",
     "url": "https://www.twitch.tv/videos/2828506826",
     "title": "🌙 RIDERSKILL | LUNAR STRIKE PLAYTEST : Découverte, survie et premières impressions ! 🚀",
     "published_at": "2026-07-25T06:22:26Z",
-    "thumbnail_url": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png"
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/a20147644e717a6f6856_riderskill_317292842978_1784960538//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
     "id": "2826888266",
@@ -26,12 +33,5 @@
     "title": "Music time by riderskill + célébration Kick Partner 💚",
     "published_at": "2026-07-21T04:28:34Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/fea96b7e6a7b3d7b7f0a_riderskill_317259646050_1784608106//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
-    "id": "2821832554",
-    "url": "https://www.twitch.tv/videos/2821832554",
-    "title": "#4 🎉 Live spécial ! Je célèbre mon passage Kick Partner 💚 Merci à toute la communauté !",
-    "published_at": "2026-07-17T01:10:41Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/a036d6d8cd563c53de89_riderskill_317251925988_1784250633//thumb/thumb0-%{width}x%{height}.jpg"
   }
 ]
