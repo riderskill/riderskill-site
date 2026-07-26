@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-26T07:59:45.318Z",
+  "updated_at": "2026-07-26T09:57:29.226Z",
   "items": [
+    {
+      "id": "TPQNeKUvI58",
+      "title": "🤖 RIDERSKILL | ARC RAIDERS : Loot, combats et survie dans les terres sauvages ! 🔥",
+      "url": "https://www.youtube.com/watch?v=TPQNeKUvI58",
+      "published_at": "2026-07-26T09:24:12+00:00",
+      "cover": "https://i1.ytimg.com/vi/TPQNeKUvI58/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/TPQNeKUvI58/hqdefault.jpg"
+    },
+    {
+      "id": "xnVeMfFza94",
+      "title": "🌙 RIDERSKILL | LUNAR STRIKE PLAYTEST : Découverte, survie et premières impressions ! 🚀",
+      "url": "https://www.youtube.com/watch?v=xnVeMfFza94",
+      "published_at": "2026-07-26T09:24:10+00:00",
+      "cover": "https://i1.ytimg.com/vi/xnVeMfFza94/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/xnVeMfFza94/hqdefault.jpg"
+    },
     {
       "id": "Bki1aCj7OAk",
       "title": "🚜 RIDERSKILL | CAFÉ &amp; RÉCOLTES : Live matinal, détente et début de journ� (Part 2/2)",
@@ -104,22 +120,6 @@
       "published_at": "2026-07-22T21:22:39+00:00",
       "cover": "https://i4.ytimg.com/vi/7U6z7YuCWIw/hqdefault.jpg",
       "thumbnail": "https://i4.ytimg.com/vi/7U6z7YuCWIw/hqdefault.jpg"
-    },
-    {
-      "id": "EqNiMWox5TQ",
-      "title": "Music time by riderskill + célébration Kick Partner 💚 (Part 13/22)",
-      "url": "https://www.youtube.com/watch?v=EqNiMWox5TQ",
-      "published_at": "2026-07-22T21:22:37+00:00",
-      "cover": "https://i2.ytimg.com/vi/EqNiMWox5TQ/hqdefault.jpg",
-      "thumbnail": "https://i2.ytimg.com/vi/EqNiMWox5TQ/hqdefault.jpg"
-    },
-    {
-      "id": "oPOvSHCuZjQ",
-      "title": "Music time by riderskill + célébration Kick Partner 💚 (Part 12/22)",
-      "url": "https://www.youtube.com/watch?v=oPOvSHCuZjQ",
-      "published_at": "2026-07-22T21:22:35+00:00",
-      "cover": "https://i4.ytimg.com/vi/oPOvSHCuZjQ/hqdefault.jpg",
-      "thumbnail": "https://i4.ytimg.com/vi/oPOvSHCuZjQ/hqdefault.jpg"
     }
   ]
 }
