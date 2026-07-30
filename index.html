@@ -19,7 +19,7 @@
 
         body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-        /* --- HEADER (BARRE COMPLÈTE AMÉLIORÉE) --- */
+        /* --- HEADER --- */
         header { 
             background: rgba(0, 0, 0, 0.9); padding: 12px 0; border-bottom: 1px solid var(--border);
             position: sticky; top: 0; z-index: 9999; backdrop-filter: blur(10px);
@@ -30,7 +30,6 @@
         .logo-img { width: 35px; height: 35px; border-radius: 6px; object-fit: cover; border: 1px solid var(--border); }
         .brand-name { font-weight: 900; font-size: 20px; color: white; }
         
-        /* Point ON/OFF avec animation Ripple */
         .status-dot { width: 12px; height: 12px; border-radius: 50%; background: #ff4444; position: relative; }
         .is-live .status-dot { background: var(--kick); box-shadow: 0 0 10px var(--kick); }
         .is-live .status-dot::after {
@@ -39,7 +38,6 @@
         }
         @keyframes pulse-live { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
 
-        /* TOUS LES BOUTONS (DESIGN AMÉLIORÉ) */
         .menu-links { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
         .btn { 
             background: rgba(26,26,26,0.92); border: 1px solid #2a2a2a; color: white; 
@@ -57,19 +55,16 @@
 
         .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
         
-        /* PLAYER AVEC LUEUR DYNAMIQUE */
         #player-twitch { 
             width: 100%; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; 
-            border: 1px solid var(--border); background: #000; margin-bottom: 40px;
+            border: 1px solid var(--border); background: #000; margin-bottom: 20px;
             transition: 0.5s;
         }
         .is-live #player-twitch { border-color: var(--kick); box-shadow: 0 0 30px var(--glow-green); }
 
-        /* TITRES ET GRILLES */
         .section-title { font-size: 24px; font-weight: 900; margin: 40px 0 20px; border-left: 5px solid var(--accent); padding-left: 15px; display: flex; align-items: center; justify-content: space-between; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
         
-        /* CARTES AMÉLIORÉES */
         .card { 
             background: var(--panel); border-radius: 20px; border: 1px solid var(--border); 
             overflow: hidden; text-decoration: none; color: white; transition: 0.3s; display: block;
@@ -82,17 +77,69 @@
         .card-title { font-size: 14px; font-weight: 900; height: 40px; overflow: hidden; margin: 0; line-height: 1.4; }
         .card-tag { font-size: 10px; font-weight: 900; color: var(--accent); text-transform: uppercase; margin-top: 10px; display: block; }
 
-        footer { padding: 60px; text-align: center; color: #444; font-weight: 900; border-top: 1px solid var(--border); }
+        footer { padding: 60px; text-align: center; color: #444; font-weight: 900; border-top: 1px solid var(--border); margin-top: 40px; }
     </style>
 </head>
-<body class="">
-  <section style="background: #000; color: white; padding: 80px 20px; font-family: 'Inter', sans-serif;">
+<body>
+
+<header>
+    <div class="nav">
+        <a href="index.html" class="brand-area" id="live-indicator">
+            <img src="logo avecfond.jpg" class="logo-img" alt="RiderSkill">
+            <span class="brand-name">RiderSkill</span>
+            <div class="status-dot"></div>
+        </a>
+
+        <div class="menu-links">
+            <a href="index.html" class="btn">Live</a>
+            <a href="clips.html" class="btn">Clips</a>
+            <a href="alaune.html" class="btn">À la une</a>
+            <a href="https://twitch.tv/riderskill" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="Twitch"> Twitch</a>
+            <a href="https://kick.com/riderskill" target="_blank" class="btn" style="color:var(--kick);"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Kick_logo.svg" alt="Kick"> Kick</a>
+            <a href="https://youtube.com/@riderskill" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> YouTube</a>
+            <a href="https://tiktok.com/@riderskill_twitch" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"> TikTok</a>
+            <a href="https://x.com/riderskill" target="_blank" class="btn"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X"> X</a>
+            <a href="https://discord.gg/nbAZ28Z6jH" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord"> Discord</a>
+        </div>
+    </div>
+</header>
+
+<div class="setup-banner">
+    i5-14600KF @ 5.5 GHZ | RTX 5070 TI | 32 GO DDR5 | RIVATUNER STEALTH MODE
+</div>
+
+<div class="container">
+    <!-- TWITCH -->
+    <div id="player-twitch"></div>
+
+    <!-- KICK -->
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; margin-top: 20px; border-radius: 20px; border: 1px solid var(--border);">
+        <iframe 
+            src="https://player.kick.com/riderskill?parent=riderskill.github.io" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+            frameborder="0" 
+            scrolling="no" 
+            allowfullscreen="true">
+        </iframe>
+    </div>
+
+    <!-- YOUTUBE -->
+    <h2 class="section-title">📺 PRODUCTIONS YOUTUBE <span>📀</span></h2>
+    <div id="yt-grid" class="grid"></div>
+
+    <!-- TIKTOK -->
+    <h2 class="section-title">📱 TIKTOK HIGHLIGHTS <span>📱</span></h2>
+    <div id="tk-grid" class="grid"></div>
+</div>
+
+<!-- SECTION PARTENARIATS & SERVICES -->
+<section style="background: #000; color: white; padding: 60px 20px; font-family: 'Inter', sans-serif; border-top: 1px solid var(--border);">
     <div style="max-width: 1200px; margin: auto; text-align: center;">
         
-        <h1 style="font-size: 3rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 2px;">PARTENARIATS & STUDIOS</h1>
-        <div style="border: 1px solid #22c55e; color: #22c55e; display: inline-block; padding: 5px 20px; font-weight: bold; border-radius: 4px; margin-bottom: 50px;">EXPERTISE 5070 Ti</div>
+        <h1 style="font-size: 2.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 2px;">PARTENARIATS & STUDIOS</h1>
+        <div style="border: 1px solid #22c55e; color: #22c55e; display: inline-block; padding: 5px 20px; font-weight: bold; border-radius: 4px; margin-bottom: 40px;">EXPERTISE 5070 Ti</div>
 
-        <div style="background: rgba(145, 70, 255, 0.05); border: 1px solid #9146FF; border-radius: 12px; padding: 30px; max-width: 700px; margin: 0 auto 60px auto; text-align: left;">
+        <div style="background: rgba(145, 70, 255, 0.05); border: 1px solid #9146FF; border-radius: 12px; padding: 30px; max-width: 700px; margin: 0 auto 50px auto; text-align: left;">
             <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
                 <span>📹 Session Live Découverte (1h-2h)</span>
                 <span style="color: #22c55e; font-weight: 800;">40 €</span>
@@ -107,24 +154,24 @@
             </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px;">
             
-            <div style="border: 1px solid #22c55e; border-radius: 15px; padding: 30px; background: #0a0a0a; text-align: left;">
-                <h2 style="color: #22c55e; text-align: center; border-bottom: 1px solid #22c55e; padding-bottom: 15px; margin-bottom: 25px;">🎮 GAMME GAMING</h2>
+            <div style="border: 1px solid #22c55e; border-radius: 15px; padding: 25px; background: #0a0a0a; text-align: left;">
+                <h2 style="color: #22c55e; text-align: center; border-bottom: 1px solid #22c55e; padding-bottom: 15px; margin-bottom: 20px;">🎮 GAMME GAMING</h2>
                 <p style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span>Montage PC Gaming</span> <b>85 €</b></p>
                 <p style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span>Installation Windows</span> <b>30 €</b></p>
                 <p style="color: #22c55e; font-weight: bold; border-top: 1px solid #222; padding-top: 15px; margin-top: 20px;">Conseil / Aide achat <span style="float: right;">20 € / h</span></p>
             </div>
 
-            <div style="border: 1px solid #3b82f6; border-radius: 15px; padding: 30px; background: #0a0a0a; text-align: left;">
-                <h2 style="color: #3b82f6; text-align: center; border-bottom: 1px solid #3b82f6; padding-bottom: 15px; margin-bottom: 25px;">🏠 PARTICULIER</h2>
+            <div style="border: 1px solid #3b82f6; border-radius: 15px; padding: 25px; background: #0a0a0a; text-align: left;">
+                <h2 style="color: #3b82f6; text-align: center; border-bottom: 1px solid #3b82f6; padding-bottom: 15px; margin-bottom: 20px;">🏠 PARTICULIER</h2>
                 <p style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span>Montage Bureautique</span> <b>55 €</b></p>
                 <div style="height: 40px;"></div>
                 <p style="color: #3b82f6; font-weight: bold; border-top: 1px solid #222; padding-top: 15px; margin-top: 20px;">Conseil / Aide achat <span style="float: right;">10 € / h</span></p>
             </div>
 
-            <div style="border: 1px solid #a855f7; border-radius: 15px; padding: 30px; background: #0a0a0a; text-align: left;">
-                <h2 style="color: #a855f7; text-align: center; border-bottom: 1px solid #a855f7; padding-bottom: 15px; margin-bottom: 25px;">💼 GAMME PRO</h2>
+            <div style="border: 1px solid #a855f7; border-radius: 15px; padding: 25px; background: #0a0a0a; text-align: left;">
+                <h2 style="color: #a855f7; text-align: center; border-bottom: 1px solid #a855f7; padding-bottom: 15px; margin-bottom: 20px;">💼 GAMME PRO</h2>
                 <p style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span>Montage Stabilité</span> <b>85 €</b></p>
                 <p style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span>Pack Full Pro</span> <b>115 €</b></p>
                 <p style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span>Installation OS Pro</span> <b>35 €</b></p>
@@ -137,56 +184,14 @@
             📧 Commander par Email
         </a>
 
-        <p style="margin-top: 40px; font-size: 0.8rem; color: #444;">SIRET : 504 712 043 00026 | RIDERSKILL PRODUCTION</p>
+        <p style="margin-top: 30px; font-size: 0.8rem; color: #444;">SIRET : 504 712 043 00026 | RIDERSKILL PRODUCTION</p>
     </div>
 </section>
-<header>
-    <div class="nav">
-        <a href="index.html" class="brand-area" id="live-indicator">
-            <img src="logo avecfond.jpg" class="logo-img" alt="RiderSkill">
-            <span class="brand-name">RiderSkill</span>
-            <div class="status-dot"></div>
-        </a>
 
-        <div class="menu-links">
-            <a href="index.html" class="btn">Live</a>
-            <a href="clips.html" class="btn">Clips</a>
-            <a href="alaune.html" class="btn">À la une</a>
-            <a href="https://twitch.tv/riderskill" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png"> Twitch</a>
-            <a href="https://kick.com/riderskill" target="_blank" class="btn" style="color:var(--kick);"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Kick_logo.svg"> Kick</a>
-            <a href="https://youtube.com/@riderskill" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"> YouTube</a>
-            <a href="https://tiktok.com/@riderskill_twitch" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"> TikTok</a>
-            <a href="https://x.com/riderskill" target="_blank" class="btn"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg"> X</a>
-            <a href="https://discord.gg/nbAZ28Z6jH" target="_blank" class="btn"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png"> Discord</a>
-        </div>
-    </div>
-</header>
-
-<div class="setup-banner">
-    i5-14600KF @ 5.5 GHZ | RTX 5070 TI | 32 GO DDR5 | RIVATUNER STEALTH MODE
-</div>
-<div class="container">
-      <div id="player-twitch"></div>
-
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-top: 20px; border-radius: 12px;">
-        <iframe 
-          src="https://player.kick.com/riderskill?parent=riderskill.github.io" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-          frameborder="0" 
-          scrolling="no" 
-          allowfullscreen="true">
-        </iframe>
-      </div>
-
-      <h2 class="section-title">📺 PRODUCTIONS YOUTUBE <span>📀</span></h2>
-      <div id="yt-grid" class="grid"></div>
-
-      <h2 class="section-title">📱 TIKTOK HIGHLIGHTS <span>📱</span></h2>
-      <div id="tk-grid" class="grid"></div>
-    </div>
 <footer>© 2026 RIDERSKILL PRODUCTION — PERFORMANCE 5.5 GHZ</footer>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 1000px; margin: 20px auto; border-radius: 12px;">
+<!-- SCRIPTS OBLIGATOIRES -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
 <script>
     // GESTION LIVE + DESIGN DYNAMIQUE
     const player = new Twitch.Player("player-twitch", {
@@ -203,7 +208,7 @@
         document.body.classList.remove('is-live');
     });
 
-    // CHARGEMENT DES JSON (VERSION AMÉLIORÉE)
+    // CHARGEMENT DES JSON
     const v = Date.now();
 
     // YouTube Grid
@@ -237,7 +242,6 @@
             `).join('');
         });
 </script>
-
 
 </body>
 </html>
