@@ -1,52 +1,22 @@
-{
-  "data": [
-    {
-      "id": "BetterHonorableSoybeanMikeHogu-TIiRm9zTr8jBF39f",
-      "url": "https://www.twitch.tv/riderskill/clip/BetterHonorableSoybeanMikeHogu-TIiRm9zTr8jBF39f",
-      "title": "🚨arc raiders puis rust pour vous et fresh les drops rust de demain !|🤖 déménagement a la fin du mois , l'annee 2026 commence au top⚠️",
-      "created_at": "2026-02-04T17:36:01Z",
-      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/BetterHonorableSoybeanMikeHogu-TIiRm9zTr8jBF39f/190bdc20-3881-4213-872c-9b06ef559da3/preview-480x272.jpg",
-      "view_count": 9
-    },
-    {
-      "id": "LuckyModernWaspHassanChop-eHcK3GDfYJ12t_UF",
-      "url": "https://www.twitch.tv/riderskill/clip/LuckyModernWaspHassanChop-eHcK3GDfYJ12t_UF",
-      "title": "🎵🤖 Live inédit : j’écris les paroles et la musique en temps réel 🎶💻Création de musique IA en live – Voyez tout : paroles + génération.",
-      "created_at": "2026-01-09T09:12:18Z",
-      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/LuckyModernWaspHassanChop-eHcK3GDfYJ12t_UF/9c8298be-917c-4d4f-8a3b-121bde128645/preview-480x272.jpg",
-      "view_count": 5
-    },
-    {
-      "id": "AbrasiveLittleApePMSTwin-nJ5WQKQuCjE5R0iu",
-      "url": "https://www.twitch.tv/riderskill/clip/AbrasiveLittleApePMSTwin-nJ5WQKQuCjE5R0iu",
-      "title": "[drop on] ⚡ ARC Raiders =recrutement team ouverte 2 joueurs (500h mini)-RUST=need 2 aussi pour le 9, tournois esport RUST( 4500 heures mini)",
-      "created_at": "2026-01-06T14:08:35Z",
-      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AbrasiveLittleApePMSTwin-nJ5WQKQuCjE5R0iu/3f6bea70-fa73-4cb4-b93f-2849d2ab567f/preview-480x272.jpg",
-      "view_count": 21
-    },
-    {
-      "id": "BrightTardyPresidentDxCat-5fzpnE5ZopN2kyYi",
-      "url": "https://www.twitch.tv/riderskill/clip/BrightTardyPresidentDxCat-5fzpnE5ZopN2kyYi",
-      "title": "everthing moove",
-      "created_at": "2026-01-01T12:49:50Z",
-      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/BrightTardyPresidentDxCat-5fzpnE5ZopN2kyYi/31a8789e-cb47-484b-9466-2366406e958a/preview-480x272.jpg",
-      "view_count": 11
-    },
-    {
-      "id": "AssiduousEnergeticTildeDxAbomb-3YpJA5lrCEe3l_KF",
-      "url": "https://www.twitch.tv/riderskill/clip/AssiduousEnergeticTildeDxAbomb-3YpJA5lrCEe3l_KF",
-      "title": "WzBot CLIP | [drop on] 💣🔥 Survie, loot et décisions propres ⚔️🤖 | suite du wipe. (by riderskill)",
-      "created_at": "2025-12-23T21:51:29Z",
-      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AssiduousEnergeticTildeDxAbomb-3YpJA5lrCEe3l_KF/55e00abd-11be-45e7-9920-8a8f71863241/preview-480x272.jpg",
-      "view_count": 5
-    },
-    {
-      "id": "CooperativeFamousSandstormNerfBlueBlaster-ocakxfi3iel6BbAP",
-      "url": "https://www.twitch.tv/riderskill/clip/CooperativeFamousSandstormNerfBlueBlaster-ocakxfi3iel6BbAP",
-      "title": "ton pseudo il fini ci",
-      "created_at": "2025-12-23T20:42:25Z",
-      "thumbnail_url": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CooperativeFamousSandstormNerfBlueBlaster-ocakxfi3iel6BbAP/a1a49a0d-8939-473e-8edf-ac9f020e3f3e/preview-480x272.jpg",
-      "view_count": 14
-    }
-  ]
-}
+[
+  {
+    "title": "🚨 ARC Raiders puis Rust !",
+    "url": "https://www.twitch.tv/riderskill/clip/BetterHonorableSoybeanMikeHogu-TIiRm9zTr8jBF39f",
+    "cover": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/BetterHonorableSoybeanMikeHogu-TIiRm9zTr8jBF39f/190bdc20-3881-4213-872c-9b06ef559da3/preview-480x272.jpg"
+  },
+  {
+    "title": "🎵 Live inédit : Création musique IA",
+    "url": "https://www.twitch.tv/riderskill/clip/LuckyModernWaspHassanChop-eHcK3GDfYJ12t_UF",
+    "cover": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/LuckyModernWaspHassanChop-eHcK3GDfYJ12t_UF/9c8298be-917c-4d4f-8a3b-121bde128645/preview-480x272.jpg"
+  },
+  {
+    "title": "⚡ ARC Raiders & Tournois RUST",
+    "url": "https://www.twitch.tv/riderskill/clip/AbrasiveLittleApePMSTwin-nJ5WQKQuCjE5R0iu",
+    "cover": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AbrasiveLittleApePMSTwin-nJ5WQKQuCjE5R0iu/3f6bea70-fa73-4cb4-b93f-2849d2ab567f/preview-480x272.jpg"
+  },
+  {
+    "title": "💣🔥 Survie, loot et décisions propres",
+    "url": "https://www.twitch.tv/riderskill/clip/AssiduousEnergeticTildeDxAbomb-3YpJA5lrCEe3l_KF",
+    "cover": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AssiduousEnergeticTildeDxAbomb-3YpJA5lrCEe3l_KF/55e00abd-11be-45e7-9920-8a8f71863241/preview-480x272.jpg"
+  }
+]
