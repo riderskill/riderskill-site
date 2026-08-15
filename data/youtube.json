@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-08-15T12:10:24.838Z",
+  "updated_at": "2026-08-15T13:20:01.136Z",
   "items": [
+    {
+      "id": "0X9Jdp0GHEU",
+      "title": "🌲 [DROP ON] SOIRÉE TRANQUILLE, ON CONSTRUIT/DETRUIT ET ON FARM/LOOT ! 🏗�� (Part 2/2)",
+      "url": "https://www.youtube.com/watch?v=0X9Jdp0GHEU",
+      "published_at": "2026-08-15T12:34:12+00:00",
+      "cover": "https://i1.ytimg.com/vi/0X9Jdp0GHEU/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/0X9Jdp0GHEU/hqdefault.jpg"
+    },
+    {
+      "id": "d9Lz8X9EmvQ",
+      "title": "🌲 [DROP ON] SOIRÉE TRANQUILLE, ON CONSTRUIT/DETRUIT ET ON FARM/LOOT ! 🏗�� (Part 1/2)",
+      "url": "https://www.youtube.com/watch?v=d9Lz8X9EmvQ",
+      "published_at": "2026-08-15T12:34:08+00:00",
+      "cover": "https://i1.ytimg.com/vi/d9Lz8X9EmvQ/hqdefault.jpg",
+      "thumbnail": "https://i1.ytimg.com/vi/d9Lz8X9EmvQ/hqdefault.jpg"
+    },
     {
       "id": "f4MPnbLfHsw",
       "title": "[DROPS ON] SOIRÉE SURVIE TRANQUILLE EN PVE ! 🏗️ | #riderskill sur #Twitch",
@@ -104,22 +120,6 @@
       "published_at": "2026-07-26T09:24:12+00:00",
       "cover": "https://i1.ytimg.com/vi/TPQNeKUvI58/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/TPQNeKUvI58/hqdefault.jpg"
-    },
-    {
-      "id": "xnVeMfFza94",
-      "title": "🌙 RIDERSKILL | LUNAR STRIKE PLAYTEST : Découverte, survie et premières impressions ! 🚀",
-      "url": "https://www.youtube.com/watch?v=xnVeMfFza94",
-      "published_at": "2026-07-26T09:24:10+00:00",
-      "cover": "https://i1.ytimg.com/vi/xnVeMfFza94/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/xnVeMfFza94/hqdefault.jpg"
-    },
-    {
-      "id": "Bki1aCj7OAk",
-      "title": "🚜 RIDERSKILL | CAFÉ &amp; RÉCOLTES : Live matinal, détente et début de journ� (Part 2/2)",
-      "url": "https://www.youtube.com/watch?v=Bki1aCj7OAk",
-      "published_at": "2026-07-25T12:28:50+00:00",
-      "cover": "https://i3.ytimg.com/vi/Bki1aCj7OAk/hqdefault.jpg",
-      "thumbnail": "https://i3.ytimg.com/vi/Bki1aCj7OAk/hqdefault.jpg"
     }
   ]
 }
