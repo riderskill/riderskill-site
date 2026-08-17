@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-08-17T17:14:10.576Z",
+  "updated_at": "2026-08-17T18:17:34.418Z",
   "items": [
+    {
+      "id": "MxYnylrEP9k",
+      "title": "Quand le PVE devient addictif sur Rust ! 🪵",
+      "url": "https://www.youtube.com/shorts/MxYnylrEP9k",
+      "published_at": "2026-08-17T18:10:51+00:00",
+      "cover": "https://i2.ytimg.com/vi/MxYnylrEP9k/hqdefault.jpg",
+      "thumbnail": "https://i2.ytimg.com/vi/MxYnylrEP9k/hqdefault.jpg"
+    },
     {
       "id": "0X9Jdp0GHEU",
       "title": "🌲 [DROP ON] SOIRÉE TRANQUILLE, ON CONSTRUIT/DETRUIT ET ON FARM/LOOT ! 🏗�� (Part 2/2)",
@@ -112,14 +120,6 @@
       "published_at": "2026-07-28T20:25:37+00:00",
       "cover": "https://i1.ytimg.com/vi/8Aet7c3O578/hqdefault.jpg",
       "thumbnail": "https://i1.ytimg.com/vi/8Aet7c3O578/hqdefault.jpg"
-    },
-    {
-      "id": "TPQNeKUvI58",
-      "title": "🤖 RIDERSKILL | ARC RAIDERS : Loot, combats et survie dans les terres sauvages ! 🔥",
-      "url": "https://www.youtube.com/watch?v=TPQNeKUvI58",
-      "published_at": "2026-07-26T09:24:12+00:00",
-      "cover": "https://i1.ytimg.com/vi/TPQNeKUvI58/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/TPQNeKUvI58/hqdefault.jpg"
     }
   ]
 }
