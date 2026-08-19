@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-08-19T18:13:34.188Z",
+  "updated_at": "2026-08-19T19:15:11.808Z",
   "items": [
+    {
+      "id": "sJdyRODwl-Q",
+      "title": "[DROPS ON] SOIRÉE SURVIE TRANQUILLE EN PVE ! 🏗️",
+      "url": "https://www.youtube.com/watch?v=sJdyRODwl-Q",
+      "published_at": "2026-08-19T18:45:31+00:00",
+      "cover": "https://i4.ytimg.com/vi/sJdyRODwl-Q/hqdefault.jpg",
+      "thumbnail": "https://i4.ytimg.com/vi/sJdyRODwl-Q/hqdefault.jpg"
+    },
     {
       "id": "MxYnylrEP9k",
       "title": "Quand le PVE devient addictif sur Rust ! 🪵",
@@ -112,14 +120,6 @@
       "published_at": "2026-07-31T18:19:45+00:00",
       "cover": "https://i2.ytimg.com/vi/mLkpA_dshrU/hqdefault.jpg",
       "thumbnail": "https://i2.ytimg.com/vi/mLkpA_dshrU/hqdefault.jpg"
-    },
-    {
-      "id": "8Aet7c3O578",
-      "title": "🌾 RUST : SESSION FARMING DU SOIR, ON STACK DU LOOT ! 🔥",
-      "url": "https://www.youtube.com/watch?v=8Aet7c3O578",
-      "published_at": "2026-07-28T20:25:37+00:00",
-      "cover": "https://i1.ytimg.com/vi/8Aet7c3O578/hqdefault.jpg",
-      "thumbnail": "https://i1.ytimg.com/vi/8Aet7c3O578/hqdefault.jpg"
     }
   ]
 }
