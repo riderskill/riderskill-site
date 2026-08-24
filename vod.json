@@ -14,13 +14,6 @@
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/3a108843eabb21350086_riderskill_317478190436_1786655085//thumb/thumb0-%{width}x%{height}.jpg"
   },
   {
-    "id": "2841947248",
-    "url": "https://www.twitch.tv/videos/2841947248",
-    "title": "MULTI-GAMING DU SOIR : ON CHANGE DE JEU SELON LES ENVIES ! 🚀",
-    "published_at": "2026-08-09T23:28:17Z",
-    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d3stzm2eumvgb4/07329094dc61c01406ab_riderskill_317447253604_1786318089//thumb/thumb0-%{width}x%{height}.jpg"
-  },
-  {
     "id": "2805689911",
     "url": "https://www.twitch.tv/videos/2805689911",
     "title": "CANICULE 🚀 ARC RAIDERS : ILS ONT CACHÉ ÇA ! Ultra  | RIDERSKILL)",
@@ -33,5 +26,12 @@
     "title": "🚀 ARC RAIDERS : ILS ONT CACHÉ ÇA ! | RIDERSKILL",
     "published_at": "2026-06-26T06:34:20Z",
     "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/76ee46bf81028fb89e7e_riderskill_317106253923_1782455652/thumb/custom-7fd7108f-7b6e-4f4f-8186-8efde130e779-%{width}x%{height}.jpeg"
+  },
+  {
+    "id": "2804807087",
+    "url": "https://www.twitch.tv/videos/2804807087",
+    "title": "Canicule, on t'en. ! ❄️ Un peu de fraîcheur ? ❄️ Jeu offert par le studio Frozen District : 59ème clé ! | Ets. RIDERSKILL 504712043",
+    "published_at": "2026-06-25T03:58:19Z",
+    "thumbnail_url": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/8133f295f0d6d3e69f86_riderskill_317081412708_1782359891/thumb/custom-e61c13da-d701-4e71-b0b6-d37a728c19ac-%{width}x%{height}.jpeg"
   }
 ]
